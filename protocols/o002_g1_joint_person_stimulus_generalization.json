@@ -1,0 +1,79 @@
+{
+  "title": "O002-G1 Joint Unseen-Person × Unseen-Stimulus Generalization",
+  "status": "FROZEN_BEFORE_RESULT",
+  "purpose": "Test whether the strong reported-state baseline and the physiology incremental-utility result generalize when the test participant and the test video are both absent from training.",
+  "source": {
+    "feature_snapshot": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+    "parent_primary_run": 37217735818,
+    "subjects": 30,
+    "videos": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "expected_test_cells": 240
+  },
+  "outer_evaluation": {
+    "unit": "subject × video cell",
+    "rule": "For each of 30 subjects and 8 videos, test only rows from that subject on that video. Training excludes every row from the held-out subject AND every row from the held-out video.",
+    "rationale": "Prevents both person leakage and stimulus/video leakage. This is stricter than ordinary leave-one-subject-out."
+  },
+  "models": {
+    "context_only": [
+      "normalized time-within-video"
+    ],
+    "prior": [
+      "normalized time-within-video",
+      "immediately prior same-axis report"
+    ],
+    "physiology": [
+      "normalized time-within-video",
+      "immediately prior same-axis report",
+      "exact 29 frozen O002 peripheral features"
+    ]
+  },
+  "omitted_feature": "video_id is deliberately excluded because the test video is unseen by definition.",
+  "learner": {
+    "type": "Ridge regression",
+    "alphas": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "tuning": "Training-only GroupKFold by subject, up to 4 folds; held-out subject and video never enter tuning.",
+    "preprocessing": "Median imputation and standardization fit only on each training fold."
+  },
+  "targets": [
+    "valence",
+    "arousal"
+  ],
+  "primary_quantities": {
+    "prior_increment": "MAE(context_only)-MAE(prior); positive favors prior reported state.",
+    "physiology_increment": "MAE(prior)-MAE(physiology); positive favors physiology beyond prior report."
+  },
+  "uncertainty": {
+    "method": "Crossed subject×video bootstrap",
+    "replicates": 5000,
+    "procedure": "Sample 30 subjects with replacement and 8 videos with replacement, then average the paired cell-level delta over the Cartesian product of sampled subjects and sampled videos."
+  },
+  "decisions": {
+    "REPORT_PERSISTENCE_GENERALIZES": "prior_increment 95% CI strictly above zero for both axes.",
+    "PHYSIOLOGY_INCREMENT_GENERALIZES": "physiology_increment 95% CI strictly above zero for an axis.",
+    "NO_PHYSIOLOGY_INCREMENT_UNDER_DOUBLE_HOLDOUT": "physiology_increment CI is not strictly above zero for either axis.",
+    "MIXED_GENERALIZATION": "Different axes support materially different patterns."
+  },
+  "firewall": [
+    "This is an out-of-distribution predictive robustness test, not a causal experiment.",
+    "A physiology increment under double holdout would not establish causal embodiment; a null would not establish physiological irrelevance.",
+    "The recent-report predictor remains self-report and is not assumed available in sensor-only deployment.",
+    "No phenomenal identity or consciousness inference."
+  ],
+  "publication_role": "Directly addresses multiplicative/generalization concerns raised by recent affective-computing benchmarking and tests whether the paper's central incremental-information pattern survives simultaneous person and stimulus novelty."
+}
