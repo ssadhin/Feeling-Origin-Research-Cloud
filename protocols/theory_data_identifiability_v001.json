@@ -1,0 +1,84 @@
+{
+  "title": "Theory-to-Data Identifiability Audit v001",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "question": "Can the currently available public human datasets support a fair quantitative model comparison between MEM and hierarchical Bayesian interoceptive inference without adding theory-extraneous observation mappings or arbitrary latent-state choices?",
+  "strict_rule": {
+    "core_variable_coverage": "Every theory-specific variable required to generate the target outcome must be observed, computable from observed variables with a source-specified function, or identifiable as a latent parameter under a source-specified generative/observation model.",
+    "outcome_mapping": "The theory must specify how its latent states generate the measured outcome used for comparison.",
+    "parameter_identifiability": "There must be a defined fitting procedure plus parameter/model recovery or an equivalent identifiability demonstration for the target task.",
+    "no_custom_rescue": "Do not invent an observation link, hidden-state definition, prototype set, fusion function, or report mapping solely to make a theory fit the dataset."
+  },
+  "datasets": {
+    "H001_Parrotta_pain_false_feedback": {
+      "observed_columns": ["Exp","SSID","Session","Trial","Feedback","StimInt","HR","LIK","VAS","HR_M","HRd","HRd_M","HRd_SD","HRd_Z","LIK_M","LIKd","VAS_M","VASd"],
+      "target_outcomes": ["LIK","VAS"],
+      "notes": "False cardiac feedback manipulation, pain stimulus intensity, ECG-derived cardiac summaries, and first-person pain ratings."
+    },
+    "HDT_interoceptive_training": {
+      "public_repo": "ChatrinS/interoceptive-training-Bayesian-modelling",
+      "task_core": ["inSync","response","isFeedback","day"],
+      "target_outcome": "trial-by-trial sync/async choice",
+      "notes": "Task and code were designed together for a hierarchical Bayesian heartbeat-discrimination model."
+    }
+  },
+  "models": {
+    "MEM_2026_primary_formalism": {
+      "source": "Galus & Starzyk 2026, arXiv:2609.20437",
+      "required_core": [
+        {"name":"x(t)","meaning":"exteroceptive receptor input","source_specified_mapping":false},
+        {"name":"y(t)","meaning":"raw interoceptive/proprioceptive input","source_specified_mapping":true},
+        {"name":"n(t)","meaning":"allostatic/homeostatic state vector","source_specified_mapping":false},
+        {"name":"b(t)","meaning":"integrated bodily-motivational/mnemonic context","source_specified_mapping":false,"reason":"phi_b is generic/implementation-dependent"},
+        {"name":"A(t)","meaning":"global affect from regulatory violations","source_specified_mapping":false,"reason":"requires n(t), tolerated bounds, w_A, c_A"},
+        {"name":"mu_m","meaning":"stored sensory prototype per semblion","source_specified_mapping":false},
+        {"name":"rho_m","meaning":"stored bodily/context prototype","source_specified_mapping":false},
+        {"name":"v_m","meaning":"stored valence","source_specified_mapping":false},
+        {"name":"a_m/W(t)","meaning":"competition/winning semblions","source_specified_mapping":false},
+        {"name":"h_ff_sens","meaning":"feedforward sensory representation","source_specified_mapping":false},
+        {"name":"hhat_sens","meaning":"top-down reconstructed sensory representation","source_specified_mapping":false},
+        {"name":"h_eff_sens","meaning":"fused effective sensory representation","source_specified_mapping":false,"reason":"psi can be implementation-dependent; simple weighted-average is an example"},
+        {"name":"lambda","meaning":"bottom-up/top-down fusion weight","source_specified_mapping":false},
+        {"name":"phenomenal_report_link","meaning":"mapping from MEM state to LIK/VAS or sync judgment","source_specified_mapping":false}
+      ],
+      "published_parameter_recovery_for_target_tasks": false,
+      "public_reference_implementation_found_in_search": false
+    },
+    "Hierarchical_Bayesian_HDT_2026": {
+      "source": "Suksasilp et al. 2026 Biological Psychology + public GitHub implementation",
+      "required_core": [
+        {"name":"inSync","meaning":"trial observation/ground state","source_specified_mapping":true},
+        {"name":"response","meaning":"sync/async choice","source_specified_mapping":true},
+        {"name":"feedback","meaning":"task feedback/training condition","source_specified_mapping":true},
+        {"name":"IP1","meaning":"lower-level afferent sensory precision","source_specified_mapping":true},
+        {"name":"IP2","meaning":"higher-level precision weighting","source_specified_mapping":true},
+        {"name":"pS","meaning":"prior bias toward sync","source_specified_mapping":true}
+      ],
+      "published_parameter_recovery_for_target_tasks": true,
+      "public_reference_implementation_found_in_search": true,
+      "warning": "This model's specified observation model is for heartbeat discrimination choices, not H001 LIK/VAS pain ratings."
+    }
+  },
+  "precommitted_dataset_assessments": {
+    "H001_Parrotta_pain_false_feedback": {
+      "MEM_2026_primary_formalism": {
+        "expected": "FAIL",
+        "reason": "Core reconstruction/context/allostatic variables and the report observation link are absent or implementation-dependent."
+      },
+      "Hierarchical_Bayesian_HDT_2026": {
+        "expected": "FAIL",
+        "reason": "The published generative/observation model is task-specific to sync/async heartbeat discrimination and has no source-specified LIK/VAS observation model."
+      }
+    },
+    "HDT_interoceptive_training": {
+      "MEM_2026_primary_formalism": {
+        "expected": "FAIL",
+        "reason": "MEM does not specify a heartbeat-discrimination response likelihood, semblion training history/prototypes, or parameter-recovery procedure for this task."
+      },
+      "Hierarchical_Bayesian_HDT_2026": {
+        "expected": "PASS",
+        "reason": "Public task-specific generative model, fitting code, identifiability simulation and parameter recovery exist."
+      }
+    }
+  },
+  "cross_theory_gate": "PASS only if both models PASS on the same dataset and same held-out target outcome under source-specified mappings."
+}
