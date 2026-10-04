@@ -17,6 +17,7 @@ on:
           - proxy_mediation_sensitivity
           - theory_audit_v001
           - theory_data_identifiability_v001
+          - crfi_reduction_audit_v001
       trials:
         description: Ablation parameter sets (used only for ablation)
         required: false
@@ -115,6 +116,10 @@ jobs:
       - name: Run theory-to-data identifiability audit v001
         if: ${{ inputs.workload == 'theory_data_identifiability_v001' }}
         run: python analysis/theory_data_identifiability_v001.py
+
+      - name: Run CRFI reduction audit v001
+        if: ${{ inputs.workload == 'crfi_reduction_audit_v001' }}
+        run: python analysis/crfi_reduction_audit_v001.py
 
       - name: Upload results
         if: always()
