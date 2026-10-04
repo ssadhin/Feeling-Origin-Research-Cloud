@@ -192,8 +192,18 @@ def tune_generic_bidir(dev,target,n=40,seed=123):
         if best is None or loss<best[0]: best=(loss,p,s)
     return best
 
-def equivalent(ds,tol=.20):
-    return all(abs(ds[k])<tol for k in KEY_METRICS)
+def immediate_matched(ds,tol=.20):
+    return abs(ds["escape"])<tol
+
+def post_equivalent(ds,tol=.20):
+    return all(abs(ds[k])<tol for k in ("post_hazard_visits","reversal_latency","recovery_auc","q_change"))
+
+def classification(ds,tol=.20):
+    if not immediate_matched(ds,tol):
+        return "CONFOUNDED_IMMEDIATE_MISMATCH"
+    if post_equivalent(ds,tol):
+        return "EQUIVALENT_RIVAL_DEFEATS_BEHAVIORAL_UNIQUENESS"
+    return "VALID_POST_EVENT_DISCRIMINATION"
 
 def main():
     ap=argparse.ArgumentParser()
@@ -205,7 +215,7 @@ def main():
     best_gl=tune_gated_learning(dev,crfi_dev,args.tune)
     kinds=["reactive","homeostatic","appraisal","recurrent_downstream","gated_downstream","gated_learning_rival","crfi_noC","crfi_noL","crfi"]
     out={"design":{"development_worlds":args.dev,"heldout_worlds":args.test,"heldout_seed_start":args.test_start,"tuning_candidates":args.tune,
-                   "preregistered_equivalence":"A rival defeats CRFI behavioral uniqueness if all five signature metrics are within |Cohen d|<0.20 on held-out worlds, including matched immediate escape.",
+                   "preregistered_equivalence":"A rival defeats CRFI behavioral uniqueness if immediate escape is matched (|d|<0.20) and all four post-event signature metrics are also equivalent (|d|<0.20). Immediate mismatch makes that rival comparison confounded, not a CRFI win.",
                    "interpretation_firewall":"The simulation tests functional/causal architecture only; it does not establish subjective feeling."},
          "tuned_generic_bidir":{"params":best[1],"development_loss":best[0],"development_summary":best[2]},
          "tuned_gated_learning":{"params":best_gl[1],"development_loss":best_gl[0],"development_summary":best_gl[2]},
@@ -215,20 +225,34 @@ def main():
         s,r=summarize(k,test); item={"mean":s,"causal_signature":Agent(k,0).causal_signature()}
         if k!="crfi":
             item["d_vs_crfi"]={m:cohend([x[m] for x in r],[x[m] for x in cr]) for m in (*KEY_METRICS,"final_drive")}
-            item["equivalent_on_signature"]=equivalent(item["d_vs_crfi"])
+            item["immediate_matched"]=immediate_matched(item["d_vs_crfi"])
+            item["post_equivalent"]=post_equivalent(item["d_vs_crfi"])
+            item["classification"]=classification(item["d_vs_crfi"])
         out["heldout"][k]=item
     gs,gr=summarize("generic_bidir",test,best[1])
     gd={m:cohend([x[m] for x in gr],[x[m] for x in cr]) for m in (*KEY_METRICS,"final_drive")}
     out["heldout"]["tuned_generic_bidir"]={"mean":gs,"d_vs_crfi":gd,
-        "equivalent_on_signature":equivalent(gd),"causal_signature":Agent("generic_bidir",0,best[1]).causal_signature()}
+        "immediate_matched":immediate_matched(gd),"post_equivalent":post_equivalent(gd),
+        "classification":classification(gd),"causal_signature":Agent("generic_bidir",0,best[1]).causal_signature()}
     ls,lr=summarize("gated_learning_rival",test,best_gl[1])
     ld={m:cohend([x[m] for x in lr],[x[m] for x in cr]) for m in (*KEY_METRICS,"final_drive")}
     out["heldout"]["tuned_gated_learning"]={"mean":ls,"d_vs_crfi":ld,
-        "equivalent_on_signature":equivalent(ld),"causal_signature":Agent("gated_learning_rival",0,best_gl[1]).causal_signature()}
+        "immediate_matched":immediate_matched(ld),"post_equivalent":post_equivalent(ld),
+        "classification":classification(ld),"causal_signature":Agent("gated_learning_rival",0,best_gl[1]).causal_signature()}
     clean_rivals=["reactive","homeostatic","appraisal","recurrent_downstream","gated_downstream","gated_learning_rival","crfi_noC","crfi_noL","tuned_gated_learning"]
-    eq_rivals=[k for k in clean_rivals if out["heldout"].get(k,{}).get("equivalent_on_signature")]
-    out["behavioral_uniqueness_verdict"]="FAIL" if eq_rivals else "SURVIVES_V014"
+    eq_rivals=[k for k in clean_rivals if out["heldout"].get(k,{}).get("classification")=="EQUIVALENT_RIVAL_DEFEATS_BEHAVIORAL_UNIQUENESS"]
+    valid_discriminated=[k for k in clean_rivals if out["heldout"].get(k,{}).get("classification")=="VALID_POST_EVENT_DISCRIMINATION"]
+    confounded=[k for k in clean_rivals if out["heldout"].get(k,{}).get("classification")=="CONFOUNDED_IMMEDIATE_MISMATCH"]
+    if eq_rivals:
+        verdict="FAIL"
+    elif valid_discriminated:
+        verdict="SURVIVES_MATCHED_RIVALS_V014"
+    else:
+        verdict="INCONCLUSIVE_NO_MATCHED_RIVAL"
+    out["behavioral_uniqueness_verdict"]=verdict
     out["equivalent_rivals"]=eq_rivals
+    out["valid_discriminated_rivals"]=valid_discriminated
+    out["confounded_rivals"]=confounded
     out["topology_note"]="A behaviorally equivalent rival that also has direct E<->S reciprocity is not a clean non-CRFI rival; it falls inside the physical core unless another CRFI requirement distinguishes it."
     print(json.dumps(out,indent=2))
 if __name__=="__main__": main()
