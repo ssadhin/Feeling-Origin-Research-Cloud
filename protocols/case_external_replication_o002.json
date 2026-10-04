@@ -1,0 +1,129 @@
+{
+  "title": "Loop 005 O002 External Peripheral-Physiology Forecast Replication",
+  "status": "FROZEN_BEFORE_CASE_OUTCOME_MODEL_FIT",
+  "dataset": {
+    "name": "CASE — Continuously Annotated Signals of Emotion",
+    "source": "Sharma et al. 2019, Scientific Data, DOI 10.1038/s41597-019-0209-0",
+    "public_record": "Figshare CASE Dataset-full 10.6084/m9.figshare.8869157",
+    "participants": 30,
+    "annotations": "continuous simultaneous valence and arousal at ~20 Hz",
+    "physiology": [
+      "ECG",
+      "BVP",
+      "GSR",
+      "respiration",
+      "skin temperature",
+      "EMG zygomaticus",
+      "EMG corrugator",
+      "EMG trapezius"
+    ],
+    "physiology_rate_hz": 1000,
+    "emotional_videos": 8
+  },
+  "role": "Independent external replication of the narrow O001 claim for peripheral physiology. No EEG is present, so this does not replicate the central-neural component.",
+  "epistemic_scope": [
+    "Observational incremental prediction only.",
+    "No claim of causal necessity, sufficiency, source identity, or consciousness detection."
+  ],
+  "sampling": {
+    "unit": "non-overlapping prospective windows inside each emotional video",
+    "anchor_rule": "Starting 20 s after emotional-video onset, anchors every 10 s, stopping when fewer than 6 future seconds remain.",
+    "physiology_predictor_window_sec_relative_anchor": [
+      -10,
+      -1
+    ],
+    "prior_report_window_sec_relative_anchor": [
+      -5,
+      -1
+    ],
+    "future_report_target_window_sec_relative_anchor": [
+      0,
+      5
+    ],
+    "temporal_gap_sec": 1
+  },
+  "targets": [
+    "mean continuous valence during future target window",
+    "mean continuous arousal during future target window"
+  ],
+  "baseline_controls": [
+    "video ID one-hot",
+    "normalized time-within-video",
+    "prior same-axis self-report mean"
+  ],
+  "fixed_features": {
+    "ECG": [
+      "mean HR",
+      "median HR",
+      "SDNN",
+      "RMSSD"
+    ],
+    "BVP": [
+      "mean pulse rate",
+      "median pulse rate",
+      "pulse-interval SD",
+      "pulse-interval RMSSD"
+    ],
+    "GSR": [
+      "standard deviation",
+      "range",
+      "linear slope",
+      "end-minus-start",
+      "second-half-minus-first-half"
+    ],
+    "respiration": [
+      "dominant respiratory rate",
+      "signal standard deviation",
+      "linear slope"
+    ],
+    "skin_temperature": [
+      "mean",
+      "standard deviation",
+      "linear slope",
+      "end-minus-start"
+    ],
+    "EMG_each": [
+      "RMS",
+      "mean absolute amplitude",
+      "standard deviation"
+    ]
+  },
+  "models": {
+    "stimulus_time_only": "video ID + normalized time-within-video -> Ridge",
+    "stimulus_time_prior": "video ID + normalized time + prior same-axis report -> Ridge",
+    "peripheral": "video ID + normalized time + prior report + all frozen peripheral features -> Ridge"
+  },
+  "evaluation": {
+    "outer": "Leave-One-Subject-Out over all usable participants",
+    "inner": "GroupKFold by training participant, 5 folds",
+    "ridge_alpha_grid": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "primary_metric": "held-out subject MAE",
+    "descriptive_metrics": [
+      "pooled R2",
+      "pooled Pearson r"
+    ],
+    "uncertainty": "5000 paired bootstrap resamples of held-out subjects"
+  },
+  "primary_delta": "MAE(stimulus_time_prior)-MAE(peripheral)",
+  "success_rule": "For each axis, peripheral increment is supported only if the subject-bootstrap 95% CI for the primary delta is strictly above zero.",
+  "negative_rule": "If CI includes zero or is below zero, record NO_PERIPHERAL_INCREMENT for that axis.",
+  "admission_gate": {
+    "minimum_subjects": 24,
+    "minimum_total_windows": 1000,
+    "minimum_subjects_with_20_windows": 24,
+    "minimum_ECG_valid_fraction": 0.7
+  },
+  "integrity_rules": [
+    "All preprocessing and imputation learned inside training folds only.",
+    "No target-window annotation sample may enter predictors.",
+    "No post-hoc window or feature changes may rescue a negative primary result.",
+    "If full data access/processing cannot be reproduced from the public release, record DATA_ACCESS_OR_PIPELINE_FAIL instead of substituting another representation."
+  ],
+  "relation_to_O001": "O002 is independent-data replication for the peripheral-physiology increment question. Agreement with O001 strengthens generalization; disagreement is preserved and analyzed as task/dataset heterogeneity."
+}
