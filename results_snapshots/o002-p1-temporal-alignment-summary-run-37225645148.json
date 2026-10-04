@@ -1,0 +1,58 @@
+{
+  "status": "O002_P1_TEMPORAL_ALIGNMENT_SUMMARY",
+  "protocol_commit": "d3da8eefa9129b39f3a377deb1c38c1f69831c08",
+  "analysis_commit": "eee6f2a7a2f410c757fce9abc307ae517fcead90",
+  "workflow_commit": "ad3d2d0d23f8d3f349bc66bc5d18ab4949efec56",
+  "trigger_commit": "a0dcb0567d1b129def5f7bacf6c3d73500906839",
+  "workflow_run_id": 37225645148,
+  "artifact_id": 11311988039,
+  "artifact_digest": "sha256:10ef4d0e3ab2511a1d80f03408ae8048f5a68931d7a24572524b27ee9bf3998d",
+  "raw_result_sha256": "fd612e535b26a14a49a4f7e78c3cdb93f845f75bd4bb8ebc5e58ce5a83ec94f6",
+  "n_permutations": 200,
+  "verdict": "REAL_SIGNAL_BUT_NO_INCREMENT",
+  "results": {
+    "valence": {
+      "alignment": "ALIGNED_REAL_BETTER_THAN_SHIFTED",
+      "shifted_minus_real": {
+        "mean": 0.0020002909461026472,
+        "ci95": [
+          0.000642131532943876,
+          0.0034127007311640935
+        ]
+      },
+      "fraction_permutations_real_better": 0.995,
+      "frozen_baseline_minus_real": {
+        "mean": -0.003704715944438754,
+        "ci95": [
+          -0.005617761650137978,
+          -0.0018814816469507817
+        ]
+      }
+    },
+    "arousal": {
+      "alignment": "ALIGNED_REAL_BETTER_THAN_SHIFTED",
+      "shifted_minus_real": {
+        "mean": 0.0014043789670051413,
+        "ci95": [
+          0.00009903198790738043,
+          0.002744286721714261
+        ]
+      },
+      "fraction_permutations_real_better": 0.965,
+      "frozen_baseline_minus_real": {
+        "mean": -0.004727065463932094,
+        "ci95": [
+          -0.0069044943642409574,
+          -0.0024563511684337755
+        ]
+      }
+    }
+  },
+  "interpretation": [
+    "Correct temporal alignment of real peripheral physiology carries statistically detectable predictive information relative to a within-subject×video circular-shift control that preserves multivariate trajectory structure and circular autocorrelation.",
+    "Despite this real alignment signal, adding aligned physiology to video/time plus immediately prior self-report worsens held-out MAE in the frozen O002 primary result.",
+    "The defensible synthesis is real physiological signal but no incremental short-horizon forecasting utility beyond recent reported state and context under this model/features/dataset.",
+    "Effect magnitudes of the alignment advantage are small; statistical detection should not be confused with large practical utility."
+  ],
+  "firewall": "Observational predictive evidence only. No causal body-to-feeling necessity, no embodiment rejection, no phenomenal identity, no consciousness inference."
+}
