@@ -1,0 +1,35 @@
+name: Lyu Bridge Inventory Once
+
+on:
+  push:
+    paths:
+      - "triggers/lyu_bridge_inventory_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lyu-bridge-inventory-v001
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Run public bridge inventory
+        run: python analysis/lyu_public_bridge_inventory.py
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: lyu-public-bridge-inventory-${{ github.run_id }}
+          path: results/
+          if-no-files-found: error
+          retention-days: 14
