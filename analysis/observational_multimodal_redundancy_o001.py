@@ -71,10 +71,16 @@ class EDF:
         self.duration=self.n_records*self.record_duration
     def segment(self,label,start_sec,end_sec):
         i=self.labels.index(label)
-        # equal samples/record => flattened selected signal is chronological
-        dig=np.asarray(self.mm[:,i,:],dtype=np.float64).reshape(-1)
-        a=max(0,int(round(start_sec*self.fs))); b=min(len(dig),int(round(end_sec*self.fs)))
-        x=dig[a:b]
+        total_samples=self.n_records*self.spr0
+        a=max(0,int(round(start_sec*self.fs))); b=min(total_samples,int(round(end_sec*self.fs)))
+        if b<=a:
+            return np.asarray([],dtype=float)
+        # Read only the EDF records intersecting the requested short window.
+        r0=a//self.spr0
+        r1=(b-1)//self.spr0+1
+        block=np.asarray(self.mm[r0:r1,i,:],dtype=np.float64).reshape(-1)
+        off=a-r0*self.spr0
+        x=block[off:off+(b-a)]
         den=self.dmax[i]-self.dmin[i]
         if den==0: return np.full_like(x,np.nan,dtype=float)
         return (x-self.dmin[i])*(self.pmax[i]-self.pmin[i])/den+self.pmin[i]
