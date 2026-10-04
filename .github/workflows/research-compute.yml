@@ -17,6 +17,10 @@ on:
         required: false
         default: "2500"
 
+concurrency:
+  group: research-compute
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -66,4 +70,5 @@ jobs:
           path: results/
           if-no-files-found: warn
           retention-days: 14
+
 
