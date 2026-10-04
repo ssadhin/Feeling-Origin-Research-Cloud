@@ -152,3 +152,35 @@ Finding that cut—or failing to find one under sufficiently rich causal data—
 ## Current execution status
 
 Atlas protocol and executable are frozen. Cloud dispatch was attempted after the freeze, but the Home Laptop relay disconnected before the GitHub Actions dispatch command completed. **No atlas run is claimed yet.** Resume the frozen run unchanged when a dispatch path is available.
+
+
+## Atlas v001 executed result
+
+The frozen atlas executed successfully in GitHub Actions.
+
+Canonical run: `37206982306`  
+Head: `ca6f8778788e19f964df70f5bedf4e9ad09712cb`  
+Artifact ID: `11305386184`  
+Artifact SHA256: `af657c41b825a89d577d71cce6700889d7037594a7347a51217c4ce805f0bf8c`  
+Permanent raw snapshot: `results_snapshots/causal-route-atlas-v001-run-37206982306.json`  
+Snapshot commit: `e3ea7eb31b758b1cb5600bf75dc22e5025a680ec`
+
+A first dispatch also completed before a relay error became visible (run `37206790877`); it used the same frozen protocol and returned the same qualitative verdict. The later run above is canonical.
+
+### Verdict
+
+`EVIDENCE_FAVORS_ROUTE_MULTIPLICITY`
+
+- evidence rows: 12
+- global necessity refuted in v001: amygdala, insula
+- global necessity unresolved: ventromedial hypothalamic region, dPAG
+- route multiplicity gate: PASS
+- route substitution gate: PASS
+- physiology–feeling dissociation gate: PASS
+- single exclusive anatomical source survives v001: NO
+
+### Interpretation firewall
+
+This is **not** proof of multiple independent phenomenal generators.
+
+The strongest surviving alternative is that anatomically different upstream perturbations converge on a common downstream causal bottleneck. The next Loop 005 task is therefore a shared-minimum-cut screen, not a search for another named single region.
