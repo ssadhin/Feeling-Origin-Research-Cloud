@@ -1,0 +1,145 @@
+{
+  "title": "Feeling Origin Theory Discrimination Audit v001",
+  "status": "THEORY_LEVEL_NEGATIVE_GATE",
+  "purpose": "Identify whether any current intervention yields a source-supported, observable, feasible, non-circular disagreement between strong named theories of feeling/consciousness.",
+  "admission_rule": {
+    "prediction_strength": "Both theories must have EXPLICIT or strong DERIVED predictions for the same independently measured outcome.",
+    "divergence": "Predictions must be materially incompatible, not merely different phenomenal labels on matched observables.",
+    "observability": "The critical outcome must remain independently measurable under the intervention.",
+    "feasibility": "The intervention must be selective enough to interpret without destroying the very measurement required.",
+    "scope": "For V015, the disagreement must concern feeling/phenomenal presence or character, not only generic access or a peripheral mechanism."
+  },
+  "theories": [
+    "HOTEC",
+    "Damasio_Hybrid",
+    "Seth_Friston_Interoceptive_Inference",
+    "Solms_Affective_Consciousness",
+    "GNWT",
+    "RPT",
+    "IIT",
+    "N_star",
+    "MEM",
+    "CRFI_S"
+  ],
+  "interventions": [
+    {
+      "id": "I1_FIRST_ORDER_SOURCE_ATTENUATION",
+      "description": "Attenuate first-order defensive/body-sensing input while higher-order cortical machinery remains functional.",
+      "observable": "reported emotional feeling",
+      "human_feasible": true,
+      "report_available": true,
+      "independent_phenomenal_ground_truth": true,
+      "scope_feeling": true,
+      "predictions": {
+        "HOTEC": {"value":"PRESERVE_OR_MUTE","strength":"EXPLICIT","basis":"LeDoux & Brown explicitly predict first-order subcortical/body-sensing damage should mute but not eliminate fear feeling."},
+        "Damasio_Hybrid": {"value":"CONDITIONAL","strength":"CONDITIONAL","basis":"Depends on which interoceptive/hybrid channels remain; as-if body loops and distributed interoception prevent a simple knockout prediction."},
+        "Seth_Friston_Interoceptive_Inference": {"value":"CONDITIONAL","strength":"CONDITIONAL","basis":"Hierarchical predictions can dominate when low-level precision is attenuated, but conscious-feeling sufficiency is not fixed."},
+        "Solms_Affective_Consciousness": {"value":"CONDITIONAL","strength":"CONDITIONAL","basis":"Depends on whether the upper-brainstem affective mechanism itself is disrupted."}
+      }
+    },
+    {
+      "id": "I2_GNC_DISRUPTION_LOWER_AFFECT_INTACT",
+      "description": "Disable the cortical general network of cognition while preserving lower homeostatic/brainstem affective machinery.",
+      "observable": "conscious emotional experience during intervention",
+      "human_feasible": false,
+      "report_available": false,
+      "independent_phenomenal_ground_truth": false,
+      "scope_feeling": true,
+      "predictions": {
+        "HOTEC": {"value":"ABOLISH","strength":"EXPLICIT","basis":"GNC is essential for conscious emotional experience."},
+        "Damasio_Hybrid": {"value":"PRESERVE_BASIC","strength":"DERIVED","basis":"Basic/homeostatic feeling is not identified with higher-order cortical GNC."},
+        "Solms_Affective_Consciousness": {"value":"PRESERVE_ELEMENTAL","strength":"EXPLICIT","basis":"Elemental affective consciousness is assigned to upper-brainstem extended homeostasis."}
+      },
+      "failure_mode": "NO_REPORT / intervention strong enough to satisfy HOTEC undermines direct first-person measurement."
+    },
+    {
+      "id": "I3_CARDIAC_EFFECTOR_CLAMP_PLUS_FALSE_FEEDBACK",
+      "description": "Clamp a prespecified cardiac effector response while manipulating perceived cardiac state via false feedback.",
+      "observable": "pain/emotion rating",
+      "human_feasible": true,
+      "report_available": true,
+      "independent_phenomenal_ground_truth": true,
+      "scope_feeling": true,
+      "predictions": {
+        "HOTEC": {"value":"PRESERVE_POSSIBLE","strength":"DERIVED","basis":"Peripheral/first-order body inputs are modulatory rather than constitutive."},
+        "Damasio_Hybrid": {"value":"PRESERVE_POSSIBLE","strength":"DERIVED","basis":"Damasio includes as-if body loops; clamping one peripheral effector need not remove feeling."},
+        "Seth_Friston_Interoceptive_Inference": {"value":"PRESERVE_POSSIBLE","strength":"DERIVED","basis":"Higher-level interoceptive predictions may shape affect even when a low-level effector is constrained."},
+        "Solms_Affective_Consciousness": {"value":"PRESERVE_POSSIBLE","strength":"CONDITIONAL","basis":"One peripheral cardiac effector is not identical to the upper-brainstem affective mechanism."}
+      },
+      "failure_mode": "NO_STRONG_THEORY_DIVERGENCE"
+    },
+    {
+      "id": "I4_LIVING_BODY_REPLACEMENT_SIGNAL_MATCHED",
+      "description": "Replace living non-neural bodily coupling with an artificial signal-matched surrogate while preserving causal/informational organization.",
+      "observable": "phenomenal presence in artificial/surrogate system",
+      "human_feasible": false,
+      "report_available": true,
+      "independent_phenomenal_ground_truth": false,
+      "scope_feeling": true,
+      "predictions": {
+        "Damasio_Hybrid": {"value":"ABSENT","strength":"EXPLICIT","basis":"2023 account makes neural-nonneural living-body interaction constitutive and rejects an isolated nervous system/inanimate object as sufficient."},
+        "N_star": {"value":"POSSIBLE","strength":"DERIVED","basis":"Substrate-general under constrained causal realization if N* conditions are met."},
+        "IIT": {"value":"POSSIBLE","strength":"DERIVED","basis":"Experience depends on intrinsic cause-effect structure rather than biological material per se."},
+        "MEM": {"value":"POSSIBLE","strength":"EXPLICIT","basis":"MEM explicitly develops artificial embodied implementations as candidates for rational consciousness attribution."}
+      },
+      "failure_mode": "NO_INDEPENDENT_PHENOMENAL_GROUND_TRUTH"
+    },
+    {
+      "id": "I5_GLOBAL_ACCESS_CUT_LOCAL_RECURRENCE_INTACT",
+      "description": "Preserve local recurrent sensory processing while preventing global broadcast/access.",
+      "observable": "phenomenal content without report",
+      "human_feasible": "PARTIAL",
+      "report_available": false,
+      "independent_phenomenal_ground_truth": false,
+      "scope_feeling": false,
+      "predictions": {
+        "GNWT": {"value":"ABSENT_OR_INACCESSIBLE","strength":"EXPLICIT","basis":"Global broadcast/ignition is necessary for conscious access."},
+        "RPT": {"value":"PRESERVE_PHENOMENAL","strength":"DERIVED","basis":"Local recurrent processing is proposed as sufficient/central for phenomenal consciousness."}
+      },
+      "failure_mode": "NO_REPORT plus not specifically a feeling-origin test."
+    },
+    {
+      "id": "I6_SENSORY_REENTRY_CUT_GLOBAL_ACCESS_PRESERVED",
+      "description": "Disrupt modality-specific recurrent reconstruction while attempting to preserve global availability and report.",
+      "observable": "reported phenomenal quality/content",
+      "human_feasible": "UNCERTAIN",
+      "report_available": true,
+      "independent_phenomenal_ground_truth": true,
+      "scope_feeling": "POTENTIAL",
+      "predictions": {
+        "MEM": {"value":"DEGRADE_PHENOMENAL_QUALITY","strength":"DERIVED","basis":"MEM makes receptor-grounded content and re-entry into lower sensory/interoceptive maps part of the phenomenal state."},
+        "GNWT": {"value":"PRESERVE_ACCESS_IF_BROADCAST_PRESERVED","strength":"DERIVED","basis":"GNWT centers global availability/broadcast rather than MEM-style modality-specific re-entry."}
+      },
+      "failure_mode": "SELECTIVITY_UNPROVEN: cutting re-entry while truly preserving the same globally broadcast content/report is not yet an established selective manipulation."
+    },
+    {
+      "id": "I7_UPPER_BRAINSTEM_AFFECT_SUPPRESSION_CORTICAL_REPLAY",
+      "description": "Suppress the proposed upper-brainstem affective generator while replaying/matching higher-order cortical emotional representations.",
+      "observable": "reported emotional feeling",
+      "human_feasible": false,
+      "report_available": "CONFOUNDED",
+      "independent_phenomenal_ground_truth": false,
+      "scope_feeling": true,
+      "predictions": {
+        "Solms_Affective_Consciousness": {"value":"ABOLISH_ELEMENTAL_AFFECT","strength":"EXPLICIT","basis":"Upper-brainstem extended homeostasis is the proposed physiological mechanism of elemental affect."},
+        "HOTEC": {"value":"PRESERVE_IF_HOR_GNC_REMAINS","strength":"DERIVED","basis":"Modified HOT allows higher-order conscious content without the corresponding current first-order source, provided GNC representation remains."}
+      },
+      "failure_mode": "AROUSAL_CONFOUND_AND_UNSAFE_SELECTIVITY: suppressing the relevant brainstem machinery risks abolishing global wakefulness/report."
+    },
+    {
+      "id": "I8_COUNTERFACTUAL_STRUCTURE_CHANGE_TRAJECTORY_MATCHED",
+      "description": "Preserve observed trajectory while altering counterfactual causal alternatives.",
+      "observable": "phenomenal classification",
+      "human_feasible": false,
+      "report_available": "SIMULATION_ONLY",
+      "independent_phenomenal_ground_truth": false,
+      "scope_feeling": false,
+      "predictions": {
+        "IIT": {"value":"CHANGE_IF_CES_CHANGES","strength":"EXPLICIT","basis":"Consciousness/quality depends on intrinsic cause-effect structure."},
+        "N_star": {"value":"CHANGE_IF_COUNTERFACTUAL_AVAILABILITY_CHANGES","strength":"DERIVED","basis":"Counterfactual system-wide availability is constitutive in N*."},
+        "GNWT": {"value":"MAY_PRESERVE_IF_BROADCAST_DYNAMICS_MATCH","strength":"CONDITIONAL","basis":"Observed broadcast/access can be preserved despite counterfactual manipulation depending on implementation."}
+      },
+      "failure_mode": "PHENOMENAL_GROUND_TRUTH_ABSENT; counterfactual-eraser prior art exists."
+    }
+  ]
+}
