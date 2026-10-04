@@ -184,3 +184,76 @@ A first dispatch also completed before a relay error became visible (run `372067
 This is **not** proof of multiple independent phenomenal generators.
 
 The strongest surviving alternative is that anatomically different upstream perturbations converge on a common downstream causal bottleneck. The next Loop 005 task is therefore a shared-minimum-cut screen, not a search for another named single region.
+
+
+## Shared Minimum-Cut Screen v001
+
+After atlas v001 favored route multiplicity, the next adversarial alternative was frozen:
+
+> multiple effective routes may all converge on one shared downstream causal bottleneck.
+
+Protocol: `protocols/shared_minimum_cut_screen_v001.json`  
+Protocol commit: `2ad028a7ec4d80184c21b78128015e3e7cacba36`  
+Executable: `analysis/shared_minimum_cut_screen_v001.py`  
+Executable commit: `175144a5be092021e0f4940431a455299fafc4a3`  
+Workflow support commit: `28c5099d79d36329b8deb81c53fa4fe44e6669ef`
+
+Canonical run: `37207403625`  
+Head: `28c5099d79d36329b8deb81c53fa4fe44e6669ef`  
+Artifact ID: `11305536518`  
+Artifact SHA256: `f7671362778302c9ef2c91a722cbd2478416d21498035999702e573d38d8f449`  
+Permanent snapshot: `results_snapshots/shared-minimum-cut-screen-v001-run-37207403625.json`  
+Snapshot commit: `fef2d005a7c1aee8d842c29f3a9e39713b9626b4`
+
+### Frozen admission criteria
+
+A shared anatomical minimum cut counted only if:
+1. it survives known lesion counterexamples;
+2. direct causal loss specifically abolishes felt affect rather than merely recognition, autonomic output, memory, arousal or access;
+3. wakefulness and a viable first-person report/communication channel remain sufficiently intact to assess feeling;
+4. the evidence is directly causal.
+
+### Verdict
+
+`NO_SHARED_MINIMUM_CUT_IDENTIFIED`
+
+Seven candidate bottlenecks were screened; **zero** passed all criteria.
+
+- rostral dorsolateral pontine tegmentum: causal role in coma/wakefulness is strong, but fails feeling-specificity and observability because decisive injury causes coma;
+- ventral anterior insula/pregenual ACC network: fails lesion-complement evidence;
+- somatosensory cortices: plausible and often implicated, but no direct global-feeling necessity test;
+- ventromedial hypothalamic region: stimulation can evoke emotion but no necessity test and network propagation is substantial;
+- dPAG: causal participation supported, selective human feeling-necessity test absent;
+- higher-order/global cortical machinery: decisive loss is confounded with access/report loss;
+- distributed dynamic bottleneck: remains an open hypothesis class but is not yet operationalized.
+
+### Interpretation
+
+This result does **not** show that there is no common bottleneck.
+
+It shows that current direct human evidence does not identify one while preserving a feeling-specific observable. Two live possibilities remain:
+
+1. **true causal-route degeneracy/substitution** — more than one downstream organization can support overlapping felt affect;
+2. **hidden network convergence** — distinct entry routes converge on a distributed state that current lesions/stimulation methods have not selectively isolated.
+
+The next Loop 005 attack should therefore target **network convergence conditional on subjective affect**, not simply anatomical overlap.
+
+## New lead: subjective-affect network convergence versus physiology-only propagation
+
+Existing evidence creates a useful contrast:
+
+- multiple stimulation sites can evoke reported fear/anxiety or other emotion;
+- amygdala stimulation can robustly evoke defensive autonomic physiology without subjective emotion in most tested cases.
+
+Candidate question:
+
+> Do stimulation events that produce a reported affective experience converge on a downstream causal/network pattern that is absent or weaker in stimulation events producing autonomic defensive physiology without reported emotion?
+
+This is deliberately framed as a **subjective-report-associated network signature**, not a phenomenal ground-truth detector.
+
+The strongest rival possibilities are:
+
+- **COMMON-FELT-NETWORK**: diverse emotion-evoking stimulation routes converge on a reproducible downstream state/network feature not explained by autonomic arousal alone.
+- **ROUTE-HETEROGENEITY**: after controlling for stimulation site, intensity, arousal and report/access variables, no common downstream feature remains across subjective-emotion events.
+
+Before freezing this as a new experiment, conduct a novelty/data-availability attack. Direct electrical stimulation network mapping is already substantial prior art (including es-fMRI causal mapping and recent broad DES-network analyses), so the project must establish whether the **felt-report vs physiology-only** contrast itself is both novel and identifiable from available data.
