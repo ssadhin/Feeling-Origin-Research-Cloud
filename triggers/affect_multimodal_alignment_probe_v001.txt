@@ -1,0 +1,2 @@
+Trigger multimodal affect alignment probe v001.
+Analysis commit: c5d38ffd647dbab8dcca43f9c2f680e43474d65a
