@@ -1,0 +1,35 @@
+{
+  "title": "O001-C1 Matched ECG-only sensitivity",
+  "status": "FROZEN_BEFORE_EXTERNAL_O001-E1_RESULT",
+  "input": "results_snapshots/o001_feature_rows_run-37214461250.jsonl",
+  "purpose": "Create an exact cardiac-only bridge from primary on002722 to independent on002725, which lacks GSR.",
+  "targets": [
+    "valence",
+    "arousal"
+  ],
+  "features": {
+    "baseline": [
+      "target_code",
+      "music_id",
+      "prior same-axis FEELTRACE"
+    ],
+    "ecg": [
+      "auto_hr_mean",
+      "auto_hr_median",
+      "auto_sdnn",
+      "auto_rmssd"
+    ]
+  },
+  "model": "Ridge with alpha selected from [0.1,1,10,100,1000] by GroupKFold on training subjects; LOSO outer evaluation.",
+  "metric": "held-out subject MAE",
+  "uncertainty": "5000 paired subject bootstrap",
+  "primary_delta": "MAE(baseline)-MAE(baseline+ECG), positive favors ECG",
+  "relative_delta": "(MAE(baseline)-MAE(baseline+ECG))/MAE(baseline)",
+  "practical_margin": "5% relative MAE improvement",
+  "interpretation": {
+    "ECG_INCREMENT": "95% CI of absolute delta >0.",
+    "ECG_NO_PRACTICALLY_MEANINGFUL_INCREMENT": "95% upper CI of relative improvement <0.05.",
+    "ECG_WORSENS": "95% upper CI of absolute delta <0."
+  },
+  "firewall": "Post-primary bridge sensitivity. Does not replace O001 frozen primary. Frozen before independent external outcome."
+}
