@@ -1,0 +1,16 @@
+{
+  "verdict": "FAIL_NO_COMMON_PUBLIC_DATASET_FOR_FELT_VS_PHYSIOLOGY_NETWORK_CONTRAST",
+  "n_datasets_screened": 7,
+  "n_passing_datasets": 0,
+  "passing_datasets": [],
+  "near_misses": [
+    {"id":"DUONG_INSULA_2023_2026","n_passed":4,"missing":["objective_autonomic","public_now"]},
+    {"id":"FOX_OFC_DRYAD_2018","n_passed":4,"missing":["objective_autonomic","network_propagation"]},
+    {"id":"INMAN_AMYGDALA_2018_2020","n_passed":4,"missing":["network_propagation","public_now"]},
+    {"id":"LIU_SEEG_EMOTION_NETWORK_2025","n_passed":4,"missing":["objective_autonomic","public_now"]},
+    {"id":"LYU_CC_PCU_BODILY_AWARENESS_2026","n_passed":4,"missing":["first_person_affect","objective_autonomic"]},
+    {"id":"FOX_WHOLE_BRAIN_IES_2020","n_passed":3,"missing":["objective_autonomic","network_propagation","public_now"]},
+    {"id":"SOULIER_VISCERAL_EMOTION_2023","n_passed":3,"missing":["objective_autonomic","network_propagation","public_now"]}
+  ],
+  "consequence":"Failure forbids a confirmatory cross-dataset network comparison that silently treats different cohorts/modalities as commensurate. It does not kill the hypothesis. It redirects to data request/collaboration, prospective collection, or a clearly labeled methodological/observational bridge."
+}
