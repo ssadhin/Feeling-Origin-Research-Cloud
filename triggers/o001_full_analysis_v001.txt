@@ -1,0 +1,1 @@
+Trigger frozen O001 full 19-participant analysis.\nProtocol commit: 7e56cf6933451aac89c25103106929f6a1b419ce\nAnalysis commit: 32e28c9c3e336ad267c314c63a94c4161e700e81\nExtraction smoke run: 37212859303 (success; 180/180 usable trials, ECG valid fraction 1.0).\n
