@@ -175,9 +175,17 @@ def extract_dataset():
                     af=autonomic_features(mm,h,fs,a,b)
                     ef=eeg_features(mm,h,fs,a,b,False)
                     ef_nomotor=eeg_features(mm,h,fs,a,b,True)
-                    rows.append(dict(subject=sub,session=ses,run=f"{sub}/{ses}/run{run}",
+                    row=dict(subject=sub,session=ses,run=f"{sub}/{ses}/run{run}",
                         event=ei,tau_rel=tau_rel,y1=y1,y2=y2,prior1=p1,prior2=p2,
-                        vtarget=vt,auto=af,eeg=ef,eeg_nomotor=ef_nomotor))
+                        vtarget=vt,auto=af,eeg=ef,eeg_nomotor=ef_nomotor)
+                    if tau_rel in (10.0,14.0,18.0):
+                        row["prior1_s2"]=mean_channel(mm,h,fs,"VA1",tau-3,tau-2)
+                        row["prior2_s2"]=mean_channel(mm,h,fs,"VA2",tau-3,tau-2)
+                        row["vtarget_s2"]=int(round(mean_channel(mm,h,fs,"VAtarg",tau-5,tau-4)))
+                        row["auto_s2"]=autonomic_features(mm,h,fs,tau-8,tau-4)
+                        row["eeg_s2"]=eeg_features(mm,h,fs,tau-8,tau-4,False)
+                        row["eeg_nomotor_s2"]=eeg_features(mm,h,fs,tau-8,tau-4,True)
+                    rows.append(row)
                     made+=1
             qc.append({"path":path,"status":"OK","samples":made,"subject":sub,"session":ses,"run":run})
             del mm
@@ -188,17 +196,28 @@ def extract_dataset():
             except: pass
     return rows,qc
 
-def baseline_vec(r,target_free=False):
-    z=[r["prior1"],r["prior2"]]
+def baseline_vec(r,target_free=False,variant="primary"):
+    if variant=="s2":
+        z=[r["prior1_s2"],r["prior2_s2"]]
+        vt=r["vtarget_s2"]
+        times=(10.0,14.0,18.0)
+    else:
+        z=[r["prior1"],r["prior2"]]
+        vt=r["vtarget"]
+        times=TARGET_TIMES
     if not target_free:
-        z += [1.0 if r["vtarget"]==j else 0.0 for j in range(10)]
-    z += [1.0 if r["tau_rel"]==t else 0.0 for t in TARGET_TIMES]
+        z += [1.0 if vt==j else 0.0 for j in range(10)]
+    z += [1.0 if r["tau_rel"]==t else 0.0 for t in times]
     return z
 
-def feature_vec(r,kind,target_free=False,no_motor=False):
-    z=baseline_vec(r,target_free)
-    if "A" in kind:z+=r["auto"]
-    if "E" in kind:z+=(r["eeg_nomotor"] if no_motor else r["eeg"])
+def feature_vec(r,kind,target_free=False,no_motor=False,variant="primary"):
+    z=baseline_vec(r,target_free,variant)
+    if variant=="s2":
+        if "A" in kind:z+=r["auto_s2"]
+        if "E" in kind:z+=(r["eeg_nomotor_s2"] if no_motor else r["eeg_s2"])
+    else:
+        if "A" in kind:z+=r["auto"]
+        if "E" in kind:z+=(r["eeg_nomotor"] if no_motor else r["eeg"])
     return z
 
 def ridge_fit(X,y,alpha):
@@ -219,28 +238,23 @@ def r2(y,p):
     y=np.asarray(y); p=np.asarray(p); den=float(((y-y.mean())**2).sum())
     return None if den<1e-12 else float(1-((y-p)**2).sum()/den)
 
-def choose_alpha(train,kind,outcome,target_free=False,no_motor=False):
+def choose_alpha(train,kind,outcome,target_free=False,no_motor=False,variant="primary"):
     runs=sorted({r["run"] for r in train})
     if len(runs)<2:return 10.0
     scores={a:[] for a in ALPHAS}
     for vr in runs:
         tr=[r for r in train if r["run"]!=vr]; va=[r for r in train if r["run"]==vr]
         if not tr or not va: continue
-        Xt=[feature_vec(r,kind,target_free,no_motor) for r in tr]
-        yt=[r[outcome] for r in tr]; Xv=[feature_vec(r,kind,target_free,no_motor) for r in va]
+        Xt=[feature_vec(r,kind,target_free,no_motor,variant) for r in tr]
+        yt=[r[outcome] for r in tr]; Xv=[feature_vec(r,kind,target_free,no_motor,variant) for r in va]
         yv=[r[outcome] for r in va]
         for a in ALPHAS:
             try:scores[a].append(rmse(yv,predict(ridge_fit(Xt,yt,a),Xv)))
             except np.linalg.LinAlgError:scores[a].append(1e99)
     return min(ALPHAS,key=lambda a:np.mean(scores[a]) if scores[a] else 1e99)
 
-def evaluate(rows,target_free=False,no_motor=False,strong_gap=False):
-    use=rows
-    if strong_gap:
-        # Re-extraction is not needed: primary features use [tau-6,tau-2], so the
-        # stricter window requires a separate extraction path. Implement below by
-        # returning marker; actual sensitivity is handled only if precomputed.
-        raise RuntimeError("strong-gap sensitivity requires dedicated extraction")
+def evaluate(rows,target_free=False,no_motor=False,variant="primary"):
+    use=[r for r in rows if variant!="s2" or r["tau_rel"] in (10.0,14.0,18.0)]
     result=[]
     bysub=defaultdict(list)
     for r in use:bysub[r["subject"]].append(r)
@@ -255,9 +269,10 @@ def evaluate(rows,target_free=False,no_motor=False,strong_gap=False):
             for outcome in ("y1","y2"):
                 ax={}
                 for kind in ("B","BA","BE","BAE"):
-                    alpha=choose_alpha(tr,kind,outcome,target_free,no_motor)
-                    Xtr=[feature_vec(r,kind,target_free,no_motor) for r in tr]
-                    ytr=[r[outcome] for r in tr]; Xte=[feature_vec(r,kind,target_free,no_motor) for r in te]
+                    alpha=choose_alpha(tr,kind,outcome,target_free,no_motor,variant)
+                    Xtr=[feature_vec(r,kind,target_free,no_motor,variant) for r in tr]
+                    ytr=[r[outcome] for r in tr]
+                    Xte=[feature_vec(r,kind,target_free,no_motor,variant) for r in te]
                     yte=[r[outcome] for r in te]
                     pr=predict(ridge_fit(Xtr,ytr,alpha),Xte)
                     ax[kind]={"alpha":alpha,"rmse":rmse(yte,pr),"r2":r2(yte,pr)}
@@ -291,8 +306,12 @@ def main():
     subs=sorted({r["subject"] for r in rows})
     folds=evaluate(rows)
     nm=evaluate(rows,no_motor=True)
+    s2=evaluate(rows,variant="s2")
+    tf=evaluate(rows,target_free=True)
     primary={k:bootstrap(folds,k) for k in ("delta_E_given_A","delta_A_given_E")}
     sens_nm={k:bootstrap(nm,k) for k in ("delta_E_given_A","delta_A_given_E")}
+    sens_s2={k:bootstrap(s2,k) for k in ("delta_E_given_A","delta_A_given_E")}
+    sens_tf={k:bootstrap(tf,k) for k in ("delta_E_given_A","delta_A_given_E")}
     nsub=len({f["subject"] for f in folds})
     def passed(x):return x["ci95"][0]>0
     if nsub<5: cls="INSUFFICIENT_PARTICIPANTS"
@@ -301,11 +320,15 @@ def main():
         cls="OBSERVATIONAL_COMPLEMENTARITY" if ep and ap else "EEG_PREDICTIVE_DOMINANCE" if ep else "AUTONOMIC_PREDICTIVE_DOMINANCE" if ap else "NO_DETECTED_UNIQUE_COMPLEMENTARITY"
     out={"status":"O001_OBSERVATIONAL_ONLY","classification":cls,
          "dataset":{"base":BASE,"n_rows":len(rows),"n_ok_runs":len(okruns),"subjects":subs},
-         "primary":primary,"motor_exclusion":sens_nm,"folds":folds,"qc":qc,
-         "flags":{"motor_report_contamination_plausible":passed(primary["delta_E_given_A"]) and not passed(sens_nm["delta_E_given_A"])},
-         "not_run_yet":["S2 stronger temporal separation","S3 target-free baseline"],
+         "primary":primary,"motor_exclusion":sens_nm,"stronger_temporal_separation":sens_s2,
+         "target_free_baseline":sens_tf,"folds":folds,"qc":qc,
+         "flags":{
+            "motor_report_contamination_plausible":passed(primary["delta_E_given_A"]) and not passed(sens_nm["delta_E_given_A"]),
+            "eeg_short_lag_dependence":passed(primary["delta_E_given_A"]) and not passed(sens_s2["delta_E_given_A"]),
+            "autonomic_short_lag_dependence":passed(primary["delta_A_given_E"]) and not passed(sens_s2["delta_A_given_E"])
+         },
          "firewall":"Predictive complementarity/dominance is not causal origin, necessity, sufficiency, or phenomenal identity. VA1/VA2 axis ordering is not assumed."}
     (OUT/"o001_observational_multimodal_redundancy.json").write_text(json.dumps(out,indent=2),encoding="utf-8")
-    print(json.dumps({k:out[k] for k in ("status","classification","dataset","primary","motor_exclusion","flags","not_run_yet")},indent=2))
+    print(json.dumps({k:out[k] for k in ("status","classification","dataset","primary","motor_exclusion","stronger_temporal_separation","target_free_baseline","flags")},indent=2))
 
 if __name__=="__main__":main()
