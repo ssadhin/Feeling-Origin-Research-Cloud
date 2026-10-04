@@ -1,0 +1,1 @@
+Trigger frozen O002-P1 temporal-alignment permutation.\nProtocol commit: d3da8eefa9129b39f3a377deb1c38c1f69831c08\nAnalysis commit: eee6f2a7a2f410c757fce9abc307ae517fcead90\nWorkflow commit: ad3d2d0d23f8d3f349bc66bc5d18ab4949efec56\nParent O002 primary run: 37217735818\nParent O002-S1 run: 37218283683\n
