@@ -20,6 +20,7 @@ on:
           - causal_route_atlas_v001
           - shared_minimum_cut_v001
           - felt_vs_physiology_data_audit_v001
+          - lyu_public_bridge_inventory
           - theory_data_identifiability_v001
           - crfi_reduction_audit_v001
       trials:
@@ -140,6 +141,10 @@ jobs:
       - name: Run felt-vs-physiology data audit v001
         if: ${{ inputs.workload == 'felt_vs_physiology_data_audit_v001' }}
         run: python analysis/felt_vs_physiology_network_data_audit_v001.py
+
+      - name: Run Lyu public bridge inventory
+        if: ${{ inputs.workload == 'lyu_public_bridge_inventory' }}
+        run: python analysis/lyu_public_bridge_inventory.py
 
       - name: Upload results
         if: always()
