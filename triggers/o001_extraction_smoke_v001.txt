@@ -1,0 +1,1 @@
+Trigger O001 extraction-only smoke on first two subjects.\nProtocol commit: 7e56cf6933451aac89c25103106929f6a1b419ce\nAnalysis commit: 32e28c9c3e336ad267c314c63a94c4161e700e81\n
