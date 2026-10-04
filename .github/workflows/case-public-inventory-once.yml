@@ -1,0 +1,29 @@
+name: CASE Public Inventory Once
+
+on:
+  push:
+    paths:
+      - "triggers/case_public_inventory_v001.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Inventory CASE Figshare
+        run: python analysis/case_public_inventory.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: case-public-inventory-${{ github.run_id }}
+          path: results/case_public_inventory.json
+          if-no-files-found: error
+          retention-days: 14
