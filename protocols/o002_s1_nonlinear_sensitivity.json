@@ -1,0 +1,43 @@
+{
+  "title": "O002-S1 CASE Nonlinear Model-Class Sensitivity",
+  "status": "FROZEN_AFTER_O002_PRIMARY",
+  "purpose": "Test whether the O002 no-peripheral-increment result is an artifact of linear Ridge regression under the exact same CASE windows, features, LOSO split, and strong stimulus+time+prior-report baseline.",
+  "input_generation": "Re-run frozen O002 extraction only; do not alter windows/features.",
+  "target_axes": [
+    "valence",
+    "arousal"
+  ],
+  "outer": "Leave-one-subject-out, identical 30 CASE participants if frozen QC passes.",
+  "baseline_features": [
+    "video ID",
+    "normalized time-within-video",
+    "prior same-axis continuous self-report"
+  ],
+  "peripheral_features": "The exact 29 O002 frozen ECG/BVP/GSR/respiration/skin-temperature/EMG features.",
+  "preprocessing": "One-hot categorical controls, median imputation and standardization fit only on each outer training set.",
+  "learners": {
+    "hist_gradient_boosting": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1,
+      "random_state": 601
+    },
+    "extra_trees": {
+      "n_estimators": 300,
+      "min_samples_leaf": 5,
+      "max_features": 0.5,
+      "n_jobs": -1,
+      "random_state": 602
+    }
+  },
+  "metric": "held-out participant MAE",
+  "uncertainty": "5000 paired subject bootstrap resamples",
+  "delta": "MAE(baseline)-MAE(peripheral); positive favors physiology",
+  "decision": {
+    "NONLINEAR_PERIPHERAL_INCREMENT": "At least one learner/axis has delta 95% CI strictly above zero.",
+    "ROBUST_NO_PERIPHERAL_INCREMENT": "No learner/axis has delta CI strictly above zero.",
+    "STRONG_DEGRADATION": "All learner/axis delta CIs strictly below zero."
+  },
+  "firewall": "Post-primary sensitivity only. It cannot redefine O002 primary. No feature/window changes."
+}
