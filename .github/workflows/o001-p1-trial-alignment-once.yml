@@ -1,0 +1,35 @@
+name: O001-P1 Trial Alignment Once
+
+on:
+  push:
+    paths:
+      - "triggers/o001_p1_trial_alignment_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: o001-p1-trial-alignment-v001
+  cancel-in-progress: true
+
+jobs:
+  alignment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "scikit-learn>=1.6,<2" "pandas>=2.2,<3"
+      - name: Run frozen O001 trial-alignment permutation
+        run: python analysis/o001_p1_trial_alignment_permutation.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o001-p1-trial-alignment-${{ github.run_id }}
+          path: results/o001_p1_trial_alignment_permutation.json
+          if-no-files-found: error
+          retention-days: 14
