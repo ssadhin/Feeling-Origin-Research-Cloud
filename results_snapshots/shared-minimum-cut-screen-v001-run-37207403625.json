@@ -1,0 +1,17 @@
+{
+  "verdict": "NO_SHARED_MINIMUM_CUT_IDENTIFIED",
+  "n_candidates": 7,
+  "n_identified_cuts": 0,
+  "identified_cuts": [],
+  "rows": [
+    {"id":"C1_ROSTRAL_DORSOLATERAL_PONTINE_TEGMENTUM","direct_causal_gate":true,"spared_by_counterexamples_gate":true,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"AROUSAL_COMA_CONFOUND"},
+    {"id":"C2_VENTRAL_ANTERIOR_INSULA_PREGENUAL_ACC_NETWORK","direct_causal_gate":false,"spared_by_counterexamples_gate":false,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":true,"minimum_cut_identified":false,"failure_mode":"LESION_COUNTEREXAMPLE"},
+    {"id":"C3_SOMATOSENSORY_CORTICES","direct_causal_gate":false,"spared_by_counterexamples_gate":true,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"NO_DIRECT_GLOBAL_FEELING_NECESSITY_TEST"},
+    {"id":"C4_VENTROMEDIAL_HYPOTHALAMIC_REGION","direct_causal_gate":true,"spared_by_counterexamples_gate":false,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"SUFFICIENCY_WITH_NETWORK_PROPAGATION_NO_NECESSITY"},
+    {"id":"C5_DORSAL_PERIAQUEDUCTAL_GRAY","direct_causal_gate":true,"spared_by_counterexamples_gate":false,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"NO_SELECTIVE_HUMAN_NECESSITY_TEST"},
+    {"id":"C6_HIGHER_ORDER_GLOBAL_CORTICAL_MACHINERY","direct_causal_gate":false,"spared_by_counterexamples_gate":true,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"REPORT_ACCESS_CONFOUND"},
+    {"id":"C7_DISTRIBUTED_DYNAMIC_BOTTLENECK","direct_causal_gate":false,"spared_by_counterexamples_gate":true,"feeling_specific_necessity_gate":false,"post_intervention_observability_gate":false,"minimum_cut_identified":false,"failure_mode":"NOT_YET_OPERATIONALIZED"}
+  ],
+  "interpretation": "Failure does not prove there is no shared bottleneck. It means current direct human evidence does not identify one while preserving a feeling-specific observable. Route multiplicity and hidden convergence both remain live.",
+  "next_action": "Prioritize perturb-and-recover, lesion-complement, and double-dissociation evidence that can separate feeling from arousal, report, recognition, and memory."
+}
