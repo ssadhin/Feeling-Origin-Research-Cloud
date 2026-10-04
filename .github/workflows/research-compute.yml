@@ -14,6 +14,7 @@ on:
           - ablation
           - organism_v014
           - proxy_mediation_gate
+          - proxy_mediation_sensitivity
       trials:
         description: Ablation parameter sets (used only for ablation)
         required: false
@@ -35,7 +36,7 @@ on:
         required: false
         default: "50000"
       proxy_bootstrap:
-        description: Subject-cluster bootstrap replicates for proxy_mediation_gate
+        description: Subject-cluster bootstrap replicates for proxy mediation workloads
         required: false
         default: "1000"
 
@@ -97,6 +98,12 @@ jobs:
         if: ${{ inputs.workload == 'proxy_mediation_gate' }}
         run: >-
           python analysis/human_proxy_mediation_gate.py
+          --bootstrap "${{ inputs.proxy_bootstrap }}"
+
+      - name: Run cardiac mediator sensitivity
+        if: ${{ inputs.workload == 'proxy_mediation_sensitivity' }}
+        run: >-
+          python analysis/human_proxy_mediation_sensitivity.py
           --bootstrap "${{ inputs.proxy_bootstrap }}"
 
       - name: Upload results
