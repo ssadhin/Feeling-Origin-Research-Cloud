@@ -1,0 +1,2 @@
+Trigger on002724 manifest inventory v001.
+Analysis commit: 2c7a25c759a672d8d4bca3efd09c20fec6a82df0
