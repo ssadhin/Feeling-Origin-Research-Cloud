@@ -214,3 +214,97 @@ It is a **location/identity dissociation of the feeling-bearing state**:
 - versus the provisional CRFI-S claim that the independently identified current evaluative source itself must be reciprocally embedded.
 
 This is a sharper conflict than the V014 behavioral test, but it is not yet a CRFI victory or a V015 protocol.
+
+
+## 9. Second prior-art collision: source-identity is not untouched territory
+
+The source/proxy idea itself overlaps older consciousness theories and therefore **cannot presently be claimed as novel**.
+
+### Self-representational / same-order theories
+
+Relevant sources:
+- Kriegel, U. (2007/2008), *The Same-Order Monitoring Theory of Consciousness*, Synthesis Philosophica 22(2):361-384. https://hrcak.srce.hr/23581
+- Kriegel, U. & Williford, K. (eds.) (2006), *Self-Representational Approaches to Consciousness*, MIT Press.
+- Stanford Encyclopedia of Philosophy, *Higher-Order Theories of Consciousness*, self-representational section.
+
+These theories reject the idea that the conscious-making representation must be wholly independent of the state represented. In identity or part-whole versions, the conscious state itself carries or contains the relevant higher-order/self-representational relation.
+
+This is not the same as CRFI-S: self-representation is an intentional/representational relation, whereas CRFI-S proposes a physical content-specific reciprocal causal relation between an independently identified evaluative source and a wider domain. But the broad idea that **the feeling/conscious state itself, rather than only a downstream proxy, must participate in its conscious-making relation** is clear prior art.
+
+### Reflexive imperativism about affective phenomenal character
+
+Relevant source:
+- Barlassina, L. & Khan Hayward, M. (2019), *More of me! Less of me!: Reflexive Imperativism about Affective Phenomenal Character*, Mind 128(512):1013-1044. DOI: 10.1093/mind/fzz035.
+
+Their proposal is specifically about affective phenomenal character: pleasant and unpleasant experiences are partly constituted by reflexive imperative content roughly equivalent to “more of me” / “less of me.”
+
+Again, this is not a causal-network identity claim of the CRFI-S form. But it occupies affect-specific reflexive structure and further weakens any claim that reflexivity/source-self-involvement is a new discovery.
+
+### Consequence
+
+CRFI-S is now downgraded from “candidate novelty” to:
+
+> **a provisional causal formalization that may be useful for adversarial theory identification, but whose novelty is unearned.**
+
+To count as a distinct theory it would need a prediction that cannot be reproduced by:
+1. higher-order construction;
+2. self-/same-order representation;
+3. reflexive affective imperativism;
+4. biological interoceptive hybrid theories;
+5. active interoceptive inference;
+6. brainstem affective theories;
+7. GNW/RPT/IIT/N*.
+
+If it cannot, reduce it.
+
+## 10. Preliminary biological bridge scan
+
+The initial lesion literature gives constraints, not a decisive winner.
+
+### Amygdala damage: route-specific fear survives
+
+- Feinstein et al. (2013), *Fear and panic in humans with bilateral amygdala damage*, Nature Neuroscience 16:270-272. DOI: 10.1038/nn.3323. https://pmc.ncbi.nlm.nih.gov/articles/PMC3739474/
+
+Three people with bilateral amygdala damage experienced strong CO2-evoked fear/panic, even though the best-studied patient had major deficits in fear to several external threat paradigms.
+
+**Constraint:** “the source of fear” cannot be assigned wholesale to the amygdala. Source identification must be route- and content-specific. Interoceptive and exteroceptive routes can dissociate.
+
+### Bilateral insula destruction: feelings can persist
+
+- Damasio et al. (2013; published online 2012), *Persistence of Feelings and Sentience after Bilateral Damage of the Insula*, Cerebral Cortex 23(4):833-846. DOI: 10.1093/cercor/bhs077. https://pmc.ncbi.nlm.nih.gov/articles/PMC3657385/
+
+The reported patient had complete bilateral insular destruction plus other damage, yet retained a broad range of body and emotional feelings. The authors argue against the insula as the exclusive source of feeling and propose subcortical plus cortical mapping levels.
+
+**Constraint:** do not operationalize E_f as “insula activity” or any single cortical region by default.
+
+### Brainstem lesions: strong necessity for arousal, weak specificity for feeling identity
+
+- Parvizi & Damasio (2003), *Neuroanatomical correlates of brainstem coma*, Brain 126:1524-1536. DOI: 10.1093/brain/awg166. PMID: 12805123.
+- Fischer et al. (2016), *A human brain network derived from coma-causing brainstem lesions*, Neurology 87:2427-2434.
+
+Focal upper pontine/brainstem lesions can cause coma.
+
+**Constraint:** this supports a causal role of brainstem systems in maintaining consciousness/arousal. It does **not by itself** establish that upper-brainstem affect is the constitutive feeling-bearing state, because loss of arousal globally removes the conditions needed to test felt-content localization.
+
+### Spinal-cord deafferentation: potentially useful graded perturbation, not a clean knockout
+
+Human spinal-cord injury partially disrupts afferent/efferent body-brain coupling. Studies report altered emotional/interoceptive processing, but the literature is not a clean abolition result and lesions spare multiple interoceptive routes.
+
+**Constraint:** SCI may be useful for testing graded dependence of affect on body feedback, but is not presently a binary test of Damasio, HOTEC or CRFI-S.
+
+## 11. Revised next move: Affective Causal Location Diagnostic Set
+
+The most defensible next product is not “CRFI-S wins.” It is a **prespecified diagnostic set** that asks strong theories where the feeling-bearing state resides under matched information and behavior.
+
+Candidate intervention families:
+1. source-to-proxy preserved / return-to-source removed;
+2. higher-order/GNC construction removed while lower interoceptive/affective loops remain;
+3. living-body coupling replaced with a signal-matched artificial surrogate;
+4. local self-/same-order relation disrupted while global availability is preserved;
+5. counterfactual causal structure altered while current trajectories are replay-matched (not novel by itself; counterfactual-erasure prior art exists).
+
+The goal is to find a *vector* of predictions that uniquely identifies or collapses theory families. A single manipulation need not distinguish every theory.
+
+### Revised stop condition
+
+If no small intervention set yields distinguishable, source-supported theory fingerprints without relying on unverifiable subjective labels, do not run V015. Record the theories as operationally underdetermined by the available paradigm.
