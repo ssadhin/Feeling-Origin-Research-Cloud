@@ -17,6 +17,7 @@ on:
           - proxy_mediation_sensitivity
           - theory_audit_v001
           - theory_audit_v002
+          - causal_route_atlas_v001
           - theory_data_identifiability_v001
           - crfi_reduction_audit_v001
       trials:
@@ -125,6 +126,10 @@ jobs:
       - name: Run theory discrimination audit v002
         if: ${{ inputs.workload == 'theory_audit_v002' }}
         run: python analysis/theory_discrimination_audit_v002.py
+
+      - name: Run causal route atlas v001
+        if: ${{ inputs.workload == 'causal_route_atlas_v001' }}
+        run: python analysis/causal_route_atlas_v001.py
 
       - name: Upload results
         if: always()
