@@ -1,0 +1,138 @@
+{
+  "verdict": "REDUCE_TO_SYNTHESIS_FRAMEWORK",
+  "n_commitments": 10,
+  "n_distinct_survivors": 0,
+  "survivors": [],
+  "rows": [
+    {
+      "id": "K1_FIRST_ORDER_INSUFFICIENCY",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "HOTEC",
+        "GNWT",
+        "N_star",
+        "MEM"
+      ]
+    },
+    {
+      "id": "K2_DOMAIN_CAPACITY_C",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "IIT",
+        "GNWT",
+        "RPT",
+        "N_star"
+      ]
+    },
+    {
+      "id": "K3_CONTENT_ADMISSION_L",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "GNWT",
+        "N_star",
+        "MEM",
+        "Active_interoceptive_inference"
+      ]
+    },
+    {
+      "id": "K4_C_AND_L_PRESENCE_RULE",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "straightforward_conjunction_of_K2_and_K3"
+      ]
+    },
+    {
+      "id": "K5_QUALITY_CAUSAL_GEOMETRY",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "IIT",
+        "N_star"
+      ]
+    },
+    {
+      "id": "K6_ORGANISM_RELATIVE_EVALUATION",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "Damasio_Carvalho",
+        "Solms",
+        "Active_interoceptive_inference",
+        "MEM",
+        "N_star"
+      ]
+    },
+    {
+      "id": "K7_REENTRANT_SOURCE_IDENTITY_CRFI_S",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": false,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "same_order_self_representational_theories",
+        "reflexive_imperativism",
+        "Damasio_Carvalho",
+        "Solms"
+      ]
+    },
+    {
+      "id": "K8_FUNCTIONAL_AFTEREFFECTS",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": true,
+      "distinctness_survives": false,
+      "coverage": [
+        "recurrent_gating_learning_rival"
+      ]
+    },
+    {
+      "id": "K9_SUBSTRATE_GENERAL_CAUSAL_REALIZATION",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": true,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "IIT",
+        "N_star",
+        "functional_computational_accounts"
+      ]
+    },
+    {
+      "id": "K10_CAUSAL_INERT_QUALIA_NO_GO",
+      "prior_art_escape": false,
+      "divergent_observable_prediction": false,
+      "eligible_original_mechanistic_commitment": false,
+      "directly_falsified": false,
+      "distinctness_survives": false,
+      "coverage": [
+        "causal_underdetermination_and_inverted_spectrum_traditions"
+      ]
+    }
+  ],
+  "consequence": "CRFI must no longer be presented as a distinct discovered mechanism of feeling. Retain it, if useful, as a synthesis/engineering framework, vocabulary, or benchmark architecture. The V009 methodological no-go and other project results remain valid on their own terms. A future revival of distinct-theory status would require genuinely new evidence, not reinterpretation of these failed gates."
+}
