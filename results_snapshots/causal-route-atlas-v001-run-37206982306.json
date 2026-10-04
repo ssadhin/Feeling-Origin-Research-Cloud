@@ -1,0 +1,51 @@
+{
+  "status": "EVIDENCE_FAVORS_ROUTE_MULTIPLICITY",
+  "n_evidence_rows": 12,
+  "global_necessity_refuted_candidates": [
+    "amygdala",
+    "insula"
+  ],
+  "global_necessity_unknown_candidates": [
+    "ventromedial_hypothalamic_region",
+    "dorsal_periaqueductal_gray"
+  ],
+  "route_multiplicity_gate": true,
+  "route_substitution_gate": true,
+  "physiology_feeling_dissociation_gate": true,
+  "single_anatomical_source_survives_v001": false,
+  "candidate_assessments": {
+    "amygdala": {
+      "global_necessity": "REFUTED",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED",
+      "route_specific_roles": "SUPPORTED"
+    },
+    "insula": {
+      "global_necessity": "REFUTED",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED",
+      "route_specific_roles": "SUPPORTED"
+    },
+    "peripheral_autonomic_feedback": {
+      "global_necessity": "STRONGLY_WEAKENED_NOT_CLEANLY_REFUTED_FOR_ALL_FEELING",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED_MODULATORY"
+    },
+    "ventromedial_hypothalamic_region": {
+      "global_necessity": "UNKNOWN",
+      "isolated_sufficiency": "NOT_ESTABLISHED_DUE_NETWORK_PROPAGATION",
+      "causal_participation": "SUPPORTED"
+    },
+    "dorsal_periaqueductal_gray": {
+      "global_necessity": "UNKNOWN",
+      "isolated_sufficiency": "PARTIAL_OLDER_SUPPORT_NOT_ISOLATED",
+      "causal_participation": "SUPPORTED_WITH_CAVEATS"
+    },
+    "distributed_operculo_insulo_limbic_routes": {
+      "route_multiplicity": "SUPPORTED",
+      "single_common_downstream_bottleneck": "UNKNOWN"
+    }
+  },
+  "critical_caveat": "This atlas does not prove independent redundant generators. Multiple perturbation sites may converge on a shared downstream network not isolated by current human data. The result is about route multiplicity and failure of simple exclusive-node models at current resolution.",
+  "next_test": "Search for human double-dissociations or selective perturbations that can identify a shared minimum cut across preserved/evoked feelings without using report loss as evidence of absent phenomenality."
+}
