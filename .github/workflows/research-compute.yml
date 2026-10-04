@@ -18,6 +18,7 @@ on:
           - theory_audit_v001
           - theory_audit_v002
           - causal_route_atlas_v001
+          - shared_minimum_cut_v001
           - theory_data_identifiability_v001
           - crfi_reduction_audit_v001
       trials:
@@ -130,6 +131,10 @@ jobs:
       - name: Run causal route atlas v001
         if: ${{ inputs.workload == 'causal_route_atlas_v001' }}
         run: python analysis/causal_route_atlas_v001.py
+
+      - name: Run shared minimum-cut screen v001
+        if: ${{ inputs.workload == 'shared_minimum_cut_v001' }}
+        run: python analysis/shared_minimum_cut_screen_v001.py
 
       - name: Upload results
         if: always()
