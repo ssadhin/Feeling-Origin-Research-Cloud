@@ -1,0 +1,10 @@
+{
+  "status": "TECHNICAL_FAIL_NO_SCIENTIFIC_RESULT",
+  "run_id": 37211947680,
+  "head": "d625533dd81ea056299ba0832b317764ecf9a749",
+  "analysis_commit": "5ff2fb7b4a0abeabd7bda74a17c523e61cf164ce",
+  "stage": "label-blind DENS signal QC",
+  "error": "AttributeError: numpy 2.5.3 has no attribute trapz; script used np.trapz before any QC result was written.",
+  "scientific_consequence": "None. No signal-quality gate or affect model was evaluated. Preserve as technical failure; any rerun must use np.trapezoid or scipy.integrate.trapezoid without changing the frozen feature intent.",
+  "artifact": "none; upload step also failed because result JSON was never created."
+}
