@@ -1,0 +1,160 @@
+{
+  "status": "O002_H1_PRIOR_LAG_DEPTH_SUMMARY",
+  "protocol_commit": "b7f0d85862366a79c44a296afc28f2417f056d84",
+  "analysis_commit": "ff185c8e3c5979a04068d8aad9b9e459ccee2eca",
+  "workflow_commit": "e0f6110ba32e8ac0a8286bcf10ff2b507e631aa1",
+  "trigger_commit": "27aea9d0f9491d0896b64252ab8774b6fea34637",
+  "workflow_run_id": 37226162338,
+  "artifact_id": 11312335448,
+  "artifact_digest": "sha256:2b622ddcb5651dbedf64a8a727d18cd11441ef5b59a278697124c753ab010dba",
+  "raw_result_sha256": "3e53ef725015987a8184f22cf749a7d020062d07ee71277553a7e7a536ddc780",
+  "n_rows_common": 2820,
+  "n_subjects": 30,
+  "verdict": {
+    "valence": {
+      "persistence": "PERSISTENCE_BEYOND_IMMEDIATE_REPORT",
+      "physiology": "NO_PHYSIOLOGY_INCREMENT_ACROSS_LAGS"
+    },
+    "arousal": {
+      "persistence": "PERSISTENCE_BEYOND_IMMEDIATE_REPORT",
+      "physiology": "NO_PHYSIOLOGY_INCREMENT_ACROSS_LAGS"
+    }
+  },
+  "results": {
+    "valence": {
+      "mae": {
+        "context_only": 1.0608029316405938,
+        "prior_lag0": 0.18054906513079255,
+        "prior_lag1": 0.4033727734494034,
+        "prior_lag2": 0.5401103536479501,
+        "phys_lag0": 0.18403292560476517,
+        "phys_lag1": 0.4108753100244257,
+        "phys_lag2": 0.5573490773955173
+      },
+      "persistence_depth": {
+        "lag0": {
+          "mean": 0.8802538665098013,
+          "ci95": [
+            0.7887243434768446,
+            0.9750690056755918
+          ]
+        },
+        "lag1": {
+          "mean": 0.6574301581911907,
+          "ci95": [
+            0.5752863540999975,
+            0.7450117471709762
+          ]
+        },
+        "lag2": {
+          "mean": 0.5206925779926437,
+          "ci95": [
+            0.44775898202804904,
+            0.596467011340705
+          ]
+        }
+      },
+      "immediate_advantage_lag1_minus_lag0": {
+        "mean": 0.22282370831861079,
+        "ci95": [
+          0.20238961017415205,
+          0.24365700503558557
+        ]
+      },
+      "physiology_increment": {
+        "lag0": {
+          "mean": -0.003483860473972625,
+          "ci95": [
+            -0.0058765513354897625,
+            -0.0012972807877979875
+          ]
+        },
+        "lag1": {
+          "mean": -0.007502536575022275,
+          "ci95": [
+            -0.02119711642399805,
+            0.002495756930213779
+          ]
+        },
+        "lag2": {
+          "mean": -0.017238723747567266,
+          "ci95": [
+            -0.03599923952354208,
+            -0.002192872092490322
+          ]
+        }
+      }
+    },
+    "arousal": {
+      "mae": {
+        "context_only": 0.8306684887708793,
+        "prior_lag0": 0.19681300966739543,
+        "prior_lag1": 0.4110240592581687,
+        "prior_lag2": 0.5459412583925318,
+        "phys_lag0": 0.20226516333591418,
+        "phys_lag1": 0.4194046606816765,
+        "phys_lag2": 0.5582556284087234
+      },
+      "persistence_depth": {
+        "lag0": {
+          "mean": 0.6338554791034838,
+          "ci95": [
+            0.5648650671370005,
+            0.7068283968011333
+          ]
+        },
+        "lag1": {
+          "mean": 0.4196444295127105,
+          "ci95": [
+            0.36377910429243077,
+            0.47894354270384326
+          ]
+        },
+        "lag2": {
+          "mean": 0.2847272303783474,
+          "ci95": [
+            0.2311441628626339,
+            0.3394718087831362
+          ]
+        }
+      },
+      "immediate_advantage_lag1_minus_lag0": {
+        "mean": 0.2142110495907733,
+        "ci95": [
+          0.19146751774938722,
+          0.23839014513569204
+        ]
+      },
+      "physiology_increment": {
+        "lag0": {
+          "mean": -0.005452153668518706,
+          "ci95": [
+            -0.008244814414127527,
+            -0.0025133362206090828
+          ]
+        },
+        "lag1": {
+          "mean": -0.008380601423507704,
+          "ci95": [
+            -0.0210525343766094,
+            0.002577523178459742
+          ]
+        },
+        "lag2": {
+          "mean": -0.01231437001619171,
+          "ci95": [
+            -0.033066315748066476,
+            0.0034706786079503806
+          ]
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "Prior-report predictive value remains substantial at approximately 11s and 21s target gaps, so the O002 baseline dominance is not confined to immediately adjacent joystick/annotation persistence.",
+    "Immediate prior report retains a large additional advantage over the 11s-gap report, so near-target measurement dynamics still contribute and should remain an explicit caveat.",
+    "No lag shows a strictly positive physiology increment. Valence physiology significantly degrades at lag0 and lag2; arousal significantly degrades at lag0 and is inconclusive at lag1/lag2.",
+    "This supports a temporally extended reported-state persistence benchmark and strengthens the negative incremental-utility result, without establishing a psychological or phenomenal mechanism."
+  ],
+  "firewall": "Robustness/measurement-inertia result only; no causal body-to-feeling, embodiment necessity, phenomenal identity, or consciousness inference."
+}
