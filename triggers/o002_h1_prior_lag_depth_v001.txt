@@ -1,0 +1,1 @@
+Trigger frozen O002-H1 prior-report lag-depth robustness.\nProtocol commit: b7f0d85862366a79c44a296afc28f2417f056d84\nAnalysis commit: ff185c8e3c5979a04068d8aad9b9e459ccee2eca\n
