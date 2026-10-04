@@ -1,0 +1,126 @@
+{
+  "title": "Loop 005 Shared Minimum-Cut Screen v001",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "question": "Does current direct human causal evidence identify a shared anatomical bottleneck that is specifically necessary for felt affect across otherwise distinct routes?",
+  "admission_criteria": {
+    "spared_by_counterexamples": "Candidate must not already be absent/destroyed in a reliable case with preserved broad feeling.",
+    "feeling_specific_necessity": "Selective damage/perturbation must abolish or sharply eliminate felt affect, not merely emotion recognition, autonomic output, memory, arousal, access, or motor report.",
+    "observability": "Wakefulness and a viable first-person report/communication channel must remain sufficiently intact to assess feeling.",
+    "causal_directness": "Evidence must be lesion, blockade, stimulation, or similarly direct causal perturbation rather than correlation alone.",
+    "replication": "Prefer replicated/multi-patient evidence; single cases can refute universal necessity but cannot alone establish a universal bottleneck."
+  },
+  "lesion_complement_constraints": [
+    {
+      "id": "B_PATIENT_LIMBIC_CORTICAL_LOSS",
+      "source": "Damasio et al. 2013, DOI 10.1093/cercor/bhs077, PMID 22473895",
+      "absent_or_destroyed": [
+        "bilateral insula",
+        "bilateral amygdala",
+        "hippocampus",
+        "entorhinal cortex",
+        "temporal pole/mesial temporal regions",
+        "posterior orbitofrontal cortex",
+        "anterior cingulate affective sector"
+      ],
+      "preserved_outcome": "broad body and emotional feelings plus sentience",
+      "consequence": "Any listed structure, and the listed damaged bundle as a whole, cannot be a universally necessary anatomical minimum cut for broad feeling in the simple sense."
+    },
+    {
+      "id": "AMYGDALA_CO2_ALT_ROUTE",
+      "source": "Feinstein et al. 2013, DOI 10.1038/nn.3323",
+      "absent_or_destroyed": [
+        "bilateral amygdala"
+      ],
+      "preserved_outcome": "CO2-evoked fear and panic",
+      "consequence": "Fear/panic has an amygdala-independent route."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C1_ROSTRAL_DORSOLATERAL_PONTINE_TEGMENTUM",
+      "rationale": "Focal lesions in this region are associated with coma and it is connected to cortical consciousness-related regions.",
+      "source": "Fischer et al. 2016, Neurology, DOI 10.1212/WNL.0000000000003404, PMID 27815400",
+      "direct_causal_evidence": true,
+      "spared_by_counterexamples": true,
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": false,
+      "replicated": true,
+      "failure_mode": "AROUSAL_COMA_CONFOUND",
+      "note": "Supports a wakefulness/consciousness-maintenance role, not a feeling-specific minimum cut."
+    },
+    {
+      "id": "C2_VENTRAL_ANTERIOR_INSULA_PREGENUAL_ACC_NETWORK",
+      "rationale": "Functionally connected to coma-associated pontine region in Fischer et al.",
+      "source": "Fischer et al. 2016 plus Damasio et al. 2013",
+      "direct_causal_evidence": "MIXED",
+      "spared_by_counterexamples": false,
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": true,
+      "replicated": false,
+      "failure_mode": "LESION_COUNTEREXAMPLE",
+      "note": "Patient B had complete bilateral insula plus affective ACC destruction with broad feelings intact."
+    },
+    {
+      "id": "C3_SOMATOSENSORY_CORTICES",
+      "rationale": "Spared in the major bilateral-insula lesion case and repeatedly implicated in bodily/emotional representation.",
+      "source": "Damasio et al. 2013; Adolphs et al. 2000 DOI 10.1523/JNEUROSCI.20-07-02683.2000",
+      "direct_causal_evidence": "PARTIAL_LESION_FOR_EMOTION_RECOGNITION",
+      "spared_by_counterexamples": true,
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": "UNKNOWN",
+      "replicated": true,
+      "failure_mode": "NO_DIRECT_GLOBAL_FEELING_NECESSITY_TEST",
+      "note": "Lesion evidence strongly concerns recognition/simulation of others' emotions, not abolition of own felt affect."
+    },
+    {
+      "id": "C4_VENTROMEDIAL_HYPOTHALAMIC_REGION",
+      "rationale": "Direct stimulation can evoke profound negative affect.",
+      "source": "Parvizi et al. 2022, DOI 10.1016/j.brs.2022.04.008",
+      "direct_causal_evidence": true,
+      "spared_by_counterexamples": "UNKNOWN",
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": "UNKNOWN",
+      "replicated": false,
+      "failure_mode": "SUFFICIENCY_WITH_NETWORK_PROPAGATION_NO_NECESSITY",
+      "note": "Stimulation rapidly recruits multiple limbic/cortical structures."
+    },
+    {
+      "id": "C5_DORSAL_PERIAQUEDUCTAL_GRAY",
+      "rationale": "Human stimulation can evoke panic-like anxiety and autonomic arousal.",
+      "source": "Graeff et al. 1995, PMID 7480384",
+      "direct_causal_evidence": true,
+      "spared_by_counterexamples": "UNKNOWN",
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": "UNKNOWN",
+      "replicated": "OLDER_LITERATURE",
+      "failure_mode": "NO_SELECTIVE_HUMAN_NECESSITY_TEST",
+      "note": "Causal participation is plausible; universal bottleneck status is not established."
+    },
+    {
+      "id": "C6_HIGHER_ORDER_GLOBAL_CORTICAL_MACHINERY",
+      "rationale": "HOTEC/GNWT-style candidates place conscious content in higher-order/global cortical organization.",
+      "source": "LeDoux & Brown 2017 and GNWT literature; assessed previously in theory-discrimination audits",
+      "direct_causal_evidence": "THEORY_PLUS_PARTIAL_HUMAN_PERTURBATION",
+      "spared_by_counterexamples": true,
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": false,
+      "replicated": "NOT_APPLICABLE",
+      "failure_mode": "REPORT_ACCESS_CONFOUND",
+      "note": "A decisive knockout also undermines the direct report/access channel, so current evidence cannot establish feeling-specific necessity."
+    },
+    {
+      "id": "C7_DISTRIBUTED_DYNAMIC_BOTTLENECK",
+      "rationale": "A shared causal state may be distributed across varying anatomical implementations rather than localized to one node.",
+      "source": "Hypothesis class motivated by atlas v001, not an established result",
+      "direct_causal_evidence": false,
+      "spared_by_counterexamples": true,
+      "feeling_specific_necessity": false,
+      "observability_after_decisive_loss": "UNDEFINED",
+      "replicated": false,
+      "failure_mode": "NOT_YET_OPERATIONALIZED",
+      "note": "Retained as an open class, not counted as an identified cut."
+    }
+  ],
+  "decision_rule": "IDENTIFIED_SHARED_MINIMUM_CUT only if at least one candidate satisfies all four core gates: spared_by_counterexamples=true, feeling_specific_necessity=true, observability_after_decisive_loss=true, and direct_causal_evidence=true. Otherwise NO_SHARED_MINIMUM_CUT_IDENTIFIED.",
+  "consequence": "Failure means current human causal evidence supports route multiplicity but does not yet distinguish true downstream degeneracy from convergence onto an unidentified distributed or inaccessible bottleneck."
+}
