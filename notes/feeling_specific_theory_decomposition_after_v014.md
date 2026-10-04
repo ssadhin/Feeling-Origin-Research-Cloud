@@ -474,3 +474,220 @@ Before any confirmatory compute:
 7. freeze failure consequences before simulation.
 
 If these cannot be met, the correct result is **operational underdetermination**, not a new simulator.
+
+
+## 18. September 2026 collision: Motivated Emotional Mind (MEM)
+
+The novelty search uncovered another close contemporary program.
+
+Galus & Starzyk's September 2026 Motivated Emotional Mind (MEM) work combines receptor-grounded content, interoceptive/regulatory self-monitoring, affect, and content-specific re-entry into lower sensory/interoceptive maps. A companion mathematical treatment formalizes re-entrant integration of feedforward, lateral, feedback, bodily-motivational and global-affective terms. A later September 2026 comparison of GNWT and MEM explicitly proposes interventions that dissociate sensory re-entry, global availability, report and interoceptive valuation.
+
+Consequence:
+
+> source/proxy re-entry, interoceptive valuation, and architecture-ablation around these variables are **not clean CRFI novelty territory**.
+
+CRFI-S remains a possible operational formalization, not an established new mechanism.
+
+## 19. Human bridge H001 — public false-cardiac-feedback reanalysis
+
+Rather than immediately build another toy organism, the project reanalyzed public trial-level human data from:
+
+- Parrotta et al. (2026), *Exposure to false cardiac feedback alters pain perception and anticipatory cardiac frequency*, eLife, DOI 10.7554/eLife.90013.
+- Public repository: `EP171993/painperception`.
+- Dataset pinned to external commit `692d57f47861684b5144cfd4f3e6f0c9a2c3dc43`, blob SHA `447fff57c91fb5ff761449d98d93737e26b1236c`.
+
+### Exploratory analysis status
+
+**Not preregistered. Not confirmatory. Not a consciousness detector.**
+
+Contrast: Faster versus Slower false cardiac feedback.
+
+Measured mediator: trial-level ECG-derived cardiac measure.
+
+First-person outcomes:
+- LIK = unpleasantness;
+- VAS = pain intensity.
+
+Controls:
+- stimulus intensity;
+- standardized trial index;
+- subject fixed effects.
+
+Uncertainty:
+- 1000-replicate cluster bootstrap resampling subjects.
+
+### Initial HR gate
+
+GitHub Actions run: `37202673284`  
+Head: `6ac260165c88d505304a290490ca4a5ef4d5a42c`  
+Artifact ID: `11303323069`  
+Artifact SHA256: `d8e43726a089dd604f036cd12796686a5dfbd170b9a0c3d3052b94246823ea42`  
+Permanent raw snapshot commit: `964fb83505914c1badba4c6e904b32efc4415bc4`
+
+Interoceptive experiment: 408 analyzed trials, 34 subjects.
+
+#### Unpleasantness (LIK)
+
+- proxy→HR: -0.63815; 95% bootstrap CI approximately [-1.108, -0.221]
+- total Faster-vs-Slower effect: +0.15417; CI [0.0226, 0.2907]
+- residual/direct effect after HR adjustment: +0.15335; CI [0.0238, 0.2846]
+- indirect a×b through HR: +0.00082; CI [-0.0157, 0.0182]
+- estimated mediated fraction: ~0.5%, very uncertain and compatible with zero
+
+#### Pain intensity (VAS)
+
+- proxy→HR: -0.63815; CI approximately [-1.089, -0.172]
+- total Faster-vs-Slower effect: +4.4906; CI [1.669, 7.254]
+- residual/direct effect after HR adjustment: +4.6237; CI [1.766, 7.383]
+- indirect a×b through HR: -0.1332; CI [-0.567, 0.221]
+- estimated mediated fraction: approximately -3%, compatible with zero
+
+The exteroceptive control did not show the same clear total or cardiac effects.
+
+### Sensitivity attack across cardiac summaries
+
+Because the dataset also contains `HRd` and `HRd_Z`, the mediation result was re-run across:
+- HR,
+- HRd,
+- HRd_Z,
+
+and again with a secondary feedback×trial interaction model.
+
+Sensitivity script: `analysis/human_proxy_mediation_sensitivity.py`  
+Script commit: `38a490ea277282c665e7d75357c52d237055dc34`  
+Workflow head: `b510421dd9cf4799ca4cc709f556550a5b1d93b4`  
+GitHub Actions run: `37202996664`  
+Artifact ID: `11303333640`  
+Artifact SHA256: `4ff8b7bd4936dee28950d55366c6c60a670633e56f6f9e8f8ca61c93d0891362`  
+Permanent raw snapshot commit: `4036502f4ef4cc559ff7141f3365292a35285d67`
+
+For **both LIK and VAS, across HR, HRd and HRd_Z**:
+
+1. Faster-vs-Slower feedback significantly changed the cardiac mediator.
+2. The total proxy effect on the first-person outcome was detected.
+3. No cardiac indirect a×b effect was detected; every 95% bootstrap CI included zero.
+4. The residual/direct proxy effect remained detected after adjustment for the cardiac mediator.
+
+Examples of sensitivity CIs:
+
+LIK residual/direct:
+- HR: [0.0286, 0.2845]
+- HRd: [0.0261, 0.2852]
+- HRd_Z: [0.0220, 0.2760]
+
+LIK indirect:
+- HR: [-0.0154, 0.0174]
+- HRd: [-0.0144, 0.0186]
+- HRd_Z: [-0.0150, 0.0276]
+
+VAS residual/direct:
+- HR: [1.922, 7.319]
+- HRd: [1.738, 7.496]
+- HRd_Z: [1.838, 7.438]
+
+VAS indirect:
+- HR: [-0.564, 0.254]
+- HRd: [-0.558, 0.209]
+- HRd_Z: [-0.561, 0.341]
+
+Allowing a feedback×trial term did not reveal a hidden cardiac mediation that reversed this conclusion.
+
+### Correct interpretation
+
+This is a robust constraint on a **strict cardiac-mediation hypothesis**:
+
+> the observed effect of false interoceptive cardiac feedback on pain ratings was not statistically carried by any of the three available ECG-derived cardiac summaries in this exploratory reanalysis.
+
+It is **not** a falsification of Damasio, Solms, active inference, HOTEC, or a sufficiently broad CRFI-S because:
+
+- heart rate is only one physiological/interoceptive channel;
+- mediator timing and measurement may miss the relevant state;
+- post-treatment mediator-outcome confounding is possible;
+- standard a×b mediation is not automatically a natural direct/indirect causal effect;
+- a broad theory can invoke respiratory, vascular, endocrine, nociceptive, central interoceptive or other bodily variables.
+
+This result therefore strengthens the project's demand that any future "source" hypothesis identify its measured source variables **before** seeing the data.
+
+## 20. Pharmacological and natural-denervation constraints
+
+### Randomized beta-blockade during experimentally induced panic
+
+de Vos et al. (2024), *The role of the peripheral and central adrenergic system in the construction of the subjective emotional experience of panic*, Psychopharmacology, DOI 10.1007/s00213-024-06548-2.
+
+Design:
+- double-blind,
+- randomized,
+- placebo-controlled,
+- within-subject crossover,
+- 34 participants,
+- 35% CO2 panic challenge,
+- atenolol: predominantly peripheral beta-1 blockade,
+- metoprolol: peripheral + central beta-1 blockade,
+- placebo.
+
+The drugs reduced tonic heart rate and systolic blood pressure, demonstrating effective physiological manipulation. Yet fear, discomfort and panic-symptom responses to CO2 did not differ by drug condition.
+
+Important limitation:
+- the relative HR increase during CO2 inhalation was **not** eliminated;
+- HR variability could not be assessed;
+- other physiological channels remained intact.
+
+Therefore this study argues against a major necessary role for beta-1 adrenergic tone in generating the subjective panic response, but does not establish body-independence.
+
+### Pure autonomic failure
+
+Work in pure autonomic failure (peripheral autonomic denervation) shows that broad emotional, motivational and social function can remain despite inability to generate normal integrated peripheral autonomic responses. Earlier imaging work reported subtle emotional changes and altered hierarchical bodily representation, not abolition of emotion.
+
+Consequence:
+
+> ongoing integrated autonomic arousal can modulate emotion, but available human evidence does not support a simple rule that such arousal is universally necessary for conscious emotion.
+
+This sharply weakens any CRFI-S formulation that equates the feeling source with a single ongoing peripheral autonomic channel.
+
+## 21. Candidate causal-clamp bridge — not V015
+
+A targeted search did **not find an obvious direct study** combining modern false-cardiac-feedback pain manipulation with pharmacological blockade of the specific autonomic response. This is a lead, not a novelty claim; a deeper systematic novelty search would still be required.
+
+The most informative design would not merely regress out physiology. It would experimentally clamp a relevant bodily effector while manipulating the interoceptive proxy.
+
+### Candidate question
+
+> If false cardiac feedback still changes pain unpleasantness/intensity when the feedback-induced cardiac response is experimentally prevented or strongly attenuated, then the perceptual effect does not require that cardiac effector response as its mediator.
+
+The Parrotta manipulation produces anticipatory cardiac **deceleration**, interpreted as parasympathetic/orienting physiology. Therefore simple beta-1 blockade is not an ideal clamp of the exact reported response. A cardiac-vagal manipulation would be closer mechanistically, but pharmacological blockade introduces its own interoceptive effects and requires clinical safety oversight.
+
+High-dose glycopyrrolate has been used in healthy volunteers to produce peripheral vagal cardiac blockade, but combining such a drug with a false-feedback/pain paradigm would be a new human experimental protocol requiring ethics approval and medical supervision. It is **not** something this project should treat as an informal self-experiment.
+
+### Observable prediction, narrowly stated
+
+The clean mechanistic rival pair is:
+
+- **CARDIAC-EFFECTOR-REQUIRED**: false-feedback modulation of first-person pain must substantially collapse when the relevant cardiac response is clamped.
+- **PERCEPTUAL-INFERENCE-CAN-DISSOCIATE**: false-feedback modulation of first-person pain can persist even when the relevant cardiac effector response is clamped.
+
+This pair is empirically distinguishable.
+
+However, it does **not** by itself separate full HOTEC, Damasio, Solms, N*, IIT, GNW or CRFI, because those theories permit additional causal routes or do not specify this exact cardiac channel.
+
+Therefore this should be treated as a **human mechanistic bridge experiment (H002)**, not as V015 and not as a direct consciousness-theory tournament.
+
+## 22. Current verdict after the human-data turn
+
+The project has gained a real empirical foothold but has not recovered CRFI novelty.
+
+What survives:
+
+1. V014 remains a valid falsification of CRFI behavioral uniqueness.
+2. CRFI-S remains novelty-downgraded because of prior art and source-relabeling.
+3. Human false-feedback data show that changing an interoceptive representation can alter first-person pain ratings even when available cardiac measures do not statistically mediate the effect.
+4. Pharmacological and autonomic-denervation evidence further rejects simplistic one-channel bodily-source necessity.
+5. Strong embodied theories remain alive because the body is multichannel, and selective autonomic manipulations do not remove the whole neural–nonneural loop.
+6. The next scientifically clean target is **causal substitution/clamping of a prespecified bodily channel**, with first-person outcome left free to differ.
+
+### Updated V015 rule
+
+V015 remains **WITHHELD** as a CRFI confirmatory experiment.
+
+Do not promote H001 or H002 into V015 unless a strong named consciousness/feeling theory is shown, from its own commitments, to make a disjoint observable prediction that another strong theory denies.
+
+Otherwise continue the project as empirical constraint mapping and record the remaining phenomenal allocation as underdetermined.
