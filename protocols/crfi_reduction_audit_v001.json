@@ -1,0 +1,93 @@
+{
+  "title":"CRFI Distinct-Theory Reduction Audit v001",
+  "status":"FROZEN_BEFORE_EXECUTION",
+  "purpose":"Apply the previously adopted reduction/kill condition to the operational commitments of CRFI after V014, prior-art attack, feeling-specific decomposition, human H001, and theory discrimination audits.",
+  "kill_condition":"If every operational CRFI commitment maps onto an existing strong theory or a straightforward conjunction of existing mechanisms without yielding a new divergent observable prediction, CRFI is not a distinct theory and must be reduced to a synthesis/implementation framework.",
+  "distinctness_rule":{
+    "prior_art_escape":"A commitment counts as distinct only if its operative requirement is not already present in a strong prior theory and is not a straightforward conjunction of such requirements.",
+    "prediction":"It must yield at least one material, source-supported observable prediction that a strong rival denies under matched conditions.",
+    "ad_hoc_prohibition":"Post-V014 source/proxy refinements do not count as original CRFI novelty unless independently justified and they survive their own falsifiability/novelty tests.",
+    "phenomenal_label_prohibition":"Different phenomenal labels on identical observables do not count as divergent empirical predictions."
+  },
+  "commitments":[
+    {
+      "id":"K1_FIRST_ORDER_INSUFFICIENCY",
+      "commitment":"A local evaluative/content state E can drive automatic response without felt presence; additional system-level conditions are required.",
+      "prior_coverage":["HOTEC","GNWT","N_star","MEM"],
+      "coverage_note":"Higher-order/global/re-entry accounts already distinguish local/first-order processing from conscious experience.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K2_DOMAIN_CAPACITY_C",
+      "commitment":"Feeling requires a sustained, integrated, differentiated, recurrent/re-entrant, repertoire-rich causal domain C.",
+      "prior_coverage":["IIT","GNWT","RPT","N_star"],
+      "coverage_note":"Integration/differentiation/intrinsic causal structure, recurrent processing, global recurrent workspace, and recurrent-stability/integration criteria are established prior commitments.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K3_CONTENT_ADMISSION_L",
+      "commitment":"Specific content E must participate bidirectionally in the wider domain; E changes S trajectory and S/context changes E.",
+      "prior_coverage":["GNWT","N_star","MEM","Active_interoceptive_inference"],
+      "coverage_note":"Top-down workspace-to-local feedback, content-specific counterfactual availability, sensory/interoceptive re-entry, and circular predictive body-brain causality jointly occupy the operational territory.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K4_C_AND_L_PRESENCE_RULE",
+      "commitment":"Presence is modeled as the conjunction C AND L under the project's binary dissociation constraints.",
+      "prior_coverage":["straightforward_conjunction_of_K2_and_K3"],
+      "coverage_note":"The exact Boolean packaging may be project-specific, but V013 established necessity only inside the engineered model class and no strong-rival divergent empirical prediction has been validated.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K5_QUALITY_CAUSAL_GEOMETRY",
+      "commitment":"Phenomenal quality is identified/approximated by intervention-defined relational causal geometry rather than raw activation alone.",
+      "prior_coverage":["IIT","N_star"],
+      "coverage_note":"IIT ties quality to intrinsic cause-effect distinctions/relations; N* explicitly develops perturbation-defined causal trajectory geometry and anchoring.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K6_ORGANISM_RELATIVE_EVALUATION",
+      "commitment":"Feeling-relevant content is organism-relative evaluative/homeostatic significance rather than arbitrary information.",
+      "prior_coverage":["Damasio_Carvalho","Solms","Active_interoceptive_inference","MEM","N_star"],
+      "coverage_note":"Homeostatic feeling, affective extended homeostasis, active interoception, regulatory affect/allostasis, and viability constraints are existing commitments.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K7_REENTRANT_SOURCE_IDENTITY_CRFI_S",
+      "commitment":"Provisional post-V014 refinement: the independently defined current evaluative source itself, not merely a downstream proxy, must be reciprocally embedded.",
+      "prior_coverage":["same_order_self_representational_theories","reflexive_imperativism","Damasio_Carvalho","Solms"],
+      "coverage_note":"Broad self-involvement/source-location territory is prior art; CRFI-S also faces source-relabeling and proxy-equivalence problems.",
+      "current_unique_observable_prediction":false,
+      "post_hoc_refinement":true
+    },
+    {
+      "id":"K8_FUNCTIONAL_AFTEREFFECTS",
+      "commitment":"The CRFI architecture should uniquely support the selected later avoidance, recovery, learning/plasticity, and memory-like consequences of salient events.",
+      "prior_coverage":["recurrent_gating_learning_rival"],
+      "coverage_note":"V014 preregistered held-out test directly falsified behavioral uniqueness: the clean gated-learning rival matched immediate behavior and all frozen post-event equivalence criteria without direct S_to_E feedback.",
+      "current_unique_observable_prediction":false,
+      "directly_falsified":true
+    },
+    {
+      "id":"K9_SUBSTRATE_GENERAL_CAUSAL_REALIZATION",
+      "commitment":"If the relevant causal organization is realized, biological material is not itself the defining requirement.",
+      "prior_coverage":["IIT","N_star","functional_computational_accounts"],
+      "coverage_note":"Substrate-general or causal-organization-based realization is established territory; Damasio supplies an opposing biological-hybrid view, but artificial systems lack independent phenomenal ground truth.",
+      "current_unique_observable_prediction":false
+    },
+    {
+      "id":"K10_CAUSAL_INERT_QUALIA_NO_GO",
+      "commitment":"A causally inert phenomenal permutation is empirically indistinguishable under physical intervention by construction.",
+      "prior_coverage":["causal_underdetermination_and_inverted_spectrum_traditions"],
+      "coverage_note":"The project's V009 simulation usefully formalized the consequence, but the principle is a methodological/no-go constraint rather than a positive distinctive feeling mechanism.",
+      "current_unique_observable_prediction":false,
+      "methodological_not_mechanistic":true
+    }
+  ],
+  "external_gate_results":{
+    "V014_behavioral_uniqueness":"FAIL",
+    "theory_discrimination_audit_v001":"FAIL_NO_V015_ADMISSIBLE_PAIR",
+    "theory_data_identifiability_v001":"expected to be evaluated separately; no distinctness credit unless common identifiable data exist"
+  },
+  "decision_rule":"DISTINCT_THEORY_SURVIVES only if at least one non-post-hoc mechanistic commitment has prior_art_escape=true and current_unique_observable_prediction=true. Otherwise REDUCE_TO_SYNTHESIS_FRAMEWORK."
+}
