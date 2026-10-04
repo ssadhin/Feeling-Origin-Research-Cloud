@@ -1,0 +1,1 @@
+Trigger DENS one-subject multimodal schema inventory v001.\nAnalysis commit: b338b5c83e0d6a6be6633951bfe8f4e583a024e7\n
