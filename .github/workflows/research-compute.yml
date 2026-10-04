@@ -1,0 +1,68 @@
+﻿name: Research Compute
+
+on:
+  workflow_dispatch:
+    inputs:
+      workload:
+        description: Workload to run
+        required: true
+        type: choice
+        default: smoke
+        options:
+          - smoke
+          - core
+          - ablation
+      trials:
+        description: Ablation parameter sets (used only for ablation)
+        required: false
+        default: "2500"
+
+permissions:
+  contents: read
+
+jobs:
+  compute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Runner info
+        run: |
+          echo "CPU"
+          lscpu
+          echo "MEMORY"
+          free -h
+          echo "DISK"
+          df -h .
+
+      - name: Run smoke
+        if: ${{ inputs.workload == 'smoke' }}
+        run: python cloud/smoke.py
+
+      - name: Run CRFI core suite
+        if: ${{ inputs.workload == 'core' }}
+        run: python cloud/run_core.py
+
+      - name: Run CRFI ablation
+        if: ${{ inputs.workload == 'ablation' }}
+        run: python cloud/run_ablation.py --trials "${{ inputs.trials }}"
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-results-${{ github.run_id }}
+          path: results/
+          if-no-files-found: warn
+          retention-days: 14
