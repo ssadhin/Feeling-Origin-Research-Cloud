@@ -1,0 +1,1 @@
+Trigger frozen O002-G1 joint unseen-person × unseen-stimulus generalization.\nProtocol commit: 049bb88b4edeecf494a6adeb0ce6076e6ce59adf\nAnalysis commit: 7ce5684a62dd2baf83e301d681c670d145c77e60\nParent O002 primary run: 37217735818\n
