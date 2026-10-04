@@ -1,0 +1,29 @@
+name: CASE Snippet Probe Once
+
+on:
+  push:
+    paths:
+      - "triggers/case_snippet_probe_v001.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Probe CASE snippet
+        run: python analysis/case_snippet_probe.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: case-snippet-probe-${{ github.run_id }}
+          path: results/case_snippet_probe.json
+          if-no-files-found: error
+          retention-days: 14
