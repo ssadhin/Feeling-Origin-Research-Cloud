@@ -1,5 +1,5 @@
 from __future__ import annotations
-import csv, io, json, math, os, tempfile, urllib.request
+import argparse, csv, io, json, math, os, tempfile, urllib.request
 from collections import defaultdict
 from pathlib import Path
 
@@ -137,13 +137,14 @@ def parse_subject_session_run(path):
     run=fn.split("_task-run")[1].split("_")[0]
     return sub,ses,run
 
-def extract_dataset():
+def extract_dataset(max_runs=None):
     manifest=json.loads(get(BASE+"manifest.json"))
     entries=manifest if isinstance(manifest,list) else manifest.get("files",manifest.get("entries",[]))
     edfs={pof(e):e for e in entries if pof(e).endswith("_eeg.edf")}
     events={pof(e):e for e in entries if pof(e).endswith("_events.tsv")}
     rows=[]; qc=[]; td=Path(tempfile.mkdtemp(prefix="o001_"))
     for k,path in enumerate(sorted(edfs)):
+        if max_runs is not None and k>=max_runs: break
         stem=path[:-8] # remove _eeg.edf
         ep=stem+"_events.tsv"
         if ep not in events: qc.append({"path":path,"status":"NO_EVENTS"}); continue
@@ -301,8 +302,25 @@ def bootstrap(folds,key):
             "n_subjects":len(subs),"n_folds":len(folds)}
 
 def main():
-    rows,qc=extract_dataset()
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--max-runs",type=int,default=None)
+    ap.add_argument("--extract-only",action="store_true")
+    args=ap.parse_args()
+    rows,qc=extract_dataset(args.max_runs)
     okruns=[x for x in qc if x["status"]=="OK"]
+    if args.extract_only:
+        out={"status":"O001_EXTRACTION_PREFLIGHT_ONLY","n_rows":len(rows),"n_ok_runs":len(okruns),
+             "subjects":sorted({r["subject"] for r in rows}),"qc":qc,
+             "feature_lengths":{
+               "baseline":len(baseline_vec(rows[0])) if rows else 0,
+               "autonomic":len(rows[0]["auto"]) if rows else 0,
+               "eeg":len(rows[0]["eeg"]) if rows else 0,
+               "eeg_nomotor":len(rows[0]["eeg_nomotor"]) if rows else 0,
+               "s2_present":bool(rows and any("auto_s2" in r for r in rows))
+             }}
+        (OUT/"o001_extraction_preflight.json").write_text(json.dumps(out,indent=2),encoding="utf-8")
+        print(json.dumps(out,indent=2))
+        return
     subs=sorted({r["subject"] for r in rows})
     folds=evaluate(rows)
     nm=evaluate(rows,no_motor=True)
