@@ -1,4 +1,4 @@
-﻿name: Research Compute
+name: Research Compute
 
 on:
   workflow_dispatch:
@@ -12,10 +12,27 @@ on:
           - smoke
           - core
           - ablation
+          - organism_v014
       trials:
         description: Ablation parameter sets (used only for ablation)
         required: false
         default: "2500"
+      organism_dev:
+        description: Development worlds for organism_v014
+        required: false
+        default: "40"
+      organism_test:
+        description: Held-out worlds for organism_v014
+        required: false
+        default: "120"
+      organism_tune:
+        description: Rival tuning candidates for organism_v014
+        required: false
+        default: "30"
+      organism_test_start:
+        description: First held-out seed for organism_v014
+        required: false
+        default: "50000"
 
 concurrency:
   group: research-compute
@@ -62,6 +79,15 @@ jobs:
         if: ${{ inputs.workload == 'ablation' }}
         run: python cloud/run_ablation.py --trials "${{ inputs.trials }}"
 
+      - name: Run virtual organism v014
+        if: ${{ inputs.workload == 'organism_v014' }}
+        run: >-
+          python cloud/run_organism.py
+          --dev "${{ inputs.organism_dev }}"
+          --test "${{ inputs.organism_test }}"
+          --tune "${{ inputs.organism_tune }}"
+          --test-start "${{ inputs.organism_test_start }}"
+
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v7
@@ -70,5 +96,3 @@ jobs:
           path: results/
           if-no-files-found: warn
           retention-days: 14
-
-
