@@ -1,0 +1,65 @@
+{
+  "title": "O002-H1 Prior-Report Lag-Depth Robustness / Measurement-Inertia Attack",
+  "status": "FROZEN_BEFORE_RESULT",
+  "purpose": "Test whether the dominance of the immediate prior self-report reflects a longer-lived affect-state signal or mainly near-target annotation/joystick persistence, and determine whether physiology gains incremental value as prior-report information is moved farther from the future target.",
+  "parent_data": {
+    "source": "Frozen O002 CASE feature table",
+    "feature_snapshot": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+    "primary_run": 37217735818,
+    "rows": 3300,
+    "subjects": 30,
+    "anchor_spacing_seconds": 10
+  },
+  "construction": {
+    "lag0": "Current row prior same-axis report, originally mean over anchor-5s to anchor-1s; target is anchor to anchor+5s. Approximate gap to target = 1s.",
+    "lag1": "Previous anchor's frozen prior report within the same subject×video sequence. Because anchors are 10s apart, this corresponds to approximately current anchor-15s to anchor-11s. Approximate gap to target = 11s.",
+    "lag2": "Two anchors back within the same subject×video sequence, approximately current anchor-25s to anchor-21s. Approximate gap to target = 21s.",
+    "rule": "No interpolation or new label extraction. Lagged predictors are deterministic shifts of the already frozen O002 prior-report variable within subject×video after sorting by time_norm."
+  },
+  "targets": [
+    "valence",
+    "arousal"
+  ],
+  "evaluation": "Leave-one-subject-out. Inner GroupKFold tuning on training subjects only.",
+  "models": [
+    "context_only = video_id + normalized time-within-video",
+    "prior_lag0 = context + lag0 same-axis report",
+    "prior_lag1 = context + lag1 same-axis report",
+    "prior_lag2 = context + lag2 same-axis report",
+    "phys_lag0 = context + lag0 + exact 29 frozen peripheral features",
+    "phys_lag1 = context + lag1 + exact 29 frozen peripheral features",
+    "phys_lag2 = context + lag2 + exact 29 frozen peripheral features"
+  ],
+  "learner": "Ridge regression; alphas [0.1,1,10,100,1000]; standardization/imputation fit on training folds only.",
+  "metric": "Held-out participant MAE",
+  "uncertainty": "5000 paired bootstrap resamples over subject-level MAE differences.",
+  "primary_diagnostics": {
+    "persistence_depth": [
+      "MAE(context_only)-MAE(prior_lag0)",
+      "MAE(context_only)-MAE(prior_lag1)",
+      "MAE(context_only)-MAE(prior_lag2)"
+    ],
+    "immediate_advantage": "MAE(prior_lag1)-MAE(prior_lag0); positive means the near-target report has extra predictive advantage over the 11s-gap report.",
+    "physiology_increment": [
+      "MAE(prior_lag0)-MAE(phys_lag0)",
+      "MAE(prior_lag1)-MAE(phys_lag1)",
+      "MAE(prior_lag2)-MAE(phys_lag2)"
+    ]
+  },
+  "interpretation_rules": {
+    "PERSISTENCE_BEYOND_IMMEDIATE_REPORT": "lag1 and/or lag2 context-vs-prior CI strictly above zero. Supports a temporally extended state-persistence signal, though still not pure psychological inertia.",
+    "NEAR_REPORT_ONLY": "lag0 improves context but lag1 and lag2 do not. Strong warning that immediate baseline dominance may be dominated by annotation/joystick persistence.",
+    "PHYSIOLOGY_EMERGES_WITH_OLDER_PRIOR": "physiology increment CI is non-positive at lag0 but strictly positive at lag1 or lag2. Supports redundancy with recent report rather than absence of physiological information.",
+    "NO_PHYSIOLOGY_INCREMENT_ACROSS_LAGS": "all physiology increment CIs fail to be strictly positive. Strengthens a broad short-horizon incremental-utility negative result."
+  },
+  "firewall": [
+    "This is a robustness/measurement attack, not a confirmatory theory-of-feeling experiment.",
+    "Lagged self-report remains a behavioral measurement and can still contain annotation mechanics, reaction delay, and slow label dynamics.",
+    "No causal inference from physiology to feeling and no phenomenal/consciousness inference.",
+    "Do not rename report persistence as affective inertia unless the lag-depth pattern supports it and measurement alternatives remain acknowledged."
+  ],
+  "external_rationale": [
+    "CASE annotations are joystick-generated continuous traces and the released interpolated stream was linearly interpolated to a fixed 50ms grid.",
+    "Continuous affect literature documents annotator reaction lag and slow/smoothed label dynamics; therefore immediate prior-label baselines require a measurement-inertia attack."
+  ]
+}
