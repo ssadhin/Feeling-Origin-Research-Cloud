@@ -1,0 +1,25 @@
+name: O001-E1 Marker Probe Once
+on:
+  push:
+    paths:
+      - "triggers/o001_e1_marker_probe_v001.txt"
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "numpy>=2,<3"
+      - run: python analysis/o001_e1_marker_probe.py
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o001-e1-marker-probe-${{ github.run_id }}
+          path: results/o001_e1_marker_probe.json
+          if-no-files-found: error
+          retention-days: 14
