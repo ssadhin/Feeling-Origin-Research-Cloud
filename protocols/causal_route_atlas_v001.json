@@ -1,0 +1,241 @@
+{
+  "title": "Loop 005 Causal Route Atlas v001",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "question": "At the current resolution of direct human causal evidence, does felt affect depend on one globally necessary/sufficient anatomical route, or do the data favor multiple substitutable/distributed causal routes?",
+  "scope": "Human causal lesion, pharmacological deafferentation/blockade, and direct intracranial stimulation evidence with subjective affect whenever available.",
+  "definitions": {
+    "global_necessity": "A candidate route is globally necessary only if removing it abolishes the target class of felt affect across relevant elicitation routes. A verified counterexample with the target feeling preserved refutes the universal claim, while route/content-specific necessity may remain.",
+    "isolated_sufficiency": "A candidate route counts as isolatedly sufficient only if its selective activation reliably evokes the target felt affect and evidence excludes the interpretation that stimulation merely recruits a wider necessary network.",
+    "modulation": "A perturbation changes intensity/probability/quality of feeling without demonstrating necessity or sufficiency.",
+    "route_substitution": "A target feeling remains possible through a causally distinct elicitation route after loss/attenuation of a canonical route.",
+    "route_multiplicity": "Direct perturbations at multiple anatomically distinct sites can evoke overlapping reported affective states.",
+    "degeneracy_warning": "Multiple effective sites do not by themselves prove independent sufficient generators; they may converge on a shared downstream network. Therefore the atlas uses EVIDENCE_FAVORS_ROUTE_MULTIPLICITY, not a claim of proven independent generators."
+  },
+  "rules": {
+    "necessity_kill": "A high-confidence direct human lesion/loss result preserving the relevant feeling sets global_necessity=false for that exact candidate, but does not erase content-specific roles.",
+    "stimulation_caution": "Direct stimulation that evokes a feeling supports causal participation. It does not establish isolated sufficiency when spread/network propagation is plausible.",
+    "physiology_dissociation": "Reliable autonomic physiology without subjective emotion counts against equations of that stimulated route's autonomic output with felt presence.",
+    "no_behavior_proxy": "Social cognition, recognition, choice, or autonomic output alone are not treated as direct evidence of current subjective feeling.",
+    "null_preservation": "Null and negative findings are retained."
+  },
+  "evidence": [
+    {
+      "id": "A1_AMYGDALA_BILATERAL_LESION_CO2",
+      "route": "amygdala",
+      "perturbation": "focal bilateral amygdala damage",
+      "target": "fear/panic",
+      "result": "35% CO2 evoked fear and panic attacks in all three lesion patients",
+      "causal_class": [
+        "necessity_challenge",
+        "route_substitution"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "HIGH_FOR_COUNTEREXAMPLE",
+      "source": "Feinstein et al. 2013, Nature Neuroscience, DOI 10.1038/nn.3323, PMID 23377128",
+      "inference": "Refutes universal amygdala necessity for human fear/panic; does not refute amygdala importance for exteroceptive/anticipatory fear."
+    },
+    {
+      "id": "A2_AMYGDALA_BILATERAL_LESION_ISOPROTERENOL",
+      "route": "amygdala",
+      "perturbation": "bilateral amygdala damage plus peripheral beta-adrenergic agonist",
+      "target": "anxiety/panic",
+      "result": "isoproterenol induced anxiety in both patients and full panic in one",
+      "causal_class": [
+        "necessity_challenge",
+        "alternative_interoceptive_route"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "MODERATE",
+      "source": "Khalsa et al. 2016, Frontiers in Human Neuroscience, PMCID PMC4804013",
+      "inference": "Supports amygdala-independent cardiorespiratory/interoceptive routes to aversive feeling."
+    },
+    {
+      "id": "A3_AMYGDALA_STIM_PHYSIOLOGY_WITHOUT_FEELING",
+      "route": "amygdala",
+      "perturbation": "direct intracranial electrical stimulation",
+      "target": "autonomic defensive state and subjective emotion",
+      "result": "9 patients: dose-dependent EDA increase and HR deceleration were reliable; subjective emotional responses occurred only in a minority (2/9)",
+      "causal_class": [
+        "causal_participation",
+        "physiology_feeling_dissociation"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "HIGH",
+      "source": "Inman et al. 2018/2020, Human Brain Mapping, PMID 29551365, PMCID PMC6139084",
+      "inference": "Amygdala activation can drive defensive autonomic physiology without felt emotion; simple autonomic-output=feeling sufficiency is unsupported."
+    },
+    {
+      "id": "I1_BILATERAL_INSULA_DESTRUCTION",
+      "route": "insula",
+      "perturbation": "complete bilateral insular destruction in patient B after herpes encephalitis",
+      "target": "broad body and emotional feelings",
+      "result": "pain, pleasure, hunger, thirst, happiness, sadness, apprehension, irritation, caring and compassion remained reportable",
+      "causal_class": [
+        "necessity_challenge"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "HIGH_COUNTEREXAMPLE_LOW_GENERALIZATION",
+      "source": "Damasio et al. 2013, Cerebral Cortex, DOI 10.1093/cercor/bhs077, PMID 22473895",
+      "inference": "Refutes the insula as a universally necessary exclusive platform for feeling; single-case and extensive additional lesions limit population generalization."
+    },
+    {
+      "id": "I2_INSULA_STIMULATION",
+      "route": "insula",
+      "perturbation": "direct intracranial electrical stimulation",
+      "target": "visceral sensations and anxiety",
+      "result": "insula stimulation can evoke visceral/autonomic sensations; anxiety/foreboding occurred at a small subset of anterior/middle insular contacts",
+      "causal_class": [
+        "causal_participation",
+        "partial_sufficiency"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "MODERATE",
+      "source": "Subjective states induced by intracranial electrical stimulation matches the cytoarchitectonic organization of the human insula, PMCID PMC10893903",
+      "inference": "Insula can causally contribute to conscious bodily/affective states but responses are heterogeneous and do not establish isolated/global sufficiency."
+    },
+    {
+      "id": "D1_LARGE_DES_DISTRIBUTED_EMOTION",
+      "route": "distributed_operculo_insulo_limbic",
+      "perturbation": "12,088 direct bipolar stimulations in 203 epilepsy patients",
+      "target": "visceral and emotional sensations",
+      "result": "115 emotional sensations; fear/anxiety associated with amygdala, anterior cingulate, hippocampus, anterior insula and frontal operculum; about half of emotional sensations occurred without a reported visceral sensation",
+      "causal_class": [
+        "route_multiplicity",
+        "causal_participation"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "HIGH",
+      "source": "Visceral and emotional responses to direct electrical stimulations of the cortex, 2023, PMCID PMC9852394",
+      "inference": "Overlapping affective experiences can be evoked from multiple distinct limbic/operculo-insular sites."
+    },
+    {
+      "id": "D2_DES_CASE_SERIES_MULTIPLE_SITES",
+      "route": "distributed_cortical_limbic",
+      "perturbation": "direct electrical stimulation case series plus literature review",
+      "target": "mirth, excitement, fear, sadness, calmness",
+      "result": "emotions were evoked from superior frontal gyrus, frontal/parietal operculum, insula, middle cingulate, amygdala, hippocampus",
+      "causal_class": [
+        "route_multiplicity",
+        "causal_participation"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "MODERATE",
+      "source": "Emotional experience elicited by direct electrical stimulation: Case series and literature review, 2023, PMCID PMC10235553",
+      "inference": "Reinforces anatomical route multiplicity; stimulation spread prevents isolated-node sufficiency claims."
+    },
+    {
+      "id": "HYP1_HYPOTHALAMUS_STIM",
+      "route": "ventromedial_hypothalamic_region",
+      "perturbation": "direct electrical stimulation in one intracranially monitored patient",
+      "target": "complex negative affect",
+      "result": "reproducible profound shame, sadness and fear; single pulses also evoked responses in amygdala, hippocampus, vmPFC/OFC, ACC and insula",
+      "causal_class": [
+        "causal_participation",
+        "network_propagation"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "MODERATE_SINGLE_CASE",
+      "source": "Parvizi et al. 2022, Brain Stimulation, DOI 10.1016/j.brs.2022.04.008, PMID 35413481",
+      "inference": "Supports hypothalamic causal importance but simultaneously demonstrates rapid network recruitment; isolated hypothalamic sufficiency is not established."
+    },
+    {
+      "id": "PAG1_DPAG_STIMULATION",
+      "route": "dorsal_periaqueductal_gray",
+      "perturbation": "neurosurgical stimulation summarized in human panic literature",
+      "target": "panic-like anxiety",
+      "result": "dPAG stimulation in humans reported to induce autonomic arousal and subjective anxiety",
+      "causal_class": [
+        "causal_participation",
+        "partial_sufficiency"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "LOW_TO_MODERATE_OLDER_EVIDENCE",
+      "source": "Graeff et al. 1995, Psychiatry Research, DOI 10.1016/0165-1781(95)02673-k, PMID 7480384",
+      "inference": "Supports a brainstem route capable of contributing to panic-like feeling; global necessity remains untested."
+    },
+    {
+      "id": "AUT1_PURE_AUTONOMIC_FAILURE",
+      "route": "peripheral_autonomic_feedback",
+      "perturbation": "peripheral autonomic denervation in pure autonomic failure",
+      "target": "social/emotional/motivational function",
+      "result": "patients were broadly unimpaired on motivational decision-making, emotion recognition, theory of mind and social cognition; emotional attribution showed a mild deficit",
+      "causal_class": [
+        "necessity_challenge",
+        "modulation"
+      ],
+      "direct_subjective_report": false,
+      "confidence": "MODERATE_INDIRECT_FOR_FEELING",
+      "source": "Heims et al. 2004, Neuropsychologia, PMID 15381028",
+      "inference": "Strongly weakens claims that ongoing peripheral autonomic feedback is globally necessary for emotional/social functioning, but does not by itself establish preservation of every current feeling."
+    },
+    {
+      "id": "AUT2_BETA_BLOCKADE_CO2_PANIC",
+      "route": "beta1_adrenergic_peripheral_and_central",
+      "perturbation": "randomized double-blind crossover atenolol/metoprolol/placebo before 35% CO2",
+      "target": "subjective panic/fear/discomfort",
+      "result": "beta blockers lowered tonic heart rate and blood pressure, but fear, discomfort and panic symptom responses did not differ by drug condition",
+      "causal_class": [
+        "necessity_challenge",
+        "modulation"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "HIGH_FOR_BETA1_ROUTE",
+      "source": "de Vos et al. 2024, Psychopharmacology, DOI 10.1007/s00213-024-06548-2, PMID 38363344",
+      "inference": "Beta1 adrenergic tone is not a demonstrated necessary carrier of CO2-induced subjective panic; relative HR response and other body channels remained."
+    },
+    {
+      "id": "H001_FALSE_CARDIAC_FEEDBACK_REANALYSIS",
+      "route": "interoceptive_representation_vs_measured_cardiac_state",
+      "perturbation": "false faster versus slower cardiac feedback in public pain dataset",
+      "target": "pain unpleasantness and intensity",
+      "result": "project reanalysis found robust subjective feedback effects not detectably mediated by HR, HRd or HRd_Z",
+      "causal_class": [
+        "representation_effect",
+        "measured_mediation_negative"
+      ],
+      "direct_subjective_report": true,
+      "confidence": "EXPLORATORY_PROJECT_REANALYSIS",
+      "source": "Parrotta et al. 2026 eLife DOI 10.7554/eLife.90013; project runs 37202673284 and 37202996664",
+      "inference": "Constrains strict measured-cardiac mediation only; does not establish body independence or a phenomenal bearer."
+    }
+  ],
+  "precommitted_candidate_assessments": {
+    "amygdala": {
+      "global_necessity": "REFUTED",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED",
+      "route_specific_roles": "SUPPORTED"
+    },
+    "insula": {
+      "global_necessity": "REFUTED",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED",
+      "route_specific_roles": "SUPPORTED"
+    },
+    "peripheral_autonomic_feedback": {
+      "global_necessity": "STRONGLY_WEAKENED_NOT_CLEANLY_REFUTED_FOR_ALL_FEELING",
+      "isolated_sufficiency": "NOT_ESTABLISHED",
+      "causal_participation": "SUPPORTED_MODULATORY"
+    },
+    "ventromedial_hypothalamic_region": {
+      "global_necessity": "UNKNOWN",
+      "isolated_sufficiency": "NOT_ESTABLISHED_DUE_NETWORK_PROPAGATION",
+      "causal_participation": "SUPPORTED"
+    },
+    "dorsal_periaqueductal_gray": {
+      "global_necessity": "UNKNOWN",
+      "isolated_sufficiency": "PARTIAL_OLDER_SUPPORT_NOT_ISOLATED",
+      "causal_participation": "SUPPORTED_WITH_CAVEATS"
+    },
+    "distributed_operculo_insulo_limbic_routes": {
+      "route_multiplicity": "SUPPORTED",
+      "single_common_downstream_bottleneck": "UNKNOWN"
+    }
+  },
+  "atlas_gate": {
+    "route_multiplicity_requires": "At least one large human DES dataset with subjective emotion from >=3 anatomically distinct regions.",
+    "substitution_requires": "At least one verified loss of a canonical candidate with preservation of the same affect class through another elicitation route.",
+    "physiology_feeling_dissociation_requires": "A direct perturbation that reliably changes emotion-related physiology while subjective emotion is absent in most tested cases.",
+    "single_anatomical_source_survives_only_if": "No candidate necessity counterexample exists and a selective sufficiency/necessity chain identifies one exclusive route."
+  }
+}
