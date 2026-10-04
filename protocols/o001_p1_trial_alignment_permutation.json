@@ -1,0 +1,52 @@
+{
+  "title": "O001-P1 Trial-Alignment Permutation Replication",
+  "status": "FROZEN_BEFORE_RESULT",
+  "purpose": "Test whether O002's REAL_SIGNAL_BUT_NO_INCREMENT pattern generalizes to independent O001 EEG+autonomic trial data: real trial-aligned physiology should outperform category-matched misaligned physiology even when the frozen strong prior-report/context baseline is not improved.",
+  "source": {
+    "feature_snapshot": "results_snapshots/o001_feature_rows_run-37214461250.jsonl",
+    "primary_snapshot": "results_snapshots/observational-multimodal-redundancy-o001-run-37214461250.json",
+    "primary_run": 37214461250,
+    "n_subjects": 19,
+    "n_trials": 1663
+  },
+  "targets": [
+    "valence",
+    "arousal"
+  ],
+  "evaluation": "Leave-one-subject-out using the same held-out subjects as O001 primary.",
+  "baseline": "target_code + music_id + immediately prior same-axis self-report",
+  "modalities": [
+    "autonomic",
+    "eeg",
+    "combined"
+  ],
+  "model": {
+    "learner": "Ridge",
+    "preprocessing": "Exactly the O001 primary preprocessing: one-hot target_code/music_id; standardized prior; autonomic standardized; EEG standardized then PCA(20).",
+    "alpha_rule": "Reuse each target×heldout-subject×modality alpha selected in the frozen O001 primary. No retuning after permutation."
+  },
+  "null_control": {
+    "type": "within-subject × target_code circular permutation of the complete physiology vector",
+    "permutations": 200,
+    "seed_base": 91000,
+    "ordering": "sort each subject×target_code group deterministically by run then onset then trial; circularly shift by a non-zero offset",
+    "vector_rule": "All EEG and autonomic features are shifted together to preserve their multivariate covariance structure.",
+    "rationale": "Preserves participant identity, coarse intended affect/target category, feature distributions and cross-modal covariance while breaking exact trial/music alignment.",
+    "limitation": "music_id is effectively unique within participant in the frozen O001 table, so exact-stimulus identity cannot be preserved by a nontrivial within-participant permutation. A positive alignment contrast may therefore contain stimulus-specific as well as subjective-affect-specific physiology."
+  },
+  "primary_quantity": "For each held-out subject, target, and modality: mean over permutations [MAE(category-matched shifted physiology)-MAE(real trial-aligned physiology)]. Positive values favor real alignment.",
+  "uncertainty": "5000 paired subject bootstrap resamples for each target×modality primary contrast.",
+  "decision": {
+    "EXTERNAL_REAL_SIGNAL_REPLICATION": "At least the autonomic or combined modality has a primary CI strictly above zero for both valence and arousal, while its frozen O001 Ridge model did not establish increment beyond the strong baseline.",
+    "PARTIAL_ALIGNMENT_REPLICATION": "A primary CI is strictly above zero for some target/modality combinations but the both-axis external pattern is incomplete.",
+    "NO_ALIGNMENT_REPLICATION": "No target/modality primary CI is strictly above zero.",
+    "SHIFTED_BETTER_ANOMALY": "Any primary CI strictly below zero; investigate model/control mismatch without post-hoc rescue."
+  },
+  "relation_to_o001_s1": "O001-S1 nonlinear sensitivity found a small ExtraTrees valence increment. O001-P1 uses the frozen O001 Ridge primary only and must not erase or reinterpret that sensitivity.",
+  "firewall": [
+    "Observational predictive replication only.",
+    "Positive real-vs-shifted alignment does not establish causal physiology-to-feeling influence.",
+    "Because exact music identity cannot be preserved, alignment evidence may include stimulus-specific physiological structure.",
+    "No phenomenal identity or consciousness inference."
+  ]
+}
