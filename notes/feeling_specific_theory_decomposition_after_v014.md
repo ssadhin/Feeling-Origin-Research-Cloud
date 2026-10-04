@@ -757,3 +757,133 @@ These opposite interaction directions are **NOT YET FROZEN**. Two unresolved pre
 2. that MEM's primary formulation really commits to a smaller first-person false-feedback effect under impaired interoceptive re-entry, rather than allowing compensation elsewhere.
 
 Until both survive a steelman/prior-art attack, this remains H003 hypothesis generation and is not V015.
+
+
+## 25. H003 opposite-interaction hypothesis rejected before preregistration
+
+The provisional H003 idea proposed an opposite interaction under posterior-insula LIFU:
+
+- active interoceptive inference: reduced ascending precision -> larger top-down false-feedback effect;
+- MEM: impaired interoceptive re-entry -> smaller false-feedback effect.
+
+This exact contrast is **REJECTED AS UNSUPPORTED** and must not be treated as a prediction.
+
+Reasons:
+1. Posterior-insula LIFU modulation of the heartbeat-evoked potential does not by itself identify a reduction in interoceptive precision. HEP amplitude can reflect multiple components of interoceptive processing, prediction, prediction error, attention, and precision weighting.
+2. MEM explicitly predicts that effective disruption of modality-specific re-entry should alter phenomenal quality, but its primary formulation does not license the specific claim that the behavioral effect of false cardiac feedback must decrease under the available LIFU manipulation.
+3. Therefore the proposed opposite-sign interaction would have depended on assumptions added by this project rather than source-supported theory commitments.
+
+H003 is preserved as a failed hypothesis-generation step. Do not revive it without new evidence that establishes both mappings independently.
+
+## 26. Theory-to-data identifiability audit v001
+
+A second gate asked whether available public human datasets permit a **fair direct quantitative comparison** between MEM and a hierarchical Bayesian interoceptive model without inventing theory-extraneous observation mappings.
+
+Frozen protocol:
+- `protocols/theory_data_identifiability_v001.json`
+- commit `4032d12a481aff36844cc9579c705df3cac267f3`
+
+Executable audit:
+- `analysis/theory_data_identifiability_v001.py`
+- commit `5c4b018e480b3624b9b34332c8a3f50ddc2dd3b5`
+
+Cloud:
+- run `37205213130`
+- head `93a9995eedb6646f85cc1672fdcd6ffbb2142d16`
+- artifact ID `11303709123`
+- artifact SHA256 `8307d1a4701d5fddba1dd62069e2f42570d693f4a7566ed71233b09ded81fa8c`
+- permanent snapshot: `results_snapshots/theory_data_identifiability_v001.json`, snapshot commit `a13b5ab7e8dcce9b0d6ca3856bbfe037b3eddcce`
+
+Verdict:
+> **FAIL_NO_COMMON_IDENTIFIABLE_DATASET**
+
+H001 Parrotta pain/false-feedback data:
+- MEM FAIL: key reconstruction/context/allostatic variables and the LIK/VAS observation mapping are absent or implementation-dependent.
+- Published hierarchical Bayesian heartbeat-discrimination model FAIL: its source-defined observation model is sync/async heartbeat choice, not LIK/VAS pain ratings.
+
+Public heartbeat-discrimination training dataset:
+- MEM FAIL: no source-specified heartbeat-discrimination likelihood, semblion training/prototype history, or parameter-recovery procedure for the task.
+- Hierarchical Bayesian model PASS on its own task: public generative model, fitting code, identifiability simulation, and parameter recovery exist.
+
+This asymmetry is **not evidence that Bayesian interoception is the true theory of feeling**. It is evidence about model maturity and task-specific identifiability.
+
+## 27. CRFI distinct-theory reduction audit v001 — kill condition fired
+
+The project previously adopted this kill condition:
+
+> If every operational CRFI commitment maps onto an existing strong theory or a straightforward conjunction of existing mechanisms without yielding a new divergent observable prediction, CRFI is not a distinct theory and must be reduced to a synthesis/implementation framework.
+
+That condition was applied explicitly and frozen before execution.
+
+Frozen protocol:
+- `protocols/crfi_reduction_audit_v001.json`
+- commit `3115ec402cdb66a01d70559907db11775c5d0c40`
+
+Executable audit:
+- `analysis/crfi_reduction_audit_v001.py`
+- commit `ff81be7e5177b467306d2b4c0d149c49199cedd5`
+
+Cloud:
+- run `37205589588`
+- head `82344838e8913b233951540eeca069dda1d078b5`
+- artifact ID `11303958812`
+- artifact SHA256 `bb0c15698cba06d3c2f0f8d10b5a23bf90f9a2baa1d28bed4dfb160b87f33e00`
+- permanent snapshot: `results_snapshots/crfi_reduction_audit_v001.json`
+- snapshot commit `f643688015d7708c6f55909d18853175160adb26`
+
+Result:
+- 10 CRFI commitments audited;
+- 0 distinct survivors;
+- official verdict:
+
+> **REDUCE_TO_SYNTHESIS_FRAMEWORK**
+
+Commitment-level result:
+- First-order insufficiency -> covered by HOTEC/GNWT/N*/MEM.
+- Domain capacity C -> IIT/GNWT/RPT/N*.
+- Bidirectional content admission L -> GNWT/N*/MEM/active interoceptive inference.
+- C AND L packaging -> straightforward conjunction; no validated new divergent observable prediction.
+- Causal quality geometry -> IIT/N*.
+- Organism-relative evaluative significance -> Damasio/Carvalho, Solms, active interoception, MEM, N*.
+- CRFI-S source identity -> prior-art overlap plus source-relabeling/proxy-equivalence problems; post-V014 refinement.
+- Claimed unique functional aftereffects -> directly falsified by V014's clean recurrent-gating rival.
+- Substrate-general causal realization -> IIT/N*/functional-computational accounts.
+- Causally inert qualia no-go -> useful methodological constraint, not a distinct positive feeling mechanism.
+
+### Consequence
+
+CRFI must no longer be presented as:
+- the discovered origin of feeling;
+- a distinct new consciousness mechanism;
+- the winning theory of this project.
+
+CRFI may still be retained as:
+- a synthesis vocabulary;
+- an engineering architecture;
+- a benchmark implementation;
+- a historical record of hypotheses that generated useful falsification tests.
+
+V009, H001, V014, and other project results remain valid on their own terms.
+
+A future revival of CRFI as a distinct theory would require genuinely new evidence satisfying the original distinctness/novelty gates. Reinterpretation of the existing failures is not sufficient.
+
+## 28. Transition to the next research loop
+
+The Feeling Origin Research project continues, but it is no longer CRFI-centered.
+
+The evidence accumulated so far points toward a different empirical problem:
+
+> **Which causal routes are necessary, sufficient, substitutable, or redundant for changes in reported felt affect?**
+
+This should be approached as a causal route atlas / minimum-cut problem, not as an immediate new metaphysical identity theory.
+
+The next loop should:
+1. catalogue causal interventions across peripheral autonomic, interoceptive cortical, limbic, brainstem, higher-order/global, and representational routes;
+2. distinguish activation/sufficiency evidence from blockade/necessity evidence;
+3. preserve route-specific and content-specific dissociations;
+4. explicitly model causal degeneracy and compensation;
+5. search for minimum intervention sets that eliminate or preserve a first-person feeling outcome while keeping consciousness/report capacity intact;
+6. avoid treating known neural degeneracy or distributed emotion as a novel discovery.
+
+Working name:
+> **Loop 005 — Causal Route Mapping and Degeneracy of Felt Affect**
