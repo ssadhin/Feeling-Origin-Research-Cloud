@@ -1,0 +1,198 @@
+{
+  "title": "Loop 005 Observational Multimodal Redundancy Bridge O001",
+  "status": "FROZEN_BEFORE_TARGET_MODEL_FIT",
+  "dataset": {
+    "primary": "NEMAR on002722 / OpenNeuro ds002722 calibration dataset",
+    "version": "v1.0.0",
+    "manifest": "https://data.nemar.org/on002722/v1.0.0/manifest.json",
+    "participants": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16",
+      "sub-17",
+      "sub-18",
+      "sub-19"
+    ],
+    "channels": {
+      "eeg": 32,
+      "autonomic": [
+        "ECG",
+        "GSR"
+      ],
+      "report": [
+        "VA1 current felt valence",
+        "VA2 current felt arousal"
+      ],
+      "stimulus_metadata": [
+        "VAtarg/event target category",
+        "music/stimulus ID from duplicate event row"
+      ]
+    }
+  },
+  "epistemic_scope": [
+    "Observational association / incremental held-out information only.",
+    "No necessity, sufficiency, causal direction, phenomenal identity, or consciousness detection claim.",
+    "VA1/VA2 are first-person report channels and can include report/motor dynamics."
+  ],
+  "unit": "one unique 21-second music trial onset",
+  "windows": {
+    "physiology_predictors_sec": [
+      5,
+      14
+    ],
+    "prior_report_sec": [
+      10,
+      14
+    ],
+    "future_report_target_sec": [
+      15,
+      20
+    ],
+    "gap_sec": 1
+  },
+  "targets": [
+    "mean VA1 in target window",
+    "mean VA2 in target window"
+  ],
+  "fixed_features": {
+    "eeg": {
+      "channels": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "F7",
+        "F3",
+        "Fz",
+        "F4",
+        "F8",
+        "FT9",
+        "FC5",
+        "FC1",
+        "FC2",
+        "FC6",
+        "FT10",
+        "T7",
+        "C3",
+        "Cz",
+        "C4",
+        "T8",
+        "TP9",
+        "CP5",
+        "CP1",
+        "CP2",
+        "CP6",
+        "TP10",
+        "P7",
+        "P3",
+        "Pz",
+        "P4",
+        "P8",
+        "O1",
+        "O2"
+      ],
+      "robust_clip": "per segment/channel median +/- 8*MAD; then demean",
+      "spectral_method": "Welch, 2 s windows, 50% overlap",
+      "bands_hz": {
+        "delta": [
+          1,
+          4
+        ],
+        "theta": [
+          4,
+          8
+        ],
+        "alpha": [
+          8,
+          13
+        ],
+        "beta": [
+          13,
+          30
+        ],
+        "gamma": [
+          30,
+          45
+        ]
+      },
+      "representation": "relative power per channel/band, 160 features",
+      "model_preprocess": "training-fold median imputation -> standardization -> PCA 20 components"
+    },
+    "autonomic": {
+      "ecg": "5-25 Hz Butterworth bandpass; select positive/negative peak orientation giving plausible 40-180 bpm rhythm; features mean HR, median HR, SDNN, RMSSD; mark invalid if <5 valid RR intervals",
+      "gsr": "standard deviation, range, linear slope, end-minus-start, second-half-minus-first-half",
+      "model_preprocess": "training-fold median imputation -> standardization"
+    },
+    "prior_report": "mean same-axis VA report over seconds 10-14",
+    "categorical_stimulus_controls": [
+      "target category 1-9",
+      "music/stimulus ID >9 extracted from event pair"
+    ]
+  },
+  "models": {
+    "stimulus_only": "one-hot target category + music ID -> Ridge",
+    "stimulus_prior": "stimulus controls + prior same-axis report -> Ridge",
+    "eeg": "stimulus controls + prior report + EEG PCA -> Ridge",
+    "autonomic": "stimulus controls + prior report + ECG/GSR -> Ridge",
+    "combined": "stimulus controls + prior report + EEG PCA + ECG/GSR -> Ridge"
+  },
+  "training": {
+    "outer": "Leave-One-Subject-Out across all available subjects",
+    "inner": "GroupKFold on training subjects, 4 folds",
+    "ridge_alpha_grid": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "inner_score": "negative mean absolute error",
+    "fitting_firewall": "All imputation, scaling, PCA, one-hot fitting and alpha selection occur inside training folds only."
+  },
+  "primary_metric": "participant-held-out MAE",
+  "descriptive_metrics": [
+    "pooled held-out R2",
+    "pooled held-out Pearson r"
+  ],
+  "uncertainty": "5000 paired bootstrap resamples of outer held-out subjects for MAE differences",
+  "deltas": {
+    "combined_vs_stimulus_prior": "MAE(stimulus_prior) - MAE(combined)",
+    "autonomic_increment_beyond_eeg": "MAE(eeg) - MAE(combined)",
+    "eeg_increment_beyond_autonomic": "MAE(autonomic) - MAE(combined)"
+  },
+  "outcome_taxonomy": {
+    "BIDIRECTIONAL_COMPLEMENTARITY": "All three delta 95% bootstrap CIs are strictly >0 and QC gate passes.",
+    "AUTONOMIC_ADDS_ONLY": "combined beats stimulus_prior and EEG-only, but does not beat autonomic-only.",
+    "EEG_ADDS_ONLY": "combined beats stimulus_prior and autonomic-only, but does not beat EEG-only.",
+    "MULTIMODAL_INCREMENT_NO_CLEAR_COMPLEMENTARITY": "combined beats stimulus_prior but does not satisfy a one-way or bidirectional pattern cleanly.",
+    "NO_INCREMENT_BEYOND_PRIOR_REPORT_AND_STIMULUS": "combined-vs-stimulus_prior CI includes or falls below 0.",
+    "INSUFFICIENT_DATA_OR_QC": "QC/admission gate fails."
+  },
+  "admission_gate": {
+    "minimum_subjects": 12,
+    "minimum_usable_trials": 600,
+    "minimum_ecg_valid_fraction": 0.7,
+    "minimum_outer_subjects_with_30_trials": 12
+  },
+  "negative_controls_and_sensitivities": [
+    "Report stimulus-only baseline so physiology cannot win merely by stimulus identity.",
+    "Prior-report baseline is mandatory; physiology must add beyond affective inertia/self-report history.",
+    "Never use VA1, VA2, or VAtarg signal samples as physiology predictors.",
+    "Event target/music IDs may be used only as explicit baseline/control variables.",
+    "If ECG QC fails but GSR remains available, report autonomic analysis as LOW_ECG_QC rather than silently redefining autonomic signal.",
+    "Calibration dataset is primary. on002724 is only a later-session/same-subject replication subset, not independent external replication."
+  ],
+  "kill_condition": "If combined physiology does not improve held-out future felt-report prediction beyond stimulus+prior-report baseline, this observational bridge supplies no evidence for unique multimodal state information at the chosen resolution. Do not change windows/features post hoc to rescue it."
+}
