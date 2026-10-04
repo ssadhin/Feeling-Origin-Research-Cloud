@@ -1,0 +1,331 @@
+{
+  "status": "EXPLORATORY_REANALYSIS_NOT_PREREGISTERED",
+  "interpretation_firewall": "This reanalysis tests whether measured anticipatory cardiac change statistically mediates the effect of manipulated cardiac feedback on pain ratings. HR is not assumed to be the complete bodily/evaluative source, mediation assumptions are not fully guaranteed, and no result establishes which physical state is phenomenal.",
+  "source": {
+    "paper": "Parrotta et al. (2026), Exposure to false cardiac feedback alters pain perception and anticipatory cardiac frequency",
+    "doi": "10.7554/eLife.90013",
+    "repository": "EP171993/painperception",
+    "dataset_commit": "692d57f47861684b5144cfd4f3e6f0c9a2c3dc43",
+    "dataset_blob_sha": "447fff57c91fb5ff761449d98d93737e26b1236c",
+    "dataset_url": "https://raw.githubusercontent.com/EP171993/painperception/692d57f47861684b5144cfd4f3e6f0c9a2c3dc43/Data_v3%20-%202504.xlsx"
+  },
+  "method": {
+    "contrast": "Faster (1) vs Slower (0) feedback",
+    "mediator": "trial-level HR measure supplied in public dataset",
+    "outcomes": [
+      "LIK (unpleasantness)",
+      "VAS (pain intensity)"
+    ],
+    "covariates": [
+      "stimulus intensity centered as in authors' code",
+      "standardized trial index"
+    ],
+    "subject_control": "subject fixed effects",
+    "uncertainty": "1000-replicate cluster bootstrap resampling subjects",
+    "estimand_warning": "a*b is exploratory statistical mediation, not a proven natural direct/indirect causal effect."
+  },
+  "analyses": {
+    "Intero": {
+      "LIK": {
+        "point": {
+          "a_proxy_to_HR": -0.638147407170635,
+          "b_HR_to_outcome_adjusted": -0.0012817240143176978,
+          "c_total_proxy_to_outcome": 0.15416702334506582,
+          "c_prime_direct_proxy_to_outcome": 0.15334909448861925,
+          "indirect_a_times_b": 0.0008179288564451767,
+          "mediated_fraction": 0.0053054721995535944,
+          "r2_mediator": 0.9017140506305639,
+          "r2_total": 0.6496788421162099,
+          "r2_direct": 0.6496902257042627,
+          "n_rows": 408,
+          "n_subjects": 34
+        },
+        "cluster_bootstrap_by_subject": {
+          "a_proxy_to_HR": {
+            "median": -0.6517891836079119,
+            "ci95": [
+              -1.108126441600091,
+              -0.22141191251734865
+            ],
+            "n_valid": 1000
+          },
+          "b_HR_to_outcome_adjusted": {
+            "median": -0.001253055366669531,
+            "ci95": [
+              -0.025471356174455777,
+              0.024203992533467132
+            ],
+            "n_valid": 1000
+          },
+          "c_total_proxy_to_outcome": {
+            "median": 0.14813704027167646,
+            "ci95": [
+              0.022568623565401298,
+              0.29072797918428483
+            ],
+            "n_valid": 1000
+          },
+          "c_prime_direct_proxy_to_outcome": {
+            "median": 0.14636302940808804,
+            "ci95": [
+              0.023787938893171844,
+              0.2845740163980349
+            ],
+            "n_valid": 1000
+          },
+          "indirect_a_times_b": {
+            "median": 0.0006237903046865454,
+            "ci95": [
+              -0.01574253735976198,
+              0.018245593568843848
+            ],
+            "n_valid": 1000
+          },
+          "mediated_fraction": {
+            "median": 0.005490193105503301,
+            "ci95": [
+              -0.19739128522826183,
+              0.1931067685720213
+            ],
+            "n_valid": 1000
+          }
+        },
+        "bootstrap_failures": 0,
+        "paired_raw_condition_contrast": {
+          "n_subjects_with_both": 34,
+          "mean_faster_minus_slower": 0.1764705882352941,
+          "sd_subject_differences": 0.391279470056709
+        }
+      },
+      "VAS": {
+        "point": {
+          "a_proxy_to_HR": -0.638147407170635,
+          "b_HR_to_outcome_adjusted": 0.20866217868825299,
+          "c_total_proxy_to_outcome": 4.490583133335878,
+          "c_prime_direct_proxy_to_outcome": 4.623740361640355,
+          "indirect_a_times_b": -0.13315722830448437,
+          "mediated_fraction": -0.02965254719726502,
+          "r2_mediator": 0.9017140506305639,
+          "r2_total": 0.7024488997813414,
+          "r2_direct": 0.7029371062006377,
+          "n_rows": 408,
+          "n_subjects": 34
+        },
+        "cluster_bootstrap_by_subject": {
+          "a_proxy_to_HR": {
+            "median": -0.6279725789897261,
+            "ci95": [
+              -1.0886048613879977,
+              -0.17213099911207538
+            ],
+            "n_valid": 1000
+          },
+          "b_HR_to_outcome_adjusted": {
+            "median": 0.21671729917033655,
+            "ci95": [
+              -0.331364768086617,
+              0.7190226590738699
+            ],
+            "n_valid": 1000
+          },
+          "c_total_proxy_to_outcome": {
+            "median": 4.331638991942237,
+            "ci95": [
+              1.6691028804633206,
+              7.254363263297545
+            ],
+            "n_valid": 1000
+          },
+          "c_prime_direct_proxy_to_outcome": {
+            "median": 4.4540422279053296,
+            "ci95": [
+              1.7659424497687903,
+              7.383321425709629
+            ],
+            "n_valid": 1000
+          },
+          "indirect_a_times_b": {
+            "median": -0.12092466474306594,
+            "ci95": [
+              -0.5666123741322374,
+              0.22080698154785447
+            ],
+            "n_valid": 1000
+          },
+          "mediated_fraction": {
+            "median": -0.02761950092471888,
+            "ci95": [
+              -0.18421175200813472,
+              0.06071943979847895
+            ],
+            "n_valid": 1000
+          }
+        },
+        "bootstrap_failures": 0,
+        "paired_raw_condition_contrast": {
+          "n_subjects_with_both": 34,
+          "mean_faster_minus_slower": 4.808823529411764,
+          "sd_subject_differences": 8.720996409353397
+        }
+      }
+    },
+    "Extero": {
+      "LIK": {
+        "point": {
+          "a_proxy_to_HR": 0.22242486483497284,
+          "b_HR_to_outcome_adjusted": 0.015669692297861908,
+          "c_total_proxy_to_outcome": 0.07463759995925323,
+          "c_prime_direct_proxy_to_outcome": 0.07115227076789996,
+          "indirect_a_times_b": 0.0034853291913575497,
+          "mediated_fraction": 0.04669669433717442,
+          "r2_mediator": 0.9306439571648738,
+          "r2_total": 0.6910588644256741,
+          "r2_direct": 0.6926926256103763,
+          "n_rows": 348,
+          "n_subjects": 29
+        },
+        "cluster_bootstrap_by_subject": {
+          "a_proxy_to_HR": {
+            "median": 0.21407278459352752,
+            "ci95": [
+              -0.22624782144685815,
+              0.6370128625557637
+            ],
+            "n_valid": 1000
+          },
+          "b_HR_to_outcome_adjusted": {
+            "median": 0.015374141768536437,
+            "ci95": [
+              -0.015434229412459493,
+              0.04871537698817348
+            ],
+            "n_valid": 1000
+          },
+          "c_total_proxy_to_outcome": {
+            "median": 0.07211311766512618,
+            "ci95": [
+              -0.02562807848341786,
+              0.18117111738357727
+            ],
+            "n_valid": 1000
+          },
+          "c_prime_direct_proxy_to_outcome": {
+            "median": 0.0703549523638339,
+            "ci95": [
+              -0.029497520520233224,
+              0.17674722515105076
+            ],
+            "n_valid": 1000
+          },
+          "indirect_a_times_b": {
+            "median": 0.0017284764302384634,
+            "ci95": [
+              -0.007839920821284915,
+              0.017262668742356255
+            ],
+            "n_valid": 1000
+          },
+          "mediated_fraction": {
+            "median": 0.020432759194824512,
+            "ci95": [
+              -0.37551393473436917,
+              0.5092215522427126
+            ],
+            "n_valid": 1000
+          }
+        },
+        "bootstrap_failures": 0,
+        "paired_raw_condition_contrast": {
+          "n_subjects_with_both": 29,
+          "mean_faster_minus_slower": 0.06896551724137928,
+          "sd_subject_differences": 0.28001290141518326
+        }
+      },
+      "VAS": {
+        "point": {
+          "a_proxy_to_HR": 0.22242486483497284,
+          "b_HR_to_outcome_adjusted": 0.44164767598612653,
+          "c_total_proxy_to_outcome": 2.113636667633694,
+          "c_prime_direct_proxy_to_outcome": 2.0154032429978717,
+          "indirect_a_times_b": 0.09823342463589407,
+          "mediated_fraction": 0.04647602217550027,
+          "r2_mediator": 0.9306439571648738,
+          "r2_total": 0.707542772928603,
+          "r2_direct": 0.7095634075131934,
+          "n_rows": 348,
+          "n_subjects": 29
+        },
+        "cluster_bootstrap_by_subject": {
+          "a_proxy_to_HR": {
+            "median": 0.21772859576670528,
+            "ci95": [
+              -0.24480974248571435,
+              0.6315229948731124
+            ],
+            "n_valid": 1000
+          },
+          "b_HR_to_outcome_adjusted": {
+            "median": 0.47379744260899825,
+            "ci95": [
+              -0.3121535304358621,
+              1.253000749927391
+            ],
+            "n_valid": 1000
+          },
+          "c_total_proxy_to_outcome": {
+            "median": 2.153026112244894,
+            "ci95": [
+              -0.30363626967254553,
+              4.3012066881394215
+            ],
+            "n_valid": 1000
+          },
+          "c_prime_direct_proxy_to_outcome": {
+            "median": 2.055905933850773,
+            "ci95": [
+              -0.3119023091636311,
+              4.154911644811033
+            ],
+            "n_valid": 1000
+          },
+          "indirect_a_times_b": {
+            "median": 0.058396709124006616,
+            "ci95": [
+              -0.19921850940811123,
+              0.48620661324410386
+            ],
+            "n_valid": 1000
+          },
+          "mediated_fraction": {
+            "median": 0.02819896399963834,
+            "ci95": [
+              -0.21111756648035998,
+              0.35022394443705385
+            ],
+            "n_valid": 1000
+          }
+        },
+        "bootstrap_failures": 0,
+        "paired_raw_condition_contrast": {
+          "n_subjects_with_both": 29,
+          "mean_faster_minus_slower": 2.0517241379310347,
+          "sd_subject_differences": 6.534873398458511
+        }
+      }
+    }
+  },
+  "exploratory_gate": [
+    {
+      "outcome": "LIK",
+      "total_effect_detected": true,
+      "measured_HR_indirect_detected": false,
+      "residual_direct_detected_after_HR": true
+    },
+    {
+      "outcome": "VAS",
+      "total_effect_detected": true,
+      "measured_HR_indirect_detected": false,
+      "residual_direct_detected_after_HR": true
+    }
+  ]
+}
