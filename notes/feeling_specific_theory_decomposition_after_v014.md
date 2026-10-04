@@ -308,3 +308,169 @@ The goal is to find a *vector* of predictions that uniquely identifies or collap
 ### Revised stop condition
 
 If no small intervention set yields distinguishable, source-supported theory fingerprints without relying on unverifiable subjective labels, do not run V015. Record the theories as operationally underdetermined by the available paradigm.
+
+
+## 12. Proxy-Equivalence Corollary: mechanism can be identifiable while phenomenal allocation is not
+
+The source/proxy program exposes a project-specific form of interventional underdetermination.
+
+Let:
+- (M) be a fully specified physical system,
+- (I) a prespecified family of feasible interventions,
+- (O) the measured outcomes (behavior, report, physiology, neural dynamics, learning, etc.),
+- (T_1) and (T_2) two theories that agree on the physical system and all intervention-outcome distributions but disagree on which internal state is the phenomenal bearer.
+
+If, for every (i \in I),
+
+[
+P_{T_1}(O\mid do(i),M)=P_{T_2}(O\mid do(i),M),
+]
+
+then no experiment restricted to (I) and (O) can identify whether the phenomenal bearer is the source state (E_f), the proxy (P_f), both, or neither. The likelihood ratio contributed by those observations is 1.
+
+Directly measuring that (S\to E_f) exists or has been cut can identify **causal architecture**. It does not by itself identify **phenomenal allocation** when the competing theories already agree about the measured architecture and differ only in their consciousness mapping.
+
+This is not presented as a novel theorem. It is a direct identifiability consequence and is continuous with the project's earlier no-go result for causally inert qualia permutations.
+
+### Falsifiability consequence
+
+A source/proxy experiment can adjudicate theories only if at least one strong theory entails a difference in an independently assessable phenomenal/first-person structure or another observation that is not stipulated to be matched.
+
+If CRFI-S says:
+- report can stay the same,
+- behavior can stay the same,
+- all measured internal dynamics can stay the same except the defining source-return edge,
+- but feeling disappears solely because that edge is absent,
+
+then the experiment verifies the architectural manipulation but does **not** empirically verify the phenomenal claim.
+
+Therefore V015 cannot use “different theory labels on the same matched agent” as confirmatory evidence for feeling identity.
+
+## 13. Source-Relabeling Dilemma for CRFI-S
+
+CRFI-S faces a second problem.
+
+### Flexible source definition
+
+If any downstream state (P_f) that accurately encodes/evaluates (f) may be reclassified as the new source (E_f), then the proposed source-return cut is not a genuine falsifier:
+
+1. cut return to the original (E_f);
+2. (P_f) remains recurrent/global and evaluative;
+3. relabel (P_f) as (E_f);
+4. declare CRFI-S satisfied again.
+
+That move makes source identity outcome-dependent and violates the project's no-moving-goalposts rule.
+
+### Rigid source definition
+
+If (E_f) is frozen as the earliest/minimal causal origin of the current organism-relative evaluative variable, then downstream or centrally generated affective states can become genuine counterexamples. False interoceptive feedback, cognitive appraisal, imagery, hallucination-like higher-order states, and route-specific fear dissociations become relevant because felt content may change without the original peripheral or canonical source changing in the corresponding way.
+
+### Required resolution
+
+Before any V015 protocol, CRFI-S must state a source criterion that is:
+1. independent of the consciousness verdict;
+2. invariant under the critical interventions;
+3. applicable to exteroceptive, interoceptive, imagined and centrally generated affect;
+4. incapable of post-hoc migration from (E_f) to (P_f);
+5. connected to a measurable phenomenal prediction.
+
+If no such criterion can be stated, CRFI-S is rejected as a distinct testable theory.
+
+## 14. Existing human source/proxy dissociations
+
+The source/proxy idea is not empirically untouched.
+
+### Real peripheral perturbation
+
+Khalsa et al. (2009), *Bolus isoproterenol infusions provide a reliable method for assessing interoceptive awareness*, Int J Psychophysiol. DOI: 10.1016/j.ijpsycho.2008.08.010, PMID: 18854201.
+
+Randomized double-blind placebo-controlled isoproterenol infusions produced dose-dependent changes in heart rate and heartbeat/breathing sensations. This is a useful controlled peripheral-interoceptive perturbation.
+
+### Real arousal crossed with false feedback
+
+Gray et al. (2007), *Modulation of Emotional Appraisal by False Physiological Feedback during fMRI*, PLoS ONE. DOI: 10.1371/journal.pone.0000546, PMID: 17579718.
+
+The design crossed isometric exercise/no-exercise with true, asynchronous and false cardiac feedback. False increased-heart-rate feedback increased emotional intensity ratings of neutral faces and altered insula/amygdala activity. In that study, exercise itself did not produce the same appraisal effect.
+
+Therefore a simple “real body arousal × false body feedback” factorial is already prior art and cannot be our novelty claim.
+
+### False feedback without corresponding physiological change
+
+Thornton & Hagan (1976), *A failure to explain the effects of false heart-rate feedback on affect by induced changes in physiological response*, Br J Psychol. DOI: 10.1111/j.2044-8295.1976.tb01522.x, PMID: 974449.
+
+The study reported false-feedback effects on affect without support for the proposal that the affective effect was caused by induced physiological changes.
+
+Carroll & Evans (1981), *Effects of heart-rate biofeedback and false feedback on reactions to stressful stimulation*, Percept Mot Skills, PMID: 7312525.
+
+Direction of false feedback did not alter actual heart rate, yet differential unpleasantness/loudness ratings appeared in the false-feedback group.
+
+These older studies are relevant because they weaken any crude rule that affective change must always be mediated by a corresponding peripheral cardiac change.
+
+### False feedback can also change the body
+
+Parrotta et al. (2026), *Exposure to false cardiac feedback alters pain perception and anticipatory cardiac frequency*, eLife. DOI: 10.7554/eLife.90013.
+
+False faster cardiac feedback changed pain expectations and ratings and also altered anticipatory cardiac physiology. The control experiment strongly reduced these effects when feedback was framed exteroceptively.
+
+This means that “proxy” manipulations can causally alter the putative source. A valid source/proxy experiment must therefore model/measure mediation and cannot assume the manipulation remains downstream.
+
+### Contemporary review
+
+Stevenson (2026), *Psychological induction of interoceptive states*, Consciousness and Cognition, PMID: 41687306, reviews psychologically induced interoceptive states, including cases without the normal physiological perturbation and cases where psychological induction modifies the body itself.
+
+## 15. Affective Causal Location Diagnostic Set — v0.1
+
+This is a **theory-identification worksheet**, not a preregistration and not evidence that any theory is true.
+
+Prediction status:
+- **EXPLICIT**: source directly licenses the prediction.
+- **DERIVED**: prediction follows fairly directly from the theory but is not stated for this exact experiment.
+- **CONDITIONAL**: depends on implementation/bearer choice.
+- **UNLICENSED**: theory does not currently specify enough to classify the intervention.
+
+| Intervention | HOTEC | Damasio hybrid | Seth/Friston | Solms | Same/self-order | N* | CRFI-S provisional |
+|---|---|---|---|---|---|---|---|
+| Lower-order defensive/body source attenuated while higher-order GNC remains | **EXPLICIT: feeling muted, not eliminated** | CONDITIONAL: depends whether constitutive neural–nonneural homeostatic interaction is broken | mechanism predicts changed hierarchical inference; consciousness classification UNLICENSED | if upper-brainstem affect generator itself is removed, **DERIVED: elemental affect fails** | UNLICENSED without a physical realization map | CONDITIONAL on V+N1+N2+N3/bearer | **DERIVED NO** only if frozen E_f is actually the cut source |
+| Higher-order/GNC construction removed while lower homeostatic/brainstem loops remain | **DERIVED NO** for HOTEC emotional consciousness | **DERIVED YES** for basic homeostatic feeling if hybrid interaction survives | consciousness classification UNLICENSED | **DERIVED YES** for elemental affect | CONDITIONAL on where self-representing state is realized | CONDITIONAL | CONDITIONAL on whether lower E_f↔S still satisfies frozen C/L |
+| Living nonneural body replaced by signal-matched artificial surrogate | UNLICENSED | **EXPLICIT NO** for the 2023 living-body partnership account | mechanism could be instantiated computationally, phenomenal sufficiency UNLICENSED | UNLICENSED | generally implementation-neutral but phenomenal realization details UNLICENSED | **DERIVED possible** under constrained causal/substrate realization if V+N* holds | OPEN until substrate commitment is frozen |
+| Global/system-wide access cut while local recurrent content remains | HOTEC likely impaired but exact mapping requires operationalization | basic homeostatic feeling may remain; exact global manipulation UNLICENSED | UNLICENSED | elemental affect may remain; exact global manipulation UNLICENSED | UNLICENSED | **DERIVED NO** if N2 fails | depends on frozen C definition |
+| Current trajectory replayed while counterfactual causal alternatives are changed | HOTEC classification depends on GNC realization | hybrid account depends on whether bodily interaction changed | inferential dynamics likely changed; exact phenotype CONDITIONAL | exact phenotype CONDITIONAL | representation relation may or may not survive | CONDITIONAL on N1/N2/N3 changes | CONDITIONAL on L/C changes |
+
+No row currently provides a clean, unique CRFI-S fingerprint across all strong rivals.
+
+## 16. Better empirical target: mediation, not mere mismatch
+
+Because proxy manipulations can either:
+- change reported affect without a corresponding measured cardiac change, **or**
+- feed back and alter actual physiology,
+
+the sharper empirical quantity is a causal decomposition.
+
+For a proxy manipulation (Z), source state (E), and first-person affect measure (Y):
+
+- total proxy effect: (TE = Y(do(Z_1)) - Y(do(Z_0)));
+- source-mediated component: effect transmitted through measured changes in (E);
+- residual/direct component: proxy effect on (Y) not explained by the measured source pathway, subject to the usual causal-identification assumptions.
+
+The research question becomes:
+
+> When an interoceptive proxy changes felt affect, how much of that change is mediated by the current bodily/evaluative source, and how much remains when the source trajectory is matched?
+
+This is scientifically sharper than merely asking whether false feedback “works.”
+
+However, even a residual direct effect does not by itself locate phenomenality. It constrains theories only to the extent that they make prespecified claims about whether such a source-independent phenomenal effect is possible.
+
+## 17. Revised V015 admission rule
+
+V015 remains **WITHHELD**.
+
+Before any confirmatory compute:
+1. resolve or reject the Source-Relabeling Dilemma;
+2. require at least one theory pair to make disjoint observable predictions, not merely different phenomenal labels;
+3. specify an independently measured phenomenal/first-person outcome that is not forced to match by design;
+4. distinguish mechanism identification from phenomenal-bearer attribution;
+5. incorporate mediation because proxy manipulations can alter the source;
+6. use existing false-feedback and peripheral-perturbation literature as prior constraints;
+7. freeze failure consequences before simulation.
+
+If these cannot be met, the correct result is **operational underdetermination**, not a new simulator.
