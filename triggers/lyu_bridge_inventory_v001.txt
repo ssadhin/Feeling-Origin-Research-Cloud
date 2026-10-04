@@ -1,0 +1,2 @@
+Trigger public Lyu/Parvizi Zenodo bridge inventory v001.
+Frozen analysis commit: bae3af89c7bb9dd77908a1ba7b2c3f5d6c6d980d
