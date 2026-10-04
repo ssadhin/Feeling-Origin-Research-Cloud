@@ -1,0 +1,94 @@
+{
+  "title": "Loop 005 Felt-vs-Physiology Network Data Availability Audit v001",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "target_contrast": "Compare downstream neural/network propagation for direct-stimulation events with reported affective experience against stimulation events with strong objective autonomic response but no reported emotion.",
+  "required_fields": {
+    "direct_human_stimulation": "Trial/event-level direct intracranial or deep electrical stimulation.",
+    "first_person_affect": "Trial/event-level report of affective feeling, including a negative/no-affect class.",
+    "objective_autonomic": "Same-event HR/EDA/respiration or another objective autonomic measure.",
+    "network_propagation": "Same-event electrophysiological or stimulation-evoked causal connectivity/propagation measure beyond the stimulated node.",
+    "localization_and_dose": "Stimulation location and intensity/parameters sufficient for confound control.",
+    "public_now": "Individual-level analyzable data accessible without a new author data-use request."
+  },
+  "datasets": [
+    {
+      "id": "INMAN_AMYGDALA_2018_2020",
+      "source": "Inman et al., Human amygdala stimulation effects on emotion physiology and emotional experience, DOI 10.1016/j.neuropsychologia.2018.03.019, PMID 29551365",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": true,
+      "network_propagation": false,
+      "localization_and_dose": true,
+      "public_now": false,
+      "note": "Excellent within-study physiology-vs-subjective dissociation; no published/public same-trial downstream network-propagation dataset found."
+    },
+    {
+      "id": "LIU_SEEG_EMOTION_NETWORK_2025",
+      "source": "Liu et al. 2025, Symptomatic Emotional Responses and Changes in Networks Elicited by Direct Electrical Stimulation, DOI 10.1111/cns.70393, PMID 40243275",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": false,
+      "network_propagation": true,
+      "localization_and_dose": true,
+      "public_now": false,
+      "note": "85 positive emotion contacts; network analysis only exemplary three contacts in two patients; authors state data available on reasonable request. No objective autonomic channel reported for the target contrast."
+    },
+    {
+      "id": "FOX_WHOLE_BRAIN_IES_2020",
+      "source": "Fox et al. 2020, Intrinsic network architecture predicts effects elicited by intracranial electrical stimulation, DOI 10.1038/s41562-020-0910-1, PMID 32632334",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": false,
+      "network_propagation": false,
+      "localization_and_dose": true,
+      "public_now": false,
+      "note": "1537 sites/67 participants; emotional and physiological/interoceptive effects are distinct categories and intrinsic network membership predicts effect class. Uses intrinsic-network assignment rather than same-trial evoked propagation. Individual data/code are by request."
+    },
+    {
+      "id": "LYU_CC_PCU_BODILY_AWARENESS_2026",
+      "source": "Lyu et al. 2026, Causal Mapping of Bodily Awareness and Mesoscale Circuit Organization in the Human Cingulate and Precuneus, DOI 10.21203/rs.3.rs-10503199/v1; Zenodo 10.5281/zenodo.21536139",
+      "direct_human_stimulation": true,
+      "first_person_affect": false,
+      "objective_autonomic": false,
+      "network_propagation": true,
+      "localization_and_dose": true,
+      "public_now": true,
+      "note": "Public electrode-level responsive/silent classifications and CCEP analysis resources. Strong methodological prior art for connectivity distinguishing reportable bodily experience from nearby silent sites, but the target is bodily awareness rather than affect and there is no objective autonomic negative-control channel."
+    },
+    {
+      "id": "SOULIER_VISCERAL_EMOTION_2023",
+      "source": "Soulier et al. 2023, Visceral and emotional responses to direct electrical stimulations of the cortex, DOI 10.1002/acn3.51694, PMID 36424874",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": false,
+      "network_propagation": false,
+      "localization_and_dose": true,
+      "public_now": false,
+      "note": "12088 analyzed stimulations; separates pure emotional reports from emotional+visceral subjective sensations. Visceral reports are not objective autonomic measurements; no same-event propagation dataset."
+    },
+    {
+      "id": "FOX_OFC_DRYAD_2018",
+      "source": "Fox et al. 2018, Changes in subjective experience elicited by direct stimulation of the human orbitofrontal cortex, DOI 10.1212/WNL.0000000000006358; Dryad 10.5061/dryad.3h3k08d",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": false,
+      "network_propagation": false,
+      "localization_and_dose": true,
+      "public_now": true,
+      "note": "Public table supplies exact coordinates/parameters/first-person reports for elicited effects. Does not supply objective autonomic or evoked network-propagation channels needed for target contrast."
+    },
+    {
+      "id": "DUONG_INSULA_2023_2026",
+      "source": "Duong et al. 2023 DOI 10.1016/j.brs.2023.11.001; Parvizi/Quabs et al. 2026 preprint DOI 10.21203/rs.3.rs-8912902/v1",
+      "direct_human_stimulation": true,
+      "first_person_affect": true,
+      "objective_autonomic": false,
+      "network_propagation": true,
+      "localization_and_dose": true,
+      "public_now": false,
+      "note": "Anxiety/visceral subjective responses plus rich causal connectivity in expanded 2026 work; connectivity data were stated to be shared upon publication and no public target dataset was located in this audit. No objective autonomic negative-control channel."
+    }
+  ],
+  "decision_rule": "PASS_COMMON_PUBLIC_DATASET only if at least one dataset has all six required fields true. Otherwise FAIL_NO_COMMON_PUBLIC_DATASET_FOR_FELT_VS_PHYSIOLOGY_NETWORK_CONTRAST.",
+  "scientific_consequence": "Failure forbids a confirmatory cross-dataset network comparison that silently treats different cohorts/modalities as commensurate. It does not kill the hypothesis. It redirects to (a) data request/collaboration, (b) prospective collection, or (c) a clearly labeled methodological bridge using public non-affective bodily-awareness data."
+}
