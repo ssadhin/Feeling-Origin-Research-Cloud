@@ -691,3 +691,69 @@ V015 remains **WITHHELD** as a CRFI confirmatory experiment.
 Do not promote H001 or H002 into V015 unless a strong named consciousness/feeling theory is shown, from its own commitments, to make a disjoint observable prediction that another strong theory denies.
 
 Otherwise continue the project as empirical constraint mapping and record the remaining phenomenal allocation as underdetermined.
+
+
+## 23. Theory Discrimination Audit v001 — V015 gate failed
+
+A prespecified executable audit was frozen before interpreting its result.
+
+Frozen protocol:
+- `protocols/feeling_theory_discrimination_audit_v001.json`
+- protocol commit `39c122131bf44cb8afff444be9947ea67afaf4f5`
+
+Executable audit:
+- `analysis/theory_discrimination_audit_v001.py`
+- script commit `b1cc58d6507a755d2dfeb2ba61e6632027ab02ff`
+
+Cloud run:
+- GitHub Actions run `37204254417`
+- workflow head `b097f8b2d7f0186a56ef259884cb7b94a264e13f`
+- artifact ID `11303543392`
+- artifact SHA256 `6e2677610a5646cecf73e4e5d60f49cd1e3060d6351a206ea0bc9f15ae0b6415`
+- permanent raw snapshot commit `72521a34ef469e7b9adf92126e5d9606202d2477`
+
+Admission required all five:
+1. both theories have explicit or strong derived predictions;
+2. predictions are materially incompatible;
+3. critical outcome remains independently observable;
+4. intervention is selective/feasible enough to interpret;
+5. disagreement is specifically about feeling/phenomenal presence or character.
+
+Result:
+- 27 pairwise theory/intervention rows;
+- 8 strong divergent pairs;
+- **0 V015-admissible pairs**;
+- official verdict: `FAIL_NO_V015_ADMISSIBLE_PAIR`.
+
+Strong disagreements that nevertheless failed:
+- HOTEC vs Damasio and HOTEC vs Solms under higher-order/GNC disruption: genuine feeling disagreement, but decisive GNC disruption removes/confounds direct report.
+- Damasio vs N*, IIT and MEM under signal-matched living-body replacement: genuine substrate disagreement, but no independent phenomenal ground truth in the artificial/surrogate system.
+- GNWT vs RPT under global-access cut with local recurrence preserved: classic divergence, but report is unavailable and the test is not specifically feeling-origin.
+- MEM vs GNWT under sensory/interoceptive re-entry disruption with global access preserved: observable in principle, but intervention selectivity is not yet established and the current formulation is not yet affect-specific enough.
+- Solms vs HOTEC under upper-brainstem affect suppression with cortical replay: strong disagreement, but brainstem/arousal manipulation threatens wakefulness/report and cannot currently isolate the proposed affective generator.
+
+This is a substantive negative result. Do not launch V015 merely because a pair of theories differs conceptually.
+
+## 24. Closest near-miss: central interoceptive re-entry versus top-down inference
+
+The audit identified sensory/interoceptive re-entry manipulation as the closest route because it may preserve first-person report while perturbing a candidate constitutive process.
+
+A new methodological lead is human low-intensity focused ultrasound (LIFU/tFUS) targeting posterior insula.
+
+Published human work reports:
+- posterior-insula LIFU can alter heartbeat-evoked cortical potentials while leaving peripheral heart rate and HRV unchanged;
+- insula LIFU can causally alter pain ratings and pain-evoked electrophysiology;
+- therefore central interoceptive processing can potentially be perturbed without simply changing the measured peripheral cardiac source.
+
+Candidate factorial:
+> false cardiac/interoceptive feedback × posterior-insula LIFU
+
+Potential theory contrast to attack:
+- **Active interoceptive inference / predictive coding:** if posterior-insula LIFU reduces the effective precision of ascending interoceptive prediction errors, top-down false-feedback priors may exert **greater** influence on felt appraisal.
+- **MEM-style receptor-grounded re-entry:** if the same manipulation specifically disrupts the content-specific re-entry needed to reconstruct interoceptive content, the false-feedback effect on phenomenal quality should **decrease**.
+
+These opposite interaction directions are **NOT YET FROZEN**. Two unresolved premises must be justified from primary sources:
+1. that the observed LIFU/HEP change can legitimately operationalize reduced afferent interoceptive precision rather than merely altered processing;
+2. that MEM's primary formulation really commits to a smaller first-person false-feedback effect under impaired interoceptive re-entry, rather than allowing compensation elsewhere.
+
+Until both survive a steelman/prior-art attack, this remains H003 hypothesis generation and is not V015.
