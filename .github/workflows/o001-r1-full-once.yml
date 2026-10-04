@@ -1,0 +1,35 @@
+name: O001-R1 Full Replication Once
+
+on:
+  push:
+    paths:
+      - "triggers/o001_r1_full_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: o001-r1-full-v001
+  cancel-in-progress: true
+
+jobs:
+  full:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "scipy>=1.14,<2" "scikit-learn>=1.6,<2" "pandas>=2.2,<3"
+      - name: Run frozen O001-R1
+        run: python analysis/observational_multimodal_redundancy_o001_r1.py --bootstrap 5000
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o001-r1-full-${{ github.run_id }}
+          path: results/
+          if-no-files-found: error
+          retention-days: 14
