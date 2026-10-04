@@ -1,0 +1,353 @@
+{
+  "design": {
+    "development_worlds": 40,
+    "heldout_worlds": 120,
+    "heldout_seed_start": 50000,
+    "tuning_candidates": 30,
+    "preregistered_equivalence": "A rival defeats CRFI behavioral uniqueness if immediate escape is matched (|d|<0.20) and all four post-event signature metrics are also equivalent (|d|<0.20). Immediate mismatch makes that rival comparison confounded, not a CRFI win.",
+    "interpretation_firewall": "The simulation tests functional/causal architecture only; it does not establish subjective feeling."
+  },
+  "tuned_generic_bidir": {
+    "params": {
+      "decay": 0.7034580163542591,
+      "input_gain": 0.15893695005613934,
+      "distractor_gain": 0.14133996866713824,
+      "feedback_gain": 0.2684729984549785,
+      "policy_gain": 0.1677900737660315,
+      "plasticity_gain": 0.13634078097502889
+    },
+    "development_loss": 0.018021172157440295,
+    "development_summary": {
+      "survival": 236.975,
+      "escape": 1.525,
+      "post_hazard_visits": 0.25,
+      "reversal_latency": 87.4,
+      "recovery_auc": 20.287975441926157,
+      "q_change": 3.68824492419435e-05,
+      "final_drive": 0.6359058155208481
+    }
+  },
+  "tuned_gated_learning": {
+    "params": {
+      "decay": 0.7172319083563715,
+      "input_gain": 0.5385433746997206,
+      "policy_gain": 0.1177318078321037,
+      "plasticity_gain": 0.06393129548048772
+    },
+    "development_loss": 0.009113274761051463,
+    "development_summary": {
+      "survival": 231.55,
+      "escape": 1.525,
+      "post_hazard_visits": 0.575,
+      "reversal_latency": 86.05,
+      "recovery_auc": 20.21911727148132,
+      "q_change": 3.437616337348864e-05,
+      "final_drive": 0.709004863599769
+    }
+  },
+  "heldout": {
+    "reactive": {
+      "mean": {
+        "survival": 234.35833333333332,
+        "escape": 1.6083333333333334,
+        "post_hazard_visits": 0.14166666666666666,
+        "reversal_latency": 82.25833333333334,
+        "recovery_auc": 20.110295342204147,
+        "q_change": 0.0,
+        "final_drive": 0.5659838126884669
+      },
+      "causal_signature": {
+        "E_to_S": 0.0,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.2265130193353575,
+        "post_hazard_visits": 0.020730606196000232,
+        "reversal_latency": -0.10322325422754874,
+        "recovery_auc": 0.18240131387601902,
+        "q_change": -2.9802539012042137,
+        "final_drive": 0.02251860944558294
+      },
+      "immediate_matched": false,
+      "post_equivalent": false,
+      "classification": "CONFOUNDED_IMMEDIATE_MISMATCH"
+    },
+    "homeostatic": {
+      "mean": {
+        "survival": 234.46666666666667,
+        "escape": 1.625,
+        "post_hazard_visits": 0.16666666666666666,
+        "reversal_latency": 83.24166666666666,
+        "recovery_auc": 20.564752970924484,
+        "q_change": 2.6556368297665034e-05,
+        "final_drive": 0.5724940738670922
+      },
+      "causal_signature": {
+        "E_to_S": 0.0,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.24015819126260313,
+        "post_hazard_visits": 0.07538503504145927,
+        "reversal_latency": -0.06461944636595772,
+        "recovery_auc": 0.21800887819688233,
+        "q_change": -1.0024442884246807,
+        "final_drive": 0.042134372271253336
+      },
+      "immediate_matched": false,
+      "post_equivalent": false,
+      "classification": "CONFOUNDED_IMMEDIATE_MISMATCH"
+    },
+    "appraisal": {
+      "mean": {
+        "survival": 233.26666666666668,
+        "escape": 1.525,
+        "post_hazard_visits": 0.15,
+        "reversal_latency": 82.91666666666667,
+        "recovery_auc": 19.231821006382734,
+        "q_change": 2.459096586444452e-05,
+        "final_drive": 0.5467118126649645
+      },
+      "causal_signature": {
+        "E_to_S": 0.0,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.12244345273900631,
+        "post_hazard_visits": 0.03666923454948006,
+        "reversal_latency": -0.07723778912494803,
+        "recovery_auc": 0.09802361661447774,
+        "q_change": -1.1446318790613774,
+        "final_drive": -0.03670463095569533
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION"
+    },
+    "recurrent_downstream": {
+      "mean": {
+        "survival": 232.48333333333332,
+        "escape": 1.45,
+        "post_hazard_visits": 0.14166666666666666,
+        "reversal_latency": 84.01666666666667,
+        "recovery_auc": 17.09467324260795,
+        "q_change": 2.078169941677721e-05,
+        "final_drive": 0.5728822302430622
+      },
+      "causal_signature": {
+        "E_to_S": 0.4197320573889967,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.02581988893471602,
+        "post_hazard_visits": 0.020730606196000236,
+        "reversal_latency": -0.030718717466352453,
+        "recovery_auc": -0.11817432754020629,
+        "q_change": -1.4469778615122464,
+        "final_drive": 0.044103841758144816
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION"
+    },
+    "gated_downstream": {
+      "mean": {
+        "survival": 232.31666666666666,
+        "escape": 1.475,
+        "post_hazard_visits": 0.175,
+        "reversal_latency": 83.88333333333334,
+        "recovery_auc": 18.360071417267868,
+        "q_change": 2.1082250912691207e-05,
+        "final_drive": 0.6238675063943498
+      },
+      "causal_signature": {
+        "E_to_S": 0.44247129034654037,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.0644766180369828,
+        "post_hazard_visits": 0.09561984968046647,
+        "reversal_latency": -0.03717402866165219,
+        "recovery_auc": 0.017857856439837477,
+        "q_change": -1.4373525146154633,
+        "final_drive": 0.18441581229530055
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION"
+    },
+    "gated_learning_rival": {
+      "mean": {
+        "survival": 231.65,
+        "escape": 1.4916666666666667,
+        "post_hazard_visits": 0.2,
+        "reversal_latency": 83.50833333333334,
+        "recovery_auc": 18.775434718712223,
+        "q_change": 4.632349128603988e-05,
+        "final_drive": 0.6386937301326404
+      },
+      "causal_signature": {
+        "E_to_S": 0.44247129034654037,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.08763242304002462,
+        "post_hazard_visits": 0.14118427051386198,
+        "reversal_latency": -0.051717664722054434,
+        "recovery_auc": 0.05478354931826385,
+        "q_change": 0.076552292280401,
+        "final_drive": 0.2198235666078481
+      },
+      "immediate_matched": true,
+      "post_equivalent": true,
+      "classification": "EQUIVALENT_RIVAL_DEFEATS_BEHAVIORAL_UNIQUENESS"
+    },
+    "crfi_noC": {
+      "mean": {
+        "survival": 233.26666666666668,
+        "escape": 1.525,
+        "post_hazard_visits": 0.15,
+        "reversal_latency": 82.91666666666667,
+        "recovery_auc": 19.24061018714364,
+        "q_change": 2.1864221093102233e-05,
+        "final_drive": 0.5464143715773501
+      },
+      "causal_signature": {
+        "E_to_S": 0.0,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.12244345273900631,
+        "post_hazard_visits": 0.03666923454948006,
+        "reversal_latency": -0.07723778912494803,
+        "recovery_auc": 0.09886281856326701,
+        "q_change": -1.3391905836572655,
+        "final_drive": -0.03759796125755192
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION"
+    },
+    "crfi_noL": {
+      "mean": {
+        "survival": 231.49166666666667,
+        "escape": 1.4416666666666667,
+        "post_hazard_visits": 0.15,
+        "reversal_latency": 82.35,
+        "recovery_auc": 18.249433340376005,
+        "q_change": 2.112551196812814e-05,
+        "final_drive": 0.5510223766792367
+      },
+      "causal_signature": {
+        "E_to_S": 0.44247129034654037,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      },
+      "d_vs_crfi": {
+        "escape": 0.013326914047885725,
+        "post_hazard_visits": 0.039134786626979216,
+        "reversal_latency": -0.0959350779439286,
+        "recovery_auc": 0.007282678480213345,
+        "q_change": -1.4153016270378205,
+        "final_drive": -0.022959047000239534
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION"
+    },
+    "crfi": {
+      "mean": {
+        "survival": 233.15833333333333,
+        "escape": 1.4333333333333333,
+        "post_hazard_visits": 0.13333333333333333,
+        "reversal_latency": 84.78333333333333,
+        "recovery_auc": 18.17671301046514,
+        "q_change": 4.4640616195530486e-05,
+        "final_drive": 0.5586916175349319
+      },
+      "causal_signature": {
+        "E_to_S": 0.44247129034654037,
+        "S_to_E": 0.21483625496515685,
+        "reciprocal": 0.09505887494765129
+      }
+    },
+    "tuned_generic_bidir": {
+      "mean": {
+        "survival": 232.14166666666668,
+        "escape": 1.4833333333333334,
+        "post_hazard_visits": 0.13333333333333333,
+        "reversal_latency": 85.28333333333333,
+        "recovery_auc": 18.433266101886353,
+        "q_change": 3.464109297590782e-05,
+        "final_drive": 0.5623834545262566
+      },
+      "d_vs_crfi": {
+        "escape": 0.0724249384924138,
+        "post_hazard_visits": 0.0,
+        "reversal_latency": 0.02090845143312708,
+        "recovery_auc": 0.024183407493446937,
+        "q_change": -0.5044403646511267,
+        "final_drive": 0.011572082872915413
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION",
+      "causal_signature": {
+        "E_to_S": 0.14824651787154572,
+        "S_to_E": 0.24032388978055802,
+        "reciprocal": 0.03562717982131288
+      }
+    },
+    "tuned_gated_learning": {
+      "mean": {
+        "survival": 232.00833333333333,
+        "escape": 1.4666666666666666,
+        "post_hazard_visits": 0.19166666666666668,
+        "reversal_latency": 84.625,
+        "recovery_auc": 18.804951870455238,
+        "q_change": 3.391190517579836e-05,
+        "final_drive": 0.6091895421114027
+      },
+      "d_vs_crfi": {
+        "escape": 0.05108472486769608,
+        "post_hazard_visits": 0.11387019807011875,
+        "reversal_latency": -0.006676829967842152,
+        "recovery_auc": 0.05946655072962392,
+        "q_change": -0.5440506032387649,
+        "final_drive": 0.1341283988566186
+      },
+      "immediate_matched": true,
+      "post_equivalent": false,
+      "classification": "VALID_POST_EVENT_DISCRIMINATION",
+      "causal_signature": {
+        "E_to_S": 0.4964374623145119,
+        "S_to_E": 0.0,
+        "reciprocal": 0.0
+      }
+    }
+  },
+  "behavioral_uniqueness_verdict": "FAIL",
+  "equivalent_rivals": [
+    "gated_learning_rival"
+  ],
+  "valid_discriminated_rivals": [
+    "appraisal",
+    "recurrent_downstream",
+    "gated_downstream",
+    "crfi_noC",
+    "crfi_noL",
+    "tuned_gated_learning"
+  ],
+  "confounded_rivals": [
+    "reactive",
+    "homeostatic"
+  ],
+  "topology_note": "A behaviorally equivalent rival that also has direct E<->S reciprocity is not a clean non-CRFI rival; it falls inside the physical core unless another CRFI requirement distinguishes it."
+}
