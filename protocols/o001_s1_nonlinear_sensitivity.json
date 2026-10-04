@@ -1,0 +1,47 @@
+{
+  "title": "O001-S1 Nonlinear Model-Class Sensitivity",
+  "status": "FROZEN_AFTER_PRIMARY_BEFORE_REPLICATION_RESULT",
+  "purpose": "Test whether the primary O001 no-increment result is an artifact of Ridge regression under the same features, windows, subject-held-out split, and strong baseline.",
+  "input": "results_snapshots/o001_feature_rows_run-37214461250.jsonl",
+  "targets": [
+    "y_valence",
+    "y_arousal"
+  ],
+  "outer": "Leave-one-subject-out, identical 19 subjects",
+  "baseline_features": [
+    "target_code",
+    "music_id",
+    "prior same-axis FEELTRACE"
+  ],
+  "combined_features": [
+    "baseline",
+    "160 frozen EEG relative-band features reduced to PCA20 inside training fold",
+    "9 frozen ECG/GSR features"
+  ],
+  "preprocessing": "Fit only on each outer training set: one-hot categorical controls, median imputation, standardization, PCA20 for EEG.",
+  "learners": {
+    "hist_gradient_boosting": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1,
+      "random_state": 501
+    },
+    "extra_trees": {
+      "n_estimators": 300,
+      "min_samples_leaf": 5,
+      "max_features": 0.5,
+      "n_jobs": -1,
+      "random_state": 502
+    }
+  },
+  "metric": "held-out participant MAE",
+  "uncertainty": "5000 paired subject bootstrap resamples",
+  "delta": "MAE(baseline)-MAE(combined); positive favors physiology",
+  "decision": {
+    "NONLINEAR_INCREMENT": "At least one learner/axis has delta 95% CI strictly above zero.",
+    "ROBUST_NO_INCREMENT": "No learner/axis has delta 95% CI strictly above zero.",
+    "STRONG_DEGRADATION": "All learner/axis delta 95% CIs strictly below zero."
+  },
+  "firewall": "Sensitivity only; it cannot replace or redefine the frozen O001 primary endpoint. No feature/window changes."
+}
