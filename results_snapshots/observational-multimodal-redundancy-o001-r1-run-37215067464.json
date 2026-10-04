@@ -1,0 +1,255 @@
+{
+  "status": "O001_R1_TEMPORAL_REPLICATION",
+  "protocol": "protocols/observational_multimodal_redundancy_o001_r1.json",
+  "qc": {
+    "edf_files": 28,
+    "segments_seen": 1008,
+    "segments_usable": 1008,
+    "ecg_valid": 1007,
+    "file_errors": [],
+    "subjects": [
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-15"
+    ],
+    "n_subjects": 7,
+    "ecg_valid_fraction": 0.9990079365079365
+  },
+  "firewall": "Same-cohort session generalization only; observational association, not causal evidence.",
+  "analysis": {
+    "gate": {
+      "minimum_subjects": false,
+      "minimum_usable_segments": true,
+      "minimum_ecg_valid_fraction": true,
+      "observed": {
+        "subjects": 7,
+        "segments": 1008,
+        "ecg_valid_fraction": 0.9990079365079365
+      }
+    },
+    "targets": {
+      "valence": {
+        "metrics": {
+          "target_only": {
+            "mae": 1.1020958569823724,
+            "r2": 0.36286287533184214,
+            "pearson_r": 0.6024640673420453,
+            "mean_subject_mae": 1.1020958569823724
+          },
+          "target_prior": {
+            "mae": 0.5198040107873616,
+            "r2": 0.8176592264794093,
+            "pearson_r": 0.9042743919331658,
+            "mean_subject_mae": 0.5198040107873615
+          },
+          "eeg": {
+            "mae": 0.5461867077698643,
+            "r2": 0.8036370737660196,
+            "pearson_r": 0.8966693655653104,
+            "mean_subject_mae": 0.5461867077698642
+          },
+          "autonomic": {
+            "mae": 0.5375950313610148,
+            "r2": 0.8075577857398507,
+            "pearson_r": 0.8986866123707328,
+            "mean_subject_mae": 0.5375950313610149
+          },
+          "combined": {
+            "mae": 0.5560484656288043,
+            "r2": 0.7950381942933021,
+            "pearson_r": 0.8917335488198727,
+            "mean_subject_mae": 0.5560484656288042
+          }
+        },
+        "deltas": {
+          "combined_vs_target_prior": {
+            "mean": -0.03624445484144261,
+            "ci95": [
+              -0.06758904432777899,
+              -0.015370712060128704
+            ]
+          },
+          "autonomic_increment_beyond_eeg": {
+            "mean": -0.009861757858939946,
+            "ci95": [
+              -0.04183013690330693,
+              0.01180480272818829
+            ]
+          },
+          "eeg_increment_beyond_autonomic": {
+            "mean": -0.018453434267789354,
+            "ci95": [
+              -0.024127170925692075,
+              -0.011872538376463166
+            ]
+          }
+        },
+        "taxonomy": "INSUFFICIENT_DATA_OR_QC",
+        "subject_mae": {
+          "sub-08": {
+            "target_only": 0.8668673439704612,
+            "target_prior": 0.36409593742443136,
+            "eeg": 0.39090413066984847,
+            "autonomic": 0.46169157799750526,
+            "combined": 0.49015133317375653
+          },
+          "sub-09": {
+            "target_only": 1.4681651193363865,
+            "target_prior": 0.5411414782864237,
+            "eeg": 0.5423487285110419,
+            "autonomic": 0.5397124405783625,
+            "combined": 0.5457223246702614
+          },
+          "sub-10": {
+            "target_only": 1.2916055547698708,
+            "target_prior": 0.5882434682575645,
+            "eeg": 0.6148149358838269,
+            "autonomic": 0.5988568985585254,
+            "combined": 0.6156131577209523
+          },
+          "sub-11": {
+            "target_only": 1.3604645255339547,
+            "target_prior": 0.6939277387109843,
+            "eeg": 0.7104222742409285,
+            "autonomic": 0.7030568049471929,
+            "combined": 0.7240613389281634
+          },
+          "sub-12": {
+            "target_only": 0.7890855390273832,
+            "target_prior": 0.2722892762863147,
+            "eeg": 0.3260799209008135,
+            "autonomic": 0.27510514638441275,
+            "combined": 0.30076301470656397
+          },
+          "sub-13": {
+            "target_only": 1.201904636528837,
+            "target_prior": 0.7754554761134577,
+            "eeg": 0.817036674368649,
+            "autonomic": 0.778577927489081,
+            "combined": 0.8035739236441438
+          },
+          "sub-15": {
+            "target_only": 0.736578279709714,
+            "target_prior": 0.4034747004323549,
+            "eeg": 0.42170028981394153,
+            "autonomic": 0.4061644235720241,
+            "combined": 0.41245416655778805
+          }
+        }
+      },
+      "arousal": {
+        "metrics": {
+          "target_only": {
+            "mae": 1.0811411639862123,
+            "r2": 0.5102576248526084,
+            "pearson_r": 0.7144466405918185,
+            "mean_subject_mae": 1.0811411639862123
+          },
+          "target_prior": {
+            "mae": 0.5548494755046502,
+            "r2": 0.8371181692478737,
+            "pearson_r": 0.9149609575133204,
+            "mean_subject_mae": 0.5548494755046502
+          },
+          "eeg": {
+            "mae": 0.5669559011833778,
+            "r2": 0.8343627476605822,
+            "pearson_r": 0.9134433287805841,
+            "mean_subject_mae": 0.5669559011833779
+          },
+          "autonomic": {
+            "mae": 0.5605923541648828,
+            "r2": 0.8363780654243825,
+            "pearson_r": 0.9145535513202503,
+            "mean_subject_mae": 0.5605923541648828
+          },
+          "combined": {
+            "mae": 0.5719401617105317,
+            "r2": 0.8323879915844584,
+            "pearson_r": 0.9123575192534676,
+            "mean_subject_mae": 0.5719401617105317
+          }
+        },
+        "deltas": {
+          "combined_vs_target_prior": {
+            "mean": -0.017090686205881563,
+            "ci95": [
+              -0.03012651616814747,
+              -0.005437510607092966
+            ]
+          },
+          "autonomic_increment_beyond_eeg": {
+            "mean": -0.004984260527153823,
+            "ci95": [
+              -0.01306535583018778,
+              0.0016330066556535
+            ]
+          },
+          "eeg_increment_beyond_autonomic": {
+            "mean": -0.011347807545648942,
+            "ci95": [
+              -0.023329447665129257,
+              -0.00036077189803633
+            ]
+          }
+        },
+        "taxonomy": "INSUFFICIENT_DATA_OR_QC",
+        "subject_mae": {
+          "sub-08": {
+            "target_only": 1.0948467797298784,
+            "target_prior": 0.4195842238696667,
+            "eeg": 0.46538134648917473,
+            "autonomic": 0.42812000534780287,
+            "combined": 0.46743547972008226
+          },
+          "sub-09": {
+            "target_only": 1.0719356758767664,
+            "target_prior": 0.563820401173781,
+            "eeg": 0.5739654429885876,
+            "autonomic": 0.5592499504874999,
+            "combined": 0.5717860465678292
+          },
+          "sub-10": {
+            "target_only": 1.3628637218898987,
+            "target_prior": 0.688794665285014,
+            "eeg": 0.6880524304467109,
+            "autonomic": 0.6844671064061654,
+            "combined": 0.6818303586653174
+          },
+          "sub-11": {
+            "target_only": 0.9419916236035538,
+            "target_prior": 0.569408446186546,
+            "eeg": 0.5800851875748891,
+            "autonomic": 0.5704035760494263,
+            "combined": 0.5796273010409672
+          },
+          "sub-12": {
+            "target_only": 0.8669948806749979,
+            "target_prior": 0.32051500833885127,
+            "eeg": 0.3277461906335241,
+            "autonomic": 0.36314609722055397,
+            "combined": 0.3530763965314834
+          },
+          "sub-13": {
+            "target_only": 0.9950825812784532,
+            "target_prior": 0.6603029346068892,
+            "eeg": 0.6639976850359364,
+            "autonomic": 0.6625000471490565,
+            "combined": 0.6675702268912707
+          },
+          "sub-15": {
+            "target_only": 1.2342728848499385,
+            "target_prior": 0.6615206490718033,
+            "eeg": 0.6694630251148226,
+            "autonomic": 0.6562596964936748,
+            "combined": 0.6822553225567722
+          }
+        }
+      }
+    }
+  }
+}
