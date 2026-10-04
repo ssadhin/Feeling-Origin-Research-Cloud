@@ -1,0 +1,90 @@
+{
+  "title": "Loop 005 O001-R1 Temporal/Session Replication",
+  "status": "FROZEN_BEFORE_O001_PRIMARY_RESULT",
+  "dataset": {
+    "name": "NEMAR on002724 / OpenNeuro ds002724 training sessions",
+    "public_mirror_subjects": [
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16",
+      "sub-17"
+    ],
+    "public_session": "ses-3",
+    "runs_per_subject": 4,
+    "channels": [
+      "32 EEG",
+      "ECG",
+      "GSR",
+      "VA1 felt valence",
+      "VA2 felt arousal",
+      "VAtarg"
+    ],
+    "design": "Each 40-second music trial contains two successive ~20-second target-affect segments. Event TSV provides target code at each segment onset."
+  },
+  "role": "Temporal/session generalization for participants overlapping the calibration cohort. Not an independent-population replication.",
+  "unit": "one 20-second target-affect segment",
+  "windows": {
+    "physiology_predictors_sec_from_segment_onset": [
+      4,
+      13
+    ],
+    "prior_report_sec": [
+      9,
+      13
+    ],
+    "future_report_target_sec": [
+      14,
+      19
+    ],
+    "gap_sec": 1
+  },
+  "targets": [
+    "mean VA1 in target window",
+    "mean VA2 in target window"
+  ],
+  "features": "Exactly the O001 EEG band-power and ECG/GSR feature definitions unless a schema incompatibility is discovered before target inspection.",
+  "models": {
+    "target_only": "one-hot target affect code -> Ridge",
+    "target_prior": "target affect code + prior same-axis report -> Ridge",
+    "eeg": "target + prior + EEG PCA -> Ridge",
+    "autonomic": "target + prior + ECG/GSR -> Ridge",
+    "combined": "target + prior + EEG PCA + ECG/GSR -> Ridge"
+  },
+  "evaluation": {
+    "outer": "Leave-one-subject-out across the 10 public subjects",
+    "inner": "GroupKFold on remaining subjects, 4 folds when feasible",
+    "alpha_grid": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "primary_metric": "held-out subject MAE",
+    "uncertainty": "5000 paired bootstrap resamples of held-out subjects"
+  },
+  "primary_deltas": {
+    "combined_vs_target_prior": "MAE(target_prior)-MAE(combined)",
+    "autonomic_increment_beyond_eeg": "MAE(eeg)-MAE(combined)",
+    "eeg_increment_beyond_autonomic": "MAE(autonomic)-MAE(combined)"
+  },
+  "admission_gate": {
+    "minimum_subjects": 8,
+    "minimum_usable_segments": 1000,
+    "minimum_ecg_valid_fraction": 0.7
+  },
+  "replication_success": {
+    "for_each_axis": "Primary O001 direction is considered session-replicated only if the corresponding combined-vs-prior baseline delta is >0 with 95% subject-bootstrap CI strictly above zero. Bidirectional modality complementarity additionally requires both modality-increment CIs >0."
+  },
+  "interpretation_firewall": [
+    "This is same-cohort temporal/session generalization, not external replication.",
+    "No causal or phenomenal-identity inference.",
+    "If O001 is negative, O001-R1 cannot retroactively redefine the primary endpoint."
+  ]
+}
