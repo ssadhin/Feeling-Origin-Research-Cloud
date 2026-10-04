@@ -1,0 +1,1 @@
+Trigger frozen O002 CASE 30-person external replication.\nProtocol commit: b5b08f77d098844632fbd8bf329076e4df9a0b9b\nAnalysis commit: cdcbeda402e4a6739d9ea16c878bdd9566e91b5c\nOfficial snippet schema probe run: 37217552358 (success).\n
