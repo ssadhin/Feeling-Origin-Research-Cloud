@@ -1,0 +1,49 @@
+{
+  "status": "O002_S1_NONLINEAR_SENSITIVITY_SUMMARY",
+  "frozen_protocol_commit": "07c7d6f452a92ef028df309dda850e70dc518aa8",
+  "analysis_commit": "7c5c8bbb97e0a23801838f27c03c29e624006245",
+  "trigger_commit": "2106908705f51313f797252d49577719f27cfaaf",
+  "workflow_run_id": 37218283683,
+  "workflow_conclusion": "success",
+  "artifact_id": 11309515778,
+  "artifact_digest": "sha256:f42ab2529a86d636ce9a8b0cec579e53c6bdcf8ce7eccc38bdcb76cf409cd66b",
+  "raw_result_file_sha256": "eca7f48bc45f14186b92c923c6b5fd481e5b5ec02b5157cb216ed59cd0c1a776",
+  "verdict": "STRONG_DEGRADATION",
+  "delta_definition": "MAE(baseline)-MAE(peripheral); positive favors physiology",
+  "results": {
+    "hgb": {
+      "valence": {
+        "mean": -0.012440790080051861,
+        "ci95": [
+          -0.01629042256359873,
+          -0.008544743588910922
+        ]
+      },
+      "arousal": {
+        "mean": -0.013277624797307807,
+        "ci95": [
+          -0.01897721523363646,
+          -0.007722998147898496
+        ]
+      }
+    },
+    "extra_trees": {
+      "valence": {
+        "mean": -0.013629731750651443,
+        "ci95": [
+          -0.02288680683845019,
+          -0.0035761458507558136
+        ]
+      },
+      "arousal": {
+        "mean": -0.022673401469797645,
+        "ci95": [
+          -0.030692442059365718,
+          -0.01543839477424974
+        ]
+      }
+    }
+  },
+  "interpretation": "Under the exact frozen CASE windows/features/LOSO split and strong stimulus+time+prior-report baseline, adding the 29 peripheral-physiology features worsened held-out MAE for both valence and arousal under both frozen nonlinear learners. This strengthens the O002 primary NO_PERIPHERAL_INCREMENT conclusion and is not evidence that peripheral physiology is causally irrelevant to feeling.",
+  "firewall": "Post-primary sensitivity only. No causal, phenomenal-identity, or universal no-physiology claim."
+}
