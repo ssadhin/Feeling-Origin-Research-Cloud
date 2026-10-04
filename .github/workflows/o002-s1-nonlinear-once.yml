@@ -1,0 +1,39 @@
+name: O002-S1 Nonlinear Sensitivity Once
+
+on:
+  push:
+    paths:
+      - "triggers/o002_s1_nonlinear_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: o002-s1-nonlinear-v001
+  cancel-in-progress: true
+
+jobs:
+  sensitivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "scipy>=1.14,<2" "scikit-learn>=1.6,<2" "pandas>=2.2,<3"
+      - name: Re-extract frozen O002 features
+        run: python analysis/case_external_replication_o002.py --extract-only
+      - name: Run frozen nonlinear sensitivity
+        run: python analysis/o002_s1_nonlinear_sensitivity.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o002-s1-nonlinear-${{ github.run_id }}
+          path: |
+            results/o002_s1_nonlinear_sensitivity.json
+            results/case_external_replication_o002.json
+          if-no-files-found: error
+          retention-days: 14
