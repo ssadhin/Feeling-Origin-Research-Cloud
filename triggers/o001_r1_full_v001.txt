@@ -1,0 +1,1 @@
+Trigger frozen O001-R1 full temporal/session replication.\nProtocol commit: fb7645bc92bc3f96f4000e33286a464264319083\nAnalysis commit: d0c230c842861674987f4cf188cf0fbe5584843a\nExtraction smoke run: 37214801932 (288/288 usable; ECG valid fraction 1.0).\nPrimary O001 result is already fixed and must not alter this protocol.\n
