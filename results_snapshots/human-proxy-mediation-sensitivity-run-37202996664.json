@@ -1,0 +1,2046 @@
+{
+  "status": "EXPLORATORY_SENSITIVITY_NOT_PREREGISTERED",
+  "source": {
+    "doi": "10.7554/eLife.90013",
+    "repo": "EP171993/painperception",
+    "dataset_commit": "692d57f47861684b5144cfd4f3e6f0c9a2c3dc43",
+    "dataset_blob_sha": "447fff57c91fb5ff761449d98d93737e26b1236c"
+  },
+  "firewall": "Sensitivity analysis across HR, HRd and HRd_Z. These variables are ECG-derived summaries, not exhaustive bodily/evaluative sources. A non-mediated residual is not proof of a source-independent phenomenal effect; mediation assumptions and timing may fail.",
+  "analyses": {
+    "Intero": {
+      "LIK": {
+        "HR": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.6381474071706155,
+              "b_mediator_to_outcome_adjusted": -0.0012817240143179198,
+              "c_total_proxy_to_outcome": 0.15416702334506538,
+              "c_prime_direct_proxy_to_outcome": 0.15334909448861755,
+              "indirect_a_times_b": 0.0008179288564452934,
+              "mediated_fraction": 0.005305472199554366,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.6310122819222338,
+                "ci95": [
+                  -1.0731673609138526,
+                  -0.1858164509210076
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.0013517425056222693,
+                "ci95": [
+                  -0.024958309201221357,
+                  0.022875664133293894
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.15460253952053404,
+                "ci95": [
+                  0.0254238167830926,
+                  0.28645461360773383
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.15205141412445042,
+                "ci95": [
+                  0.028626647234456685,
+                  0.28448759501839743
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0005781067308781758,
+                "ci95": [
+                  -0.015406940096957951,
+                  0.01742829851820678
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.004073617466556639,
+                "ci95": [
+                  -0.2160617222392981,
+                  0.1915530616930351
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.6416178283123344,
+              "b_mediator_to_outcome_adjusted": -0.0008208126596839782,
+              "c_total_proxy_to_outcome": 0.15450500915399545,
+              "c_prime_direct_proxy_to_outcome": 0.15397836111783622,
+              "indirect_a_times_b": 0.0005266480361577053,
+              "mediated_fraction": 0.0034086146400133482,
+              "proxy_x_trial_mediator": 0.36345549186760095,
+              "proxy_x_trial_total": -0.03539708681258946,
+              "proxy_x_trial_direct": -0.03509875794363132,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.6313368563885522,
+                "ci95": [
+                  -1.094701509158118,
+                  -0.1725854315286824
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.00010734402319555886,
+                "ci95": [
+                  -0.02392843681202306,
+                  0.021334388939228344
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.15043075913767923,
+                "ci95": [
+                  0.042028338257692484,
+                  0.281903570033393
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.15062858889929887,
+                "ci95": [
+                  0.04272462867521624,
+                  0.28141377905297926
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 4.5737195765452534e-05,
+                "ci95": [
+                  -0.01503710240915296,
+                  0.016300895437432825
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.00019698927101112062,
+                "ci95": [
+                  -0.14563992526693273,
+                  0.15692517109797197
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.36530421785863076,
+                "ci95": [
+                  -0.03795795147224945,
+                  0.7579692573538465
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.03147719963839096,
+                "ci95": [
+                  -0.14604869092762232,
+                  0.05738152114354286
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.03283502004275195,
+                "ci95": [
+                  -0.14263070456067187,
+                  0.05640336252236009
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.008045206137322515,
+              "b_mediator_to_outcome_adjusted": -0.1508051912758127,
+              "c_total_proxy_to_outcome": 0.15416702334506538,
+              "c_prime_direct_proxy_to_outcome": 0.15295376449467235,
+              "indirect_a_times_b": 0.0012132588503922642,
+              "mediated_fraction": 0.007869768930263896,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.00804172313165803,
+                "ci95": [
+                  -0.014133401443133691,
+                  -0.002169496024086766
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.1685196059085677,
+                "ci95": [
+                  -1.9747261973002455,
+                  1.6881978684242862
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.15503875928667116,
+                "ci95": [
+                  0.030178387842380687,
+                  0.28590081817306096
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.1540190256804003,
+                "ci95": [
+                  0.02606902352609368,
+                  0.2851569621467466
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0010427483332029683,
+                "ci95": [
+                  -0.01439650785945639,
+                  0.018599038652299286
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.006093436677574079,
+                "ci95": [
+                  -0.15096040240445677,
+                  0.2061347113277208
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.00809408913117429,
+              "b_mediator_to_outcome_adjusted": -0.11165759155675892,
+              "c_total_proxy_to_outcome": 0.15450500915399545,
+              "c_prime_direct_proxy_to_outcome": 0.15360124265576253,
+              "indirect_a_times_b": 0.0009037664982326606,
+              "mediated_fraction": 0.0058494316992135495,
+              "proxy_x_trial_mediator": 0.005119491799101875,
+              "proxy_x_trial_total": -0.03539708681258946,
+              "proxy_x_trial_direct": -0.034825456688304945,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.007872576811335012,
+                "ci95": [
+                  -0.014058451656515107,
+                  -0.0023077688229314482
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.1720628520592632,
+                "ci95": [
+                  -2.0297287610972954,
+                  1.67672449701562
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.15413296023144865,
+                "ci95": [
+                  0.03090632495729228,
+                  0.2768511006940673
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.15250814130604173,
+                "ci95": [
+                  0.02589868494416088,
+                  0.27456001581892114
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0011906273822870992,
+                "ci95": [
+                  -0.013693350501277008,
+                  0.01769736330859126
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.007011146636932803,
+                "ci95": [
+                  -0.1641014126142031,
+                  0.19067127966913522
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.005091954103652367,
+                "ci95": [
+                  -0.00020371092628325804,
+                  0.010308024611861496
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.03536296444608659,
+                "ci95": [
+                  -0.1511682340865025,
+                  0.0638259506117375
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.03568546101466358,
+                "ci95": [
+                  -0.15063014976349756,
+                  0.061087473724669536
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd_Z": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.2521797634421256,
+              "b_mediator_to_outcome_adjusted": -0.01270555375322352,
+              "c_total_proxy_to_outcome": 0.15416702334506538,
+              "c_prime_direct_proxy_to_outcome": 0.15096293980517572,
+              "indirect_a_times_b": 0.0032040835398891186,
+              "mediated_fraction": 0.020783196499277002,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.24953577170253946,
+                "ci95": [
+                  -0.41457916155284574,
+                  -0.08352328901622752
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.012073063513682855,
+                "ci95": [
+                  -0.08543082789774872,
+                  0.05918551609993486
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.14805968837220684,
+                "ci95": [
+                  0.024831277907493877,
+                  0.2775652176636798
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.14537165043661468,
+                "ci95": [
+                  0.022007488797311427,
+                  0.2759805235264028
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.002735933044288279,
+                "ci95": [
+                  -0.014986730074004992,
+                  0.027619554879745944
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.015946152606039037,
+                "ci95": [
+                  -0.2023010234583755,
+                  0.2516916208261452
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.253817899609513,
+              "b_mediator_to_outcome_adjusted": -0.01118763013759061,
+              "c_total_proxy_to_outcome": 0.15450500915399545,
+              "c_prime_direct_proxy_to_outcome": 0.1516653883708648,
+              "indirect_a_times_b": 0.0028396207831313356,
+              "mediated_fraction": 0.01837882667157464,
+              "proxy_x_trial_mediator": 0.17156119161155609,
+              "proxy_x_trial_total": -0.03539708681258946,
+              "proxy_x_trial_direct": -0.03347772365487339,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.25181289946286833,
+                "ci95": [
+                  -0.42554150706495286,
+                  -0.07206844469945572
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": -0.009949413515712671,
+                "ci95": [
+                  -0.07902136618348876,
+                  0.05868778736572929
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.14684459639797812,
+                "ci95": [
+                  0.020931356896609778,
+                  0.28178031997759473
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.14295391396309104,
+                "ci95": [
+                  0.020038046824482136,
+                  0.2843510900127909
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0019820493702893344,
+                "ci95": [
+                  -0.01519393363165409,
+                  0.027128267804148197
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.014457082837535103,
+                "ci95": [
+                  -0.18065045450232461,
+                  0.29113769876083934
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.16919693059055316,
+                "ci95": [
+                  0.0049150987572823815,
+                  0.3455543439490823
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.03369564541488307,
+                "ci95": [
+                  -0.14362720968971912,
+                  0.06135614844909326
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.03226164719106278,
+                "ci95": [
+                  -0.1376134041902048,
+                  0.06173213947000966
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        }
+      },
+      "VAS": {
+        "HR": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.6381474071706155,
+              "b_mediator_to_outcome_adjusted": 0.20866217868824322,
+              "c_total_proxy_to_outcome": 4.490583133335829,
+              "c_prime_direct_proxy_to_outcome": 4.623740361640315,
+              "indirect_a_times_b": -0.13315722830447407,
+              "mediated_fraction": -0.029652547197263054,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.6236621011466035,
+                "ci95": [
+                  -1.0768596920832405,
+                  -0.21284859398645337
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.2094040981474392,
+                "ci95": [
+                  -0.4071698056851037,
+                  0.7761609112040884
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.461690468068641,
+                "ci95": [
+                  1.7428676008956354,
+                  7.305981006495247
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.587997087552891,
+                "ci95": [
+                  1.9216543143294536,
+                  7.318768620641004
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.11941788064066242,
+                "ci95": [
+                  -0.5635905936350873,
+                  0.2543474273340167
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.02526822129525847,
+                "ci95": [
+                  -0.17501426873704629,
+                  0.0654164491099183
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.6416178283123344,
+              "b_mediator_to_outcome_adjusted": 0.2380600218018396,
+              "c_total_proxy_to_outcome": 4.511132684888356,
+              "c_prime_direct_proxy_to_outcome": 4.6638762390848205,
+              "indirect_a_times_b": -0.1527435541964833,
+              "mediated_fraction": -0.0338592466384667,
+              "proxy_x_trial_mediator": 0.36345549186760095,
+              "proxy_x_trial_total": -2.152144383119669,
+              "proxy_x_trial_direct": -2.23866860543765,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.6244645790285333,
+                "ci95": [
+                  -1.0768219913774286,
+                  -0.20475588442049578
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.2250125240968388,
+                "ci95": [
+                  -0.3480171449214729,
+                  0.8099531657191732
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.48723008464739,
+                "ci95": [
+                  1.458130138291168,
+                  7.284955940662023
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.5881470197901155,
+                "ci95": [
+                  1.6852409346666266,
+                  7.405719019189043
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.12762249222728678,
+                "ci95": [
+                  -0.6105568460981537,
+                  0.1948044063642857
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.029031241966255797,
+                "ci95": [
+                  -0.22000898851869294,
+                  0.04519508960504877
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.3534517382310778,
+                "ci95": [
+                  -0.09530115577995289,
+                  0.7716574575974531
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -2.1629613967855423,
+                "ci95": [
+                  -4.103433192329053,
+                  -0.26443340894121437
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -2.274759051895475,
+                "ci95": [
+                  -4.256711633191305,
+                  -0.3875950394099167
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.008045206137322515,
+              "b_mediator_to_outcome_adjusted": 15.539701208058876,
+              "c_total_proxy_to_outcome": 4.490583133335829,
+              "c_prime_direct_proxy_to_outcome": 4.615603232867098,
+              "indirect_a_times_b": -0.1250200995312334,
+              "mediated_fraction": -0.027840504410918728,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.008057512189881252,
+                "ci95": [
+                  -0.013871626937796757,
+                  -0.0019475312039465317
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 15.51289318538156,
+                "ci95": [
+                  -24.939840597204263,
+                  60.90720015867593
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.424050010490111,
+                "ci95": [
+                  1.565574023534956,
+                  7.240157880237338
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.528408215350101,
+                "ci95": [
+                  1.7382587972464074,
+                  7.496079969024662
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.11126362784264299,
+                "ci95": [
+                  -0.5581231510378613,
+                  0.2090552502486776
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.02433202712440352,
+                "ci95": [
+                  -0.22195285039959894,
+                  0.0576605616571875
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.00809408913117429,
+              "b_mediator_to_outcome_adjusted": 18.062895016350407,
+              "c_total_proxy_to_outcome": 4.511132684888356,
+              "c_prime_direct_proxy_to_outcome": 4.6573353671177,
+              "indirect_a_times_b": -0.1462026822293841,
+              "mediated_fraction": -0.032409306584827796,
+              "proxy_x_trial_mediator": 0.005119491799101875,
+              "proxy_x_trial_total": -2.152144383119669,
+              "proxy_x_trial_direct": -2.2446172260238804,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.008176933525423601,
+                "ci95": [
+                  -0.01464248430018088,
+                  -0.0023830043548210486
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 17.302195712983817,
+                "ci95": [
+                  -27.445853262190898,
+                  60.69418788472888
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.4257081679577475,
+                "ci95": [
+                  1.8684111467718745,
+                  7.377404749430073
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.59040787318002,
+                "ci95": [
+                  1.9628077803603168,
+                  7.49100318018174
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.12275444591157346,
+                "ci95": [
+                  -0.6263018285055392,
+                  0.19750762112731637
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.027898300105642267,
+                "ci95": [
+                  -0.19558724106775874,
+                  0.05092490547336381
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.004824959875260308,
+                "ci95": [
+                  -0.0009745372290817603,
+                  0.010894901087170861
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -2.1822156946356466,
+                "ci95": [
+                  -4.171550949283925,
+                  -0.24440924051477278
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -2.2997894685399647,
+                "ci95": [
+                  -4.3444607760379705,
+                  -0.4295132211996188
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd_Z": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.2521797634421256,
+              "b_mediator_to_outcome_adjusted": 0.4090161482858292,
+              "c_total_proxy_to_outcome": 4.490583133335829,
+              "c_prime_direct_proxy_to_outcome": 4.593728728854607,
+              "indirect_a_times_b": -0.10314559551872979,
+              "mediated_fraction": -0.022969309877158006,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.24344324920163382,
+                "ci95": [
+                  -0.4197364267741374,
+                  -0.07565625935747333
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.39370585833709626,
+                "ci95": [
+                  -1.2666309123344042,
+                  1.8821521385229623
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.372506059618197,
+                "ci95": [
+                  1.81235136551695,
+                  7.2805394371642524
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.464109506737146,
+                "ci95": [
+                  1.837683818268748,
+                  7.437564878797575
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.08162983209260277,
+                "ci95": [
+                  -0.5610612877541319,
+                  0.34138588546381027
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.018938457886632128,
+                "ci95": [
+                  -0.17169367460427995,
+                  0.0886479197443136
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": -0.253817899609513,
+              "b_mediator_to_outcome_adjusted": 0.5105687957229748,
+              "c_total_proxy_to_outcome": 4.511132684888356,
+              "c_prime_direct_proxy_to_outcome": 4.640724184224965,
+              "indirect_a_times_b": -0.12959149933656397,
+              "mediated_fraction": -0.028727042272703885,
+              "proxy_x_trial_mediator": 0.17156119161155609,
+              "proxy_x_trial_total": -2.152144383119669,
+              "proxy_x_trial_direct": -2.239738174113544,
+              "n_rows": 408,
+              "n_subjects": 34
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": -0.2595889401550455,
+                "ci95": [
+                  -0.4270293549905246,
+                  -0.09391914750687848
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.5343874139750753,
+                "ci95": [
+                  -1.0891409802458025,
+                  2.1061586066866167
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 4.413702568844005,
+                "ci95": [
+                  1.5679067963206679,
+                  7.623323366496145
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 4.547615608926449,
+                "ci95": [
+                  1.7384125274179074,
+                  7.739828311069407
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": -0.11443180278616095,
+                "ci95": [
+                  -0.6370981706010644,
+                  0.32827449228732164
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": -0.02594675480024925,
+                "ci95": [
+                  -0.19779108617355654,
+                  0.09347445433381123
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": 0.16945104665659677,
+                "ci95": [
+                  0.005099415571171018,
+                  0.3254910210093487
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -2.1739131323925607,
+                "ci95": [
+                  -4.081108561469086,
+                  -0.18055124345295698
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -2.2855175728785966,
+                "ci95": [
+                  -4.1885814812912905,
+                  -0.2613501568695184
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        }
+      }
+    },
+    "Extero": {
+      "LIK": {
+        "HR": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.22242486483496826,
+              "b_mediator_to_outcome_adjusted": 0.015669692297861956,
+              "c_total_proxy_to_outcome": 0.0746375999592529,
+              "c_prime_direct_proxy_to_outcome": 0.0711522707678989,
+              "indirect_a_times_b": 0.003485329191357489,
+              "mediated_fraction": 0.04669669433717381,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.23011481912249065,
+                "ci95": [
+                  -0.22194733844361036,
+                  0.6289278079725182
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.016977761696382092,
+                "ci95": [
+                  -0.01826389637752644,
+                  0.04905037324329465
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07152009512716855,
+                "ci95": [
+                  -0.02485664317194397,
+                  0.17148635590686334
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.06871587102936186,
+                "ci95": [
+                  -0.026672630104411676,
+                  0.1710201963888036
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0020007611987374898,
+                "ci95": [
+                  -0.00803076824356192,
+                  0.01603838360873477
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.024663251115886235,
+                "ci95": [
+                  -0.29241951938017496,
+                  0.4737821974515502
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.22235324068346607,
+              "b_mediator_to_outcome_adjusted": 0.01565152063415609,
+              "c_total_proxy_to_outcome": 0.07378922227864049,
+              "c_prime_direct_proxy_to_outcome": 0.07030905594401338,
+              "indirect_a_times_b": 0.0034801663346287447,
+              "mediated_fraction": 0.04716361315595728,
+              "proxy_x_trial_mediator": -0.006186130157023548,
+              "proxy_x_trial_total": -0.07327381392088253,
+              "proxy_x_trial_direct": -0.07317699157708485,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.2133525753342429,
+                "ci95": [
+                  -0.24053609497688283,
+                  0.6626946768287655
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.014387293368895493,
+                "ci95": [
+                  -0.01684060892872407,
+                  0.04955263914230356
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07013881461124853,
+                "ci95": [
+                  -0.028095232679504138,
+                  0.1793382210092264
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.06767838498037199,
+                "ci95": [
+                  -0.029395378322486725,
+                  0.17686682515588703
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0013088783202461329,
+                "ci95": [
+                  -0.00854883447833642,
+                  0.01639764821309983
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.018556721148533094,
+                "ci95": [
+                  -0.2830245749775035,
+                  0.5013775819633628
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.0019059137773942917,
+                "ci95": [
+                  -0.6065517746207192,
+                  0.6772647301703439
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.07479002949098659,
+                "ci95": [
+                  -0.14760737192183926,
+                  0.01107733612983692
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.0718030968032318,
+                "ci95": [
+                  -0.1475378426849402,
+                  0.01415630929820617
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.002578499372528756,
+              "b_mediator_to_outcome_adjusted": 1.4051213017477704,
+              "c_total_proxy_to_outcome": 0.0746375999592529,
+              "c_prime_direct_proxy_to_outcome": 0.07101449556437178,
+              "indirect_a_times_b": 0.0036231043948834144,
+              "mediated_fraction": 0.048542616547978305,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.0025253076541438216,
+                "ci95": [
+                  -0.0028263839848799354,
+                  0.008205140778729943
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 1.4659980616852581,
+                "ci95": [
+                  -1.1157923642618728,
+                  4.062772577314876
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07447486139477855,
+                "ci95": [
+                  -0.023307042227923166,
+                  0.18079239302785607
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.07175815482776735,
+                "ci95": [
+                  -0.026023582000746295,
+                  0.17714425228061098
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0021423917873455997,
+                "ci95": [
+                  -0.006995790870105936,
+                  0.01885778139440034
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.02458640220375987,
+                "ci95": [
+                  -0.35082417841781277,
+                  0.4478190940002019
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.002569632476472298,
+              "b_mediator_to_outcome_adjusted": 1.3910672099974777,
+              "c_total_proxy_to_outcome": 0.07378922227864049,
+              "c_prime_direct_proxy_to_outcome": 0.07021469079887599,
+              "indirect_a_times_b": 0.0035745314797652286,
+              "mediated_fraction": 0.048442460421485374,
+              "proxy_x_trial_mediator": -0.0007658278930944073,
+              "proxy_x_trial_total": -0.07327381392088253,
+              "proxy_x_trial_direct": -0.07220849585029643,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.0027346404938110146,
+                "ci95": [
+                  -0.0031986801629909083,
+                  0.007564899566856973
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 1.3695768496089604,
+                "ci95": [
+                  -1.120784528055623,
+                  3.9587646496512687
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07175922665660955,
+                "ci95": [
+                  -0.022462920123231575,
+                  0.17524711255336722
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.06842132494892705,
+                "ci95": [
+                  -0.023671027394552867,
+                  0.1694436011667497
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0018942711003563863,
+                "ci95": [
+                  -0.007726707364368436,
+                  0.01817629696900321
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.025803600184369002,
+                "ci95": [
+                  -0.3219339490339423,
+                  0.6083756526813032
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.0004786311128816579,
+                "ci95": [
+                  -0.008252339287822392,
+                  0.007560463909330956
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.07409673707505642,
+                "ci95": [
+                  -0.14477961725468375,
+                  0.013707097896312937
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.0725297883900507,
+                "ci95": [
+                  -0.14296601275902343,
+                  0.01671172976692504
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd_Z": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.15762107322007768,
+              "b_mediator_to_outcome_adjusted": 0.042404286946241584,
+              "c_total_proxy_to_outcome": 0.0746375999592529,
+              "c_prime_direct_proxy_to_outcome": 0.06795379074165708,
+              "indirect_a_times_b": 0.006683809217598729,
+              "mediated_fraction": 0.08955016266932,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.15172791143082615,
+                "ci95": [
+                  -0.06117082441595809,
+                  0.37525161289588443
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.04070742030711813,
+                "ci95": [
+                  -0.03269009374539817,
+                  0.11606649755573381
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07713765149566412,
+                "ci95": [
+                  -0.023123417928887946,
+                  0.17526487881220768
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.07214951616301782,
+                "ci95": [
+                  -0.02704376761852639,
+                  0.17218654697148664
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.003945845123376163,
+                "ci95": [
+                  -0.008082046435741291,
+                  0.02285893710170562
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.04843220158428305,
+                "ci95": [
+                  -0.46427223153995073,
+                  0.5384467237965481
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.15717728802673814,
+              "b_mediator_to_outcome_adjusted": 0.04166080928283322,
+              "c_total_proxy_to_outcome": 0.07378922227864049,
+              "c_prime_direct_proxy_to_outcome": 0.06724108925856676,
+              "indirect_a_times_b": 0.006548133020074883,
+              "mediated_fraction": 0.08874104940892362,
+              "proxy_x_trial_mediator": -0.038329430889800536,
+              "proxy_x_trial_total": -0.07327381392088253,
+              "proxy_x_trial_direct": -0.07167697881066282,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.1596964199771135,
+                "ci95": [
+                  -0.07151884531509846,
+                  0.36272829077986524
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.039893705010613456,
+                "ci95": [
+                  -0.0279381501919775,
+                  0.11497535376818566
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 0.07798080467072219,
+                "ci95": [
+                  -0.026709861934145738,
+                  0.17783117135536006
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 0.07122049772218497,
+                "ci95": [
+                  -0.034606971546423046,
+                  0.1673410332060506
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.0043470888026200406,
+                "ci95": [
+                  -0.007643892292778737,
+                  0.023346233060769328
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.05770096947655247,
+                "ci95": [
+                  -0.4238945370553725,
+                  0.9616441011925332
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.03557247846433685,
+                "ci95": [
+                  -0.24805312693600048,
+                  0.159258682075425
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -0.07299076177543559,
+                "ci95": [
+                  -0.1481940245263943,
+                  0.004181867615251464
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -0.07095723102095061,
+                "ci95": [
+                  -0.14988233058581896,
+                  0.006836035705653079
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        }
+      },
+      "VAS": {
+        "HR": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.22242486483496826,
+              "b_mediator_to_outcome_adjusted": 0.4416476759861241,
+              "c_total_proxy_to_outcome": 2.1136366676336955,
+              "c_prime_direct_proxy_to_outcome": 2.015403242997873,
+              "indirect_a_times_b": 0.0982334246358915,
+              "mediated_fraction": 0.04647602217549903,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.21353183550967358,
+                "ci95": [
+                  -0.21828696822647595,
+                  0.6367755683314623
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.46516699523888094,
+                "ci95": [
+                  -0.27914414407300864,
+                  1.267217015813012
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.149230019063383,
+                "ci95": [
+                  -0.28660870660083837,
+                  4.489556258658547
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 2.0479345329118637,
+                "ci95": [
+                  -0.34327866000360197,
+                  4.397672018719649
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.06226972091126181,
+                "ci95": [
+                  -0.17866114813474207,
+                  0.47287453707899046
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.031394282582073885,
+                "ci95": [
+                  -0.17583377193059002,
+                  0.4200111310280743
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.22235324068346607,
+              "b_mediator_to_outcome_adjusted": 0.441323217836709,
+              "c_total_proxy_to_outcome": 2.0984771464245355,
+              "c_prime_direct_proxy_to_outcome": 2.000347498749759,
+              "indirect_a_times_b": 0.09812964767484748,
+              "mediated_fraction": 0.04676231420582515,
+              "proxy_x_trial_mediator": -0.006186130157023548,
+              "proxy_x_trial_total": -1.3093177267562073,
+              "proxy_x_trial_direct": -1.3065876438893902,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.24652553306559633,
+                "ci95": [
+                  -0.20043329011635672,
+                  0.6594264226943589
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 0.48404450913272523,
+                "ci95": [
+                  -0.34105914104464097,
+                  1.2463156796829276
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.1219702173362567,
+                "ci95": [
+                  -0.335686205295805,
+                  4.413762163722076
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 2.0211830789237757,
+                "ci95": [
+                  -0.33629174723075717,
+                  4.241852474867467
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.07646565469581787,
+                "ci95": [
+                  -0.16447494497879753,
+                  0.4729781509270094
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.034583145943902924,
+                "ci95": [
+                  -0.15996964672901492,
+                  0.3499068516903507
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.004319492968417455,
+                "ci95": [
+                  -0.607032594850089,
+                  0.5850778231610444
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -1.3219145898925282,
+                "ci95": [
+                  -3.06994295943934,
+                  0.45287108389702246
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -1.2713094512692527,
+                "ci95": [
+                  -3.148340820593597,
+                  0.6316925107865423
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.002578499372528756,
+              "b_mediator_to_outcome_adjusted": 37.432946410970246,
+              "c_total_proxy_to_outcome": 2.1136366676336955,
+              "c_prime_direct_proxy_to_outcome": 2.017115838801125,
+              "indirect_a_times_b": 0.09652082883258932,
+              "mediated_fraction": 0.04566576191197914,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.0026356266948634466,
+                "ci95": [
+                  -0.0027381830043009506,
+                  0.007662604883785306
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 40.7379598863935,
+                "ci95": [
+                  -25.155002073130625,
+                  105.20458687988638
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.2087808664085173,
+                "ci95": [
+                  -0.33719397265428724,
+                  4.623733963598189
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 2.093796196271624,
+                "ci95": [
+                  -0.3508066621558347,
+                  4.393131539082158
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.06348384919836934,
+                "ci95": [
+                  -0.16666933793962802,
+                  0.45428445460921635
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.02932033047527624,
+                "ci95": [
+                  -0.19963263757795893,
+                  0.4026438714358495
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.002569632476472298,
+              "b_mediator_to_outcome_adjusted": 37.183653540211466,
+              "c_total_proxy_to_outcome": 2.0984771464245355,
+              "c_prime_direct_proxy_to_outcome": 2.002928822693704,
+              "indirect_a_times_b": 0.09554832373082152,
+              "mediated_fraction": 0.04553222030252765,
+              "proxy_x_trial_mediator": -0.0007658278930944073,
+              "proxy_x_trial_total": -1.3093177267562073,
+              "proxy_x_trial_direct": -1.2808414477079566,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.002541412817444645,
+                "ci95": [
+                  -0.0029429928386520364,
+                  0.00767578059330148
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 40.22522131685591,
+                "ci95": [
+                  -28.453556582500436,
+                  102.43635659055141
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.0919287011871486,
+                "ci95": [
+                  -0.40911805102630006,
+                  4.5479973513225
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 2.0216840729204932,
+                "ci95": [
+                  -0.3614683951517028,
+                  4.273740015240091
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.057802546621862114,
+                "ci95": [
+                  -0.19344599927547276,
+                  0.4355536119345537
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.02902498366561674,
+                "ci95": [
+                  -0.19812405336059985,
+                  0.34385355341895096
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.0005642557478910508,
+                "ci95": [
+                  -0.009047324343893711,
+                  0.0076917624124871785
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -1.3498007456375236,
+                "ci95": [
+                  -3.249910440763148,
+                  0.4721666191477213
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -1.2966302415418518,
+                "ci95": [
+                  -3.203471543692438,
+                  0.6978945069464755
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        },
+        "HRd_Z": {
+          "average_effect_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.15762107322007768,
+              "b_mediator_to_outcome_adjusted": 1.390411325976417,
+              "c_total_proxy_to_outcome": 2.1136366676336955,
+              "c_prime_direct_proxy_to_outcome": 1.8944785422160528,
+              "indirect_a_times_b": 0.21915812541775412,
+              "mediated_fraction": 0.10368770033835134,
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.15683945959875573,
+                "ci95": [
+                  -0.05125243764579563,
+                  0.36977857945911696
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 1.386076897727266,
+                "ci95": [
+                  -0.32577505354307273,
+                  3.0986825955735795
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.140156968126041,
+                "ci95": [
+                  -0.21824422052541353,
+                  4.741094922974599
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 1.9475485872745004,
+                "ci95": [
+                  -0.263831112936764,
+                  4.412079629309707
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.16451885923880066,
+                "ci95": [
+                  -0.13276153428907134,
+                  0.6232505511258933
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.07593205486867388,
+                "ci95": [
+                  -0.15157640973173322,
+                  0.5281868896553338
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": null,
+              "proxy_x_trial_total": null,
+              "proxy_x_trial_direct": null
+            },
+            "failures": 0
+          },
+          "feedback_by_trial_model": {
+            "point": {
+              "a_proxy_to_mediator": 0.15717728802673814,
+              "b_mediator_to_outcome_adjusted": 1.3773778910075407,
+              "c_total_proxy_to_outcome": 2.0984771464245355,
+              "c_prime_direct_proxy_to_outcome": 1.8819846249279983,
+              "indirect_a_times_b": 0.21649252149655335,
+              "mediated_fraction": 0.10316648997842148,
+              "proxy_x_trial_mediator": -0.038329430889800536,
+              "proxy_x_trial_total": -1.3093177267562073,
+              "proxy_x_trial_direct": -1.2565236160737712,
+              "n_rows": 348,
+              "n_subjects": 29
+            },
+            "bootstrap": {
+              "a_proxy_to_mediator": {
+                "median": 0.15732143430007411,
+                "ci95": [
+                  -0.06886470283993881,
+                  0.3842667765740945
+                ],
+                "n_valid": 1000
+              },
+              "b_mediator_to_outcome_adjusted": {
+                "median": 1.4052916721502768,
+                "ci95": [
+                  -0.30833807773039906,
+                  3.0221853465578934
+                ],
+                "n_valid": 1000
+              },
+              "c_total_proxy_to_outcome": {
+                "median": 2.0939659553578522,
+                "ci95": [
+                  -0.44387626587723683,
+                  4.539728957120317
+                ],
+                "n_valid": 1000
+              },
+              "c_prime_direct_proxy_to_outcome": {
+                "median": 1.8862782073754385,
+                "ci95": [
+                  -0.4565967876530537,
+                  4.237252978766368
+                ],
+                "n_valid": 1000
+              },
+              "indirect_a_times_b": {
+                "median": 0.16820063460521154,
+                "ci95": [
+                  -0.19051545475374093,
+                  0.6486220374508088
+                ],
+                "n_valid": 1000
+              },
+              "mediated_fraction": {
+                "median": 0.07882777773879593,
+                "ci95": [
+                  -0.24482633089595868,
+                  0.5644670047202233
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_mediator": {
+                "median": -0.03889691640254905,
+                "ci95": [
+                  -0.26711613266758677,
+                  0.17984000922371746
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_total": {
+                "median": -1.340035891271194,
+                "ci95": [
+                  -3.2690854752892613,
+                  0.4388921648890419
+                ],
+                "n_valid": 1000
+              },
+              "proxy_x_trial_direct": {
+                "median": -1.2439656169094278,
+                "ci95": [
+                  -3.267440933937446,
+                  0.6732320141074708
+                ],
+                "n_valid": 1000
+              }
+            },
+            "failures": 0
+          }
+        }
+      }
+    }
+  },
+  "intero_sensitivity_gate": {
+    "LIK": {
+      "HR": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.015406940096957951,
+          0.01742829851820678
+        ],
+        "direct_ci": [
+          0.028626647234456685,
+          0.28448759501839743
+        ]
+      },
+      "HRd": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.01439650785945639,
+          0.018599038652299286
+        ],
+        "direct_ci": [
+          0.02606902352609368,
+          0.2851569621467466
+        ]
+      },
+      "HRd_Z": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.014986730074004992,
+          0.027619554879745944
+        ],
+        "direct_ci": [
+          0.022007488797311427,
+          0.2759805235264028
+        ]
+      }
+    },
+    "VAS": {
+      "HR": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.5635905936350873,
+          0.2543474273340167
+        ],
+        "direct_ci": [
+          1.9216543143294536,
+          7.318768620641004
+        ]
+      },
+      "HRd": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.5581231510378613,
+          0.2090552502486776
+        ],
+        "direct_ci": [
+          1.7382587972464074,
+          7.496079969024662
+        ]
+      },
+      "HRd_Z": {
+        "proxy_changes_mediator": true,
+        "total_proxy_effect": true,
+        "indirect_detected": false,
+        "residual_direct_detected": true,
+        "indirect_ci": [
+          -0.5610612877541319,
+          0.34138588546381027
+        ],
+        "direct_ci": [
+          1.837683818268748,
+          7.437564878797575
+        ]
+      }
+    }
+  }
+}
