@@ -1,0 +1,65 @@
+{
+  "status": "FAIL_NO_COMMON_IDENTIFIABLE_DATASET",
+  "rows": [
+    {
+      "dataset": "H001_Parrotta_pain_false_feedback",
+      "model": "MEM_2026_primary_formalism",
+      "status": "FAIL",
+      "reason": "Core reconstruction/context/allostatic variables and the report observation link are absent or implementation-dependent."
+    },
+    {
+      "dataset": "H001_Parrotta_pain_false_feedback",
+      "model": "Hierarchical_Bayesian_HDT_2026",
+      "status": "FAIL",
+      "reason": "The published generative/observation model is task-specific to sync/async heartbeat discrimination and has no source-specified LIK/VAS observation model."
+    },
+    {
+      "dataset": "HDT_interoceptive_training",
+      "model": "MEM_2026_primary_formalism",
+      "status": "FAIL",
+      "reason": "MEM does not specify a heartbeat-discrimination response likelihood, semblion training history/prototypes, or parameter-recovery procedure for this task."
+    },
+    {
+      "dataset": "HDT_interoceptive_training",
+      "model": "Hierarchical_Bayesian_HDT_2026",
+      "status": "PASS",
+      "reason": "Public task-specific generative model, fitting code, identifiability simulation and parameter recovery exist."
+    }
+  ],
+  "cross_theory": [
+    {
+      "dataset": "H001_Parrotta_pain_false_feedback",
+      "model_statuses": {
+        "MEM_2026_primary_formalism": "FAIL",
+        "Hierarchical_Bayesian_HDT_2026": "FAIL"
+      },
+      "fair_cross_theory_comparison": false
+    },
+    {
+      "dataset": "HDT_interoceptive_training",
+      "model_statuses": {
+        "MEM_2026_primary_formalism": "FAIL",
+        "Hierarchical_Bayesian_HDT_2026": "PASS"
+      },
+      "fair_cross_theory_comparison": false
+    }
+  ],
+  "mem_core_items_without_source_specified_mapping": 13,
+  "mem_unspecified_names": [
+    "x(t)",
+    "n(t)",
+    "b(t)",
+    "A(t)",
+    "mu_m",
+    "rho_m",
+    "v_m",
+    "a_m/W(t)",
+    "h_ff_sens",
+    "hhat_sens",
+    "h_eff_sens",
+    "lambda",
+    "phenomenal_report_link"
+  ],
+  "bayesian_hdt_core_items_without_source_specified_mapping": 0,
+  "interpretation": "No current dataset in this audit supports a fair direct MEM-vs-hierarchical-Bayesian model comparison. H001 remains useful for mechanism constraints but would require custom observation models for both theories. The heartbeat-discrimination dataset supports the published Bayesian model and its parameter-recovery tests, but MEM lacks a source-specified task likelihood and recoverable parameterization for that task. Do not interpret this asymmetry as evidence that the Bayesian theory of feeling is true; it is a maturity/identifiability result."
+}
