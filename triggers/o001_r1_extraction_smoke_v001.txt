@@ -1,0 +1,1 @@
+Trigger O001-R1 extraction-only smoke.\nReplication protocol commit: fb7645bc92bc3f96f4000e33286a464264319083\nAnalysis commit: d0c230c842861674987f4cf188cf0fbe5584843a\n
