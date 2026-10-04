@@ -1,0 +1,22 @@
+{
+  "status":"PUBLIC_BRIDGE_INVENTORY",
+  "source":{"zenodo_record":"10.5281/zenodo.21536139","paper_related_doi":"10.1038/s41593-025-02009-x"},
+  "downloads":{
+    "EBS_elecloc_QCcleaned.csv":{"sha256":"b85f36d54f3b9ec08f7afa6ec0f99ee8d2fb2664b19601dda36072a5fcf4e740","bytes":175427},
+    "Part3-CCEP.zip":{"sha256":"511badef7cc4d24a696e41b699d4aa15d6ed3c98c940fa2d6899213c0aa4945b","bytes":332800}
+  },
+  "meta_csv":{"approx_lines":660,"label_columns":["subject","bipolar","Hot_Cold","Category","Yeo7/Gordon333","MNI coordinates"]},
+  "archive_members":[
+    "aggregateCCEP_ebsCAT_GlasserParc_bilateral_v4_mean.m",
+    "MNE_spectra_stats_2sampleTest-SMvxComplex.ipynb"
+  ],
+  "candidate_connectivity_tables":[],
+  "bridge_gate":"NO_OBVIOUS_SITE_LEVEL_CONNECTIVITY_TABLE_FROM_SCHEMA_SCAN",
+  "code_dependency_findings":[
+    "MATLAB script loads private/non-public table_CCEPnewpipOutput_wholebrain_anatomical_info_activationRedone_41sbjs_fslr.csv",
+    "MATLAB script loads private time_maxCor_all.mat and peak_maxCor_all.mat",
+    "MATLAB script loads private EBS_elecloc_Cingulate_stims_QCcleaned_1014.mat",
+    "Notebook expects private CCEP_cingIns_CMPvsSM.csv plus within-subj CSV and PKL spectral files"
+  ],
+  "interpretation":"The Zenodo record exposes site labels and example analysis code, but not the underlying subject/site-level CCEP matrices needed to independently reproduce or cross-validate the connectivity classifier."
+}
