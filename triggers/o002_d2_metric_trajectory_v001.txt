@@ -4,3 +4,6 @@ Analysis commit: dabe1b3076d17da6a30e9877c95e3d9905e692fe
 Workflow commit: fff49cf5a16948ccea01f60a20cb8afbd8e248f8
 Classification: post-primary metric/trajectory sensitivity.
 Frozen before POPANE-R6 outcome is known.
+
+Technical rerun after subject-ID string correction commit: 21c59388331bee5c6f74ed865bd1f0693e59b402
+Original failed run 37270639614 produced no scientific outcome.
