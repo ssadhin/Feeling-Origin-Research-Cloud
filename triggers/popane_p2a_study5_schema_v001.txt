@@ -1,0 +1,5 @@
+Trigger outcome-blind POPANE-P2a Study 5 schema preflight.
+Protocol commit: 327c162933d237bf5f8e0870bc12e78f0e6f7bd1
+Analysis commit: d84ddd9bf4f11d2a2e6fea5c8b061027b3dae0b1
+Workflow commit: a654ee41ade936731ad4d7d2bf36b83c4b5a5d18
+Purpose: resolve external signal-validity dependency using a separate published POPANE study; inspect filenames/metadata/header only, no data rows.
