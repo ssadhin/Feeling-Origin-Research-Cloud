@@ -1,0 +1,58 @@
+{
+  "status": "POPANE_R3_ALIGNMENT_SIGNAL_CONTROL",
+  "classification": "EXPLORATORY_POST_PRIMARY",
+  "run_id": 37269068756,
+  "head_sha": "4cab68f9796f3e7482023698c94680ae219c75dd",
+  "protocol_commit": "8e2fb4e00a4dfeaed358b651d8e7570ceab6d1b4",
+  "final_metric_access_correction_commit": "b2a68bad26f09eeb5a8395e049da97ed3c8ceebf",
+  "artifact_id": 11327912274,
+  "artifact_sha256": "4e84e37707541380a136bf7abc3370167c526c8336b99ae3086699da014e2b0f",
+  "verdict": "NO_DETECTABLE_ALIGNED_SIGNAL",
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18
+  },
+  "ridge": {
+    "time_only_mae": 1.153021758500974,
+    "real_physiology_mae": 1.202510451022761,
+    "shifted_physiology_mae": 1.2041331437981482,
+    "delta_shift_real": {
+      "mean": 0.0016168213758936322,
+      "ci95": [
+        -0.004438928782549123,
+        0.009315603141871786
+      ]
+    },
+    "delta_time_real": {
+      "mean": -0.04949936118017261,
+      "ci95": [
+        -0.07168702875258136,
+        -0.027017642931544617
+      ]
+    }
+  },
+  "hgb": {
+    "time_only_mae": 1.1615864845360397,
+    "real_physiology_mae": 1.2490843435564365,
+    "shifted_physiology_mae": 1.2612290797958343,
+    "delta_shift_real": {
+      "mean": 0.011993652670679707,
+      "ci95": [
+        -0.0025020989217614783,
+        0.026227910705802382
+      ]
+    },
+    "delta_time_real": {
+      "mean": -0.08733597224685902,
+      "ci95": [
+        -0.1325259607451405,
+        -0.04727091287159273
+      ]
+    }
+  },
+  "interpretation": "No learner showed a statistically detectable real-vs-shifted temporal-alignment advantage for recent POPANE valence. Real physiology was also significantly worse than time-only. Therefore POPANE supports persistence dominance but does not independently replicate CASE's stronger signal-without-increment distinction.",
+  "firewall": "Concurrent/recent valence alignment diagnostic only; no causal, bodily-necessity, universal, or phenomenal inference."
+}
