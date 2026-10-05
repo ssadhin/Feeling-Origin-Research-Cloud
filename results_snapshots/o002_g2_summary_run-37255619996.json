@@ -1,0 +1,114 @@
+{
+  "status": "O002_G2_PROSPECTIVE_HORIZON_STRESS",
+  "run_id": 37255619996,
+  "head_sha": "2bfc6ad371dd75d24c0d1d2c6cbc6c4d36ccdd90",
+  "protocol_commit": "fc936cd6cd6cd77beb6622d0ab96a5ae86468452",
+  "analysis_commit": "9401e8bfd6cb5cdf09b222e874ddb1ee3ad02c93",
+  "workflow_commit": "30277b4796296d8e31b743dc6e6220e13bbb8430",
+  "artifact_id": 11322846291,
+  "artifact_sha256": "b26e4a02d48c993158ccf8c072710a037b0a242452e755638fea3c83bd1c4a55",
+  "verdict": "REPORT_PERSISTENCE_HORIZON_GENERALIZES__NO_PHYSIOLOGY_INCREMENT_ACROSS_HORIZONS",
+  "prior_positive_all_six": true,
+  "physiology_positive_any": false,
+  "physiology_degradation_all_six": false,
+  "horizons": {
+    "gap_11s": {
+      "valence": {
+        "context_mae": 1.436521,
+        "prior_mae": 0.390186,
+        "physiology_mae": 0.403873,
+        "prior_increment_mean": 0.9791745160952562,
+        "prior_ci95": [
+          0.6278863533169976,
+          1.4171851570287088
+        ],
+        "physiology_increment_mean": -0.0127577443440317,
+        "physiology_ci95": [
+          -0.021260911200568205,
+          -0.006257509403698029
+        ]
+      },
+      "arousal": {
+        "context_mae": 1.379836,
+        "prior_mae": 0.424848,
+        "physiology_mae": 0.434922,
+        "prior_increment_mean": 0.9709172796611971,
+        "prior_ci95": [
+          0.5996578849080081,
+          1.3694477104280118
+        ],
+        "physiology_increment_mean": -0.011008108676361676,
+        "physiology_ci95": [
+          -0.020645650074322192,
+          -0.0014340159198737777
+        ]
+      }
+    },
+    "gap_21s": {
+      "valence": {
+        "context_mae": 1.489537,
+        "prior_mae": 0.558861,
+        "physiology_mae": 0.574803,
+        "prior_increment_mean": 0.8587563888426566,
+        "prior_ci95": [
+          0.5153080318029953,
+          1.267156046896067
+        ],
+        "physiology_increment_mean": -0.014115569447735949,
+        "physiology_ci95": [
+          -0.026016488424300453,
+          -0.0034680109755780694
+        ]
+      },
+      "arousal": {
+        "context_mae": 1.437363,
+        "prior_mae": 0.617728,
+        "physiology_mae": 0.631065,
+        "prior_increment_mean": 0.8426601422372914,
+        "prior_ci95": [
+          0.4952238549306702,
+          1.1998305738245516
+        ],
+        "physiology_increment_mean": -0.012423063084167607,
+        "physiology_ci95": [
+          -0.02865599736128295,
+          0.00218336421551994
+        ]
+      }
+    },
+    "gap_31s": {
+      "valence": {
+        "context_mae": 1.548421,
+        "prior_mae": 0.68615,
+        "physiology_mae": 0.709125,
+        "prior_increment_mean": 0.7794928305613769,
+        "prior_ci95": [
+          0.44555797876120184,
+          1.2036422787946146
+        ],
+        "physiology_increment_mean": -0.020010214906194347,
+        "physiology_ci95": [
+          -0.03816344771076282,
+          -0.0034009706191270965
+        ]
+      },
+      "arousal": {
+        "context_mae": 1.492743,
+        "prior_mae": 0.748122,
+        "physiology_mae": 0.768135,
+        "prior_increment_mean": 0.7691059180545182,
+        "prior_ci95": [
+          0.414172242755764,
+          1.1164974438553743
+        ],
+        "physiology_increment_mean": -0.01756269001060905,
+        "physiology_ci95": [
+          -0.03692146044048567,
+          0.0011276872889459935
+        ]
+      }
+    }
+  },
+  "interpretation": "Reported-state persistence survives 11/21/31 s forecasting gaps under simultaneous unseen-person and unseen-stimulus holdout. No horizon×axis shows a significant positive physiology increment. Valence shows significant degradation at all three horizons; arousal shows degradation at 11 s and inconclusive negative estimates at 21/31 s.",
+  "firewall": "Predictive robustness only; no causal, bodily-necessity, or phenomenal inference."
+}
