@@ -1,0 +1,70 @@
+{
+  "title": "O002-D1 Future-Change Prediction Attack",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_CHANGE_OUTCOMES",
+  "classification": "Exploratory/post-primary adversarial test. CASE level-prediction outcomes are known; future-change outcomes are not.",
+  "purpose": "Test the strongest alternative explanation of the baseline-dominance result: physiology may predict changes/deviations in future affect even if it cannot improve absolute level prediction over persistence.",
+  "source": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+  "design": {
+    "horizons_rows": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gaps_sec": [
+      1,
+      11,
+      21,
+      31
+    ],
+    "change_target": "delta_y = future target y_axis at horizon h minus prior_axis from the predictor row.",
+    "naive_zero_change": "predict delta_y = 0.",
+    "context_features": [
+      "prior same-axis report",
+      "normalized time-within-video"
+    ],
+    "physiology_features": "context features + exact frozen 29 O002 peripheral features",
+    "learners": {
+      "ridge": {
+        "alphas": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ],
+        "tuning": "training-only GroupKFold by subject, up to 4 folds"
+      },
+      "hgb": {
+        "max_iter": 150,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1,
+        "random_state": 1701
+      }
+    },
+    "evaluation": "Simultaneous unseen-person × unseen-video cells. For each test subject and video, training excludes all rows from that subject AND all rows from that video. Video identity omitted.",
+    "metrics": [
+      "MAE of zero-change baseline",
+      "MAE of context model",
+      "MAE of context+physiology model",
+      "delta_zero_phys = MAE(zero)-MAE(physiology), positive favors physiology for future change",
+      "delta_context_phys = MAE(context)-MAE(physiology), positive is physiology increment beyond prior level/time"
+    ],
+    "uncertainty": "Crossed subject×video bootstrap, 5000 replicates, separately by axis/horizon/learner."
+  },
+  "decision_rules": {
+    "CHANGE_SIGNAL_SURVIVES": "At least one horizon×axis has BOTH Ridge and HGB delta_context_phys 95% CI strictly above zero. This requires narrowing the paper: physiology may predict deviations despite failing to improve level forecasts.",
+    "NO_INCREMENT_FOR_CHANGE": "No horizon×axis has delta_context_phys 95% CI strictly above zero for either learner.",
+    "MIXED_CHANGE_RESULT": "Any other pattern.",
+    "ZERO_CHANGE_BEATS_PHYSIOLOGY_STRONGLY": "For both axes and all four horizons, both learners have delta_zero_phys mean <=0 and no positive CI."
+  },
+  "firewalls": [
+    "Post-primary; cannot be presented as preregistered confirmation.",
+    "A positive change signal does not invalidate the level-prediction result; it changes interpretation.",
+    "A null change signal does not imply physiology is causally irrelevant.",
+    "No phenomenal inference."
+  ],
+  "next_if_positive": "Replicate the positive change horizon/axis externally before manuscript claim.",
+  "next_if_nonpositive": "Run the same change-target attack on independent POPANE valence and then finalize manuscript-readiness audit."
+}
