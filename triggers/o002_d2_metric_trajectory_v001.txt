@@ -1,0 +1,6 @@
+Trigger frozen O002-D2 CASE metric and trajectory-tracking sensitivity.
+Protocol commit: 600a5cd95398d1f023c06a128e9520872a138790
+Analysis commit: dabe1b3076d17da6a30e9877c95e3d9905e692fe
+Workflow commit: fff49cf5a16948ccea01f60a20cb8afbd8e248f8
+Classification: post-primary metric/trajectory sensitivity.
+Frozen before POPANE-R6 outcome is known.
