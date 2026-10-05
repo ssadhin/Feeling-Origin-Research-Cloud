@@ -128,7 +128,13 @@
       "canonical_trigger_commit": "8c484b897d138e323e7bbf8571926d4b50aa6d7d",
       "canonical_run_id": 37270785057,
       "original_technical_failure_run": 37270639614,
-      "status": "IN_PROGRESS_AT_MANIFEST_FREEZE"
+      "status": "COMPLETED_SUCCESS",
+      "artifact_id": 11329066114,
+      "artifact_sha256": "52d3038e309b5f74823e34a0a66f6e24c886f8af3b92c44ec804aa069bbd8b65",
+      "summary_path": "results_snapshots/o002_d2_summary_run-37270785057.json",
+      "summary_commit": "1688fc932ec8a582fa036fc36b59fb3c0e31eb14",
+      "verdict": "MIXED_METRIC_RESULT",
+      "paper_gate_interpretation": "G6 PASS-ROBUST: no CCC rescue; RMSE favors persistence in all 16 point estimates, 15/16 CIs strictly negative, one inconclusive but non-reversing."
     }
   ],
   "audits": {
@@ -139,10 +145,15 @@
     "temporal_leakage_audit_commit": "17fd24ba9adb95aeee411a8958b74219f5cf56d4",
     "rating_inertia_audit_commit": "538acd7fde5be52f28f54215c05e56858e7ba04c",
     "claim_evidence_matrix_commit": "90357c04622d1983f5568fac661333dd28e36696",
-    "reviewer_objection_ledger_commit": "ed5d70aa1e4e1150b3bea915aee8eaf6bc39a8b6"
+    "reviewer_objection_ledger_commit": "ed5d70aa1e4e1150b3bea915aee8eaf6bc39a8b6",
+    "case_o002_dataset_provenance_commit": "e51b209bc3747d4731aa8fd76c326328ac35edfb",
+    "popane_r1_provenance_bridge_commit": "e8ba2eec7666ace2198b02b1566e5f51dd2b3027",
+    "paper_readiness_loop1_commit": "60f5cb47efbbe648656a0323550ff99fe8eeea97"
   },
   "manuscript_control": {
     "rule": "Do not create or modify manuscript until three consecutive research-loop paper-readiness decisions agree, unless user explicitly overrides.",
-    "decisions_recorded": 0
+    "decisions_recorded": 1,
+    "current_consecutive_decision": "PAPER_READY_FOR_DRAFTING",
+    "status": "HOLD_MANUSCRIPT_UNTIL_3_OF_3_CONSECUTIVE_READY_DECISIONS"
   }
 }
