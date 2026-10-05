@@ -1,0 +1,42 @@
+name: POPANE-R2b Future Change Valence Once
+
+on:
+  push:
+    paths:
+      - "triggers/popane_r2b_future_change_v002.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: popane-r2b-future-change-v002
+  cancel-in-progress: true
+
+jobs:
+  change-replication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "pandas>=2.2,<3" "scipy>=1.14,<2" "scikit-learn>=1.6,<2"
+      - name: Download public POPANE Study 6 archive transiently
+        run: curl -L --fail --retry 5 --retry-delay 3 --connect-timeout 30 -o /tmp/study6.zip https://data.psychosensing.psnc.pl/popane/files/study6.zip
+      - name: Run unchanged frozen change-target replication with import-only correction
+        env:
+          POPANE_ZIP: /tmp/study6.zip
+        run: python analysis/popane_r2b_future_change_valence.py
+      - name: Remove raw archive
+        if: always()
+        run: rm -f /tmp/study6.zip
+      - name: Upload aggregate result only
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: popane-r2b-future-change-${{ github.run_id }}
+          path: results/popane_r2_future_change_valence.json
+          if-no-files-found: error
+          retention-days: 14
