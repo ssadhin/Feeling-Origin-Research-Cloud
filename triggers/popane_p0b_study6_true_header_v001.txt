@@ -1,0 +1,5 @@
+Trigger POPANE-P0b Study 6 true-header preflight.
+Protocol commit: e84190935a6f367635ce5b794830e7ea47c94180
+Analysis commit: 3f60a45bafb22d109a48b78cb887f44170c332c5
+Workflow commit: 3e3896d4c55bdf8cb10d97c7619f53c167197750
+Reason: P0 parser stopped at metadata comment line; P0b scans comments only until the actual CSV header and stops before data.
