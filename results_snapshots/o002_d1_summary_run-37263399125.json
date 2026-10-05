@@ -1,0 +1,56 @@
+{
+  "status": "O002_D1_FUTURE_CHANGE_ATTACK",
+  "classification": "EXPLORATORY_POST_PRIMARY",
+  "run_id": 37263399125,
+  "head_sha": "2a4881aaa48530e9b3efbd7c5e5896478a02e765",
+  "protocol_commit": "46ffbbef436d2dc4b247f9016665b4119710bfae",
+  "analysis_commit": "ec90b1ab9abdabedf3471cf5acea1e5be9ae4122",
+  "workflow_commit": "0a5a6742665465752243887976bfeef4d4d9d019",
+  "artifact_id": 11326166327,
+  "artifact_sha256": "afe62df422e9c69ec3a3930ab9b4b4225c9725afff96b3b85632d77f99ac90d8",
+  "verdict": "MIXED_CHANGE_RESULT",
+  "zero_change_beats_physiology_strongly": true,
+  "both_learner_positive_horizon_axes": [],
+  "hgb_only_positive_vs_context": [
+    {
+      "gap_sec": 1,
+      "axis": "arousal",
+      "mean": 0.008865538041550417,
+      "ci95": [
+        0.00022820158302529843,
+        0.0165884756540584
+      ]
+    },
+    {
+      "gap_sec": 11,
+      "axis": "arousal",
+      "mean": 0.019266975488995485,
+      "ci95": [
+        0.0015092698045114758,
+        0.03661322892136454
+      ]
+    },
+    {
+      "gap_sec": 31,
+      "axis": "valence",
+      "mean": 0.039263466067808644,
+      "ci95": [
+        0.005535973003313243,
+        0.07915255547672152
+      ]
+    },
+    {
+      "gap_sec": 31,
+      "axis": "arousal",
+      "mean": 0.07062727172221984,
+      "ci95": [
+        0.016074840733839604,
+        0.12701701174798022
+      ]
+    }
+  ],
+  "ridge_positive_vs_context": [],
+  "zero_change_interpretation": "For both axes, all four horizons, and both learners, physiology never beats the zero-change baseline; every delta_zero_phys mean is negative and all 95% CIs are strictly below zero.",
+  "interpretation": "No change effect meets the frozen cross-model robustness criterion, but HGB alone shows positive incremental effects over the fitted context model for arousal at 1/11/31 s and valence at 31 s. Because Ridge shows no positive increment anywhere and zero-change remains better than physiology everywhere, this is classified as mixed rather than a robust physiology change signal.",
+  "firewall": "Exploratory predictive change diagnostic only; no causal, bodily-necessity, or phenomenal inference."
+}
