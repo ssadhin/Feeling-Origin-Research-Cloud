@@ -1,0 +1,30 @@
+{
+  "title": "O002-B1 Naive Persistence Baseline Audit",
+  "status": "FROZEN_BEFORE_RESULT",
+  "purpose": "Quantify how much of prospective CASE affect forecasting is captured by the simplest possible no-training baseline: predict future valence/arousal as the last pre-anchor same-axis reported state.",
+  "source": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+  "horizons": {
+    "shift_0": "original target [0,5] s; predictor prior report [-5,-1] s",
+    "shift_1": "target from next 10 s anchor; predictor-end to target-start gap about 11 s",
+    "shift_2": "gap about 21 s",
+    "shift_3": "gap about 31 s"
+  },
+  "prediction_rule": "For each axis and row i, yhat = prior_<axis> from row i. For shifted horizons, target = y_<axis> at row i+h within the same subject×video only.",
+  "training": "None. This baseline learns no parameters and therefore cannot leak subject or stimulus identities from training.",
+  "metrics": [
+    "row-weighted MAE",
+    "mean subject×video cell MAE",
+    "crossed subject×video bootstrap 95% CI for mean cell MAE"
+  ],
+  "interpretive_rule": [
+    "This is a diagnostic benchmark, not a new primary endpoint.",
+    "If naive persistence is already close to fitted prior-model error, manuscript framing must emphasize baseline strength / incremental information rather than model novelty.",
+    "If naive persistence is materially worse, learned time/context calibration contributes beyond simple carry-forward.",
+    "Do not infer psychological mechanism from predictive persistence."
+  ],
+  "firewalls": [
+    "No physiology conclusion is drawn from B1 alone.",
+    "No causal or phenomenal inference.",
+    "No post-result threshold will be invented to call closeness; comparisons to G1/G2 will report absolute and relative MAE differences transparently."
+  ]
+}
