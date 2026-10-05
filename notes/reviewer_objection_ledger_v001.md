@@ -1,6 +1,6 @@
 # Affect Forecasting Paper — reviewer objection ledger v001
 
-Status: final-loop audit; CASE-D2 pending at creation.
+Status: final-loop audit; CASE-D2 resolved.
 
 ## Addressed with empirical tests
 
@@ -31,10 +31,10 @@ Addressed for predeclared POPANE families.
 - This does not rule out every possible representation or feature-selection method.
 
 ### “MAE hides better trajectory tracking by physiology.”
-Addressed externally.
+Addressed across both datasets.
 - POPANE-R6: physiology is worse than persistence on RMSE and CCC at all horizons, both learners; all relevant CIs unfavorable.
-- CASE-D2 pending.
-- R6 models were not optimized specifically for CCC, so do not claim universal CCC impossibility.
+- CASE-D2: no CCC rescue in any of 16 horizon×axis×learner cells; every physiology-vs-persistence CCC CI is strictly negative. RMSE point estimates favor persistence in all 16 cells; 15/16 CIs are strictly negative and the remaining 21 s arousal HGB CI narrowly includes zero without reversing direction.
+- These models were not optimized specifically for CCC, so do not claim universal CCC impossibility.
 
 ### “Zero-phase ECG filtering leaks future target samples.”
 Addressed.
@@ -99,20 +99,10 @@ Bounded LIT-N1 search has not found a paper that simultaneously:
 
 This supports “under-tested distinction” / “no direct match found in our bounded search,” not a global first-study claim.
 
-## Remaining active gate
+## Active gate resolution
 
-CASE-O002-D2 RMSE/CCC sensitivity.
-
-If D2 has no robust CCC rescue:
-- no material scientific objection remains that requires another experiment before drafting;
-- remaining issues are reporting/limitations and broader literature-search completeness.
-
-If D2 has a robust CCC rescue:
-- paper remains viable, but title/abstract/results must distinguish point-error persistence dominance from physiology trajectory concordance in CASE;
-- external POPANE still shows no CCC rescue, making the effect dataset-specific.
+CASE-O002-D2 is resolved with no physiology CCC rescue and no RMSE reversal. The frozen PAPER-G1 gate therefore returns PAPER_READY_FOR_DRAFTING for research-loop decision 1 of 3.
 
 ## Stop rule
 
-Do not invent new analyses simply because more analyses are possible. After D2:
-- if the frozen PAPER-G1 gate returns READY, stop adding experiments unless a new concrete reviewer objection arises;
-- shift to the required three-loop readiness-confirmation process and manuscript planning, without editing the manuscript until the project rule is satisfied.
+Do not invent new analyses simply because more analyses are possible. No material scientific objection currently requires another experiment before drafting. Stop adding experiments unless a new concrete reviewer-level objection arises. Shift to the required three-loop readiness-confirmation process; do not edit or create the manuscript until three consecutive loop decisions agree, unless the user explicitly overrides that rule.
