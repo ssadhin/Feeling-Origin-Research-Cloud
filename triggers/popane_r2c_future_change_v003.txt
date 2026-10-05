@@ -1,0 +1,6 @@
+Trigger POPANE-R2c future-change valence after resumable-download technical correction.
+Scientific protocol unchanged: 5e8f8038f06fb96b216b93a6ddc81371e748eb24
+Corrected analysis unchanged: dd18e3b7b4d04997fb70c0fe61e2be428bef73c8
+Prior failure audits: 836417ff980b11e5bb552ecec540e6aa28134cd0 and 1919d4f482fddb1b01415d2a2cf0fb99e5e3adb0
+R2c workflow commit: b4c04caccb0c563952e5e2949d3fae2dfd401883
+Only change: resumable range-based archive download plus expected-size verification.
