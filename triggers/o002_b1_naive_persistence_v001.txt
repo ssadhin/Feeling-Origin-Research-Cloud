@@ -1,0 +1,5 @@
+Trigger frozen O002-B1 naive persistence audit.
+Protocol commit: c5ac129e7e425efb317aa276cfa02f99de86c556
+Analysis commit: d88f475581e67a28da860f3b8eba66e66865036f
+Workflow commit: f424b8011f855d8cc058b2896b2fe82ec91f1f27
+Parent G1 run: 37226922346
