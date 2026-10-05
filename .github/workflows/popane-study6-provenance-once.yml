@@ -1,0 +1,42 @@
+name: POPANE Study6 Provenance Once
+
+on:
+  push:
+    paths:
+      - "triggers/popane_study6_provenance_v001.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download public POPANE Study 6 archive transiently
+        run: |
+          curl -L --fail --retry 5 --retry-delay 3 --connect-timeout 30 \
+            -o /tmp/study6.zip \
+            https://data.psychosensing.psnc.pl/popane/files/study6.zip
+      - name: Record immutable provenance facts
+        run: |
+          mkdir -p results
+          {
+            echo "source_url=https://data.psychosensing.psnc.pl/popane/files/study6.zip"
+            echo "retrieval_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "size_bytes=$(stat -c%s /tmp/study6.zip)"
+            echo "sha256=$(sha256sum /tmp/study6.zip | awk '{print $1}')"
+            echo "zip_entry_count=$(unzip -Z1 /tmp/study6.zip | wc -l)"
+          } > results/popane_study6_provenance.txt
+          cat results/popane_study6_provenance.txt
+      - name: Remove raw archive
+        if: always()
+        run: rm -f /tmp/study6.zip
+      - name: Upload provenance text only
+        uses: actions/upload-artifact@v7
+        with:
+          name: popane-study6-provenance-${{ github.run_id }}
+          path: results/popane_study6_provenance.txt
+          if-no-files-found: error
+          retention-days: 14
