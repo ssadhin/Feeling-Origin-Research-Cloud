@@ -1,0 +1,151 @@
+{
+  "status": "POPANE_R1_INDEPENDENT_VALENCE_REPLICATION",
+  "run_id": 37257239830,
+  "head_sha": "2a44cfc375f30ac8acac4a4d48e60a37b2081c89",
+  "protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+  "analysis_commit": "193893f736c0d6dfeddbb580326bfd58f07431e4",
+  "workflow_commit": "28a20ae6a021accbc3ac267f68743f018e29b4d1",
+  "artifact_id": 11324086038,
+  "artifact_sha256": "28fa484c7d9907a8329465af42f8abe7ad6957be8536028f2adbe6de763b6575",
+  "verdict": "STRONG_REPLICATION_OF_BASELINE_DOMINANCE",
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "rejected_peripheral_missing": 7,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18
+  },
+  "results": {
+    "gap_1s": {
+      "ridge": {
+        "naive_mae": 0.12484766822408812,
+        "fitted_mae": 0.14512318062547375,
+        "physiology_mae": 0.16256715839283628,
+        "delta_naive_phys_mean": -0.037695036892378124,
+        "ci95": [
+          -0.04865470639180441,
+          -0.03076514748172086
+        ],
+        "delta_fitted_phys_mean": -0.017433503665023335,
+        "delta_fitted_phys_ci95": [
+          -0.0285555165710333,
+          -0.010889118415642012
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.12484766822408812,
+        "fitted_mae": 0.1665315952145962,
+        "physiology_mae": 0.180226002768008,
+        "delta_naive_phys_mean": -0.05534965320162516,
+        "ci95": [
+          -0.06154164862120455,
+          -0.04949643161585132
+        ],
+        "delta_fitted_phys_mean": -0.013678013359633978,
+        "delta_fitted_phys_ci95": [
+          -0.017903733812061538,
+          -0.009969945529101921
+        ]
+      }
+    },
+    "gap_11s": {
+      "ridge": {
+        "naive_mae": 0.3005024802585197,
+        "fitted_mae": 0.34770170667195843,
+        "physiology_mae": 0.37803143374964404,
+        "delta_naive_phys_mean": -0.07749027906995043,
+        "ci95": [
+          -0.09774814682594223,
+          -0.06401948118646839
+        ],
+        "delta_fitted_phys_mean": -0.03032040493111705,
+        "delta_fitted_phys_ci95": [
+          -0.0498004661481574,
+          -0.017950812243353417
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.3005024802585197,
+        "fitted_mae": 0.37401607969186695,
+        "physiology_mae": 0.4042720671812217,
+        "delta_naive_phys_mean": -0.10374682037080946,
+        "ci95": [
+          -0.11520125397266616,
+          -0.09267883306284173
+        ],
+        "delta_fitted_phys_mean": -0.030248855696934966,
+        "delta_fitted_phys_ci95": [
+          -0.037342956324549544,
+          -0.02329849748898701
+        ]
+      }
+    },
+    "gap_21s": {
+      "ridge": {
+        "naive_mae": 0.4383545149007306,
+        "fitted_mae": 0.5024055040716529,
+        "physiology_mae": 0.5420644150249383,
+        "delta_naive_phys_mean": -0.10368941872308005,
+        "ci95": [
+          -0.13510950186552126,
+          -0.08330069653395077
+        ],
+        "delta_fitted_phys_mean": -0.03966976617580093,
+        "delta_fitted_phys_ci95": [
+          -0.06978568925703267,
+          -0.021596136966140832
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.4383545149007306,
+        "fitted_mae": 0.5326101670658165,
+        "physiology_mae": 0.5785603356681063,
+        "delta_naive_phys_mean": -0.14012941093532494,
+        "ci95": [
+          -0.15620544602171957,
+          -0.1242399076793851
+        ],
+        "delta_fitted_phys_mean": -0.045882863488433595,
+        "delta_fitted_phys_ci95": [
+          -0.05795077181162111,
+          -0.03456362053960187
+        ]
+      }
+    },
+    "gap_31s": {
+      "ridge": {
+        "naive_mae": 0.5534943690214389,
+        "fitted_mae": 0.6331195239067479,
+        "physiology_mae": 0.6796457980092181,
+        "delta_naive_phys_mean": -0.1261850220869226,
+        "ci95": [
+          -0.15958000726856622,
+          -0.10198629223939797
+        ],
+        "delta_fitted_phys_mean": -0.046596153957440725,
+        "delta_fitted_phys_ci95": [
+          -0.08063298801762853,
+          -0.02507354693379904
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.5534943690214389,
+        "fitted_mae": 0.6619135446253582,
+        "physiology_mae": 0.7259958087536483,
+        "delta_naive_phys_mean": -0.1724108342604418,
+        "ci95": [
+          -0.19601143764750772,
+          -0.14944984092209915
+        ],
+        "delta_fitted_phys_mean": -0.06399999060115258,
+        "delta_fitted_phys_ci95": [
+          -0.08326453836254824,
+          -0.04689940437620471
+        ]
+      }
+    }
+  },
+  "interpretation": "Independent public POPANE Study 6 valence data reproduce the CASE benchmark pattern under simultaneous held-person × held-segment evaluation. Across all four horizons and both Ridge/HGB learners, physiology is worse than naive persistence and worse than the fitted prior/context model; all participant-cluster bootstrap CIs for physiology-vs-naive are strictly negative.",
+  "firewall": "External predictive valence replication only. This does not imply physiological causal irrelevance, body-independence of affect, or any phenomenal conclusion."
+}
