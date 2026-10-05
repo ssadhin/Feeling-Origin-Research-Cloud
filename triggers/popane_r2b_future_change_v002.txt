@@ -1,0 +1,7 @@
+Trigger POPANE-R2b future-change valence after import-only technical correction.
+Scientific protocol unchanged: 5e8f8038f06fb96b216b93a6ddc81371e748eb24
+Failure audit commit: 836417ff980b11e5bb552ecec540e6aa28134cd0
+Corrected analysis commit: dd18e3b7b4d04997fb70c0fe61e2be428bef73c8
+Corrected workflow commit: aef445a47b287527c2b5e226615e1ba5ce33f8f2
+Correction: same-directory Python import only. No scientific rule changed and original R2 computed no outcome.
+Raw POPANE archive remains transient; aggregate result only.
