@@ -1,0 +1,6 @@
+Trigger frozen POPANE-P1 temporal alignment signal-validity control.
+Protocol commit: e6c1f3e4605b5b0a0a69aff6f6d1dd04bd93bd25
+Analysis commit: 27880b74ab7d5f8a9a7b10f38a92f2b787e08783
+Workflow commit: 2b8b94bf4aab24083591c0772ed5844429956578
+Classification: post-primary positive control; concurrent/aligned target, not prospective evidence.
+Raw POPANE archive remains transient; aggregate output only.
