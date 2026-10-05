@@ -1,0 +1,146 @@
+{
+  "status": "CASE_O002_CORE_EVIDENCE_SUMMARY",
+  "dataset": {
+    "name": "CASE — Continuously Annotated Signals of Emotion",
+    "descriptor_doi": "10.1038/s41597-019-0209-0",
+    "figshare_version_doi": "10.6084/m9.figshare.8869157.v1",
+    "file_id": 16260497,
+    "file_name": "CASE_full.zip",
+    "size_bytes": 4553720945,
+    "md5": "5e679ce69d6602c5f8225f03c489df76",
+    "contemporaneous_inventory_run": 37217414627,
+    "inventory_artifact_id": 11308509333
+  },
+  "original_o002": {
+    "run_id": 37217735818,
+    "windows_usable": 3300,
+    "subjects": 30,
+    "valence": {
+      "prior_model_mae": 0.17780336554121015,
+      "peripheral_mae": 0.18150808148564895,
+      "delta_context_minus_phys": -0.003704715944438754,
+      "ci95": [
+        -0.005617761650137978,
+        -0.0018814816469507817
+      ],
+      "verdict": "NO_PERIPHERAL_INCREMENT"
+    },
+    "arousal": {
+      "prior_model_mae": 0.1965671827305104,
+      "peripheral_mae": 0.2012942481944425,
+      "delta_context_minus_phys": -0.004727065463932094,
+      "ci95": [
+        -0.0069044943642409574,
+        -0.0024563511684337755
+      ],
+      "verdict": "NO_PERIPHERAL_INCREMENT"
+    },
+    "note": "Original outer evaluation was LOSO and included video identity/context; later G1 is the stronger simultaneous unseen-person × unseen-video test used for the paper's generalization claim."
+  },
+  "g1_joint_generalization": {
+    "protocol_commit": "049bb88b4edeecf494a6adeb0ce6076e6ce59adf",
+    "analysis_commit": "7ce5684a62dd2baf83e301d681c670d145c77e60",
+    "workflow_commit": "74f3771c8df9e7963ad47eed679b178c88a5fe65",
+    "trigger_commit": "32f890fa8a526a44a05f97090dc429682222cb48",
+    "run_id": 37226922346,
+    "artifact_id": 11311754909,
+    "artifact_sha256": "250d1f1a7c63c6abc1b42b7e7854519d9202a1519f9bbd6750175f6a8976b951",
+    "n_test_cells": 240,
+    "verdict": "REPORT_PERSISTENCE_GENERALIZES__NO_PHYSIOLOGY_INCREMENT_UNDER_DOUBLE_HOLDOUT",
+    "valence": {
+      "context_only_mae": 1.3849801099700512,
+      "naive_prior_mae": 0.16713628779106637,
+      "physiology_mae": 0.17636176011885069,
+      "physiology_increment_mean": -0.008971520866168618,
+      "physiology_increment_ci95": [
+        -0.012454113893301698,
+        -0.006198124085801601
+      ]
+    },
+    "arousal": {
+      "context_only_mae": 1.3264125157793802,
+      "naive_prior_mae": 0.18611388021207845,
+      "physiology_mae": 0.19143189902588925,
+      "physiology_increment_mean": -0.00574271427880232,
+      "physiology_increment_ci95": [
+        -0.009635878480958834,
+        -0.002032546865004646
+      ]
+    }
+  },
+  "g2_horizon_stress": {
+    "protocol_commit": "fc936cd6cd6cd77beb6622d0ab96a5ae86468452",
+    "analysis_commit": "9401e8bfd6cb5cdf09b222e874ddb1ee3ad02c93",
+    "workflow_commit": "30277b4796296d8e31b743dc6e6220e13bbb8430",
+    "trigger_commit": "2bfc6ad371dd75d24c0d1d2c6cbc6c4d36ccdd90",
+    "run_id": 37255619996,
+    "artifact_id": 11322846291,
+    "artifact_sha256": "b26e4a02d48c993158ccf8c072710a037b0a242452e755638fea3c83bd1c4a55",
+    "verdict": "REPORT_PERSISTENCE_HORIZON_GENERALIZES__NO_PHYSIOLOGY_INCREMENT_ACROSS_HORIZONS",
+    "horizons": {
+      "11s": {
+        "valence": {
+          "prior_mae": 0.390186,
+          "physiology_mae": 0.403873,
+          "increment": -0.0127577443440317,
+          "ci95": [
+            -0.021260911200568205,
+            -0.006257509403698029
+          ]
+        },
+        "arousal": {
+          "prior_mae": 0.424848,
+          "physiology_mae": 0.434922,
+          "increment": -0.011008108676361676,
+          "ci95": [
+            -0.020645650074322192,
+            -0.0014340159198737777
+          ]
+        }
+      },
+      "21s": {
+        "valence": {
+          "prior_mae": 0.558861,
+          "physiology_mae": 0.574803,
+          "increment": -0.014115569447735949,
+          "ci95": [
+            -0.026016488424300453,
+            -0.0034680109755780694
+          ]
+        },
+        "arousal": {
+          "prior_mae": 0.617728,
+          "physiology_mae": 0.631065,
+          "increment": -0.012423063084167607,
+          "ci95": [
+            -0.02865599736128295,
+            0.00218336421551994
+          ]
+        }
+      },
+      "31s": {
+        "valence": {
+          "prior_mae": 0.68615,
+          "physiology_mae": 0.709125,
+          "increment": -0.020010214906194347,
+          "ci95": [
+            -0.03816344771076282,
+            -0.0034009706191270965
+          ]
+        },
+        "arousal": {
+          "prior_mae": 0.748122,
+          "physiology_mae": 0.768135,
+          "increment": -0.01756269001060905,
+          "ci95": [
+            -0.03692146044048567,
+            0.0011276872889459935
+          ]
+        }
+      }
+    },
+    "interpretation": "No horizon×axis shows a significant positive physiology increment. Valence degradation is significant at 11/21/31 s; arousal degradation significant at 11 s and negative-but-inconclusive at 21/31 s."
+  },
+  "claim_boundary": "CASE supports no robust incremental physiology utility for valence/arousal under double holdout and multi-horizon stress. Do not say physiology is significantly worse at every CASE horizon×axis because arousal 21/31 s CIs include zero.",
+  "firewall": "Predictive benchmark evidence only; no causal, bodily-necessity, universal, or phenomenal inference."
+}
