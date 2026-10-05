@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R1 independent prospective valence replication.
+Protocol commit: 5ae69733800c4e7a9e510b6911e908c3d65ab181
+Analysis commit: 193893f736c0d6dfeddbb580326bfd58f07431e4
+Workflow commit: 28a20ae6a021accbc3ac267f68743f018e29b4d1
+Dataset: public POPANE Study 6, CC BY-NC 4.0.
+Raw archive must remain transient; commit aggregate result only.
