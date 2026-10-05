@@ -1,0 +1,48 @@
+name: POPANE-P2 Study5 Validation Once
+
+on:
+  push:
+    paths:
+      - "triggers/popane_p2_study5_validation_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: popane-p2-study5-validation-v001
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "pandas>=2.2,<3" "scipy>=1.14,<2" "scikit-learn>=1.6,<2"
+      - name: Download public POPANE Study 5 archive with resumable retries
+        run: |
+          rm -f /tmp/study5.zip
+          for attempt in 1 2 3 4 5 6; do
+            curl -L --fail --retry 3 --retry-all-errors --retry-delay 2 --connect-timeout 30 --continue-at - -o /tmp/study5.zip https://data.psychosensing.psnc.pl/popane/files/study5.zip && break
+            sleep 3
+          done
+          test "$(stat -c%s /tmp/study5.zip)" = "1624233511"
+      - name: Run frozen Study 5 validation
+        env:
+          POPANE_ZIP: /tmp/study5.zip
+        run: python analysis/popane_p2_study5_validation.py
+      - name: Remove raw archive
+        if: always()
+        run: rm -f /tmp/study5.zip
+      - name: Upload aggregate result only
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: popane-p2-study5-validation-${{ github.run_id }}
+          path: results/popane_p2_study5_validation.json
+          if-no-files-found: error
+          retention-days: 14
