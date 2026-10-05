@@ -1,0 +1,12 @@
+{
+  "status": "O002_D2_CASE_METRIC_TRAJECTORY_SENSITIVITY",
+  "classification": "POST_PRIMARY_SENSITIVITY",
+  "run_id": 37270785057,
+  "head_sha": "8c484b897d138e323e7bbf8571926d4b50aa6d7d",
+  "artifact_id": 11329066114,
+  "artifact_sha256": "52d3038e309b5f74823e34a0a66f6e24c886f8af3b92c44ec804aa069bbd8b65",
+  "verdict": "MIXED_METRIC_RESULT",
+  "robust_ccc_rescues": [],
+  "gate_interpretation": "PAPER-G1 G6 PASS-ROBUST for the frozen persistence-vs-physiology question: no model-class-robust CCC rescue was found and RMSE does not reverse persistence dominance. Some HGB physiology-vs-context improvements exist and must remain visible, but physiology remains worse than naive recent-state persistence on the frozen core comparison.",
+  "firewall": "Metric/trajectory sensitivity only; no causal, bodily-necessity, universal, or phenomenal inference."
+}
