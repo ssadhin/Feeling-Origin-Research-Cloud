@@ -1,0 +1,160 @@
+{
+  "title": "POPANE-R1 Independent Prospective Valence Increment Replication",
+  "status": "FROZEN_BEFORE_OUTCOME_VALUES",
+  "purpose": "Independently test whether peripheral physiology improves future continuous valence forecasting beyond an extremely strong simple persistence benchmark, using public POPANE Study 6 after the CASE O002 result.",
+  "provenance": {
+    "dataset": "POPANE Study 6",
+    "paper_doi": "10.1038/s41597-021-01117-0",
+    "osf_doi": "10.17605/OSF.IO/94BPX",
+    "archive": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+    "license": "CC BY-NC 4.0",
+    "schema_preflight_run": 37256777934,
+    "schema_preflight_commit": "152308397dd8646bfdb1074c250ca7125f819953"
+  },
+  "scientific_scope": "External valence-only replication. It does not test arousal and does not test causal or phenomenal claims.",
+  "file_inclusion": {
+    "include": "Segment CSVs whose filename is <participant>_<segment>.csv, excluding _All and _Baseline.",
+    "segment_rule": "Before reading values, include only segment labels appearing in >=20 distinct participants according to filenames.",
+    "participant_rule": "Use all participants with >=1 technically usable included segment.",
+    "technical_segment_qc": [
+      "timestamp strictly nondecreasing after numeric coercion",
+      "duration >=55 seconds so all horizons can contribute at least one anchor",
+      "affect finite fraction >=0.90",
+      "ECG finite fraction >=0.80 OR EDA finite fraction >=0.80",
+      "no exclusion based on affect magnitude, physiology magnitude, prediction error, or condition outcome"
+    ]
+  },
+  "sampling": {
+    "source_rate": "Metadata reports timestamp/affect/ECG/ICG/EDA/marker at 1000 Hz; hemodynamics beat-to-beat.",
+    "anchors": "Within each usable segment, anchors every 10 seconds starting 10 s after segment start, while the requested target window remains inside segment.",
+    "predictor_physiology_window": "[-10,-1] seconds relative to anchor",
+    "predictor_affect_window": "[-5,-1] seconds relative to anchor",
+    "target_window": "[0,5] seconds relative to anchor",
+    "horizon_shifts_rows": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "effective_predictor_end_to_target_start_gaps_sec": [
+      1,
+      11,
+      21,
+      31
+    ],
+    "target": "Mean affect over target window. POPANE Study 6 'affect' is continuous valence per the data descriptor."
+  },
+  "baseline": {
+    "primary_naive": "y_hat = mean affect in [-5,-1] s. No training.",
+    "fitted_context": "Ridge prediction from prior affect + normalized time within segment; segment identity omitted in joint unseen-segment tests."
+  },
+  "physiology_features": {
+    "extraction_window": "[-10,-1] s only",
+    "ECG": [
+      "raw mean",
+      "raw standard deviation",
+      "raw RMS",
+      "raw range",
+      "first-difference standard deviation",
+      "R-peak count using a fixed preprocessing/peak rule implemented before results",
+      "mean heart rate from detected R-R intervals",
+      "SDNN",
+      "RMSSD"
+    ],
+    "EDA": [
+      "mean",
+      "standard deviation",
+      "range",
+      "linear slope",
+      "first-difference standard deviation",
+      "positive derivative area"
+    ],
+    "ICG": [
+      "dzdt mean",
+      "dzdt standard deviation",
+      "dzdt RMS",
+      "dzdt range",
+      "dz mean",
+      "dz standard deviation",
+      "z0 mean",
+      "z0 standard deviation"
+    ],
+    "hemodynamic": [
+      "SBP mean/std/slope",
+      "DBP mean/std/slope",
+      "CO mean/std/slope",
+      "TPR mean/std/slope"
+    ],
+    "missingness": "Per-feature training-fold median imputation only. Feature values are never imputed using test-fold statistics.",
+    "scaling": "Training-fold standardization for Ridge; no scaling required for tree learner."
+  },
+  "learners": {
+    "ridge": {
+      "alphas": [
+        0.1,
+        1,
+        10,
+        100,
+        1000
+      ],
+      "tuning": "training-only GroupKFold by participant, max 4 folds"
+    },
+    "hist_gradient_boosting": {
+      "max_iter": 150,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1,
+      "random_state": 1601
+    }
+  },
+  "generalization": {
+    "subject_folds": "10 deterministic folds made by sorting numeric participant IDs and assigning round-robin fold index; all windows from a participant stay together.",
+    "primary_joint": "For each subject fold × eligible segment label, train excludes every participant in the held subject fold AND every row of the held segment label; test only held-fold rows of that segment. Segment identity is omitted from features.",
+    "secondary_subject_only": "10-fold held-person evaluation using all other participants. Segment label may be one-hot encoded only in this secondary analysis because segment labels are seen in training.",
+    "rationale": "Primary mirrors the CASE G1 simultaneous unseen-person × unseen-stimulus logic while remaining computationally tractable."
+  },
+  "endpoints": {
+    "for_each_horizon_and_learner": [
+      "MAE naive persistence",
+      "MAE fitted context/prior model",
+      "MAE physiology model",
+      "delta_naive_phys = MAE(naive)-MAE(physiology), positive favors physiology over simple persistence",
+      "delta_fitted_phys = MAE(fitted prior/context)-MAE(physiology), positive favors incremental physiology beyond learned baseline"
+    ],
+    "uncertainty": "Participant-cluster bootstrap with 5000 resamples of participant-level mean paired MAE differences; primary unit is participant, preserving within-person segment/window dependence.",
+    "descriptive": "Also report segment-level and overall row-weighted MAE, but do not use them to override primary participant-cluster inference."
+  },
+  "decisions": {
+    "CLEAR_EXTERNAL_PHYSIOLOGY_INCREMENT": "For at least one horizon, BOTH Ridge and HGB have delta_naive_phys 95% CI strictly above zero in primary joint generalization. This contradicts a horizon-invariant no-increment claim and requires the CASE paper claim to be narrowed.",
+    "REPLICATED_NONPOSITIVE_INCREMENT_PATTERN": "No horizon has delta_naive_phys 95% CI strictly above zero for either learner, and mean delta_naive_phys <=0 at >=3 of 4 horizons for both learners.",
+    "MIXED_EXTERNAL_RESULT": "Any other pattern.",
+    "STRONG_REPLICATION_OF_BASELINE_DOMINANCE": "REPLICATED_NONPOSITIVE_INCREMENT_PATTERN plus naive persistence has lower overall MAE than physiology for both learners at all four horizons."
+  },
+  "secondary_checks": [
+    "Ridge vs HGB model-class agreement",
+    "fitted prior/context vs naive persistence",
+    "subject-only vs joint person×segment generalization",
+    "feature-family ablation ECG-only, EDA-only, ICG/hemodynamic-only only after the primary result and labeled secondary"
+  ],
+  "anti_leakage": [
+    "No predictor sample at or after target start.",
+    "All preprocessing/imputation/scaling/tuning fit only on training data.",
+    "No participant leakage across subject folds.",
+    "Primary joint test excludes the held segment label entirely from training.",
+    "No data-derived choice of horizon, segment, feature family, learner or exclusion rule after outcome inspection."
+  ],
+  "privacy_reproducibility": [
+    "Do not commit raw POPANE files or participant-level raw signals to GitHub.",
+    "Commit code/protocol and aggregate result summaries only.",
+    "Transient derived feature tables may remain workflow artifacts for limited retention in the private repository.",
+    "Cite POPANE and respect CC BY-NC 4.0."
+  ],
+  "firewalls": [
+    "A nonpositive predictive increment does not imply physiology is causally irrelevant to feeling.",
+    "It does not imply body-independence of emotion.",
+    "It does not prove that affect is generated by self-report persistence.",
+    "It does not support phenomenal or consciousness claims.",
+    "External valence replication cannot by itself establish the same result for arousal."
+  ],
+  "paper_gate": "If the nonpositive pattern replicates in POPANE under the primary joint test and survives both learners, upgrade the benchmark/identifiability result to a serious paper candidate; still perform final systematic novelty and reporting/leakage audit before manuscript-ready classification."
+}
