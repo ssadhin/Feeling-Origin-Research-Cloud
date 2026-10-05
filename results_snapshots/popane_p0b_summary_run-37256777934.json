@@ -1,0 +1,59 @@
+{
+  "status": "POPANE_P0B_STUDY6_TRUE_HEADER_PREFLIGHT",
+  "run_id": 37256777934,
+  "head_sha": "ff7355f53726f21f811b3115caf314170c711e3c",
+  "protocol_commit": "e84190935a6f367635ce5b794830e7ea47c94180",
+  "analysis_commit": "3f60a45bafb22d109a48b78cb887f44170c332c5",
+  "workflow_commit": "3e3896d4c55bdf8cb10d97c7619f53c167197750",
+  "artifact_id": 11322509270,
+  "artifact_sha256": "db853390a157ced74378f00d588ec474e21f1163b699525e21a3fe8cb23c3406",
+  "verdict": "PASS_REMOTE_REPLICATION_FEASIBLE",
+  "qc": {
+    "n_archive_participants": 187,
+    "n_named_nonbaseline_segments": 18,
+    "columns": [
+      "timestamp",
+      "affect",
+      "ECG",
+      "dzdt",
+      "dz",
+      "z0",
+      "EDA",
+      "SBP",
+      "DBP",
+      "CO",
+      "TPR",
+      "marker"
+    ],
+    "sampling": "timestamp/affect/ECG/ICG/EDA/marker metadata report 1000Hz; hemodynamic values beat-to-beat",
+    "peripheral_families": [
+      "ECG",
+      "EDA",
+      "ICG",
+      "hemodynamics"
+    ],
+    "remote_range_access": true
+  },
+  "segment_labels": [
+    "Amusement1",
+    "Amusement2",
+    "Amusement3",
+    "Amusement4",
+    "Anger1",
+    "Anger2",
+    "Anger3",
+    "Disgust",
+    "Fear1",
+    "Neutral1",
+    "Neutral2",
+    "Neutral3",
+    "Neutral4",
+    "Neutral5",
+    "Neutral6",
+    "Sadness1",
+    "Tenderness1",
+    "Tenderness2"
+  ],
+  "interpretation": "Public POPANE Study 6 supports an independent valence replication with participant and independently named stimulus/affect segment structure. P0b remained outcome-blind and stopped before data rows.",
+  "next_action": "Freeze the full POPANE Study 6 prospective replication protocol before reading any valence/physiology values."
+}
