@@ -1,0 +1,138 @@
+{
+  "status": "POPANE_P2_STUDY5_VALIDATION",
+  "classification": "DEPENDENCY_RESOLUTION_ANALYSIS",
+  "run_id": 37265436088,
+  "head_sha": "c0412b67714cee9c24d6c999a9cc43a37b241439",
+  "protocol_commit": "a4afe0c32febf0f82f2ceb22900e421b200b422d",
+  "analysis_commit": "685ff12d0397e3a3e85f53b0bbacf0c545c302cf",
+  "workflow_commit": "49bf1a855c6c6ac008787084644689b6c153dd62",
+  "trigger_commit": "c0412b67714cee9c24d6c999a9cc43a37b241439",
+  "preflight_run": 37265235977,
+  "artifact_id": 11326566626,
+  "artifact_sha256": "c354a884f894999617201578a6032d78e59b4d1ba414b2a6942f164272313292",
+  "verdict": "NO_SIGNAL_VALIDATION",
+  "qc": {
+    "files_seen": 597,
+    "files_usable": 597,
+    "feature_rows": 4776,
+    "subjects_usable": 199,
+    "segments_usable": 9,
+    "n_available_physiology_features": 27
+  },
+  "signal_validity": {
+    "ridge": {
+      "context_mae": 1.4715252169696535,
+      "aligned_mae": 1.4714942440441217,
+      "shifted_mae": 1.4787600292869956,
+      "delta_alignment_mean": 0.007265785242873901,
+      "delta_alignment_ci95": [
+        -0.0006435988719278049,
+        0.014929491779008312
+      ],
+      "delta_context_mean": 0.000030972925532174204,
+      "delta_context_ci95": [
+        -0.022028956937138435,
+        0.021690143545045237
+      ]
+    },
+    "hgb": {
+      "context_mae": 1.4746542377254477,
+      "aligned_mae": 1.5201688228735668,
+      "shifted_mae": 1.5322813640312507,
+      "delta_alignment_mean": 0.012112541157683792,
+      "delta_alignment_ci95": [
+        -0.011255784236560434,
+        0.03466031707442978
+      ],
+      "delta_context_mean": -0.045514585148119215,
+      "delta_context_ci95": [
+        -0.09249089251517419,
+        0.0015032305967057178
+      ]
+    }
+  },
+  "prospective_level": {
+    "gap_1s": {
+      "ridge": {
+        "naive_mae": 0.1609471393140224,
+        "phys_mae": 0.22004177316373594,
+        "delta_naive_phys_mean": -0.059094633849713564,
+        "ci95": [
+          -0.06531495879141018,
+          -0.05356335048530701
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.1609471393140224,
+        "phys_mae": 0.25212994363918395,
+        "delta_naive_phys_mean": -0.09118280432516157,
+        "ci95": [
+          -0.10290761082354252,
+          -0.08036769235601059
+        ]
+      }
+    },
+    "gap_11s": {
+      "ridge": {
+        "naive_mae": 0.38600104328694423,
+        "phys_mae": 0.5130679587032542,
+        "delta_naive_phys_mean": -0.12706691541630985,
+        "ci95": [
+          -0.14343392418685225,
+          -0.11145200641914785
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.38600104328694423,
+        "phys_mae": 0.5525802884356619,
+        "delta_naive_phys_mean": -0.1665792451487177,
+        "ci95": [
+          -0.19436566960698431,
+          -0.1420823609671548
+        ]
+      }
+    },
+    "gap_21s": {
+      "ridge": {
+        "naive_mae": 0.5746937287357187,
+        "phys_mae": 0.7378998076679538,
+        "delta_naive_phys_mean": -0.1632060789322351,
+        "ci95": [
+          -0.19022341580221816,
+          -0.1385839603215513
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.5746937287357187,
+        "phys_mae": 0.7852007515194745,
+        "delta_naive_phys_mean": -0.2105070227837559,
+        "ci95": [
+          -0.2513817168027673,
+          -0.17396689718876715
+        ]
+      }
+    },
+    "gap_31s": {
+      "ridge": {
+        "naive_mae": 0.7428729150768388,
+        "phys_mae": 0.925357310804575,
+        "delta_naive_phys_mean": -0.18248439572773603,
+        "ci95": [
+          -0.21949301145455316,
+          -0.14812944500691208
+        ]
+      },
+      "hgb": {
+        "naive_mae": 0.7428729150768388,
+        "phys_mae": 0.9736551671489976,
+        "delta_naive_phys_mean": -0.2307822520721588,
+        "ci95": [
+          -0.28386258838658374,
+          -0.18281727647063362
+        ]
+      }
+    }
+  },
+  "interpretation": "A second independent POPANE study again shows strong recent-state baseline dominance in prospective valence forecasting, but the predeclared aligned-vs-shifted physiology positive control does not pass. Under MANUSCRIPT-GATE-01 this does not resolve the external signal-validity dependency. Per the frozen rule, do not perform further same-POPANE fishing; seek a genuinely different dataset/access route or retain Class C.",
+  "firewall": "Predictive validation only; no causal, body-independence, universal no-physiology, or phenomenal inference."
+}
