@@ -1,0 +1,127 @@
+{
+  "status": "POPANE_R2_INDEPENDENT_FUTURE_CHANGE_VALENCE",
+  "classification": "EXPLORATORY_POST_PRIMARY",
+  "run_id": 37267526360,
+  "head_sha": "8f3ebe7d1b7c5645ae7093d96400bcdda63bc180",
+  "protocol_commit": "5e8f8038f06fb96b216b93a6ddc81371e748eb24",
+  "import_only_correction_commit": "a167a33be9f2e5712aa5572fdf58d9a22df91cfe",
+  "artifact_id": 11327232849,
+  "artifact_sha256": "c15442896e92fffd1dbab6e2ba714fa08970a8a2179286e008edd2244f94104e",
+  "verdict": "NO_EXTERNAL_CHANGE_INCREMENT",
+  "strong_zero_change_dominance": true,
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18
+  },
+  "horizons": {
+    "1s": {
+      "ridge": {
+        "delta_zero_phys": -0.026545434995855335,
+        "ci_zero": [
+          -0.028946295476297908,
+          -0.024256447403020933
+        ],
+        "delta_context_phys": -0.008190441440468026,
+        "ci_context": [
+          -0.010183918732386886,
+          -0.0064375607410614745
+        ]
+      },
+      "hgb": {
+        "delta_zero_phys": -0.043489348949988425,
+        "ci_zero": [
+          -0.0477631493634448,
+          -0.03956088407725799
+        ],
+        "delta_context_phys": -0.010248534491612666,
+        "ci_context": [
+          -0.014042557358121899,
+          -0.006536097232140775
+        ]
+      }
+    },
+    "11s": {
+      "ridge": {
+        "delta_zero_phys": -0.05685701241908977,
+        "ci_zero": [
+          -0.06344980790061275,
+          -0.05084781813980778
+        ],
+        "delta_context_phys": -0.014064607758410754,
+        "ci_context": [
+          -0.019242844027533814,
+          -0.009816627523488122
+        ]
+      },
+      "hgb": {
+        "delta_zero_phys": -0.0861847677570007,
+        "ci_zero": [
+          -0.09526661214031473,
+          -0.07742419729485732
+        ],
+        "delta_context_phys": -0.020692158124452627,
+        "ci_context": [
+          -0.028195832748895963,
+          -0.01352173719881991
+        ]
+      }
+    },
+    "21s": {
+      "ridge": {
+        "delta_zero_phys": -0.07779676309188871,
+        "ci_zero": [
+          -0.08789953108812078,
+          -0.06853096879828192
+        ],
+        "delta_context_phys": -0.019516555150684137,
+        "ci_context": [
+          -0.027342879398468186,
+          -0.012634326969473359
+        ]
+      },
+      "hgb": {
+        "delta_zero_phys": -0.12267365123940804,
+        "ci_zero": [
+          -0.13637869326595728,
+          -0.1093242664770232
+        ],
+        "delta_context_phys": -0.03719547730993132,
+        "ci_context": [
+          -0.050362457460751596,
+          -0.02531114355037965
+        ]
+      }
+    },
+    "31s": {
+      "ridge": {
+        "delta_zero_phys": -0.0957119233194316,
+        "ci_zero": [
+          -0.10796575500092503,
+          -0.08404463151422857
+        ],
+        "delta_context_phys": -0.02319963947872698,
+        "ci_context": [
+          -0.03259832186178294,
+          -0.014871179385300028
+        ]
+      },
+      "hgb": {
+        "delta_zero_phys": -0.14743227193406028,
+        "ci_zero": [
+          -0.16797283680770342,
+          -0.1279241986027132
+        ],
+        "delta_context_phys": -0.0471949064957865,
+        "ci_context": [
+          -0.06586477014070047,
+          -0.029311118766875442
+        ]
+      }
+    }
+  },
+  "interpretation": "Independent POPANE Study 6 valence change targets do not rescue physiology. At every horizon and for both model classes, physiology is significantly worse than both zero-change and the learned context model. This is post-primary exploratory replication and does not imply physiological causal irrelevance.",
+  "firewall": "No causal, bodily-necessity, universal no-forecasting, or phenomenal inference."
+}
