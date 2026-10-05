@@ -1,0 +1,5 @@
+Trigger frozen O002-D1 future-change adversarial test.
+Protocol commit: 46ffbbef436d2dc4b247f9016665b4119710bfae
+Analysis commit: ec90b1ab9abdabedf3471cf5acea1e5be9ae4122
+Workflow commit: 0a5a6742665465752243887976bfeef4d4d9d019
+Classification: exploratory/post-primary.
