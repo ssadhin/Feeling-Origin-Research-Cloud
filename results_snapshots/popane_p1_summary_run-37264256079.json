@@ -1,0 +1,53 @@
+{
+  "status": "POPANE_P1_TEMPORAL_ALIGNMENT_SIGNAL_CONTROL",
+  "classification": "POST_PRIMARY_POSITIVE_CONTROL",
+  "run_id": 37264256079,
+  "head_sha": "504b13641fe04c78e0046ca73c541308796f89a8",
+  "protocol_commit": "e6c1f3e4605b5b0a0a69aff6f6d1dd04bd93bd25",
+  "analysis_commit": "27880b74ab7d5f8a9a7b10f38a92f2b787e08783",
+  "workflow_commit": "2b8b94bf4aab24083591c0772ed5844429956578",
+  "artifact_id": 11325826714,
+  "artifact_sha256": "586624bd30987430fa3825125419e90145a2f27e70c0b4cfb0edc7ce717ac598",
+  "verdict": "NO_ALIGNMENT_SIGNAL",
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18
+  },
+  "results": {
+    "ridge": {
+      "context_mae": 1.153021758500974,
+      "aligned_phys_mae": 1.202510451022761,
+      "shifted_phys_mae": 1.2041331437981482,
+      "delta_alignment_mean": 0.0016168213758936322,
+      "delta_alignment_ci95": [
+        -0.004438928782549123,
+        0.009315603141871786
+      ],
+      "delta_context_mean": -0.04949936118017261,
+      "delta_context_ci95": [
+        -0.07168702875258136,
+        -0.027017642931544617
+      ]
+    },
+    "hgb": {
+      "context_mae": 1.1615864845360397,
+      "aligned_phys_mae": 1.2490843435564365,
+      "shifted_phys_mae": 1.2612290797958343,
+      "delta_alignment_mean": 0.011993652670679707,
+      "delta_alignment_ci95": [
+        -0.0025020989217614783,
+        0.026227910705802382
+      ],
+      "delta_context_mean": -0.08733597224685902,
+      "delta_context_ci95": [
+        -0.1325259607451405,
+        -0.04727091287159273
+      ]
+    }
+  },
+  "interpretation": "The predeclared POPANE positive control did not establish temporally aligned valence signal in the extracted peripheral feature set. Therefore POPANE-R1 can support external baseline-dominance/nonincrement evidence but cannot be used to claim an independent replication of the stronger CASE synthesis 'real aligned signal yet no increment'. Under MANUSCRIPT-GATE-01 this triggers CLASS C (serious result, more validation needed) unless the identified external signal-validity dependency is resolved without outcome-driven fishing.",
+  "firewall": "Concurrent/aligned signal-validity control only; no prospective, causal, bodily-necessity, or phenomenal inference."
+}
