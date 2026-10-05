@@ -1,0 +1,33 @@
+{
+  "title": "POPANE-R4 Crossed Participant × Segment Uncertainty Sensitivity",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_R4_OUTCOME",
+  "classification": "Post-primary statistical robustness sensitivity. POPANE-R1 outcomes are known.",
+  "purpose": "Re-evaluate the strongest POPANE-R1 naive-persistence versus physiology contrasts with uncertainty that explicitly resamples both participants and held-out segment labels, because R1's preregistered bootstrap clustered participants only.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "r1_run": 37257239830
+  },
+  "replication_contract": [
+    "Reuse R1 file QC, anchors, targets, physiology features, horizons 1/11/21/31 s, deterministic subject folds, joint held-person × held-segment training exclusion, Ridge/HGB specifications.",
+    "Refit only the physiology-augmented model needed for the naive-vs-physiology contrast; naive prediction remains prior_affect.",
+    "Record MAE within each observed participant×segment test cell."
+  ],
+  "uncertainty": {
+    "method": "Crossed participant×segment bootstrap with incomplete-cell support.",
+    "replicates": 5000,
+    "algorithm": "For each replicate independently sample the set of usable participants with replacement and the set of usable segment labels with replacement. Form the multiplicity-weighted Cartesian resample; include only participant×segment cells observed in the held-out predictions. Compute the equal-cell mean delta = MAE(naive)-MAE(physiology).",
+    "estimand": "Equal observed participant×segment cell mean contrast. This differs from R1's participant-cluster participant-mean estimand and is explicitly a sensitivity analysis."
+  },
+  "decisions": {
+    "CROSSED_UNCERTAINTY_STRONGLY_SUPPORTS_R1": "All 8 horizon×learner delta_naive_phys 95% CIs are strictly below zero.",
+    "CROSSED_UNCERTAINTY_SUPPORTS_NONPOSITIVE_PATTERN": "No horizon×learner CI is strictly above zero, but one or more include zero.",
+    "CROSSED_UNCERTAINTY_MIXED": "At least one horizon×learner CI is strictly above zero or directions materially conflict."
+  },
+  "firewalls": [
+    "Post-primary sensitivity; do not replace the frozen R1 inference.",
+    "A negative physiology increment remains predictive, not causal.",
+    "No bodily-irrelevance or phenomenal inference."
+  ],
+  "paper_role": "Stress-test whether external persistence dominance survives uncertainty over both generalization axes."
+}
