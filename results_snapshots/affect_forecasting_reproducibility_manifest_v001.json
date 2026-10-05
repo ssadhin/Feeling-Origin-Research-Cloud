@@ -148,12 +148,16 @@
     "reviewer_objection_ledger_commit": "caa981fb9561d1f221a25c221bf14228136083a6",
     "case_o002_dataset_provenance_commit": "e51b209bc3747d4731aa8fd76c326328ac35edfb",
     "popane_r1_provenance_bridge_commit": "e8ba2eec7666ace2198b02b1566e5f51dd2b3027",
-    "paper_readiness_loop1_commit": "60f5cb47efbbe648656a0323550ff99fe8eeea97"
+    "paper_readiness_loop1_commit": "60f5cb47efbbe648656a0323550ff99fe8eeea97",
+    "paper_readiness_loop2_commit": "53252771eceeaed426277630b41d826a46632a62",
+    "paper_readiness_loop3_path": "notes/paper_g1_readiness_decision_loop3.md",
+    "paper_readiness_loop3_blob_sha": "45ff57198704c7df673777c3aaff54ed21387791",
+    "novelty_reattack_2026_10_05": "Noor et al. 2026 arXiv:2606.16687 added as CLOSE history/trajectory predecessor; does not test peripheral-physiology increment conditional on prior affect. Global first/unique language remains forbidden."
   },
   "manuscript_control": {
     "rule": "Do not create or modify manuscript until three consecutive research-loop paper-readiness decisions agree, unless user explicitly overrides.",
-    "decisions_recorded": 1,
+    "decisions_recorded": 3,
     "current_consecutive_decision": "PAPER_READY_FOR_DRAFTING",
-    "status": "HOLD_MANUSCRIPT_UNTIL_3_OF_3_CONSECUTIVE_READY_DECISIONS"
+    "status": "MANUSCRIPT_DRAFTING_AUTHORIZED_3_OF_3_READY_DECISIONS"
   }
 }
