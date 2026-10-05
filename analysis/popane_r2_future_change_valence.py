@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
 
-from analysis.popane_r1_independent_valence_replication import (
+from popane_r1_independent_valence_replication import (
     ZIP, OUT, HORIZONS, GAPS, RNG_SEED,
     extract_rows, subject_folds, ridge_pipe, hgb_pipe, tune_ridge, bootstrap_subject
 )
