@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R3 time-alignment signal control.
+Protocol commit: 8e2fb4e00a4dfeaed358b651d8e7570ceab6d1b4
+Analysis commit: b9c63dd648c9bf72401db5f513d8ffd91ec195a4
+Workflow commit: f365c0f7533db0df6773ee59b8ec87c590932374
+Classification: exploratory/post-primary.
+Raw POPANE archive must remain transient; aggregate result only.
