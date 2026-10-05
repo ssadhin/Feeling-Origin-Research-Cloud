@@ -1,0 +1,116 @@
+{
+  "title": "POPANE-P2 Study 5 independent signal-validity + level-forecast validation",
+  "status": "FROZEN_BEFORE_STUDY5_OBSERVATIONAL_VALUES",
+  "classification": "Dependency-resolution analysis under MANUSCRIPT-GATE-01 CLASS C.",
+  "source": {
+    "dataset": "POPANE Study 5",
+    "archive": "https://data.psychosensing.psnc.pl/popane/files/study5.zip",
+    "archive_bytes": 1624233511,
+    "paper_doi": "10.1038/s41597-021-01117-0",
+    "preflight_run": 37265235977,
+    "preflight_artifact_sha256": "3dc69f0a217575630cd7176a7eda53ff38773777f0c55adcb932850a25f46bd4",
+    "published_n": 199,
+    "blind_schema": {
+      "participants": 199,
+      "segments": [
+        "Amusement2",
+        "Amusement3",
+        "Amusement4",
+        "Anger1",
+        "Anger2",
+        "Anger3",
+        "Neutral1",
+        "Neutral6",
+        "Neutral7"
+      ],
+      "columns": [
+        "timestamp",
+        "affect",
+        "ECG",
+        "EDA",
+        "SBP",
+        "DBP",
+        "CO",
+        "TPR",
+        "marker"
+      ]
+    }
+  },
+  "selection_rationale": "Study 5 was selected before inspecting its values as the largest other published continuous-valence POPANE study, with distinct participants/task/recording study and positive/negative/neutral film segments. It is not a retune of Study 6.",
+  "extraction": {
+    "reuse": "Use the frozen POPANE-R1 windowing and feature-extraction implementation where channels exist.",
+    "included_segments": "All named nonbaseline segments appearing in >=20 participants, based on filenames only.",
+    "technical_qc": [
+      "timestamp nondecreasing",
+      "duration >=55 s",
+      "affect finite fraction >=0.90",
+      "ECG or EDA finite fraction >=0.80",
+      "no outcome-magnitude or model-error exclusions"
+    ],
+    "anchors": "10 s spacing, common anchors that support all 1/11/21/31 s target-start gaps.",
+    "predictor_physiology_window": "[-10,-1] s",
+    "recent_affect_window": "[-5,-1] s",
+    "target_windows": "5 s means beginning at anchor + 0/10/20/30 s",
+    "feature_families": "R1 ECG, EDA and hemodynamic features. ICG features are unavailable in Study 5 and are omitted. Any feature column with zero finite observations is dropped solely as technical unavailability."
+  },
+  "evaluation": {
+    "subject_folds": "10 deterministic folds from sorted participant IDs, round-robin.",
+    "primary_joint": "For each held subject fold × held segment, training excludes all held-fold participants AND all rows of the held segment; segment identity omitted.",
+    "learners": {
+      "ridge": "R1 Ridge grid [0.1,1,10,100,1000] with training-only GroupKFold by participant.",
+      "hgb": "R1 HistGradientBoosting fixed hyperparameters."
+    },
+    "uncertainty": "Participant-cluster bootstrap, 5000 paired resamples."
+  },
+  "signal_validity": {
+    "target": "recent affect mean in [-5,-1] s; deliberately concurrent/aligned positive-control target, not prospective evidence.",
+    "context": [
+      "time_norm"
+    ],
+    "aligned": "time_norm + available physiology features",
+    "shifted": "same physiology features after deterministic circular shift by floor(n/2), minimum 2 anchors, within each subject×segment group with >=4 rows; target/time unchanged.",
+    "quantities": {
+      "alignment": "MAE(shifted)-MAE(aligned), positive favors correct alignment.",
+      "context_increment": "MAE(time-only)-MAE(aligned), positive means aligned physiology adds valence information over time."
+    },
+    "valid_rule": "Both Ridge and HGB alignment 95% CIs strictly above zero AND at least one learner context_increment 95% CI strictly above zero."
+  },
+  "prospective_level": {
+    "naive": "future target = recent affect mean; no fitting.",
+    "fitted_context": [
+      "recent_affect",
+      "time_norm"
+    ],
+    "physiology": "fitted_context + available physiology",
+    "horizons_target_start_gaps_sec": [
+      1,
+      11,
+      21,
+      31
+    ],
+    "quantities": {
+      "naive_increment": "MAE(naive)-MAE(physiology), positive means physiology beats recent-state persistence.",
+      "fitted_increment": "MAE(fitted_context)-MAE(physiology), positive means physiology adds beyond learned recent-state/context."
+    }
+  },
+  "decisions": {
+    "VALID_SIGNAL_WITH_STRONG_BASELINE_DOMINANCE": "Signal-validity rule passes; no horizon has naive_increment CI strictly above zero for either learner; and naive MAE < physiology MAE for both learners at all four horizons.",
+    "VALID_SIGNAL_WITH_PHYSIOLOGY_INCREMENT": "Signal-validity rule passes and at least one horizon has BOTH learners naive_increment CI strictly above zero.",
+    "VALID_SIGNAL_MIXED_FORECAST": "Signal-validity passes but level forecast is neither of the above.",
+    "NO_SIGNAL_VALIDATION": "Neither learner has a strictly positive alignment CI.",
+    "WEAK_OR_MODEL_SPECIFIC_SIGNAL": "Any other signal-validity pattern."
+  },
+  "interpretation_gate": [
+    "Only VALID_SIGNAL_WITH_STRONG_BASELINE_DOMINANCE resolves the specific external 'real aligned signal yet no incremental level utility' dependency cleanly.",
+    "VALID_SIGNAL_WITH_PHYSIOLOGY_INCREMENT makes the external forecast story mixed and requires manuscript narrowing.",
+    "NO_SIGNAL_VALIDATION means do not add further same-POPANE fishing; seek a genuinely different dataset/access route or accept CLASS C.",
+    "Study 5 is not used to reclassify the already frozen Study 6 R1 result."
+  ],
+  "firewalls": [
+    "No causal physiology claim.",
+    "No body-independence claim.",
+    "No universal no-forecasting claim.",
+    "No consciousness or phenomenal inference.",
+    "Study 5 partner/couple dependence may not be fully recoverable from filenames; participant-cluster inference must be described with this limitation."
+  ]
+}
