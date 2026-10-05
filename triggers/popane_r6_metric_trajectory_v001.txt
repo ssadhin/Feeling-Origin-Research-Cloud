@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R6 metric and trajectory-tracking sensitivity.
+Protocol commit: b14fda9a4b49fae1313510ae3c70613a9b42de5b
+Analysis commit: f6de8b78478c816f6086eb344bb63ad3e0c2a0a4
+Workflow commit: 82893d7eeba9e6f42d8acd2c618445c95eee14ca
+Classification: post-primary metric/trajectory sensitivity.
+Raw POPANE archive must remain transient; aggregate output only.
