@@ -1,0 +1,33 @@
+{
+  "title": "POPANE-P0b Study 6 outcome-blind true-header discovery",
+  "status": "FROZEN_AFTER_P0_METHOD_FAILURE_BEFORE_DATA_VALUES",
+  "reason_for_revision": "P0 verified range access and ZIP structure but treated the first metadata comment line as the CSV header. P0b corrects only that parser assumption; it remains outcome-blind.",
+  "source_archive": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+  "allowed_reads": [
+    "ZIP filenames and sizes already permitted by P0",
+    "For deterministic sampled CSV entries, read sequential text lines only until the first non-empty line that does not start with '#'; record that line as the column header and stop immediately.",
+    "Record preceding '#' metadata field names/text because these are file-format metadata, not observations."
+  ],
+  "forbidden": [
+    "Do not read the first data row after the header.",
+    "Do not inspect valence or physiology values.",
+    "Do not compute distributions/correlations/models.",
+    "Do not change participant/stimulus inclusion using outcomes."
+  ],
+  "deterministic_sample": "Lexicographically sort CSV paths; exclude *_All.csv and *_Baseline.csv; inspect first 18 remaining entries, plus first 3 baseline entries. Scan at most 64 text lines per file to find the true header.",
+  "qc": [
+    "identify actual synchronized column names",
+    "verify continuous valence",
+    "verify at least ECG and EDA or other peripheral channels",
+    "identify time/sample index",
+    "record metadata keys available before header",
+    "infer participant and stimulus labels from filenames only",
+    "count distinct participant IDs and stimulus-label families from all archive filenames"
+  ],
+  "decisions": {
+    "PASS_REMOTE_REPLICATION_FEASIBLE": "True headers establish synchronized valence + time/index + >=2 peripheral channels, with participant IDs and multiple independently named stimulus/emotion segments.",
+    "PASS_PERSON_ONLY_GENERALIZATION": "Synchronized valence+physiology exists but stimulus/segment identity is unusable for held-out-stimulus evaluation.",
+    "FAIL_SCHEMA": "Required synchronized columns are absent or true header cannot be found."
+  },
+  "firewall": "Schema-only correction following P0 parser failure. No scientific outcome is inspected."
+}
