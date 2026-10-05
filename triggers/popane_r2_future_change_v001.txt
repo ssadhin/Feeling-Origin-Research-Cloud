@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R2 future-change valence attack.
+Protocol commit: 5e8f8038f06fb96b216b93a6ddc81371e748eb24
+Analysis commit: 784050c4f1747c140021a7900f829b4d3689d8c8
+Workflow commit: 27ad264b853f90b0a831df956ff4fea9bf831a1d
+Classification: exploratory/post-primary; frozen before O002-D1 outcome is known.
+Raw POPANE archive must remain transient; aggregate output only.
