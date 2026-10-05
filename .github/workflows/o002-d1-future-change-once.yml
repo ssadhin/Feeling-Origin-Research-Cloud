@@ -1,0 +1,35 @@
+name: O002-D1 Future Change Attack Once
+
+on:
+  push:
+    paths:
+      - "triggers/o002_d1_future_change_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: o002-d1-future-change-v001
+  cancel-in-progress: true
+
+jobs:
+  change-attack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "pandas>=2.2,<3" "scikit-learn>=1.6,<2"
+      - name: Run frozen future-change attack
+        run: python analysis/o002_d1_future_change_attack.py
+      - name: Upload aggregate result
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o002-d1-future-change-${{ github.run_id }}
+          path: results/o002_d1_future_change_attack.json
+          if-no-files-found: error
+          retention-days: 14
