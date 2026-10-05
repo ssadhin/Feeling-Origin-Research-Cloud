@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R5 pre-authorized physiology-family ablation.
+Protocol commit: 2d4a8d2c2b8e511761415074f688bdb38cad3eda
+Analysis commit: 4d2ad2a6962189b8e3aacc6039695d5898db7660
+Workflow commit: c2d415ac032e456ba5f4525bbea0ba41b9f8ccc9
+Classification: exploratory/post-primary sensitivity explicitly allowed by R1.
+Raw POPANE archive must remain transient; aggregate result only.
