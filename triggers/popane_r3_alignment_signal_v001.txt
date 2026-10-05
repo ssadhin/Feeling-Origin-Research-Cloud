@@ -7,3 +7,6 @@ Raw POPANE archive must remain transient; aggregate result only.
 
 Technical rerun after metric-column access correction commit: 6b3819d22351ea885d748b2c5fc6f76d67f9650b
 Original failed run 37267700807 produced no scientific verdict.
+
+Second technical rerun after remaining metric-column access correction commit: b2a68bad26f09eeb5a8395e049da97ed3c8ceebf
+Failed run 37268391855 produced no scientific verdict.
