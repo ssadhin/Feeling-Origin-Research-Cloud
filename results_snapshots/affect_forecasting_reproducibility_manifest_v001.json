@@ -144,8 +144,8 @@
     "paper_readiness_gate_commit": "590e43570c8d5ab4605bb2c8acc290e2ecde22ad",
     "temporal_leakage_audit_commit": "17fd24ba9adb95aeee411a8958b74219f5cf56d4",
     "rating_inertia_audit_commit": "538acd7fde5be52f28f54215c05e56858e7ba04c",
-    "claim_evidence_matrix_commit": "90357c04622d1983f5568fac661333dd28e36696",
-    "reviewer_objection_ledger_commit": "ed5d70aa1e4e1150b3bea915aee8eaf6bc39a8b6",
+    "claim_evidence_matrix_commit": "2eead04a468d3036009ac03871d505be19448b4a",
+    "reviewer_objection_ledger_commit": "caa981fb9561d1f221a25c221bf14228136083a6",
     "case_o002_dataset_provenance_commit": "e51b209bc3747d4731aa8fd76c326328ac35edfb",
     "popane_r1_provenance_bridge_commit": "e8ba2eec7666ace2198b02b1566e5f51dd2b3027",
     "paper_readiness_loop1_commit": "60f5cb47efbbe648656a0323550ff99fe8eeea97"
