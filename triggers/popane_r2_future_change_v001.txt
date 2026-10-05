@@ -4,3 +4,6 @@ Analysis commit: 784050c4f1747c140021a7900f829b4d3689d8c8
 Workflow commit: 27ad264b853f90b0a831df956ff4fea9bf831a1d
 Classification: exploratory/post-primary; frozen before O002-D1 outcome is known.
 Raw POPANE archive must remain transient; aggregate output only.
+
+Technical rerun after import-only correction commit: a167a33be9f2e5712aa5572fdf58d9a22df91cfe
+Original failed run 37263637334 contained no scientific outcome.
