@@ -1,0 +1,56 @@
+{
+  "title": "POPANE-P1 Temporal Alignment Signal-Validity Control",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_CONTROL_OUTCOME",
+  "classification": "Post-primary positive-control / pipeline validity analysis.",
+  "purpose": "Test whether the R1 POPANE physiological feature pipeline contains temporally aligned valence information at all, so a negative incremental forecast cannot be dismissed solely as failed physiology extraction.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "extraction": "Reuse R1 file QC, anchors, predictor windows and physiology feature extraction exactly."
+  },
+  "target": {
+    "variable": "prior_affect",
+    "definition": "Mean self-reported valence in [-5,-1] s at each anchor.",
+    "note": "This overlaps the physiological predictor interval [-10,-1] s and is deliberately a concurrent/aligned signal-validity target, NOT a prospective forecasting endpoint."
+  },
+  "predictors": {
+    "context": [
+      "time_norm"
+    ],
+    "real_model": "time_norm + all R1 peripheral physiology features",
+    "shifted_model": "time_norm + the same physiology features after deterministic circular temporal misalignment within each subject×segment."
+  },
+  "shift_rule": {
+    "grouping": "subject × segment",
+    "order": "sort anchors by time_norm",
+    "offset": "For n rows in a group, circularly shift all physiology-feature rows forward by floor(n/2), with minimum 2 anchors when n>=4. Groups with n<4 are excluded from this control only.",
+    "labels": "Self-report target and time_norm stay fixed.",
+    "rationale": "Preserves each person's segment-specific physiology distribution and much of its autocorrelation while breaking local alignment by roughly half a segment."
+  },
+  "evaluation": {
+    "generalization": "Same deterministic 10 held-person folds crossed with held-segment labels as R1; training excludes held people AND held segment.",
+    "learners": [
+      "Ridge with R1 training-only alpha tuning",
+      "R1 HistGradientBoosting"
+    ],
+    "metrics": [
+      "MAE time-only context",
+      "MAE aligned physiology",
+      "MAE shifted physiology",
+      "delta_alignment = MAE(shifted)-MAE(aligned), positive favors true temporal alignment",
+      "delta_context = MAE(context)-MAE(aligned), positive means aligned physiology adds predictive information over time alone"
+    ],
+    "uncertainty": "Participant-cluster bootstrap, 5000 replicates, paired at participant level."
+  },
+  "decision_rules": {
+    "ALIGNED_PHYSIOLOGY_SIGNAL_VALID": "Both Ridge and HGB delta_alignment 95% CIs strictly above zero AND at least one learner delta_context 95% CI strictly above zero.",
+    "WEAK_OR_MODEL_SPECIFIC_SIGNAL": "Only one learner has a strictly positive alignment CI or aligned physiology does not beat context.",
+    "NO_ALIGNMENT_SIGNAL": "Neither learner has a strictly positive delta_alignment CI."
+  },
+  "firewalls": [
+    "This is a positive control, not evidence of causal physiology.",
+    "Because target and physiology windows overlap, it cannot be used as prospective forecasting evidence.",
+    "A positive control strengthens interpretation of R1 as an incremental-information failure rather than extraction failure.",
+    "A failed control requires weakening the external 'real signal yet no increment' wording, but does not erase R1 baseline-dominance itself."
+  ]
+}
