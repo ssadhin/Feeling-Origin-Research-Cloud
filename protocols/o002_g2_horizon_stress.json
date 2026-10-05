@@ -1,0 +1,101 @@
+{
+  "title": "O002-G2 Prospective Horizon Stress under Joint Unseen-Person × Unseen-Stimulus Holdout",
+  "status": "FROZEN_BEFORE_RESULT",
+  "purpose": "Test whether the O002-G1 reported-state dominance and lack of physiology increment persist when the forecast target is moved farther into the future, reducing dependence on near-target autoregressive continuity.",
+  "source": {
+    "feature_snapshot": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+    "parent_primary_run": 37217735818,
+    "parent_g1_run": 37226922346,
+    "subjects": 30,
+    "videos": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "anchor_spacing_sec": 10
+  },
+  "horizon_construction": {
+    "method": "Within each subject×video sequence sorted by time_norm, predictors remain at row i and the target y_valence/y_arousal is taken from row i+h.",
+    "shifts": [
+      1,
+      2,
+      3
+    ],
+    "target_start_gap_from_original_anchor_sec": [
+      10,
+      20,
+      30
+    ],
+    "predictor_end_to_target_start_gap_sec": [
+      11,
+      21,
+      31
+    ],
+    "rationale": "The original physiology/prior windows end 1 s before anchor; shifting the target by h rows tests increasingly prospective forecasts without changing frozen predictor extraction."
+  },
+  "outer_evaluation": {
+    "unit": "subject × video cell at each horizon",
+    "rule": "For each test subject and test video, training excludes every row from the held-out subject AND every row from the held-out video.",
+    "video_identity": "Omitted from all models because the test video is unseen."
+  },
+  "models": {
+    "context_only": [
+      "normalized time-within-video at predictor anchor"
+    ],
+    "prior": [
+      "normalized time-within-video",
+      "prior same-axis report from predictor row"
+    ],
+    "physiology": [
+      "normalized time-within-video",
+      "prior same-axis report",
+      "exact 29 frozen O002 peripheral features"
+    ]
+  },
+  "learner": {
+    "type": "Ridge regression",
+    "alphas": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "tuning": "Training-only GroupKFold by subject, up to 4 folds; held-out subject and video never enter tuning.",
+    "preprocessing": "Median imputation and standardization fit only on each training fold."
+  },
+  "targets": [
+    "valence",
+    "arousal"
+  ],
+  "primary_quantities": {
+    "prior_increment": "MAE(context_only)-MAE(prior); positive favors prior reported state.",
+    "physiology_increment": "MAE(prior)-MAE(physiology); positive favors physiology beyond prior report."
+  },
+  "uncertainty": {
+    "method": "Crossed subject×video bootstrap",
+    "replicates": 5000,
+    "ci": "95%",
+    "note": "Each horizon/axis is reported separately. No positive claim may be made by cherry-picking across the six horizon×axis tests."
+  },
+  "decisions": {
+    "REPORT_PERSISTENCE_HORIZON_GENERALIZES": "prior_increment 95% CI strictly above zero for both axes at all three horizons.",
+    "PHYSIOLOGY_INCREMENT_AT_ANY_HORIZON": "At least one horizon×axis has physiology_increment 95% CI strictly above zero; classify as mixed and require independent replication before any positive physiology claim.",
+    "NO_PHYSIOLOGY_INCREMENT_ACROSS_HORIZONS": "No horizon×axis has physiology_increment 95% CI strictly above zero.",
+    "STRONG_PHYSIOLOGY_DEGRADATION_ACROSS_HORIZONS": "All six physiology_increment 95% CIs are strictly below zero.",
+    "MIXED_HORIZON_RESULT": "Any other pattern."
+  },
+  "firewalls": [
+    "Post-primary robustness analysis; it cannot redefine O002 primary.",
+    "Targets are shifted only within the same subject and video; no row crosses a video boundary.",
+    "This tests predictive information, not causal necessity or physiological irrelevance.",
+    "A null physiology increment at longer horizons does not imply physiology lacks affect-related signal.",
+    "No phenomenal or consciousness inference."
+  ],
+  "publication_role": "Direct manuscript-level horizon/leakage stress test of the narrow incremental-information claim."
+}
