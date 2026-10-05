@@ -1,0 +1,5 @@
+Trigger outcome-blind POPANE-P0 Study 6 schema preflight.
+Protocol commit: 81d4025f5e61c185e8d27aa53427daf028413694
+Analysis commit: 7d962cf38ffad144c23d2e867b7c40707e1f9395
+Workflow commit: 0b6eb6e20fbe9d4314d22c8d65a2bdbf7b4cc2e6
+Scientific firewall: inspect access, filenames, and CSV headers only; do not read outcome or physiology values.
