@@ -1,0 +1,59 @@
+{
+  "title": "O002-D2 CASE Metric and Trajectory-Tracking Sensitivity",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_D2_OUTCOMES_AND_BEFORE_POPANE_R6_OUTCOME",
+  "classification": "Post-primary statistical/interpretive sensitivity.",
+  "purpose": "Test whether CASE persistence dominance is specific to MAE or whether physiology may better track future valence/arousal trajectories under RMSE or concordance correlation.",
+  "source": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+  "design": {
+    "horizons_rows": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gaps_sec": [
+      1,
+      11,
+      21,
+      31
+    ],
+    "axes": [
+      "valence",
+      "arousal"
+    ],
+    "evaluation": "Same simultaneous unseen-person × unseen-video cells as O002 primary/D1. For each test subject and video, training excludes all rows from that subject AND all rows from that video. Video identity omitted.",
+    "models": {
+      "naive": "predict prior same-axis report",
+      "context": "time_norm + prior same-axis report",
+      "physiology": "context + exact frozen 29 O002 peripheral features",
+      "learners": {
+        "ridge": "same alpha grid and training-only GroupKFold tuning as O002",
+        "hgb": "same frozen HGB specification as O002-D1"
+      }
+    },
+    "metrics": {
+      "MAE": "Consistency check only.",
+      "RMSE": "Lower is better; emphasizes larger errors.",
+      "CCC": "Lin concordance correlation coefficient; higher is better and evaluates concordant trajectory tracking."
+    },
+    "uncertainty": "Crossed subject×video bootstrap with 5000 replicates, recomputing pooled RMSE and CCC from out-of-fold prediction sufficient statistics."
+  },
+  "contrasts": [
+    "delta_rmse_naive_phys = RMSE(naive)-RMSE(physiology), positive favors physiology.",
+    "delta_rmse_context_phys = RMSE(context)-RMSE(physiology), positive favors physiology.",
+    "delta_ccc_phys_naive = CCC(physiology)-CCC(naive), positive favors physiology.",
+    "delta_ccc_phys_context = CCC(physiology)-CCC(context), positive favors physiology."
+  ],
+  "decisions": {
+    "PHYSIOLOGY_TRACKING_RESCUE": "At least one horizon×axis has BOTH Ridge and HGB delta_ccc_phys_naive 95% CIs strictly above zero.",
+    "MODEL_SPECIFIC_TRACKING_SIGNAL": "At least one physiology-vs-naive CCC CI is strictly above zero but no horizon×axis is positive for both learners.",
+    "METRIC_ROBUST_PERSISTENCE_DOMINANCE": "All 16 horizon×axis×learner delta_rmse_naive_phys CIs are strictly below zero and no CCC physiology-vs-naive CI is strictly above zero.",
+    "MIXED_METRIC_RESULT": "Any other pattern."
+  },
+  "firewalls": [
+    "Post-primary sensitivity; cannot replace frozen primary MAE inference.",
+    "CCC improvement means better concordant tracking, not causal physiological necessity.",
+    "No universal physiology-null or phenomenal inference."
+  ],
+  "paper_role": "Determine whether the CASE result is robust beyond MAE and whether physiology tracks temporal variation better than persistence despite worse point-error forecasts."
+}
