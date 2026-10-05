@@ -1,0 +1,148 @@
+{
+  "project": "Feeling Origin Research — affect forecasting benchmark branch",
+  "updated_utc": "2026-10-05",
+  "canonical_drive_status_document": "18_RVWOr8y1qNYhUIQF-8LF7C9jktyL4vyE4IRrAxsfE",
+  "github_repository": "ssadhin/Feeling-Origin-Research-Cloud",
+  "datasets": {
+    "CASE": {
+      "role": "primary/internal public-dataset analysis",
+      "feature_snapshot": "results_snapshots/o002_feature_rows_run-37217735818.jsonl",
+      "scope": "valence + arousal"
+    },
+    "POPANE_Study6": {
+      "role": "independent external valence replication",
+      "doi": "10.1038/s41597-021-01117-0",
+      "osf_doi": "10.17605/OSF.IO/94BPX",
+      "source_url": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+      "sha256": "a5db8dd9b57fb1cd1ad799b635f4e59c9edaeb8481285a9e1fbef3522e998140",
+      "size_bytes": 2872865432,
+      "zip_entry_count": 1497,
+      "provenance_run": 37270877344,
+      "provenance_note_commit": "2cb073e69d03a2776848077452323d84452269a7"
+    }
+  },
+  "results": [
+    {
+      "id": "POPANE-R1",
+      "purpose": "Independent future valence level replication",
+      "protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+      "analysis_commit": "193893f736c0d6dfeddbb580326bfd58f07431e4",
+      "workflow_commit": "28a20ae6a021accbc3ac267f68743f018e29b4d1",
+      "trigger_commit": "2a44cfc375f30ac8acac4a4d48e60a37b2081c89",
+      "run_id": 37257239830,
+      "artifact_id": 11324086038,
+      "artifact_sha256": "28fa484c7d9907a8329465af42f8abe7ad6957be8536028f2adbe6de763b6575",
+      "verdict": "STRONG_REPLICATION_OF_BASELINE_DOMINANCE",
+      "scope": "POPANE valence"
+    },
+    {
+      "id": "CASE-O002-D1",
+      "purpose": "Future-change attack",
+      "protocol_commit": "46ffbbef436d2dc4b247f9016665b4119710bfae",
+      "analysis_commit": "ec90b1ab9abdabedf3471cf5acea1e5be9ae4122",
+      "workflow_commit": "0a5a6742665465752243887976bfeef4d4d9d019",
+      "trigger_commit": "2a4881aaa48530e9b3efbd7c5e5896478a02e765",
+      "run_id": 37263399125,
+      "artifact_id": 11326166327,
+      "artifact_sha256": "afe62df422e9c69ec3a3930ab9b4b4225c9725afff96b3b85632d77f99ac90d8",
+      "summary_path": "results_snapshots/o002_d1_summary_run-37263399125.json",
+      "verdict": "MIXED_CHANGE_RESULT",
+      "important": "No cross-model change rescue; zero-change beats physiology everywhere."
+    },
+    {
+      "id": "POPANE-R2",
+      "purpose": "Independent future-change valence attack",
+      "protocol_commit": "5e8f8038f06fb96b216b93a6ddc81371e748eb24",
+      "original_analysis_commit": "784050c4f1747c140021a7900f829b4d3689d8c8",
+      "implementation_fix_commit": "a167a33be9f2e5712aa5572fdf58d9a22df91cfe",
+      "workflow_commit": "27ad264b853f90b0a831df956ff4fea9bf831a1d",
+      "canonical_trigger_commit": "8f3ebe7d1b7c5645ae7093d96400bcdda63bc180",
+      "canonical_run_id": 37267526360,
+      "original_technical_failure_run": 37263637334,
+      "artifact_id": 11327232849,
+      "artifact_sha256": "c15442896e92fffd1dbab6e2ba714fa08970a8a2179286e008edd2244f94104e",
+      "summary_path": "results_snapshots/popane_r2_summary_run-37267526360.json",
+      "verdict": "NO_EXTERNAL_CHANGE_INCREMENT",
+      "important": "Strong zero-change dominance."
+    },
+    {
+      "id": "POPANE-R3",
+      "purpose": "Real-vs-time-shifted recent-valence alignment control",
+      "protocol_commit": "8e2fb4e00a4dfeaed358b651d8e7570ceab6d1b4",
+      "final_metric_access_fix_commit": "b2a68bad26f09eeb5a8395e049da97ed3c8ceebf",
+      "canonical_trigger_commit": "4cab68f9796f3e7482023698c94680ae219c75dd",
+      "canonical_run_id": 37269068756,
+      "artifact_id": 11327912274,
+      "artifact_sha256": "4e84e37707541380a136bf7abc3370167c526c8336b99ae3086699da014e2b0f",
+      "summary_path": "results_snapshots/popane_r3_summary_run-37269068756.json",
+      "verdict": "NO_DETECTABLE_ALIGNED_SIGNAL",
+      "important": "POPANE does not externally replicate CASE's aligned-signal-without-increment story."
+    },
+    {
+      "id": "POPANE-R4",
+      "purpose": "Crossed participant × segment uncertainty sensitivity",
+      "protocol_commit": "2a045859843682738ecc30f2919b978daa8e9dca",
+      "analysis_commit": "316d061bb28b3ea18293071acf1ae32f04dead9e",
+      "workflow_commit": "d8d4cad46eda79fc40cde653ad91974a736d9ff6",
+      "trigger_commit": "a785e01c726e4aa9335a4607eff24a4ae058cb35",
+      "run_id": 37267984382,
+      "artifact_id": 11327433516,
+      "artifact_sha256": "0cb68c756168fc78bc5fb07e39308afdf7b76d44b28f682fc661509d7a945eb4",
+      "summary_path": "results_snapshots/popane_r4_summary_run-37267984382.json",
+      "verdict": "CROSSED_UNCERTAINTY_STRONGLY_SUPPORTS_R1"
+    },
+    {
+      "id": "POPANE-R5",
+      "purpose": "Pre-authorized physiology-family ablation",
+      "protocol_commit": "2d4a8d2c2b8e511761415074f688bdb38cad3eda",
+      "analysis_commit": "4d2ad2a6962189b8e3aacc6039695d5898db7660",
+      "workflow_commit": "c2d415ac032e456ba5f4525bbea0ba41b9f8ccc9",
+      "trigger_commit": "dda3377b47f2a2aae16cae092ca74cf9ae90aad1",
+      "run_id": 37268598144,
+      "artifact_id": 11327741631,
+      "artifact_sha256": "f333ed308914b5a8138343cf06d0c04d4a44f04089c1e6d7fad9f6170974b008",
+      "summary_path": "results_snapshots/popane_r5_summary_run-37268598144.json",
+      "verdict": "NO_FAMILY_RESCUE"
+    },
+    {
+      "id": "POPANE-R6",
+      "purpose": "RMSE + CCC metric/trajectory sensitivity",
+      "protocol_commit": "b14fda9a4b49fae1313510ae3c70613a9b42de5b",
+      "analysis_commit": "f6de8b78478c816f6086eb344bb63ad3e0c2a0a4",
+      "workflow_commit": "82893d7eeba9e6f42d8acd2c618445c95eee14ca",
+      "trigger_commit": "18882325dacb60f476d41f8f635e7544c3bb9795",
+      "run_id": 37270191779,
+      "artifact_id": 11328740444,
+      "artifact_sha256": "3652fbc92307e7f359188adc977a9e4c5d6114bb29f3fa6da444ea4919c91eb9",
+      "summary_path": "results_snapshots/popane_r6_summary_run-37270191779.json",
+      "verdict": "METRIC_ROBUST_PERSISTENCE_DOMINANCE",
+      "important": "Physiology worse on RMSE and CCC at all four horizons for both learners."
+    },
+    {
+      "id": "CASE-O002-D2",
+      "purpose": "RMSE + CCC metric/trajectory sensitivity",
+      "protocol_commit": "600a5cd95398d1f023c06a128e9520872a138790",
+      "original_analysis_commit": "dabe1b3076d17da6a30e9877c95e3d9905e692fe",
+      "implementation_fix_commit": "21c59388331bee5c6f74ed865bd1f0693e59b402",
+      "workflow_commit": "fff49cf5a16948ccea01f60a20cb8afbd8e248f8",
+      "canonical_trigger_commit": "8c484b897d138e323e7bbf8571926d4b50aa6d7d",
+      "canonical_run_id": 37270785057,
+      "original_technical_failure_run": 37270639614,
+      "status": "IN_PROGRESS_AT_MANIFEST_FREEZE"
+    }
+  ],
+  "audits": {
+    "novelty_protocol_commit": "76358be72f9a4874b88e6afb29b91ae8e3774583",
+    "bounded_novelty_execution_commit": "f13430e04ad6a13afdb09a614bab8043e78408dc",
+    "backward_citation_addendum_commit": "6bd2a8842d08f60a4bc770ce535af689df7c850c",
+    "paper_readiness_gate_commit": "590e43570c8d5ab4605bb2c8acc290e2ecde22ad",
+    "temporal_leakage_audit_commit": "17fd24ba9adb95aeee411a8958b74219f5cf56d4",
+    "rating_inertia_audit_commit": "538acd7fde5be52f28f54215c05e56858e7ba04c",
+    "claim_evidence_matrix_commit": "90357c04622d1983f5568fac661333dd28e36696",
+    "reviewer_objection_ledger_commit": "ed5d70aa1e4e1150b3bea915aee8eaf6bc39a8b6"
+  },
+  "manuscript_control": {
+    "rule": "Do not create or modify manuscript until three consecutive research-loop paper-readiness decisions agree, unless user explicitly overrides.",
+    "decisions_recorded": 0
+  }
+}
