@@ -1,0 +1,30 @@
+{
+  "status": "O002_B1_NAIVE_PERSISTENCE_BASELINE",
+  "run_id": 37256052367,
+  "head_sha": "14badcabca84b9197f4cb1138eb49bab0dd194b6",
+  "protocol_commit": "c5ac129e7e425efb317aa276cfa02f99de86c556",
+  "analysis_commit": "d88f475581e67a28da860f3b8eba66e66865036f",
+  "workflow_commit": "f424b8011f855d8cc058b2896b2fe82ec91f1f27",
+  "artifact_id": 11323095942,
+  "artifact_sha256": "8d29c1b5c8e48edf8ae34b524b5ef3f525d925e5873bccc31849f35824855f66",
+  "results": {
+    "gap_1s": {
+      "valence_mae": 0.16222633787878799,
+      "arousal_mae": 0.17638755681818186
+    },
+    "gap_11s": {
+      "valence_mae": 0.37421223366013073,
+      "arousal_mae": 0.3959401209150327
+    },
+    "gap_21s": {
+      "valence_mae": 0.5291798386524823,
+      "arousal_mae": 0.5584139875886525
+    },
+    "gap_31s": {
+      "valence_mae": 0.643342097868217,
+      "arousal_mae": 0.6623331346899225
+    }
+  },
+  "interpretation": "A parameter-free last-reported-state baseline is extremely strong at 1 s and degrades monotonically with forecast horizon. At 1 s it is slightly better than the fitted G1 prior model on row-weighted MAE (G1: 0.16714 valence, 0.18611 arousal), so model novelty must not be claimed; the scientific question is incremental information beyond a strong persistence benchmark. Longer-horizon comparison awaits the frozen G2 fitted models.",
+  "firewall": "Diagnostic benchmark only; no physiology, causal, or phenomenal inference."
+}
