@@ -57,7 +57,7 @@ def cell_stats(pr,pred_col):
     out={}
     for (s,v),q in pr.groupby(["subject","video_id"]):
         y=q["y"].to_numpy(float); x=q[pred_col].to_numpy(float)
-        out[(int(s),str(v))]={
+        out[(str(s),str(v))]={
             "n":float(len(q)),
             "sy":float(np.sum(y)),
             "sy2":float(np.sum(y*y)),
@@ -90,7 +90,7 @@ def crossed_metric_bootstrap(pr,subjects,videos,seed):
     for b in range(NBOOT):
         ps=rng.choice(subjects,size=len(subjects),replace=True)
         vs=rng.choice(videos,size=len(videos),replace=True)
-        pc=Counter(int(x) for x in ps)
+        pc=Counter(str(x) for x in ps)
         vc=Counter(str(x) for x in vs)
         rn,cn=weighted_metrics(stats["naive"],pc,vc)
         rc,cc=weighted_metrics(stats["context"],pc,vc)
@@ -130,7 +130,7 @@ def point_metrics(pr):
 def main():
     base=pd.read_json(IN,lines=True)
     base["video_id"]=base["video_id"].astype(str)
-    subjects=sorted(int(x) for x in base.subject.unique())
+    subjects=sorted(str(x) for x in base.subject.unique())
     videos=sorted((str(x) for x in base.video_id.unique()),key=lambda x:int(x))
     phys=sorted(c for c in base.columns if c.startswith("phys_"))
     if len(subjects)!=30 or len(videos)!=8 or len(phys)!=29:
