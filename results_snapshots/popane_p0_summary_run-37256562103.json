@@ -1,0 +1,20 @@
+{
+  "status": "POPANE_P0_STUDY6_SCHEMA_PREFLIGHT",
+  "run_id": 37256562103,
+  "head_sha": "7f57ddc764dd0a1d780f615afa6c38d6fb4ebcc9",
+  "protocol_commit": "81d4025f5e61c185e8d27aa53427daf028413694",
+  "analysis_commit": "7d962cf38ffad144c23d2e867b7c40707e1f9395",
+  "workflow_commit": "0b6eb6e20fbe9d4314d22c8d65a2bdbf7b4cc2e6",
+  "artifact_id": 11323335231,
+  "artifact_sha256": "38445763c268e5e0382dc75be6efc0b0eae5ee2c10172e054958e01a9da04d31",
+  "verdict": "FAIL_SCHEMA_OR_ACCESS",
+  "interpretation": "Access itself passed: HTTP range requests work and the archive exposes 1,496 CSV entries with 187 baseline files and participant/stimulus filenames. The preflight failed only because CSV files begin with metadata comment lines (first line '#Study_name,Study 6'), so the script never reached the actual column header. This is a parser/preflight-method failure, not evidence that the dataset lacks valence/physiology.",
+  "archive": {
+    "bytes": 2872865432,
+    "range_supported": true,
+    "entries_total": 1497,
+    "csv_entries": 1496,
+    "baseline_csv_count": 187
+  },
+  "next_action": "Freeze P0b outcome-blind header discovery that scans comment metadata only until the first non-comment CSV header, then stops before any data row."
+}
