@@ -1,0 +1,6 @@
+Trigger frozen POPANE-R4 crossed participant×segment uncertainty sensitivity.
+Protocol commit: 2a045859843682738ecc30f2919b978daa8e9dca
+Analysis commit: 316d061bb28b3ea18293071acf1ae32f04dead9e
+Workflow commit: d8d4cad46eda79fc40cde653ad91974a736d9ff6
+Classification: post-primary statistical robustness sensitivity.
+Raw POPANE archive must remain transient; aggregate result only.
