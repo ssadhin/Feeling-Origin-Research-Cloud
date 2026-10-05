@@ -1,0 +1,56 @@
+{
+  "title": "POPANE-R2 Independent Future-Change Valence Attack",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_ANY_CHANGE_OUTCOME",
+  "classification": "Exploratory/post-primary adversarial replication. POPANE-R1 level outcomes are known; no POPANE change-target outcome has been inspected. Frozen before O002-D1 change outcome is known.",
+  "purpose": "Test whether peripheral physiology predicts future changes/deviations in valence even though it failed to improve absolute level forecasts over persistence.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "archive": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+    "paper_doi": "10.1038/s41597-021-01117-0",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "schema_run": 37256777934
+  },
+  "reuse_from_r1": [
+    "Identical file inclusion and technical QC.",
+    "Identical eligible segment threshold >=20 participants.",
+    "Identical 10 s anchors and common rows supporting all horizons.",
+    "Identical predictor windows, physiological feature extraction, subject folds, joint held-person × held-segment evaluation, Ridge/HGB specifications, imputation/scaling and privacy rules."
+  ],
+  "change_target": {
+    "horizons_sec": [
+      1,
+      11,
+      21,
+      31
+    ],
+    "definition": "delta_y = future target mean affect at each horizon minus prior_affect mean in [-5,-1] s at predictor anchor.",
+    "naive": "predict delta_y = 0 (no change).",
+    "context_features": [
+      "prior_affect",
+      "time_norm"
+    ],
+    "physiology_model": "context features + all predeclared R1 physiology features"
+  },
+  "endpoints": {
+    "primary": "delta_context_phys = MAE(context)-MAE(physiology). Positive favors physiology for change prediction beyond prior level/time.",
+    "secondary": "delta_zero_phys = MAE(zero-change)-MAE(physiology). Positive means physiology beats the parameter-free no-change forecast.",
+    "uncertainty": "Participant-cluster bootstrap, 5000 replicates per horizon and learner."
+  },
+  "decisions": {
+    "CLEAR_EXTERNAL_CHANGE_SIGNAL": "At least one horizon has BOTH Ridge and HGB delta_context_phys 95% CI strictly above zero.",
+    "NO_EXTERNAL_CHANGE_INCREMENT": "No horizon has delta_context_phys 95% CI strictly above zero for either learner.",
+    "MIXED_EXTERNAL_CHANGE_RESULT": "Any other pattern.",
+    "STRONG_ZERO_CHANGE_DOMINANCE": "For all four horizons and both learners, delta_zero_phys mean <=0 and no delta_zero_phys CI is strictly above zero."
+  },
+  "interpretation": [
+    "If CLEAR_EXTERNAL_CHANGE_SIGNAL, physiology may predict transitions even when it does not improve level forecasts; level-forecast result stands but manuscript claim must narrow.",
+    "If NO_EXTERNAL_CHANGE_INCREMENT, the strongest transition-based rescue fails in independent data as well.",
+    "This is post-primary exploratory evidence and cannot be described as preregistered confirmation."
+  ],
+  "firewalls": [
+    "No claim of physiological causal irrelevance.",
+    "No claim of body-independence.",
+    "No universal no-forecasting claim.",
+    "No phenomenal/consciousness inference."
+  ]
+}
