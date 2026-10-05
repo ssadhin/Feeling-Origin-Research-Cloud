@@ -1,0 +1,5 @@
+Trigger frozen O002-G2 prospective horizon stress.
+Protocol commit: fc936cd6cd6cd77beb6622d0ab96a5ae86468452
+Analysis commit: 9401e8bfd6cb5cdf09b222e874ddb1ee3ad02c93
+Workflow commit: 30277b4796296d8e31b743dc6e6220e13bbb8430
+Parent G1 run: 37226922346
