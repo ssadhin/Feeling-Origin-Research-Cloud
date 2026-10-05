@@ -1,0 +1,7 @@
+Trigger frozen POPANE-P2 Study 5 independent signal-validity + level-forecast validation.
+Protocol commit: a4afe0c32febf0f82f2ceb22900e421b200b422d
+Analysis commit: 685ff12d0397e3a3e85f53b0bbacf0c545c302cf
+Workflow commit: 49bf1a855c6c6ac008787084644689b6c153dd62
+Study 5 preflight run: 37265235977; no observational values inspected before this freeze.
+Purpose: resolve the external signal-validity dependency without retuning Study 6.
+Raw archive must remain transient; aggregate result only.
