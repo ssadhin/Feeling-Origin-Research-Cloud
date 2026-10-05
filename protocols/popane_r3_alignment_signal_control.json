@@ -1,0 +1,42 @@
+{
+  "title": "POPANE-R3 Time-Alignment Signal Control",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_ALIGNMENT_OUTCOME",
+  "classification": "Exploratory mechanism/benchmark diagnostic after POPANE-R1, frozen before any R3 outcome.",
+  "purpose": "Test whether the same POPANE peripheral features contain genuine time-aligned information about contemporaneous/recent self-reported valence even though they failed to improve future level forecasts beyond persistence.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "archive": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "r1_result_run": 37257239830
+  },
+  "reuse_from_r1": [
+    "Identical file inclusion and technical QC.",
+    "Identical common anchors and predeclared physiological feature extraction.",
+    "Identical deterministic 10-fold participant assignment and simultaneous held-person × held-segment evaluation.",
+    "Identical Ridge and HGB learner specifications."
+  ],
+  "target": "prior_affect = mean continuous valence report in [-5,-1] s relative to anchor.",
+  "models": {
+    "time_only": "normalized time within segment",
+    "real_physiology": "time_norm + all predeclared R1 physiology features from [-10,-1] s",
+    "shifted_physiology": "time_norm + the same physiology feature vector circularly shifted within each subject×segment sequence by max(1, floor(n_rows/2)) anchors, generated without consulting target values"
+  },
+  "rationale": "The shift preserves each participant×segment feature distribution and much of its slow structure while disrupting local temporal alignment. If real physiology predicts recent valence better than shifted physiology under held-person × held-segment testing, physiology contains time-aligned affect information even if it does not add future utility beyond persistence.",
+  "endpoints": {
+    "primary": "delta_shift_real = MAE(shifted_physiology)-MAE(real_physiology); positive favors real temporal alignment.",
+    "secondary": "delta_time_real = MAE(time_only)-MAE(real_physiology); positive means physiology adds contemporaneous valence information beyond normalized time.",
+    "uncertainty": "Participant-cluster bootstrap, 5000 replicates, separately for Ridge and HGB."
+  },
+  "decisions": {
+    "ALIGNED_SIGNAL_REPLICATED": "Both Ridge and HGB delta_shift_real 95% CIs strictly above zero.",
+    "MODEL_SPECIFIC_ALIGNED_SIGNAL": "Exactly one learner has delta_shift_real 95% CI strictly above zero.",
+    "NO_DETECTABLE_ALIGNED_SIGNAL": "Neither learner has delta_shift_real 95% CI strictly above zero."
+  },
+  "firewalls": [
+    "This is not a prospective forecasting endpoint.",
+    "A positive result establishes predictive time alignment, not causality or bodily necessity.",
+    "A null result does not prove physiology lacks emotion information under other representations.",
+    "No phenomenal or consciousness inference."
+  ],
+  "paper_role": "Distinguish genuine physiological signal from incremental future forecasting utility in the independent replication dataset."
+}
