@@ -84,7 +84,7 @@ def main():
             subj[int(s)]={
                 "time":float(mean_absolute_error(q.y,q.time)),
                 "real":float(mean_absolute_error(q.y,q.real)),
-                "shift":float(mean_absolute_error(q.y,q.shift))
+                "shift":float(mean_absolute_error(q["y"],q["shift"]))
             }
 
         d_sr={s:v["shift"]-v["real"] for s,v in subj.items()}
