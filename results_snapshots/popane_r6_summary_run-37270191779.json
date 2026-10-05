@@ -1,0 +1,122 @@
+{
+  "status": "POPANE_R6_METRIC_TRAJECTORY_SENSITIVITY",
+  "classification": "POST_PRIMARY_SENSITIVITY",
+  "run_id": 37270191779,
+  "head_sha": "18882325dacb60f476d41f8f635e7544c3bb9795",
+  "protocol_commit": "b14fda9a4b49fae1313510ae3c70613a9b42de5b",
+  "analysis_commit": "f6de8b78478c816f6086eb344bb63ad3e0c2a0a4",
+  "workflow_commit": "82893d7eeba9e6f42d8acd2c618445c95eee14ca",
+  "artifact_id": 11328740444,
+  "artifact_sha256": "3652fbc92307e7f359188adc977a9e4c5d6114bb29f3fa6da444ea4919c91eb9",
+  "verdict": "METRIC_ROBUST_PERSISTENCE_DOMINANCE",
+  "ccc_both_learners_positive_horizons_sec": [],
+  "contrasts": {
+    "1s": {
+      "ridge": {
+        "delta_rmse_naive_phys": -0.19656534573310613,
+        "ci_rmse": [
+          -0.48061195788375694,
+          -0.0015016637049669274
+        ],
+        "delta_ccc_phys_naive": -0.035076178526376456,
+        "ci_ccc": [
+          -0.10881636330679688,
+          -0.0008671483538349484
+        ]
+      },
+      "hgb": {
+        "delta_rmse_naive_phys": -0.009895821738161115,
+        "ci_rmse": [
+          -0.015161081011852321,
+          -0.0052066057277773865
+        ],
+        "delta_ccc_phys_naive": -0.0024996409469875136,
+        "ci_ccc": [
+          -0.003406965978886256,
+          -0.0017128025641366229
+        ]
+      }
+    },
+    "11s": {
+      "ridge": {
+        "delta_rmse_naive_phys": -0.35024559650559184,
+        "ci_rmse": [
+          -0.853188808491798,
+          -0.004591529045319458
+        ],
+        "delta_ccc_phys_naive": -0.09826722262092746,
+        "ci_ccc": [
+          -0.25790133187819386,
+          -0.006343954511080564
+        ]
+      },
+      "hgb": {
+        "delta_rmse_naive_phys": -0.022895123338293688,
+        "ci_rmse": [
+          -0.03196768336015324,
+          -0.014363782969940815
+        ],
+        "delta_ccc_phys_naive": -0.013520254463119885,
+        "ci_ccc": [
+          -0.01633670497967836,
+          -0.011084886225811228
+        ]
+      }
+    },
+    "21s": {
+      "ridge": {
+        "delta_rmse_naive_phys": -0.5989892250018337,
+        "ci_rmse": [
+          -1.403032104807918,
+          -0.008103912308412497
+        ],
+        "delta_ccc_phys_naive": -0.18667510831096712,
+        "ci_ccc": [
+          -0.41189730947674447,
+          -0.013585589107519575
+        ]
+      },
+      "hgb": {
+        "delta_rmse_naive_phys": -0.04264926326547169,
+        "ci_rmse": [
+          -0.054421814624010786,
+          -0.031748336835252786
+        ],
+        "delta_ccc_phys_naive": -0.03017484901970735,
+        "ci_ccc": [
+          -0.035781828593064856,
+          -0.025452944661340737
+        ]
+      }
+    },
+    "31s": {
+      "ridge": {
+        "delta_rmse_naive_phys": -0.6102442934244505,
+        "ci_rmse": [
+          -1.4528349781351193,
+          -0.011194123350198946
+        ],
+        "delta_ccc_phys_naive": -0.19975776255120825,
+        "ci_ccc": [
+          -0.4163990786362284,
+          -0.021817660429641148
+        ]
+      },
+      "hgb": {
+        "delta_rmse_naive_phys": -0.0652862069227671,
+        "ci_rmse": [
+          -0.08707734899248784,
+          -0.04571359628158695
+        ],
+        "delta_ccc_phys_naive": -0.05003493915159274,
+        "ci_ccc": [
+          -0.06151308307430498,
+          -0.040734442827161536
+        ]
+      }
+    }
+  },
+  "interpretation": "POPANE valence persistence dominance is robust beyond MAE. At every horizon and for both model classes, physiology has significantly worse RMSE and significantly lower CCC than naive recent-state persistence. No trajectory-concordance rescue is present for the tested MAE-trained models.",
+  "limitation": "R6 is post-primary and evaluates the frozen R1 models under additional metrics; it does not establish that no physiology representation optimized specifically for CCC could ever improve concordance.",
+  "firewall": "No causal, bodily-necessity, universal no-forecasting, or phenomenal inference."
+}
