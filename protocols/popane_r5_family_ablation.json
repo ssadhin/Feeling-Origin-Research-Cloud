@@ -1,0 +1,74 @@
+{
+  "title": "POPANE-R5 Pre-authorized Physiology-Family Ablation",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_FAMILY_OUTCOMES",
+  "classification": "Exploratory/post-primary sensitivity explicitly allowed by the frozen R1 protocol.",
+  "purpose": "Test whether the R1 all-physiology degradation masks incremental forecasting value in a narrower predeclared physiological family.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "r1_run": 37257239830
+  },
+  "reuse_from_r1": [
+    "Identical file inclusion/QC, common anchors, targets, 1/11/21/31 s horizons.",
+    "Identical deterministic subject folds and primary simultaneous held-person × held-segment exclusion.",
+    "Identical naive recent-state persistence and fitted context features (prior_affect + time_norm).",
+    "Identical Ridge alpha grid/training-only participant GroupKFold and HGB hyperparameters."
+  ],
+  "physiology_families": {
+    "ECG_ONLY": [
+      "ecg_mean",
+      "ecg_std",
+      "ecg_rms",
+      "ecg_range",
+      "ecg_diff_std",
+      "rpeak_count",
+      "hr_mean",
+      "sdnn",
+      "rmssd"
+    ],
+    "EDA_ONLY": [
+      "eda_mean",
+      "eda_std",
+      "eda_range",
+      "eda_slope",
+      "eda_diff_std",
+      "eda_posdiff_area"
+    ],
+    "ICG_HEMODYNAMIC_ONLY": [
+      "all dzdt_* features",
+      "all dz_* features",
+      "all z0_* features",
+      "all sbp_*",
+      "all dbp_*",
+      "all co_*",
+      "all tpr_*"
+    ]
+  },
+  "endpoints": {
+    "per_family_horizon_learner": [
+      "MAE naive persistence",
+      "MAE fitted context model",
+      "MAE context+family model",
+      "delta_naive_family = MAE(naive)-MAE(family); positive favors family over persistence",
+      "delta_context_family = MAE(context)-MAE(family); positive is incremental family value beyond learned context"
+    ],
+    "uncertainty": "Participant-cluster bootstrap with 5000 resamples, matching R1 for comparability."
+  },
+  "multiplicity_firewall": [
+    "This is a three-family × four-horizon × two-learner exploratory screen after R1.",
+    "No single positive cell may be promoted as confirmatory.",
+    "A potentially meaningful family rescue requires the SAME family and horizon to have delta_context_family 95% CI strictly above zero for BOTH Ridge and HGB.",
+    "Any positive rescue must be independently reproduced or supported in CASE before a manuscript claim."
+  ],
+  "decisions": {
+    "NO_FAMILY_RESCUE": "No family×horizon has both Ridge and HGB delta_context_family 95% CIs strictly above zero.",
+    "MODEL_ROBUST_FAMILY_RESCUE": "At least one family×horizon has both learners strictly positive versus context.",
+    "FAMILY_SCREEN_MIXED": "Any model-specific positive effects without cross-model agreement."
+  },
+  "firewalls": [
+    "Post-primary feature-family sensitivity only.",
+    "A null family result does not prove physiological irrelevance.",
+    "No causal, bodily-necessity, universal, or phenomenal inference."
+  ],
+  "paper_role": "Attack the objection that all-channel feature burden, rather than lack of incremental information, caused R1 physiology degradation."
+}
