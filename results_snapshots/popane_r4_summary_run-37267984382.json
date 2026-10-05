@@ -1,0 +1,88 @@
+{
+  "status": "POPANE_R4_CROSSED_PARTICIPANT_SEGMENT_UNCERTAINTY",
+  "classification": "POST_PRIMARY_SENSITIVITY",
+  "run_id": 37267984382,
+  "head_sha": "a785e01c726e4aa9335a4607eff24a4ae058cb35",
+  "protocol_commit": "2a045859843682738ecc30f2919b978daa8e9dca",
+  "analysis_commit": "316d061bb28b3ea18293071acf1ae32f04dead9e",
+  "workflow_commit": "d8d4cad46eda79fc40cde653ad91974a736d9ff6",
+  "artifact_id": 11327433516,
+  "artifact_sha256": "0cb68c756168fc78bc5fb07e39308afdf7b76d44b28f682fc661509d7a945eb4",
+  "verdict": "CROSSED_UNCERTAINTY_STRONGLY_SUPPORTS_R1",
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18,
+    "n_observed_cells": 1115
+  },
+  "contrasts": {
+    "1s": {
+      "ridge": {
+        "mean": -0.037721005735315595,
+        "ci95": [
+          -0.06295656723023826,
+          -0.028856000869333983
+        ]
+      },
+      "hgb": {
+        "mean": -0.05537616834520669,
+        "ci95": [
+          -0.06536624554846038,
+          -0.046012082930272515
+        ]
+      }
+    },
+    "11s": {
+      "ridge": {
+        "mean": -0.07753339954761271,
+        "ci95": [
+          -0.11897263607003505,
+          -0.057188859980938735
+        ]
+      },
+      "hgb": {
+        "mean": -0.10377072943509236,
+        "ci95": [
+          -0.12350392373476252,
+          -0.08665217513032313
+        ]
+      }
+    },
+    "21s": {
+      "ridge": {
+        "mean": -0.10371926704121105,
+        "ci95": [
+          -0.16798375900617743,
+          -0.07420031110213243
+        ]
+      },
+      "hgb": {
+        "mean": -0.1402135568289265,
+        "ci95": [
+          -0.16808025738362284,
+          -0.11422886967360629
+        ]
+      }
+    },
+    "31s": {
+      "ridge": {
+        "mean": -0.12616418601020934,
+        "ci95": [
+          -0.19121672480236648,
+          -0.09253888784081281
+        ]
+      },
+      "hgb": {
+        "mean": -0.17250475692567277,
+        "ci95": [
+          -0.21160702615680177,
+          -0.13812801517299553
+        ]
+      }
+    }
+  },
+  "interpretation": "Under an equal observed participant×segment-cell estimand and crossed bootstrap that independently resamples both generalization axes, naive recent-state persistence still significantly outperforms physiology for both Ridge and HGB at all four horizons. This statistical sensitivity materially strengthens POPANE-R1.",
+  "firewall": "Post-primary statistical robustness only; no causal, bodily-necessity, universal, or phenomenal inference."
+}
