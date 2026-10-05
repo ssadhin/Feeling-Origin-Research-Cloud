@@ -1,0 +1,48 @@
+{
+  "title": "POPANE-P2a Study 5 outcome-blind schema preflight",
+  "status": "FROZEN_BEFORE_STUDY5_VALUES",
+  "classification": "Validity-dependency resolution under MANUSCRIPT-GATE-01 CLASS C.",
+  "purpose": "Assess whether POPANE Study 5 can provide a genuinely separate continuous-valence physiology validation/replication after Study 6 failed the aligned-signal positive control, without tuning Study 6 after its outcome.",
+  "rationale": {
+    "selection": "Study 5 is selected from the published POPANE descriptor before inspecting Study 5 observational values because it is the largest other reported continuous-valence POPANE study (published N=199), uses a distinct study/task and includes positive, negative and neutral emotion elicitation with ECG/EDA.",
+    "nonselection": "It was not selected from any Study 5 model performance or signal outcome."
+  },
+  "source": {
+    "archive": "https://data.psychosensing.psnc.pl/popane/files/study5.zip",
+    "paper_doi": "10.1038/s41597-021-01117-0",
+    "published_n": 199,
+    "published_design": "Baseline, three rounds of film clips, and responses to partner success/capitalization.",
+    "published_signals": [
+      "continuous valence",
+      "ECG",
+      "EDA",
+      "SBP",
+      "DBP",
+      "CO",
+      "TPR"
+    ]
+  },
+  "allowed_reads": [
+    "HTTP headers/range support",
+    "ZIP filenames and sizes",
+    "For deterministic sampled CSVs, metadata comment lines and the first actual column header only; stop before first data row."
+  ],
+  "forbidden": [
+    "No valence values",
+    "No physiology values",
+    "No correlations or model fits",
+    "No outcome-based segment or participant exclusion"
+  ],
+  "qc": [
+    "number of participant IDs and named nonbaseline segments from filenames",
+    "true synchronized columns",
+    "presence of timestamp/sample index, affect/valence, ECG and EDA",
+    "whether segment labels are independently recoverable from filenames",
+    "remote range access"
+  ],
+  "decision": {
+    "PASS_STUDY5_VALIDATION_FEASIBLE": "Synchronized valence + time + ECG/EDA are present, >=20 participants, and >=2 named nonbaseline segments.",
+    "FAIL_STUDY5_SCHEMA_OR_ACCESS": "Otherwise."
+  },
+  "next_if_pass": "Freeze a Study 5 analysis before reading values. The analysis must first test aligned physiology signal; prospective incremental forecasting is interpreted only if the positive-control criterion is met or reported transparently if it does not."
+}
