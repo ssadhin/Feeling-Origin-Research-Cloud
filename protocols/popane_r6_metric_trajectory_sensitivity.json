@@ -1,0 +1,47 @@
+{
+  "title": "POPANE-R6 Metric and Trajectory-Tracking Sensitivity",
+  "status": "FROZEN_POST_PRIMARY_BEFORE_R6_OUTCOMES",
+  "classification": "Post-primary statistical/interpretive sensitivity. POPANE-R1 MAE outcomes are known.",
+  "purpose": "Test whether persistence dominance is specific to absolute-error scoring, or whether physiology may better track future valence trajectories despite worse MAE.",
+  "source": {
+    "dataset": "POPANE Study 6",
+    "r1_protocol_commit": "5ae69733800c4e7a9e510b6911e908c3d65ab181",
+    "r1_run": 37257239830
+  },
+  "reuse_from_r1": [
+    "Identical technical QC, anchors, targets and physiology features.",
+    "Identical 1/11/21/31 s future-valence targets.",
+    "Identical deterministic subject folds and simultaneous held-person × held-segment training exclusion.",
+    "Identical naive prediction = prior_affect; context = prior_affect + time_norm; physiology = context + all R1 physiology features.",
+    "Identical Ridge tuning and HGB hyperparameters."
+  ],
+  "metrics": {
+    "MAE": "Retain only as a consistency check with R1.",
+    "RMSE": "Tests sensitivity to larger errors; lower is better.",
+    "CCC": "Lin concordance correlation coefficient between predictions and future valence; higher is better and is widely used in continuous-affect evaluation."
+  },
+  "uncertainty": {
+    "unit": "participant",
+    "bootstrap_replicates": 5000,
+    "method": "Resample usable participants with replacement. Reconstruct the corresponding out-of-fold prediction rows with subject multiplicity and recompute pooled RMSE and CCC for each model.",
+    "contrasts": [
+      "delta_rmse_naive_phys = RMSE(naive)-RMSE(physiology); positive favors physiology.",
+      "delta_rmse_context_phys = RMSE(context)-RMSE(physiology); positive favors physiology beyond context.",
+      "delta_ccc_phys_naive = CCC(physiology)-CCC(naive); positive favors physiology trajectory concordance.",
+      "delta_ccc_phys_context = CCC(physiology)-CCC(context); positive favors physiology beyond context."
+    ]
+  },
+  "decisions": {
+    "METRIC_ROBUST_PERSISTENCE_DOMINANCE": "For all four horizons and both learners, delta_rmse_naive_phys 95% CI is strictly below zero AND no delta_ccc_phys_naive 95% CI is strictly above zero.",
+    "PHYSIOLOGY_TRACKING_RESCUE": "At least one horizon has BOTH Ridge and HGB delta_ccc_phys_naive 95% CIs strictly above zero, even if MAE/RMSE remain worse. Manuscript must distinguish point-error utility from trajectory concordance.",
+    "MODEL_SPECIFIC_TRACKING_SIGNAL": "At least one CCC physiology-vs-naive CI is strictly above zero but the same horizon is not positive for both learners.",
+    "MIXED_METRIC_RESULT": "Any other pattern."
+  },
+  "firewalls": [
+    "Post-primary sensitivity; does not replace R1 MAE inference.",
+    "CCC improvement would indicate better concordant tracking, not causal physiological necessity.",
+    "Null CCC/RMSE sensitivity does not prove physiology has no information under other representations.",
+    "No phenomenal/consciousness inference."
+  ],
+  "paper_role": "Determine whether the central result is robust beyond MAE and whether physiology may track temporal variation better despite worse absolute forecasts."
+}
