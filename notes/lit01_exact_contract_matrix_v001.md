@@ -1,0 +1,19 @@
+# LIT-01 exact-contract comparison matrix v001
+
+| Work | Target timing | Observed prior affect baseline? | Peripheral physiology | Person holdout | Stimulus holdout | Increment beyond prior affect? | Match |
+|---|---|---|---|---|---|---|---|
+| Asutay et al., Affective calculus, DOI 10.1037/emo0000681 | Current/momentary affect integrated over trials | Yes, prior affect is modeled | Yes (Study 4: EMG/EDA/respiration/pulse) | Not equivalent to our prospective held-person benchmark | Not equivalent | Physiology can add model fit jointly with prior affect | Important partial predecessor |
+| Coles et al. 2025 EPiC, DOI 10.1098/rsos.241778 | Affect-report prediction across several validation regimes | No observed recent-state persistence comparator | Multimodal peripheral PNS | Yes in across-subject validation | Across emotion/induction/time separately, not our joint person×stimulus persistence test | Real physiology often matters vs simulated randomness; only 46% beat training mean | Direct methodological predecessor |
+| Ringeval/RECOLA continuous emotion work | Concurrent/time-continuous annotation estimation | No observed prior-report persistence benchmark | ECG/EDA among modalities | Speaker-disjoint in canonical RECOLA challenge work | No joint unseen-stimulus test matching ours | Not the same conditional question | Partial |
+| Joudeh et al. RECOLA physiology models | Concurrent labels | No | ECG/EDA | Sample-level shuffled/split pipeline, not strict held-person prospective contract | No | High accuracy reported but not conditional on persistence | Non-commensurate counterexample |
+| Ulm-TSST autoregressive multimodal Transformer (arXiv:2311.10119) | Time-continuous aligned recognition | Autoregression uses internal/past predicted states, not observed recent self-report | Yes | Dataset evaluation, but not our exact double holdout | No exact match | Physiology ablation small for valence | Partial temporal-model predecessor |
+| EMAP temporal arousal, DOI 10.1111/psyp.14446 | Concurrent momentary arousal | No explicit observed recent-arousal persistence benchmark matching ours | Yes | Generalization analyses but not our contract | No exact match | Temporal physiological information can improve current arousal modeling | Partial/counterweight |
+| Bagnara et al. affective inertia, DOI 10.1037/emo0001541 | Repeated future affect dynamics | Yes/autoregressive affect | No core peripheral physiology increment test | Longitudinal repeated-measures context | No | Establishes persistence, not physiology increment | Foundational persistence prior art |
+| Dynamic emotion-intensity NARX physiology work (PLOS ONE 2025) | Dynamic affect/intensity modeling | Temporal model, but not our observed recent-state benchmark contract | Cardiovascular/EDA/respiration | Intra/inter-subject models | No joint stimulus holdout equivalent | Shows physiology can matter dynamically | Counterweight; prevents universal claim |
+| Current CASE + POPANE project | Future 5-s mean target with predictor-end→target-start gaps 1/11/21/31 s | Yes: parameter-free carry-forward of recent [-5,-1) mean | Yes | Yes | Yes: simultaneous held person × held video/segment | Explicit paired MAE increment; external valence replication | Candidate distinct combination |
+
+## Screen conclusion
+No exact prior match was found in the bounded Exa/web + citation-chain screen. This does not establish uniqueness. Scite and Elicit API access were unavailable on the connected plans, so manuscript novelty language must remain 'to our knowledge' and disclose that limitation.
+
+## Core distinction to preserve
+The paper does not claim that prior affect + physiology is a new modeling idea. The candidate contribution is the explicit *incremental prospective utility* test against a parameter-free recent-state benchmark under simultaneous person/stimulus generalization, together with independent replication.
