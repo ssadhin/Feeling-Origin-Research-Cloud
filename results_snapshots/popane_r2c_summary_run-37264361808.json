@@ -1,0 +1,165 @@
+{
+  "status": "POPANE_R2_INDEPENDENT_FUTURE_CHANGE_VALENCE",
+  "classification": "EXPLORATORY_POST_PRIMARY",
+  "run_id": 37264361808,
+  "head_sha": "02b11422bcaf7c4848237b0d2d280e878c40639c",
+  "protocol_commit": "5e8f8038f06fb96b216b93a6ddc81371e748eb24",
+  "analysis_commit": "dd18e3b7b4d04997fb70c0fe61e2be428bef73c8",
+  "workflow_commit": "b4c04caccb0c563952e5e2949d3fae2dfd401883",
+  "trigger_commit": "02b11422bcaf7c4848237b0d2d280e878c40639c",
+  "prior_technical_failures": [
+    {
+      "run_id": 37263637334,
+      "audit_commit": "836417ff980b11e5bb552ecec540e6aa28134cd0",
+      "reason": "import failure before outcome"
+    },
+    {
+      "run_id": 37264063491,
+      "audit_commit": "1919d4f482fddb1b01415d2a2cf0fb99e5e3adb0",
+      "reason": "download failure before outcome"
+    }
+  ],
+  "artifact_id": 11326211907,
+  "artifact_sha256": "4c5612cc11722b7d28a0447366e81a499fa503b3d36f6091dc898d960f386685",
+  "verdict": "NO_EXTERNAL_CHANGE_INCREMENT",
+  "strong_zero_change_dominance": true,
+  "qc": {
+    "files_seen": 1122,
+    "files_usable": 1115,
+    "feature_rows": 8919,
+    "subjects_usable": 186,
+    "segments_usable": 18
+  },
+  "results": {
+    "gap_1s": {
+      "ridge": {
+        "zero_mae": 0.12484766822408812,
+        "context_mae": 0.1432155730010331,
+        "phys_mae": 0.15140937310979277,
+        "delta_zero_phys_mean": -0.026545434995855342,
+        "delta_zero_phys_ci95": [
+          -0.028946295476297915,
+          -0.024256447403020943
+        ],
+        "delta_context_phys_mean": -0.00819044144046803,
+        "delta_context_phys_ci95": [
+          -0.010183918732386887,
+          -0.006437560741061481
+        ]
+      },
+      "hgb": {
+        "zero_mae": 0.12484766822408812,
+        "context_mae": 0.15809998810180395,
+        "phys_mae": 0.16836157391927975,
+        "delta_zero_phys_mean": -0.043489348949988425,
+        "delta_zero_phys_ci95": [
+          -0.0477631493634448,
+          -0.03956088407725799
+        ],
+        "delta_context_phys_mean": -0.010248534491612666,
+        "delta_context_phys_ci95": [
+          -0.014042557358121899,
+          -0.006536097232140775
+        ]
+      }
+    },
+    "gap_11s": {
+      "ridge": {
+        "zero_mae": 0.3005024802585197,
+        "context_mae": 0.34332238203715254,
+        "phys_mae": 0.35738680827663816,
+        "delta_zero_phys_mean": -0.056857012419089796,
+        "delta_zero_phys_ci95": [
+          -0.06344980790061276,
+          -0.05084781813980779
+        ],
+        "delta_context_phys_mean": -0.014064607758410768,
+        "delta_context_phys_ci95": [
+          -0.019242844027533828,
+          -0.009816627523488147
+        ]
+      },
+      "hgb": {
+        "zero_mae": 0.3005024802585197,
+        "context_mae": 0.3660106643419546,
+        "phys_mae": 0.38671454750261014,
+        "delta_zero_phys_mean": -0.0861847677570007,
+        "delta_zero_phys_ci95": [
+          -0.09526661214031473,
+          -0.07742419729485732
+        ],
+        "delta_context_phys_mean": -0.020692158124452627,
+        "delta_context_phys_ci95": [
+          -0.028195832748895963,
+          -0.01352173719881991
+        ]
+      }
+    },
+    "gap_21s": {
+      "ridge": {
+        "zero_mae": 0.4383545149007306,
+        "context_mae": 0.4966643777801873,
+        "phys_mae": 0.5161559056000756,
+        "delta_zero_phys_mean": -0.07779676309188874,
+        "delta_zero_phys_ci95": [
+          -0.08789953108812085,
+          -0.06853096879828197
+        ],
+        "delta_context_phys_mean": -0.019516555150684158,
+        "delta_context_phys_ci95": [
+          -0.027342879398468217,
+          -0.012634326969473347
+        ]
+      },
+      "hgb": {
+        "zero_mae": 0.4383545149007306,
+        "context_mae": 0.5238409456197668,
+        "phys_mae": 0.5610982682249588,
+        "delta_zero_phys_mean": -0.12267365123940804,
+        "delta_zero_phys_ci95": [
+          -0.13637869326595728,
+          -0.1093242664770232
+        ],
+        "delta_context_phys_mean": -0.03719547730993132,
+        "delta_context_phys_ci95": [
+          -0.050362457460751596,
+          -0.02531114355037965
+        ]
+      }
+    },
+    "gap_31s": {
+      "ridge": {
+        "zero_mae": 0.5534943690214389,
+        "context_mae": 0.6260413685554085,
+        "phys_mae": 0.6491645463397892,
+        "delta_zero_phys_mean": -0.09571192331943162,
+        "delta_zero_phys_ci95": [
+          -0.10796575500092512,
+          -0.08404463151422858
+        ],
+        "delta_context_phys_mean": -0.02319963947872701,
+        "delta_context_phys_ci95": [
+          -0.03259832186178297,
+          -0.014871179385300014
+        ]
+      },
+      "hgb": {
+        "zero_mae": 0.5534943690214389,
+        "context_mae": 0.6537251204149034,
+        "phys_mae": 0.7010040312836721,
+        "delta_zero_phys_mean": -0.14743227193406028,
+        "delta_zero_phys_ci95": [
+          -0.16797283680770342,
+          -0.1279241986027132
+        ],
+        "delta_context_phys_mean": -0.0471949064957865,
+        "delta_context_phys_ci95": [
+          -0.06586477014070047,
+          -0.029311118766875442
+        ]
+      }
+    }
+  },
+  "interpretation": "Independent Study 6 valence change prediction shows no physiology increment at any horizon for either learner; physiology is significantly worse than both zero-change and fitted context across all horizons. CASE HGB-only change hints therefore do not externally replicate in this dataset/pipeline.",
+  "firewall": "Exploratory predictive change result only; no causal, body-independence, universal no-physiology, or phenomenal inference."
+}
