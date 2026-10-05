@@ -1,0 +1,48 @@
+{
+  "status": "O002_G1_JOINT_PERSON_STIMULUS_GENERALIZATION",
+  "run_id": 37226922346,
+  "head_sha": "32f890fa8a526a44a05f97090dc429682222cb48",
+  "protocol_commit": "049bb88b4edeecf494a6adeb0ce6076e6ce59adf",
+  "analysis_commit": "7ce5684a62dd2baf83e301d681c670d145c77e60",
+  "workflow_commit": "74f3771c8df9e7963ad47eed679b178c88a5fe65",
+  "artifact_id": 11311754909,
+  "artifact_sha256": "250d1f1a7c63c6abc1b42b7e7854519d9202a1519f9bbd6750175f6a8976b951",
+  "n_subjects": 30,
+  "n_videos": 8,
+  "n_test_cells": 240,
+  "verdict": "REPORT_PERSISTENCE_GENERALIZES__NO_PHYSIOLOGY_INCREMENT_UNDER_DOUBLE_HOLDOUT",
+  "physiology_positive_axes": [],
+  "targets": {
+    "valence": {
+      "context_only_row_weighted_mae": 1.3849801099700512,
+      "prior_row_weighted_mae": 0.16713628779106637,
+      "physiology_row_weighted_mae": 0.17636176011885069,
+      "prior_increment_mean": 1.1513769242209877,
+      "prior_increment_ci95": [
+        0.780365920370243,
+        1.5938270035048752
+      ],
+      "physiology_increment_mean": -0.008971520866168618,
+      "physiology_increment_ci95": [
+        -0.012454113893301698,
+        -0.006198124085801601
+      ]
+    },
+    "arousal": {
+      "context_only_row_weighted_mae": 1.3264125157793802,
+      "prior_row_weighted_mae": 0.18611388021207845,
+      "physiology_row_weighted_mae": 0.19143189902588925,
+      "prior_increment_mean": 1.1466791448459241,
+      "prior_increment_ci95": [
+        0.7371415691874522,
+        1.5688467072764285
+      ],
+      "physiology_increment_mean": -0.00574271427880232,
+      "physiology_increment_ci95": [
+        -0.009635878480958834,
+        -0.002032546865004646
+      ]
+    }
+  },
+  "firewall": "Predictive robustness only; no causal or phenomenal inference."
+}
