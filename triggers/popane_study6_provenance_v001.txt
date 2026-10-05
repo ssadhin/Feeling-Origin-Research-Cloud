@@ -1,0 +1,5 @@
+Record provenance for the public POPANE Study 6 archive used by R1–R6.
+Purpose: reproducibility only; no scientific analysis or decision rule.
+Source: https://data.psychosensing.psnc.pl/popane/files/study6.zip
+Workflow commit: 7832da35203ab367de38a9351948fbebfa2b41c5
+Preserve only source URL, retrieval timestamp, size, SHA256 and ZIP entry count; raw archive remains transient.
