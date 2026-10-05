@@ -1,0 +1,35 @@
+name: O002-B1 Naive Persistence Once
+
+on:
+  push:
+    paths:
+      - "triggers/o002_b1_naive_persistence_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: o002-b1-naive-persistence-v001
+  cancel-in-progress: true
+
+jobs:
+  naive-persistence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "numpy>=2,<3" "scikit-learn>=1.6,<2" "pandas>=2.2,<3"
+      - name: Run frozen naive persistence audit
+        run: python analysis/o002_b1_naive_persistence.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: o002-b1-naive-persistence-${{ github.run_id }}
+          path: results/o002_b1_naive_persistence.json
+          if-no-files-found: error
+          retention-days: 14
