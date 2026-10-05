@@ -96,7 +96,7 @@ def main():
             "n_subjects":int(prd.subject.nunique()),
             "time_only_mae":float(mean_absolute_error(prd.y,prd.time)),
             "real_physiology_mae":float(mean_absolute_error(prd.y,prd.real)),
-            "shifted_physiology_mae":float(mean_absolute_error(prd.y,prd.shift)),
+            "shifted_physiology_mae":float(mean_absolute_error(prd["y"],prd["shift"])),
             "delta_shift_real":bsr,
             "delta_time_real":btr,
             "aligned_signal_positive":bool(bsr["ci95"][0]>0)
