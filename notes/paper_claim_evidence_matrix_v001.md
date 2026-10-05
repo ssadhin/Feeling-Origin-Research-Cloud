@@ -1,6 +1,6 @@
 # Affect Forecasting Paper — claim/evidence matrix v001
 
-Status: pre-manuscript research artifact. POPANE-R6 and CASE-D2 metric sensitivities pending when frozen.
+Status: pre-manuscript research artifact. POPANE-R6 and CASE-D2 metric sensitivities resolved.
 
 | Candidate claim | CASE support | POPANE support | Current status / required wording |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Status: pre-manuscript research artifact. POPANE-R6 and CASE-D2 metric sensitivi
 | External result is robust to uncertainty over both generalization axes. | CASE uses crossed subject×video bootstrap in D1 and pending D2. | R4 crossed participant×segment bootstrap strongly supports R1 at all 8 horizon×learner contrasts. | Strong support for external result. |
 | All-feature physiology loses only because irrelevant/noisy channels dilute a useful physiological subsystem. | Not the main CASE question here. | R5 pre-authorized ECG-only, EDA-only, ICG/hemodynamic-only all fail to rescue, every horizon both learners. | This specific rescue is weakened in POPANE. Do not generalize to all possible feature engineering. |
 | The result is not merely a linear-model artifact. | HGB stress tests do not rescue level/change result robustly. | HGB independently reproduces persistence dominance. | Supported. |
-| The result survives scoring rules beyond MAE. | D2 pending. | R6 pending. | Do not claim until metric sensitivities resolve. |
+| The result survives scoring rules beyond MAE. | D2: all 16 physiology-vs-persistence CCC CIs are negative; RMSE point estimates favor persistence in all 16 cells, with 15/16 CIs strictly negative and one inconclusive non-reversal. | R6: physiology worse than persistence on RMSE and CCC at all four horizons for both learners. | Supported for the tested frozen models; do not generalize to models optimized specifically for CCC. |
 | There is no target leakage from POPANE zero-phase ECG filtering. | N/A. | Audited: filtering occurs only after predictor-window slice; no sample at/after target start enters filter. | Supported; disclose retrospective historical-window processing. |
 | POPANE uses genuine continuous self-reported valence. | N/A. | Data descriptor: electronic 1–10 valence scale adjusted as often as needed, signal recorded at 1 kHz alongside physiology. | Supported. |
 | The result demonstrates physiology is irrelevant to emotion/feeling. | No. | No. | FORBIDDEN. |
@@ -34,8 +34,8 @@ Status: pre-manuscript research artifact. POPANE-R6 and CASE-D2 metric sensitivi
 5. POPANE-R4 crossed participant×segment uncertainty.
 6. POPANE-R5 pre-authorized physiology-family ablations.
 7. POPANE-R3 alignment control — importantly NONSUPPORTIVE of external aligned-signal narrative.
-8. POPANE-R6 metric/trajectory sensitivity — pending at freeze.
-9. CASE-D2 metric/trajectory sensitivity — pending at freeze.
+8. POPANE-R6 metric/trajectory sensitivity — resolved: METRIC_ROBUST_PERSISTENCE_DOMINANCE.
+9. CASE-D2 metric/trajectory sensitivity — resolved: no CCC rescue and no RMSE reversal; script label MIXED_METRIC_RESULT reflects one inconclusive RMSE CI.
 
 ## Proposed contribution sentence if pending metric gates do not force narrowing
 
