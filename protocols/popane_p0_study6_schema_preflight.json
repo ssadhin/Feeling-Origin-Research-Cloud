@@ -1,0 +1,53 @@
+{
+  "title": "POPANE-P0 Study 6 outcome-blind remote schema preflight",
+  "status": "FROZEN_BEFORE_DATA_INSPECTION",
+  "purpose": "Determine whether public POPANE Study 6 can support an independent prospective valence replication of the CASE incremental-information result without downloading/extracting the full 2.7 GB archive.",
+  "source": {
+    "paper_doi": "10.1038/s41597-021-01117-0",
+    "osf_doi": "10.17605/OSF.IO/94BPX",
+    "archive_url": "https://data.psychosensing.psnc.pl/popane/files/study6.zip",
+    "published_sample_n": 187,
+    "published_design": "Baseline, series of six film clips (positive, negative, neutral or mixed), ultimatum game.",
+    "published_signals": [
+      "continuous valence",
+      "ECG",
+      "EDA",
+      "ICG",
+      "SBP",
+      "DBP",
+      "CO",
+      "TPR"
+    ]
+  },
+  "allowed_preflight_reads": [
+    "HTTP response headers and range-support status",
+    "ZIP central-directory filenames, compressed/uncompressed sizes and directory structure",
+    "CSV header rows only (column names) from a small deterministic sample of entries",
+    "First two non-data metadata/comment lines only if required to identify delimiter or schema; do not inspect valence or physiology values"
+  ],
+  "forbidden_before_followup_freeze": [
+    "No outcome distributions",
+    "No correlations",
+    "No model fitting",
+    "No valence or physiology values",
+    "No selective participant exclusion based on outcomes"
+  ],
+  "deterministic_sampling": {
+    "file_selection": "Sort all CSV entry paths lexicographically; inspect headers of the first 12 non-baseline/manipulation-like CSV files plus up to 3 baseline files if present.",
+    "objective": "Establish participant/file naming, phase segmentation, timestamp column, valence column, marker/stimulus columns, and physiology-channel names."
+  },
+  "qc_questions": [
+    "Does the server support byte ranges so selective remote ZIP access is feasible?",
+    "Are participant IDs recoverable from filenames?",
+    "Can film/manipulation segments be identified independently of valence values?",
+    "Is continuous valence present in the same files as at least ECG and EDA?",
+    "Is there a usable time/timestamp/sample index?",
+    "Are there enough distinct participant and film/manipulation files to preregister held-out-person and held-out-stimulus or held-out-condition evaluation?"
+  ],
+  "decisions": {
+    "PASS_REMOTE_REPLICATION_FEASIBLE": "Range access works; schema exposes synchronized continuous valence + >=2 peripheral channels + participant IDs + independently identifiable stimulus/phase structure.",
+    "PASS_PERSON_ONLY_GENERALIZATION": "Continuous valence+physiology and participant IDs are usable but stimulus identity cannot be cleanly recovered for double holdout.",
+    "FAIL_SCHEMA_OR_ACCESS": "Range access/download or required synchronized schema is not viable."
+  },
+  "firewall": "Outcome-blind feasibility/QC only. A successful preflight does not test the scientific hypothesis. The replication protocol must be frozen in a later commit before reading valence/physiology values."
+}
