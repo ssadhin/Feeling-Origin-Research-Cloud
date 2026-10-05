@@ -1,0 +1,35 @@
+name: POPANE-P2a Study5 Schema Preflight Once
+
+on:
+  push:
+    paths:
+      - "triggers/popane_p2a_study5_schema_v001.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: popane-p2a-study5-schema-v001
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install "requests>=2,<3" "remotezip>=0.12,<1"
+      - name: Run outcome-blind Study 5 schema preflight
+        run: python analysis/popane_p2a_study5_schema_preflight.py
+      - name: Upload aggregate schema result
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: popane-p2a-study5-schema-${{ github.run_id }}
+          path: results/popane_p2a_study5_schema_preflight.json
+          if-no-files-found: error
+          retention-days: 14
