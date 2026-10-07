@@ -1,0 +1,55 @@
+name: Methodology Locked Benchmark v001.1 Gen2
+
+on:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Frozen evaluation split
+        required: true
+        type: choice
+        options:
+          - locked_test
+          - ood
+      n_per_class:
+        description: Frozen episodes per world class/composition
+        required: true
+        default: "1000"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: methodology-locked-v001-1-gen2
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Software validity v001.1
+        run: |
+          python meta_methodology/benchmark_v001_1.py --self-test
+          PYTHONHASHSEED=1 python meta_methodology/benchmark_v001_1.py --split validation --n-per-class 20 --output /tmp/h1.csv --summary /tmp/h1.json
+          PYTHONHASHSEED=777 python meta_methodology/benchmark_v001_1.py --split validation --n-per-class 20 --output /tmp/h2.csv --summary /tmp/h2.json
+          cmp /tmp/h1.csv /tmp/h2.csv
+          cmp /tmp/h1.json /tmp/h2.json
+      - name: Generation 2 self-test
+        run: python meta_methodology/benchmark_v002.py --self-test
+      - name: Run frozen evaluation
+        run: |
+          mkdir -p results/methodology
+          python meta_methodology/benchmark_v002.py \
+            --split "${{ inputs.split }}" \
+            --n-per-class "${{ inputs.n_per_class }}" \
+            --out "results/methodology/v002_${{ inputs.split }}.csv" \
+            --summary "results/methodology/v002_${{ inputs.split }}_summary.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: methodology-v001-1-gen2-${{ inputs.split }}
+          path: results/methodology/
+          retention-days: 30
