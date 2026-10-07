@@ -1,0 +1,103 @@
+{
+  "action_costs": {
+    "ancestor": 8,
+    "compare": 10,
+    "equivalence": 10,
+    "generate": 8,
+    "hybridize": 10,
+    "independent_analysis": 12,
+    "intervene": 20,
+    "mist": 10,
+    "multiverse": 12,
+    "negative_control": 8,
+    "observe": 8,
+    "ood": 14,
+    "parallel_generate": 14,
+    "positive_control": 6,
+    "preregister": 3,
+    "replicate": 12,
+    "residual": 6,
+    "sensitivity": 10,
+    "simplify": 8,
+    "software_test": 8
+  },
+  "budget": 100,
+  "claim_ceiling": "TRAIN/VALIDATION are development evidence only. No benchmark winner until locked TEST + OOD meta-test + external real-case validation.",
+  "decision_rule": "Pareto comparison first; no single weighted score during development.",
+  "development_cli_splits": [
+    "train",
+    "validation"
+  ],
+  "locked_test_status": "implemented internally but intentionally not exposed by development CLI/workflow",
+  "meta_compositions": [
+    [
+      "MISSING_TRUE_HYPOTHESIS",
+      "CONFOUND_TRAP"
+    ],
+    [
+      "HYBRID_TRUTH",
+      "OOD_FAILURE"
+    ],
+    [
+      "REJECTED_ANCESTOR_RECOVERY",
+      "ANALYSIS_FLEXIBILITY"
+    ],
+    [
+      "SURPRISE_DISTRACTOR",
+      "SOFTWARE_BUG"
+    ],
+    [
+      "MYOPIC_INFORMATION_GAIN",
+      "SHARED_ANALYST_BIAS"
+    ],
+    [
+      "DIVERSITY_COLLAPSE",
+      "PARAMETER_FRAGILITY"
+    ]
+  ],
+  "policies": {
+    "P0": "ONE_PASS",
+    "P1": "PREREG_CONFIRM",
+    "P10": "DIVERSITY_HIERARCHICAL_SEARCH",
+    "P11": "SURPRISE_MCTS",
+    "P12": "PARALLEL_INDEPENDENT",
+    "P2": "BAYESIAN_WORKFLOW",
+    "P3": "STRONG_INFERENCE",
+    "P5": "RECURSIVE_TOURNAMENT",
+    "P6": "TOURNAMENT_MIST",
+    "P7": "FULL_STACK_FIXED",
+    "P8": "ADAPTIVE_EPISTEMIC_SEARCH",
+    "P9": "MINIMAL_ADAPTIVE"
+  },
+  "split_seed_bases": {
+    "locked_test": 5000000,
+    "ood": 9000000,
+    "train": 100000,
+    "validation": 2000000
+  },
+  "version": "v001",
+  "world_classes": [
+    "SIMPLE_TRUE",
+    "MISSING_TRUE_HYPOTHESIS",
+    "DIVERSITY_COLLAPSE",
+    "CONFOUND_TRAP",
+    "BEHAVIORAL_MIMIC",
+    "NONIDENTIFIABLE",
+    "INTERVENTION_ONLY",
+    "PARAMETER_FRAGILITY",
+    "ANALYSIS_FLEXIBILITY",
+    "NEGATIVE_CONTROL_TRAP",
+    "WEAK_NULL_EQUIVALENCE",
+    "OOD_FAILURE",
+    "MEASUREMENT_CIRCULARITY",
+    "SOFTWARE_BUG",
+    "HYBRID_TRUTH",
+    "OVERCOMPLEXITY",
+    "REEVALUATION_DRIFT",
+    "REJECTED_ANCESTOR_RECOVERY",
+    "SURPRISE_DISTRACTOR",
+    "EXPENSIVE_PERFECT_TEST",
+    "MYOPIC_INFORMATION_GAIN",
+    "SHARED_ANALYST_BIAS"
+  ]
+}

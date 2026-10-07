@@ -1,0 +1,58 @@
+name: Methodology Benchmark v001
+
+on:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Development split only
+        required: true
+        default: validation
+        type: choice
+        options:
+          - train
+          - validation
+      n_per_class:
+        description: Worlds per benchmark class
+        required: true
+        default: "250"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: methodology-benchmark-v001
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Software validity self-test
+        run: python meta_methodology/benchmark_v001.py --self-test
+
+      - name: Run development benchmark
+        run: |
+          mkdir -p results/meta_methodology
+          python meta_methodology/benchmark_v001.py \
+            --split "${{ inputs.split }}" \
+            --n-per-class "${{ inputs.n_per_class }}" \
+            --output "results/meta_methodology/v001_${{ inputs.split }}.csv" \
+            --summary "results/meta_methodology/v001_${{ inputs.split }}_summary.json"
+
+      - name: Upload benchmark artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: methodology-v001-${{ inputs.split }}
+          path: |
+            results/meta_methodology/v001_${{ inputs.split }}.csv
+            results/meta_methodology/v001_${{ inputs.split }}_summary.json
+          retention-days: 14
