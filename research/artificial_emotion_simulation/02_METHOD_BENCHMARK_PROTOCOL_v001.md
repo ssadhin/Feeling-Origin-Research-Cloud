@@ -230,4 +230,22 @@ nested validation protects tuning leakage;
 replication/provenance protect generalization/reproducibility.
 The Tournament–MIST stack is designed as their nonredundant integration.
 NEXT ACTION
-Implement the methodology benchmark before using "best" as a scientific claim.
+Implement the methodology benchmark before using "best" as a scientific claim
+METHOD BENCHMARK UPDATE — RE-EVALUATION / DRIFT TESTS
+Add benchmark worlds:
+W17 — RE-EVALUATION DRIFT TRAP
+The initial model is closer to ground truth than later increasingly elaborate revisions. A good method must detect when repeated critique is causing overcorrection rather than improvement.
+W18 — REJECTED-ANCESTOR RECOVERY
+A rejected early model contains one correct component that the current leader dropped. Success requires comparing the lineage, recovering the lost component, and generating a hybrid.
+Add benchmark metrics:
+M13 — LINEAGE RECOVERY
+How often does the method recover useful structure from earlier/rejected models when later models have drifted?
+M14 — RE-EVALUATION STABILITY
+How often does repeated reevaluation improve correctness versus merely change framing or increase unnecessary complexity?
+M15 — RECENCY-BIAS RESISTANCE
+When anonymized candidate versions are scored without chronological order, does the method still select the same current leader?
+New ablation:
+Remove ancestral comparison while keeping forward recursion. Measure whether W17/W18 failures increase.
+Interpretation:
+Repeated reevaluation is itself a candidate operator, not automatically beneficial. It remains in the canonical method only if it improves benchmark performance under equal budget.
+.
