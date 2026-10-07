@@ -1,0 +1,48 @@
+{
+  "benchmark": "v001.1_gen2",
+  "run_id": 37585920892,
+  "head_sha": "633fc711e34e9bf1be37f5760147a5918276d31a",
+  "split": "locked_test",
+  "n_per_class": 1000,
+  "key": {
+    "P14": {
+      "accuracy": 0.9610909090909091,
+      "false_positive_rate": 0.004909090909090909,
+      "brier": 0.02700595766784661,
+      "cost": 80,
+      "failure_detection": 0.5909090909090909
+    },
+    "P15": {
+      "accuracy": 0.9615454545454546,
+      "false_positive_rate": 0.005772727272727273,
+      "brier": 0.025449554803482672,
+      "cost": 90,
+      "failure_detection": 0.5909090909090909
+    },
+    "P16": {
+      "accuracy": 0.9567727272727272,
+      "false_positive_rate": 0.0076363636363636364,
+      "brier": 0.024769545725100064,
+      "cost": 82.65636363636364,
+      "failure_detection": 0.6428181818181818
+    },
+    "P8": {
+      "accuracy": 0.9102727272727272,
+      "false_positive_rate": 0.043772727272727276,
+      "brier": 0.059035173240259954,
+      "cost": 96.68054545454545,
+      "failure_detection": 0.5499545454545455
+    }
+  },
+  "pareto_front": [
+    "P0",
+    "P1",
+    "P2",
+    "P9",
+    "P14",
+    "P15",
+    "P16",
+    "P18"
+  ],
+  "interpretation": "Frozen synthetic locked test. No post-test tuning authorized."
+}
