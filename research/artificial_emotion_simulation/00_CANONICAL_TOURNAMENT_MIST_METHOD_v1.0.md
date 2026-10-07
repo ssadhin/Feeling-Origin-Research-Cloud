@@ -536,4 +536,28 @@ SYSTEMATIC MAP
 -> COMPARE + REGENERATE
 -> CONVERGENCE
 -> PAPER CLAIM.
-The method is designed so that a result must survive multiple DIFFERENT kinds of failure tests rather than simply accumulating confirming evidence.
+The method is designed so that a result must survive multiple DIFFERENT kinds of failure tests rather than simply accumulating confirming evidence
+==================================================
+v1.1 METHODOLOGY RESEARCH ADDENDUM — 2026-10-07
+==================================================
+The methodology tournament and external methods search added four safeguards that were not explicit enough in v1.0.
+A. BLIND ANALYSIS / LABEL MASKING
+Where feasible, hide condition identities, candidate names, and expected directions during manual adjudication, subjective coding, visualization selection and outcome assessment. Unblinding occurs only after the relevant analysis/decision is frozen.
+B. NESTED / LOCKED VALIDATION
+Any tuning of thresholds, hyperparameters, latent-state extraction, model class, feature selection or metric choice must occur inside training/validation partitions. Final assessment uses a locked holdout or nested evaluation that has not participated in selection. Repeated nested validation is preferred when data are limited and tuning is substantial.
+C. INDEPENDENT OPTION-GENERATION LANES
+For major candidate-universe generation, use at least two independent generation lanes:
+Lane A — canonical recursive Tournament using current project state.
+Lane B — independent hypothesis generator given the research question and evidence constraints but not Lane A's candidate list.
+Merge/deduplicate only after both are frozen.
+If both lanes depend on related AI models, treat them as diversity tools, not independent replication.
+D. METHOD ABLATION
+The method itself must justify its complexity.
+For major methodological components, compare full stack versus removal of one component under benchmark worlds or retrospective cases. Retain steps that catch distinct errors, improve model recovery/information gain, or are necessary for reproducibility/claim integrity. Remove or simplify steps that add repeated cost without decision value.
+E. "BEST METHOD" CLAIM GATE
+Do not describe this protocol as the best method merely because it contains more safeguards.
+Use 02_METHOD_BENCHMARK_PROTOCOL_v001.
+A "best-performing" claim is permitted only inside a preregistered, budget-matched benchmark where the protocol wins the frozen decision rule on locked research worlds.
+Until then the correct status is:
+LEADING / MOST COMPREHENSIVE CURRENT PROJECT METHOD, BENCHMARK PENDING.
+.
