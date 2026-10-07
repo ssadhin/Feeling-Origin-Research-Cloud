@@ -54,3 +54,17 @@ DO NOT
 - equate emotion with feeling unless a specific theory defines it that way;
 - equate report with phenomenality;
 - claim the four constructs exhaust human experience.
+
+RECURSIVE TOURNAMENT UPDATE — 2026-10-07
+Generation-0 definitions/formulas/distinctions were frozen before further work. The recursive option method then ran through option generation, one-by-one hard checks, all-survivor comparison, architecture comparison, and two independent regeneration passes.
+
+Provisional top-level generative saturation result:
+- Self-maintenance -> M_C constitutive maintenance + M_R regulatory maintenance, evaluated relative to viability constraints V.
+- Broad instinct remains non-unitary; prepared-action families include reflex I_R, canalized policy disposition I_P, and motor-pattern generator I_G, with drive/motivation D separate.
+- Emotion -> theory-neutral Emotion Coordination Episode (ECE), a temporally bounded coordinated component trajectory. A central latent e_t is only an implementation hypothesis.
+- Feeling -> content-indexed phenomenal family F^(c), not one terminal causal node. Report/access stays separate; a common phenomenal-enabling mechanism remains open.
+- Universal M->I->E->F remains rejected.
+- The four words are research headings, not exhaustive atomic natural kinds.
+
+Canonical comparison:
+research/preconsciousness/RECURSIVE_RESULT_VS_GEN0_v001.md
