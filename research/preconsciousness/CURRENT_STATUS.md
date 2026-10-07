@@ -53,18 +53,27 @@ DO NOT
 - use "instinct" without operational qualification;
 - equate emotion with feeling unless a specific theory defines it that way;
 - equate report with phenomenality;
-- claim the four constructs exhaust human experience.
-
+- claim the four constructs exhaust human experience
+METHODOLOGY CORRECTION — 2026-10-07
+This document is NOT the final endpoint. It is reclassified as a Generation-0 / checkpoint result. The canonical active methodology is now RECURSIVE_OPTION_TOURNAMENT_PROTOCOL_v001: generate the option universe, destroy candidates one by one, compare and categorize all survivors/failures, generate new options from comparisons/residuals, and repeat until explicit saturation/underdetermination criteria are met. Do not cite this checkpoint as the final answer without the later recursive tournament result.
 RECURSIVE TOURNAMENT UPDATE — 2026-10-07
-Generation-0 definitions/formulas/distinctions were frozen before further work. The recursive option method then ran through option generation, one-by-one hard checks, all-survivor comparison, architecture comparison, and two independent regeneration passes.
-
-Provisional top-level generative saturation result:
-- Self-maintenance -> M_C constitutive maintenance + M_R regulatory maintenance, evaluated relative to viability constraints V.
-- Broad instinct remains non-unitary; prepared-action families include reflex I_R, canalized policy disposition I_P, and motor-pattern generator I_G, with drive/motivation D separate.
-- Emotion -> theory-neutral Emotion Coordination Episode (ECE), a temporally bounded coordinated component trajectory. A central latent e_t is only an implementation hypothesis.
-- Feeling -> content-indexed phenomenal family F^(c), not one terminal causal node. Report/access stays separate; a common phenomenal-enabling mechanism remains open.
-- Universal M->I->E->F remains rejected.
-- The four words are research headings, not exhaustive atomic natural kinds.
-
+The Generation-0 definitions/formulas/distinctions were frozen before further work in GEN0_CURRENT_DEFINITION_FORMULA_DISTINCTION_COMPARISON_CHECKPOINT_v001.
+The canonical active method then ran:
+Generation 1 option universe;
+Generation 1 one-by-one hard checks;
+Generation 2 all-survivor comparison/regeneration;
+Generation 3 architecture war;
+Generation 4 independent regeneration review;
+Generation 5 independent boundary/minimal/maximal regeneration.
+Two consecutive regeneration passes produced no new top-level ontological role, only subtypes, context variables, mechanisms, and feedback directions. Top-level generative saturation is therefore provisionally passed, but systematic database saturation and empirical causal validation remain open.
+Current best result:
+- Self-maintenance decomposes into constitutive maintenance M_C and regulatory maintenance M_R, evaluated against viability constraints V.
+- Broad "instinct" remains non-unitary; mechanistic prepared-action families include reflex I_R, canalized policy disposition I_P, and motor-pattern generator I_G, with drive/motivation D separate.
+- Emotion is best defined theory-neutrally as an Emotion Coordination Episode (ECE): a temporally bounded coordinated component trajectory. A central latent e_t is an optional implementation hypothesis, not part of the definition.
+- Feeling is best represented as a content-indexed phenomenal family F^(c), not one terminal causal node; report/access remains separate and a common phenomenal-enabling mechanism remains an open consciousness hypothesis.
+- The strict M->I->E->F hierarchy remains rejected.
+- The four words remain useful research headings, not exhaustive atomic natural kinds.
 Canonical comparison:
-research/preconsciousness/RECURSIVE_RESULT_VS_GEN0_v001.md
+RECURSIVE_RESULT_VS_GEN0_v001.
+SATURATED CHECKPOINT — 2026-10-07
+The recursive option-tournament has completed Generations 1–6 plus all-pair/all-group comparison and a convergence audit. Current bounded-search result is GENERATION_SATURATED_RESULT_v001. Stable targets: M*=biological self-maintenance as coupled constitutive+regulatory maintenance; I*=Developmentally Canalized Preparedness Profile spanning perception/learning/valuation/action, with action ICAD retained as a subtype; E*=functional emotion organization as a multicomponent dynamical coordination trajectory, with E_func separated operationally from theory-dependent full E_episode; F*=heterogeneous phenomenal feeling family with homeostatic, emotional, sensory, metacognitive, hedonic and urge subfamilies, and report/access separated from phenomenality. The universal M->I->E->F chain remains rejected. All four roles remain nonredundant within the scoped question but are not exhaustive categories of human experience. Definition/formulation search has reached bounded convergence under the project protocol. Remaining work is empirical validation, manuscript-grade systematic review, causal intervention design, and the unresolved phenomenality bridge P*/X. See CONVERGENCE_AUDIT_v001, GENERATION_SATURATED_RESULT_v001, GEN0_vs_GENERATION_SATURATED_COMPARISON_v001, and PRE_CONSCIOUSNESS_RESEARCH_MAP_v002..
