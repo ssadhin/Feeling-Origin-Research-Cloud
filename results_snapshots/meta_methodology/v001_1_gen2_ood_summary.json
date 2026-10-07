@@ -1,0 +1,52 @@
+{
+  "benchmark": "v001.1_gen2",
+  "run_id": 37585926112,
+  "head_sha": "633fc711e34e9bf1be37f5760147a5918276d31a",
+  "split": "ood",
+  "n_per_class": 1000,
+  "key": {
+    "P14": {
+      "accuracy": 0.8261666666666667,
+      "false_positive_rate": 0.051833333333333335,
+      "brier": 0.11209988213669048,
+      "cost": 80,
+      "failure_detection": 0.6666666666666666,
+      "missing_recovery": 0.494
+    },
+    "P15": {
+      "accuracy": 0.8236666666666667,
+      "false_positive_rate": 0.05,
+      "brier": 0.11067520881961643,
+      "cost": 90,
+      "failure_detection": 0.6666666666666666,
+      "missing_recovery": 0.4905
+    },
+    "P16": {
+      "accuracy": 0.6978333333333333,
+      "false_positive_rate": 0.19933333333333333,
+      "brier": 0.2212211521704512,
+      "cost": 83.92733333333334,
+      "failure_detection": 0.6666666666666666,
+      "missing_recovery": 0.3685
+    },
+    "P6": {
+      "accuracy": 0.7791666666666667,
+      "false_positive_rate": 0.06333333333333334,
+      "brier": 0.14179467125031253,
+      "cost": 80,
+      "failure_detection": 0.6666666666666666,
+      "missing_recovery": 0.4465
+    }
+  },
+  "pareto_front": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P5",
+    "P9",
+    "P14",
+    "P15"
+  ],
+  "interpretation": "Held-out composite-world meta-test. P16 development lead fails to generalize; P14/P15 survive."
+}
