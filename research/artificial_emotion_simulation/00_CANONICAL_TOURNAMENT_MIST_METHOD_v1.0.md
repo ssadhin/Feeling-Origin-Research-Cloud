@@ -560,4 +560,144 @@ Use 02_METHOD_BENCHMARK_PROTOCOL_v001.
 A "best-performing" claim is permitted only inside a preregistered, budget-matched benchmark where the protocol wins the frozen decision rule on locked research worlds.
 Until then the correct status is:
 LEADING / MOST COMPREHENSIVE CURRENT PROJECT METHOD, BENCHMARK PENDING.
+==================================================
+v1.2 ADDENDUM — ITERATED RE-EVALUATION + ANCESTRAL COMPARISON
+Date: 2026-10-07
+==================================================
+MOTIVATING OBSERVATION
+Repeated re-evaluation can genuinely improve an idea, but it can also cause conceptual drift. Therefore the method must preserve the entire lineage of opinions/candidates and compare later conclusions against earlier and rejected versions rather than assuming the newest version is better.
+CORE RULE
+Every major conclusion must have a RE-EVALUATION LINEAGE.
+Let:
+O_0 = first serious opinion/model/conclusion.
+O_1 = result after first explicit re-evaluation.
+O_2 = result after re-evaluating O_1.
+...
+O_n = current best conclusion.
+The method must preserve all O_i, including rejected variants, with the exact reason each changed.
+RE-EVALUATION CYCLE
+1. INITIAL OPINION
+State O_0 clearly, with assumptions, evidence, uncertainty, and failure conditions.
+2. FIRST EVALUATION
+Attack O_0:
+- strongest counterargument;
+- missing options;
+- hidden assumptions;
+- evidence conflicts;
+- oversimplifications;
+- unnecessary complexity.
+Produce O_1 only if warranted.
+3. RE-EVALUATION OF THE EVALUATION
+Treat O_1 as a fresh candidate.
+Ask whether the first critique itself introduced bias, overcorrection, novelty-for-novelty's-sake, or loss of useful structure.
+Produce O_2 only if warranted.
+4. FINAL RE-EVALUATION ROUND
+Repeat once more or until the change becomes materially negligible.
+Do not continue merely to generate novelty.
+5. LINEAGE COMPARISON
+Compare O_0, every materially distinct intermediate O_i, O_n, and the strongest rejected branches under the SAME frozen criteria.
+For each transition O_i -> O_(i+1), record:
+- what changed;
+- why it changed;
+- new evidence vs new interpretation;
+- what explanatory power was gained;
+- what was lost;
+- whether complexity increased;
+- whether the change improved prediction/falsifiability/coverage or merely changed framing.
+6. ANCESTOR CHALLENGE
+The current best O_n must defeat:
+- O_0;
+- the strongest rejected predecessor;
+- the simplest earlier model;
+- any earlier model that explained a phenomenon the current model now handles less clearly.
+7. RECOMBINATION
+If an older/rejected idea contains a component that solves a residual of the current leader, generate a hybrid as a NEW candidate rather than silently restoring the old idea.
+8. DRIFT AUDIT
+Ask:
+- Are we moving toward better evidence fit or merely farther from the starting point?
+- Did later versions add assumptions without new discriminating predictions?
+- Did we lose a useful constraint from an earlier version?
+- Could the current model be a reaction to criticism rather than a better explanation?
+- Would an independent evaluator prefer the current version if version order were hidden?
+9. BLIND ORDER TEST WHERE FEASIBLE
+Present anonymized versions O_0...O_n to an evaluator without chronological order and score them on the same criteria.
+This reduces recency bias and "newer must be better" bias.
+10. STABILITY / STOPPING RULE
+Stop re-evaluating when:
+- two consecutive rounds produce no materially new mechanism, prediction, falsifier, or explanatory gain;
+OR
+- remaining differences are stylistic/relabeling;
+OR
+- further changes decrease expected epistemic value.
+Never use "latest" as a synonym for "best."
+LINEAGE OUTPUT
+Every major result should preserve:
+INITIAL VERSION
+FIRST RE-EVALUATION
+SECOND RE-EVALUATION
+CURRENT BEST
+STRONGEST REJECTED ALTERNATIVE
+FIRST-vs-CURRENT COMPARISON
+CURRENT-vs-STRONGEST-REJECTED COMPARISON
+DRIFT VERDICT
+WHAT WAS LOST / WHAT WAS GAINED
+RECOMBINATION CANDIDATES
+STABILITY STATUS
+WHY THIS MATTERS
+A rejected idea can remain scientifically useful:
+- it may contain a correct subcomponent;
+- it may expose a variable the current model hides;
+- it may be simpler and therefore a stronger rival;
+- it may reveal that the current model has drifted away from the original question;
+- it may combine with the current leader to produce a better candidate.
+The research archive is therefore not a graveyard of failures. It is an active hypothesis reservoir.
+RELATION TO THE RECURSIVE TOURNAMENT
+The Tournament now has TWO recursive directions:
+FORWARD RECURSION:
+current evidence -> new options -> testing -> new options.
+BACKWARD RECURSION:
+current leader -> earlier/rejected versions -> compare -> recover lost insight -> generate hybrids.
+Combined:
+GENERATE -> TEST -> COMPARE -> REGENERATE
+             ^                     |
+             |                     v
+        ANCESTRAL COMPARE <- RE-EVALUATE
+This protects against both premature convergence and conceptual drift.
+v1.2 ADDENDUM — ITERATED RE-EVALUATION AND ANCESTRAL COMPARISON
+Date: 2026-10-07
+CORE IDEA
+Repeated re-evaluation can improve a conclusion, but it can also create drift. Therefore preserve the whole lineage rather than assuming the newest version is best.
+Let O0 be the first serious opinion/model, O1 the result after reevaluating O0, O2 the result after reevaluating O1, and On the current best.
+MANDATORY SEQUENCE
+1. Freeze O0 with assumptions, evidence, uncertainty, and failure conditions.
+2. Reevaluate O0 and create O1 only if the critique produces a material improvement.
+3. Reevaluate O1 itself. Ask whether the first critique caused overcorrection, unnecessary complexity, or loss of useful structure.
+4. Repeat until changes become materially negligible.
+5. Compare O0, all materially distinct intermediate versions, On, and the strongest rejected branches using the same criteria.
+6. For every transition record: what changed, why, what evidence was new, what was only reinterpretation, what was gained, what was lost, and whether complexity increased.
+7. Force an ANCESTOR CHALLENGE: the current leader must defeat the original version, the strongest rejected predecessor, and the simplest earlier model.
+8. If an earlier/rejected idea solves a residual of the current leader, generate a hybrid as a new candidate rather than silently restoring it.
+9. Run a DRIFT AUDIT: are changes improving evidence fit and discrimination, or merely moving farther from the starting point?
+10. Where feasible, compare anonymized versions without chronological order to reduce recency bias.
+11. Stop reevaluating when two consecutive rounds produce no materially new mechanism, prediction, falsifier, or explanatory gain, or when remaining changes are only stylistic.
+MANDATORY LINEAGE OUTPUT
+INITIAL VERSION
+FIRST RE-EVALUATION
+SECOND RE-EVALUATION
+CURRENT BEST
+STRONGEST REJECTED ALTERNATIVE
+FIRST-vs-CURRENT COMPARISON
+CURRENT-vs-STRONGEST-REJECTED COMPARISON
+WHAT WAS GAINED
+WHAT WAS LOST
+DRIFT VERDICT
+RECOMBINATION CANDIDATES
+STABILITY STATUS
+RELATION TO THE TOURNAMENT
+The method now has forward recursion and backward recursion.
+Forward recursion:
+current evidence -> new options -> testing -> new options.
+Backward recursion:
+current leader -> earlier/rejected versions -> comparison -> recovery of lost insight -> hybrid generation.
+Never use "latest" as a synonym for "best."
 .
