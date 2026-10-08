@@ -1,0 +1,74 @@
+{
+  "status": "DEVELOPMENT_ONLY_SYNTHETIC_BROKER_VALIDATION",
+  "runs": 20,
+  "tests": [
+    {
+      "test_id": "BR-H001",
+      "status": "PASS",
+      "claim": "Allowlisted model broker channel works inside network-isolated contestant"
+    },
+    {
+      "test_id": "BR-H002",
+      "status": "PASS",
+      "claim": "Evaluator, web, and hidden-state operations are denied by broker"
+    },
+    {
+      "test_id": "BR-H003",
+      "status": "PASS",
+      "claim": "Worker-returned usage is charged deterministically by broker meter"
+    },
+    {
+      "test_id": "BR-H004",
+      "status": "PASS",
+      "claim": "Planted hidden marker is absent from broker requests, responses, and contestant output"
+    },
+    {
+      "test_id": "BR-H005",
+      "status": "PASS",
+      "claim": "All broker traffic conforms to explicit request schema/op registry"
+    },
+    {
+      "test_id": "BR-H006",
+      "status": "BLOCKED_REAL_PROVIDER",
+      "claim": "Actual provider usage telemetry and retry semantics require a frozen provider-backed worker"
+    }
+  ],
+  "sample": {
+    "model_rc": 0,
+    "model_response": {
+      "status": "OK",
+      "output": "SENTINEL_RESPONSE",
+      "usage": {
+        "input_tokens": 5,
+        "output_tokens": 3,
+        "reasoning_tokens": 0
+      }
+    },
+    "eval_rc": 0,
+    "eval_response": {
+      "status": "DENIED",
+      "reason": "OP_NOT_ALLOWLISTED"
+    },
+    "web_rc": 0,
+    "web_response": {
+      "status": "DENIED",
+      "reason": "OP_NOT_ALLOWLISTED"
+    },
+    "hidden_rc": 0,
+    "hidden_response": {
+      "status": "DENIED",
+      "reason": "OP_NOT_ALLOWLISTED"
+    }
+  },
+  "sample_meter": {
+    "input_tokens": 5,
+    "output_tokens": 3,
+    "model_calls": 1,
+    "denied_calls": 3
+  },
+  "median_cpu_seconds": 0.009218999999999991,
+  "median_wall_seconds": 0.009743063999849255,
+  "scientific_controllers_run": 0,
+  "decisive_outcomes_opened": false,
+  "interpretation": "Broker architecture and allowlisting pass with a deterministic stub worker. H011 remains BLOCKED until a real provider returns authoritative usage telemetry."
+}

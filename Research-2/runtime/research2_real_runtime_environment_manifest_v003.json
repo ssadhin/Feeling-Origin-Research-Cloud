@@ -1,0 +1,24 @@
+{
+  "development_only": true,
+  "scientific_controllers_run": 0,
+  "aes_vs_comparator_outcomes_opened": false,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "kernel": "6.18.44",
+  "sandbox_mechanisms": [
+    "user_namespace",
+    "mount_namespace",
+    "pid_namespace",
+    "network_namespace",
+    "uts_namespace",
+    "ipc_namespace",
+    "chroot",
+    "uid_gid_drop",
+    "capability_drop",
+    "read_only_public_bind",
+    "private_scratch",
+    "no_proc_mount"
+  ],
+  "probe_source_sha256": "2808ab62551288cfdba1749990a74cbdb02073df52483ee014678d5c006c0a20",
+  "this_script_sha256": "cc013ff7a97b7a7f45be2ebfd4c613d6e20e7bcea49f79d548c87c816261f13d"
+}
