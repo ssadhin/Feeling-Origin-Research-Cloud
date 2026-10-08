@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "eon-mcp-agent",
+  "main": "src/router.js",
+  "compatibility_date": "2026-09-30",
+  "observability": {"enabled": true},
+  "d1_databases": [{
+    "binding": "EON_DB",
+    "database_name": "eon-mcp-agent-db",
+    "database_id": "fb7f6e78-3136-47b4-96bb-a759c0d9d2da"
+  }],
+  "durable_objects": {"bindings": [
+    {"name": "DEVICE_HUB", "class_name": "DeviceHub"},
+    {"name": "RESEARCH_CONTROL", "class_name": "ResearchControl"}
+  ]},
+  "migrations": [
+    {"tag": "v1-device-hub", "new_classes": ["DeviceHub"]},
+    {"tag": "v2-eon-research-cloud", "new_sqlite_classes": ["ResearchControl"]}
+  ],
+  "workflows": [{
+    "name": "eon-mcp-research2-continuation",
+    "binding": "RESEARCH_FLOW",
+    "class_name": "ResearchLoopWorkflow"
+  }],
+  "vars": {"RESEARCH_MODE":"smoke"}
+}
