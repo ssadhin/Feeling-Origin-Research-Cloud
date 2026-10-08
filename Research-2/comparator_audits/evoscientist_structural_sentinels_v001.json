@@ -1,0 +1,43 @@
+{
+  "status": "SOURCE_STRUCTURAL_SENTINELS_ONLY",
+  "upstream_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "checks": {
+    "ES_S01_source_files_present": true,
+    "ES_S02_all_sources_parse": true,
+    "ES_S03_post_agent_sync_and_async": true,
+    "ES_S04_memory_scheduler_error_hooks": true,
+    "ES_S05_worker_deny_tools": true,
+    "ES_S06_skill_review_paths": true,
+    "ES_S07_observation_lineage_test": true,
+    "ES_S08_autoskill_source_tests_exist": true,
+    "ES_N01_ban_removed_detected": true,
+    "ES_N02_review_removed_detected": true
+  },
+  "passed": 10,
+  "total": 10,
+  "method_behavior": "NOT_TESTED",
+  "provider_calls": 0,
+  "decisive_outcomes": 0,
+  "files": {
+    "lifecycle": {
+      "path": "EvoScientist/middleware/memory_lifecycle.py",
+      "sha256": "319f0191b480f8caf0e10df4474214b9b5c60f1fa7f501797d6567ffe190ff70"
+    },
+    "worker": {
+      "path": "EvoScientist/memory/agents/memory_worker.py",
+      "sha256": "ef58bc2826ba8e4d3e6b448ecd3b97a80ca41e7893e2d1b7a1ea084c401a8897"
+    },
+    "proposals": {
+      "path": "EvoScientist/memory/autoskills/proposals.py",
+      "sha256": "f3902cded61b2a6843a878e09df36557e19205896f762bf31bd4cd859d60e074"
+    },
+    "observation_test": {
+      "path": "tests/test_observation_memory.py",
+      "sha256": "44c39cb9e966798cb345c4a360d3342a64a0d82aaf0a827b0494d346177f5699"
+    },
+    "autoskills_test": {
+      "path": "tests/test_autoskills.py",
+      "sha256": "9e5896b82996036036ae1a75bae8d63b608bf325507c6820ec81317261a9f755"
+    }
+  }
+}
