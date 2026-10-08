@@ -1,0 +1,1 @@
+All 38 available pulse and respiratory metadata files specify 400 Hz and two columns. No raw signals analyzed.
