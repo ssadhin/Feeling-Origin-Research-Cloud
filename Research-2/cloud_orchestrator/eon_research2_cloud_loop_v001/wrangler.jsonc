@@ -1,0 +1,11 @@
+{
+  "$schema":"node_modules/wrangler/config-schema.json",
+  "name":"eon-research2-cloud-loop",
+  "main":"src/index.js",
+  "compatibility_date":"2026-10-08",
+  "observability":{"enabled":true},
+  "vars":{"RESEARCH_MODE":"smoke","OPENAI_MODEL":"gpt-5","MAX_LOOPS":"12"},
+  "durable_objects":{"bindings":[{"name":"CONTROL","class_name":"ResearchControl"}]},
+  "migrations":[{"tag":"v1","new_sqlite_classes":["ResearchControl"]}],
+  "workflows":[{"name":"eon-research2-continuation","binding":"RESEARCH_FLOW","class_name":"ResearchLoopWorkflow"}]
+}
