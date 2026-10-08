@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "title": "Eon Agent MCP native open-source browser engine",
+  "project": "Research #2 — Adaptive Epistemic Search v2 prospective methodology tournament",
+  "type": "infrastructure-only",
+  "original_eon_project": "G:\\My Drive\\Untitled folder\\agente M MCP server",
+  "scientific_output_folder": "G:\\My Drive\\Consciousness Formula Research",
+  "one_existing_mcp_link": true,
+  "backend": {
+    "repository": "https://github.com/microsoft/playwright-mcp",
+    "package": "@playwright/mcp",
+    "version": "0.0.83",
+    "license": "Apache-2.0",
+    "local_install": "%LOCALAPPDATA%\\EonMCP\\browser-controller",
+    "connect_modes": [
+      "Chrome 144+ auto CDP",
+      "official Playwright Extension in Chrome Profile 2"
+    ],
+    "default": "chrome_cdp",
+    "extra_chatgpt_plugin": false
+  },
+  "tested": {
+    "unit_tests": "21/21 PASS (7 browser adapter, 7 UIA fallback, 7 prior ChatGPT continuity)",
+    "python_syntax": "PASS",
+    "official_Eon_release_generation": "d07f0359e7324067a7390217026d40d284006d84432fef9923539db341f8a25b",
+    "browser_engine_catalog": "16 advertised Eon actions, browser backend 13 native delegated actions",
+    "live_mcp_stdio_handshake": "PASS, 13 Microsoft Playwright actions listed",
+    "live_original_chrome_155": "BLOCKED: DevToolsActivePort absent, permission disabled",
+    "authentic_ChatGPT_type_and_Enter": "NOT YET TESTED",
+    "full_browser_automation_continuation": "NOT YET TESTED",
+    "no_account_usage_limit_bypass": true
+  },
+  "safety": {
+    "existing_signed_in_chrome_profile": "Profile 2, never copy cookies or launch new user data dir",
+    "browser_mutating_actions": "OFF until explicit user confirmation",
+    "selected_project_tab_guard": "Live page URL verified before browser mutation",
+    "freeze_gate": "No changes to scientific contestants, benchmarks, exclusions or decision criteria",
+    "message_limit_policy": "Usage caps cause pause, never open chats to evade",
+    "uncertain_submit_policy": "Do not retry blindly; verify receipt"
+  },
+  "current_status": {
+    "office_eon_relay_online": true,
+    "home_eon_relay_online": false,
+    "browser_controller_integrated": true,
+    "chrome_permission_required": "Visit chrome://inspect/#remote-debugging in original Chrome Profile 2, select Allow remote debugging, accept Chrome permission prompt",
+    "fallback": "Install official Playwright Extension in original Profile 2 and approve connection",
+    "eon_continuity_watcher_auto_send": false,
+    "AES_v2_prospective_decisive_trials": 0,
+    "six_competitor_full_source_fidelity": 0
+  },
+  "provenance": {
+    "github_repository": "ssadhin/Feeling-Origin-Research-Cloud",
+    "github_branch": "research2-provenance-v001",
+    "github_prefix": "Research-2/cloud_orchestrator/eon_playwright_browser_v001/"
+  },
+  "exact_next_action": "User enables browser permission once in Chrome Profile 2. Then run eon_run(engine=browser,action=browser_tabs,arguments={action:list}), verify true Research #2 URL, record a no-send snapshot, explicitly enable mutation with user consent, perform one guarded text/Enter submission with verified receipt in a safe test chat. Only then version and activate unattended handoff watcher; not scientific completion."
+}
