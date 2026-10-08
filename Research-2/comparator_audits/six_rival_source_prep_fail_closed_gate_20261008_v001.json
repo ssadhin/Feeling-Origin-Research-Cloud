@@ -1,0 +1,145 @@
+{
+  "title": "R2 SIX-RIVAL FULL SOURCE PREPARATION COMPLETION GATE",
+  "version": "v001",
+  "recorded_date": "2026-10-08",
+  "upstream_source_commit_status": "VERIFIED_ALL_SIX",
+  "source_acquisition_done": true,
+  "full_source_preparation_done": false,
+  "full_fidelity_done": false,
+  "evidence_provenance": {
+    "pinned_tree_manifest_commit": "9977d58bb8d6bd4ce09f8304a77a9f22b0e806f3",
+    "all_six_git_trees_nontruncated": true,
+    "all_critical_source_paths_accessible": true
+  },
+  "requirements_for_DONE": [
+    "Six official pinned source snapshots and all relevant submodules",
+    "License and source usage permission reviewed",
+    "Reproducible dependency lock incl toolchains, prompts and model configuration",
+    "Native defining mechanisms passed source-derived qualitative sentinels with mutation controls",
+    "Independent method-defender steelman review signed",
+    "Equivalent neutral tools/perception, single common provider/model and hard aggregate budget tested",
+    "Exact code and tool configuration replay on authorized compute",
+    "Pre-outcome freeze of six executable contestants with no silent repairs"
+  ],
+  "reason_for_block": "Source provenance is complete, but executable environment closure, legal clarity for ResearchLoop, full policy behavior/defender review, and common-worker equality are not",
+  "rivals": [
+    {
+      "name": "AI Scientist-v2",
+      "repo": "SakanaAI/AI-Scientist-v2",
+      "sha": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+      "blobs": 68,
+      "entrypoints": [
+        "launch_scientist_bfts.py",
+        "ai_scientist/treesearch/agent_manager.py",
+        "ai_scientist/treesearch/journal.py"
+      ],
+      "source_dep": "requirements.txt",
+      "dependency": "26 declared direct requirements, none pinned by ==; no resolved lock",
+      "license": "LICENSE present",
+      "submodule": "none",
+      "partial": "Original Node AST behavior 9/9 + routing mutant detected",
+      "blockers": [
+        "Resolve dependency versions/hashes and hardware/provider environment",
+        "AIS-1..AIS-5 end-to-end native behavior + neutral parity not passed"
+      ]
+    },
+    {
+      "name": "InternAgent-1.5",
+      "repo": "InternScience/InternAgent",
+      "sha": "fa8c3eedfa9751d3752ea6eb49220b303ac2397d",
+      "blobs": 1829,
+      "entrypoints": [
+        "launch_discovery.py",
+        "internagent/mas/agents/generation_agent.py",
+        "internagent/mas/agents/evolution_agent.py"
+      ],
+      "source_dep": "requirements.txt",
+      "dependency": "376 active requirement lines: 373 exact pins, 3 unpinned (redis, astor, firecrawl); no content-hash lock",
+      "license": "LICENSE present",
+      "submodule": "sci_tasks -> InternScience/ResearchClawBench @ 9b5288e3abe660bf1c1e4bcec57f474e6e1c7ce5; independently accessible",
+      "partial": "Failed-memory original method 7/7 and 2 mutation challenges",
+      "blockers": [
+        "Freeze 3 unpinned dependencies and all transitive artifacts",
+        "IA-1..IA-5 IdeaGraph/memory across actual tasks, full native and matched-policy behavior not passed"
+      ]
+    },
+    {
+      "name": "OmniScientist-V2",
+      "repo": "tsinghua-fib-lab/OmniScientist-V2",
+      "sha": "1cbb9f6f6d793290326ca29df4d389fb64832f91",
+      "blobs": 1348,
+      "entrypoints": [
+        "cli/src/omni/agent/orchestrator.py",
+        "cli/src/omni/agent/reviewer.py"
+      ],
+      "source_dep": "cli/uv.lock + cli/pyproject.toml",
+      "dependency": "Python uv.lock included; installation/test environment partially reproduced",
+      "license": "LICENSE and NOTICE present",
+      "submodule": "none",
+      "partial": "Selected original tests 76/76 twice following 17/1 timing failure; full source criteria remain unpassed",
+      "blockers": [
+        "OS-1..OS-6 full policy/claim trace/perception parity not passed",
+        "Document native timing flake and lock runtime/tool configuration"
+      ]
+    },
+    {
+      "name": "EvoScientist",
+      "repo": "EvoScientist/EvoScientist",
+      "sha": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+      "blobs": 535,
+      "entrypoints": [
+        "EvoScientist/EvoScientist.py",
+        "EvoScientist/memory/scheduler.py"
+      ],
+      "source_dep": "uv.lock + pyproject.toml",
+      "dependency": "Python uv.lock included; native optional dependencies/test collection previously blocked",
+      "license": "LICENSE present",
+      "submodule": "none",
+      "partial": "MemoryScheduler original AST 8/8 and abort-path mutant detected",
+      "blockers": [
+        "ES-1..ES-5 complete cross-task persistent memory behavior and distinct agents not passed",
+        "Native dependencies, clean-start, temporal leakage and neutral matched harness not passed"
+      ]
+    },
+    {
+      "name": "ResearchLoop",
+      "repo": "plan-lab-szu/ResearchLoop",
+      "sha": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+      "blobs": 3214,
+      "entrypoints": [
+        "README.md",
+        "tests/researchloop/test_baseline_cards.py",
+        "src/"
+      ],
+      "source_dep": "none at root",
+      "dependency": "Research artifact lacks root install/lock manifest; exact runtime has to be derived and frozen",
+      "license": "No LICENSE, COPYING or NOTICE file found in pinned official tree",
+      "submodule": "none",
+      "partial": "Selected original 9/9 unaffected tests; malformed UTF-8 fixtures and incomplete repair preserve BLOCKED",
+      "blockers": [
+        "Resolve distribution/derivative licensing with source owner before code reuse",
+        "Repair/author-validate source fixture parsing separately, then RL-1..RL-5 evidence/claim/closeout behavior and neutral parity"
+      ]
+    },
+    {
+      "name": "EvoMaster",
+      "repo": "sjtu-sai-agents/EvoMaster",
+      "sha": "36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9",
+      "blobs": 508,
+      "entrypoints": [
+        "run.py",
+        "playground/x_master/core/exp/select_exp.py",
+        "evomaster/evolution/manager.py"
+      ],
+      "source_dep": "requirements.txt + pyproject.toml",
+      "dependency": "17 core requirements unpinned or ranged; no near-root Python lock",
+      "license": "LICENSE present",
+      "submodule": "none",
+      "partial": "Original X-Master selector AST 12/12 and index-clamp mutant detected; framework structural 9/9",
+      "blockers": [
+        "Freeze fixed strongest native X-Master+evolution version, no per-task switching",
+        "Reproducible dependencies, full solve/critique/rewrite/select/evolution behavior and neutral parity not passed"
+      ]
+    }
+  ]
+}
