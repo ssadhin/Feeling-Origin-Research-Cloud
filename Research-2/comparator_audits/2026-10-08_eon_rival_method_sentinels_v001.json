@@ -1,0 +1,44 @@
+{
+  "kind": "R2_PRE_FREEZE_COMPARATOR_METHOD_SENTINELS",
+  "recorded_at_utc": "2026-10-08T04:08:16.382276+00:00",
+  "host_platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "rivals": [
+    "EvoScientist",
+    "EvoMaster"
+  ],
+  "runs": [
+    {
+      "script": "evoscientist_scheduler_original_behavior_v001.py",
+      "source_sha256": "71aeeab509e586f41d32c0299530bb7fc504beef78b7c9994cefbffacfa2d3fb",
+      "exit_code": 0,
+      "stdout": "{\n  \"method\": \"upstream EvoScientist MemoryScheduler AST\",\n  \"commit\": \"3b382b92b8fdad6e1f13467c382dcdd91d9b19d2\",\n  \"source_sha256\": \"ec1a1712e6b2233a159f7946933e8e93db55c268d97499c4f0e12335c0dade4e\",\n  \"passed\": 8,\n  \"total\": 8,\n  \"full_fidelity\": false,\n  \"provider_calls\": 0,\n  \"decisive_runs\": 0\n}\n",
+      "stderr": "Failed to launch observation linker\nTraceback (most recent call last):\n  File \"C:\\Users\\hasad\\Research2\\comparators_20261008\\EvoScientist\\EvoScientist\\memory\\scheduler.py\", line 89, in _launch_ready\n    self._launch_linker(context)\n  File \"C:\\Users\\hasad\\Research2\\evoscientist_scheduler_original_behavior_v001.py\", line 62, in <lambda>\n    self.s._launch_linker=lambda _:(_ for _ in ()).throw(RuntimeError(\"synthetic\"))\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\hasad\\Research2\\evoscientist_scheduler_original_behavior_v001.py\", line 62, in <genexpr>\n    self.s._launch_linker=lambda _:(_ for _ in ()).throw(RuntimeError(\"synthetic\"))\nRuntimeError: synthetic\n----------------------------------------------------------------------\nRan 8 tests in 0.026s\n\nOK\n"
+    },
+    {
+      "script": "evoscientist_scheduler_mutation_dev_v001.py",
+      "source_sha256": "ca59a03acdba211fe07e64ee7208c79ada1faff852e2c37e37b2ed2519fbc3ef",
+      "exit_code": 0,
+      "stdout": "{\n  \"mutation\": \"ABORTED_WORKER_OBSERVATION_DISCARD\",\n  \"tests_run\": 8,\n  \"mutation_detected\": true,\n  \"failing_tests\": 1,\n  \"source_unchanged\": true,\n  \"decisive_trials\": 0\n}\n",
+      "stderr": "Failed to launch observation linker\nTraceback (most recent call last):\n  File \"C:\\Users\\hasad\\Research2\\comparators_20261008\\EvoScientist\\EvoScientist\\memory\\scheduler.py\", line 89, in _launch_ready\n    self._launch_linker(context)\n  File \"C:\\Users\\hasad\\Research2\\evoscientist_scheduler_original_behavior_v001.py\", line 72, in <lambda>\n  File \"C:\\Users\\hasad\\Research2\\evoscientist_scheduler_original_behavior_v001.py\", line 72, in <genexpr>\nRuntimeError: synthetic\n"
+    },
+    {
+      "script": "evomaster_selector_original_behavior_v001.py",
+      "source_sha256": "eeb975c6d2d1f85061fbf13d0102fc2af3d725d0200652831d72b4c27fb98242",
+      "exit_code": 0,
+      "stdout": "{\n  \"method\": \"EvoMaster/X-Master original SelectExp AST\",\n  \"commit\": \"36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9\",\n  \"source_sha256\": \"f102a010064eb8bd86603d6c36af8ca01d80b1c94aa94ef5b2d1518e3a137735\",\n  \"passed\": 12,\n  \"total\": 12,\n  \"full_policy_fidelity\": false,\n  \"provider_calls\": 0,\n  \"decisive_runs\": 0\n}\n",
+      "stderr": "Empty selector_response or solutions, returning first solution\n----------------------------------------------------------------------\nRan 12 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "script": "evomaster_selector_mutation_v001.py",
+      "source_sha256": "820b4caab990a0e04baffa59504625e2131dea4baa2e3f2af8fc43b8b79eec3f",
+      "exit_code": 0,
+      "stdout": "{\n  \"mutant\": \"REMOVE_SELECTOR_INDEX_BOUNDS_CLAMP\",\n  \"mutations\": 1,\n  \"tests_run\": 12,\n  \"mutant_detected\": true,\n  \"failing_tests\": 2,\n  \"source_unchanged\": true,\n  \"decisive_runs\": 0\n}\n",
+      "stderr": "Empty selector_response or solutions, returning first solution\n"
+    }
+  ],
+  "policy_fidelity": "PARTIAL_METHOD_ONLY",
+  "decisive_benchmarks_run": 0,
+  "provider_api_calls": 0,
+  "secrets_recorded": false
+}
