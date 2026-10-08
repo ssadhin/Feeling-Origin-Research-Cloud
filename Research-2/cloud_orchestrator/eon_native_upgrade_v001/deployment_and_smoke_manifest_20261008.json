@@ -1,0 +1,65 @@
+{
+  "program": "Research #2",
+  "component": "Existing Eon Agent MCP native cloud engine",
+  "date": "2026-10-08",
+  "cloudflare_worker": "eon-mcp-agent",
+  "primary_mcp": "https://eon-mcp-agent.asanistudiobangladesh.workers.dev/mcp (authenticated Eon workspace link required)",
+  "prior_version_id": "7a8f6a3e-4483-4434-a095-d86f19d1e5b3",
+  "deployed_version_id": "dbd7726d-5f32-4dc8-b259-d4b52ee1576a",
+  "prior_worker_source_sha256": "0ea8754b78685942210dc869b48e187070be7df2abd57c26eb7891532841ec2a",
+  "integrated_source": {
+    "path": "C:\\Users\\cholo\\Research2\\eon-mcp-core-upgrade",
+    "cloudflare_original_worker": "eon-original-worker/part_00_router_final_js.bin",
+    "patched_router_sha256": "85b5a6b39ccd0fa193bdae2c5c5fd09a775d104f6213231db017ea66a6c39ac1",
+    "research_cloud_sha256": "cc6ac87059fef185cf053a5bba72f852a9e12d2f594ccb55457a9efa27f23c3c",
+    "decision_sha256": "8b87fc07403b349a785cbda91880e6f4534e90ef8f0fd6bc53b45eebadae7a0b",
+    "knowledge_path": "C:\\Users\\cholo\\AppData\\Local\\EonMCP\\knowledge\\CLOUD_RESEARCH_LOOPS.md",
+    "git_path": "Research-2/cloud_orchestrator/eon_native_upgrade_v001"
+  },
+  "preservation": {
+    "same_existing_Eon_MCP_link": true,
+    "top_level_tools": [
+      "eon_device",
+      "eon_run",
+      "eon_catalog"
+    ],
+    "catalog_cloud_engine": true,
+    "cloud_uses_no_pc_relay": true,
+    "original_DeviceHub_binding_preserved": true,
+    "original_EON_DB_database_preserved": true,
+    "cloud_bindings": [
+      "RESEARCH_CONTROL: ResearchControl DO",
+      "RESEARCH_FLOW: ResearchLoopWorkflow"
+    ],
+    "separate_standalone_worker_deleted": "eon-research2-cloud-loop",
+    "hourly_ChatGPT_automation_disabled": true
+  },
+  "checks": {
+    "native_decision_tests": "6 passed, 0 failed",
+    "wrangler_bundle_dry_run": "PASS, existing EON_DB + DeviceHub and new cloud bindings",
+    "local_worker_health": "200 OK - unchanged",
+    "local_unpaired_mcp_access": "401 Unauthorized - unchanged",
+    "native_mcp_cloud_catalog": "PASS authenticated workspace",
+    "original_Eon_windows_PowerShell": "PASS after production deployment",
+    "cloud_continuation_real_workflow": "PASS",
+    "cloud_run_id": "dca5f85d-c438-434b-b671-630f814638cc",
+    "observed_events": [
+      0,
+      1,
+      2
+    ],
+    "event_sequence": "Cloud run 0 immediately spawned 1, which spawned 2; all written durably",
+    "terminal_status": "PAUSED_BUDGET",
+    "scientific_goal_met": false,
+    "actual_scientific_trials": 0,
+    "both_devices_offline_empricially_tested": false
+  },
+  "limits": {
+    "mode": "smoke",
+    "cloud_llm_prompting": "NOT ENABLED: no provisioned cloud OpenAI API key or native research executor",
+    "scientific_experiment": "NOT IMPLEMENTED for full six-rival methodological comparison",
+    "independent_reviewer": "REQUIRED, not self-certified",
+    "claim": "No AES v2 superiority, equivalence, inferiority or inconclusive verdict",
+    "next_requirement": "User-authorized cloud credentials, budget and source-native research execution/fairness gates must be completed before real cloud science"
+  }
+}
