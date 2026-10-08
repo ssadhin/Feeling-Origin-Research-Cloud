@@ -1,0 +1,206 @@
+{
+  "label": "EXPLORATORY SYNTHETIC DEVELOPMENT ONLY",
+  "policies": [
+    "maintenance",
+    "instinct",
+    "emotion",
+    "emotion_report",
+    "predictive",
+    "emotion_no_memory"
+  ],
+  "regimes": {
+    "calm": [
+      0.015,
+      0.3
+    ],
+    "persistent": [
+      0.05,
+      0.94
+    ],
+    "volatile": [
+      0.36,
+      0.45
+    ]
+  },
+  "results": [
+    {
+      "mean_forages": 30.73,
+      "mean_hits": 0.21,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "maintenance",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 35.94,
+      "mean_hits": 0.11,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "instinct",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 35.69,
+      "mean_hits": 0.18,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "emotion",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 35.69,
+      "mean_hits": 0.18,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "emotion_report",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 36.08,
+      "mean_hits": 0.28,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "predictive",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 35.48,
+      "mean_hits": 0.12,
+      "mean_steps": 120,
+      "n": 160,
+      "policy": "emotion_no_memory",
+      "regime": "calm",
+      "survival_rate": 1
+    },
+    {
+      "mean_forages": 26.04,
+      "mean_hits": 3.41,
+      "mean_steps": 101.56,
+      "n": 160,
+      "policy": "maintenance",
+      "regime": "persistent",
+      "survival_rate": 0.5875
+    },
+    {
+      "mean_forages": 32.03,
+      "mean_hits": 2.92,
+      "mean_steps": 107.87,
+      "n": 160,
+      "policy": "instinct",
+      "regime": "persistent",
+      "survival_rate": 0.725
+    },
+    {
+      "mean_forages": 32,
+      "mean_hits": 1.68,
+      "mean_steps": 117.74,
+      "n": 160,
+      "policy": "emotion",
+      "regime": "persistent",
+      "survival_rate": 0.9313
+    },
+    {
+      "mean_forages": 32,
+      "mean_hits": 1.68,
+      "mean_steps": 117.74,
+      "n": 160,
+      "policy": "emotion_report",
+      "regime": "persistent",
+      "survival_rate": 0.9313
+    },
+    {
+      "mean_forages": 32.33,
+      "mean_hits": 1.74,
+      "mean_steps": 116.37,
+      "n": 160,
+      "policy": "predictive",
+      "regime": "persistent",
+      "survival_rate": 0.9
+    },
+    {
+      "mean_forages": 31.76,
+      "mean_hits": 2.87,
+      "mean_steps": 108.5,
+      "n": 160,
+      "policy": "emotion_no_memory",
+      "regime": "persistent",
+      "survival_rate": 0.7438
+    },
+    {
+      "mean_forages": 27.02,
+      "mean_hits": 3.7,
+      "mean_steps": 105.47,
+      "n": 160,
+      "policy": "maintenance",
+      "regime": "volatile",
+      "survival_rate": 0.6062
+    },
+    {
+      "mean_forages": 35.01,
+      "mean_hits": 2.39,
+      "mean_steps": 118.06,
+      "n": 160,
+      "policy": "instinct",
+      "regime": "volatile",
+      "survival_rate": 0.9313
+    },
+    {
+      "mean_forages": 32.52,
+      "mean_hits": 2.63,
+      "mean_steps": 116.06,
+      "n": 160,
+      "policy": "emotion",
+      "regime": "volatile",
+      "survival_rate": 0.85
+    },
+    {
+      "mean_forages": 32.52,
+      "mean_hits": 2.63,
+      "mean_steps": 116.06,
+      "n": 160,
+      "policy": "emotion_report",
+      "regime": "volatile",
+      "survival_rate": 0.85
+    },
+    {
+      "mean_forages": 35.01,
+      "mean_hits": 2.39,
+      "mean_steps": 118.06,
+      "n": 160,
+      "policy": "predictive",
+      "regime": "volatile",
+      "survival_rate": 0.9313
+    },
+    {
+      "mean_forages": 34.53,
+      "mean_hits": 2.39,
+      "mean_steps": 117.69,
+      "n": 160,
+      "policy": "emotion_no_memory",
+      "regime": "volatile",
+      "survival_rate": 0.925
+    }
+  ],
+  "software_checks": {
+    "action_equivalence": true,
+    "deterministic_world": true,
+    "memory_ablation_detected": true,
+    "physiological_bounds": true,
+    "report_only_noncausal": true
+  },
+  "steps_per_world": 120,
+  "version": "0.1.0",
+  "warnings": [
+    "No proof of human emotions or feelings.",
+    "Feeling layer is only an accessible report variable.",
+    "Predictive comparator uses true regime transition parameters (model privilege); comparison is not fair for ranking.",
+    "Fixed hand-designed controllers with unequal algorithmic capabilities.",
+    "No AES-v2 methodology ranking; benchmark remains unsealed and unfrozen."
+  ],
+  "worlds_per_regime": 160
+}
