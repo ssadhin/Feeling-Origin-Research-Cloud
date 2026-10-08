@@ -1,0 +1,1 @@
+2026-10-08: metadata audit started. No causal conclusions.
