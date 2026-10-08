@@ -1,0 +1,8 @@
+# CoSpine held-out lagged unpleasantness challenge — negative temporal-specificity gate
+Source commit 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd. Train 02-25 (n=288), held-out 26-39 (n=168); pilot 01 excluded. Standardized ridge lambda 0.001.
+R0 RMSE 0.7858457052602936; R1 RMSE 0.6411302256067172; gain 0.14471547965357645.
+Cluster bootstrap (14 held-out subjects; 2000, seed 20261008) 95% CI [0.08320840299532385,0.21335319029564326].
+Lag-residual within-subject permutation (1000, seed 20261009; fixed fitted coefficients) 158 permutations >= observed; one-sided p=0.15884115884115885; gain null quantiles q5/q50/q95 [0.09010716829674593,0.1229308486685487,0.16261631941916668].
+Frozen criteria: RMSE gain>=0.1 PASS; CI lower>0 PASS; permutation p<0.05 FAIL. Thus history-specific predictive interpretation NOT SUPPORTED by frozen gate. 13/14 subject RMSE improvements, subject 39 worsened (-0.008973928534515008). Subject 36 max gain 0.3825453167352376.
+Attack: lagged unpleasantness likely carries stable response style, rating inertia, attention, adaptation and correlated reporting noise. Permutation failure is compatible with these rivals; it does not prove the null. No neural mechanism M, causal manipulation, sensory-discrimination equivalence, reverse reasoning/access arm, independent replication or phenomenality identification. NOT PAPER-WORTHY.
+P distinct from S; old ownership equation rejected. Prior art: sensory-affective pain dissociations and carryover well established. Next: stronger lag null controls, independent reproduction, causal affect-selective evidence. No notification.
