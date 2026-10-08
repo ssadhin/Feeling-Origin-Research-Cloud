@@ -1,0 +1,1 @@
+CoSpine sidecar QC: 39 BOLD, 38 pulse, 38 respiration. Missing physiology sub-22. No proof-grade result.
