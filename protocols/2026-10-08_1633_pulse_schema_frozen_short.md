@@ -1,0 +1,1 @@
+2026-10-08 16:33 +06. Source: OpenNeuroDatasets/ds005883 commit 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd. Seven previously inspected pulse JSON files (01,11,12,16,17,18,39) each show 400 Hz and a Trigger column. Freeze before remaining 32: predict same for all 39; report all exceptions. This tests metadata, not trigger edges, feeling, or a causal mechanism.
