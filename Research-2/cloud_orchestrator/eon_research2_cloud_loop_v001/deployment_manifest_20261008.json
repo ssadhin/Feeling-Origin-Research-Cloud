@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-08",
+  "project": "Research #2 AES-v2 Prospective Methodology Tournament",
+  "infrastructure": "Cloudflare Worker + Workflows + SQLite Durable Object, separate from existing Eon MCP relay",
+  "deployment": "https://eon-research2-cloud-loop.asanistudiobangladesh.workers.dev",
+  "deployment_version": "4ac5728b-5709-4a9c-a177-94c2f5d4563b",
+  "cloudflare_workflow": "eon-research2-continuation",
+  "worker": "eon-research2-cloud-loop",
+  "last_verification": {
+    "remote_build": "wrangler 4.141.0 deploy --dry-run exit 0",
+    "deployment": "wrangler deploy exit 0",
+    "node_tests": "6 passed, 0 failed on Office Eon",
+    "health": "200 application/json, cloudOnly=true, mode=smoke, cron=false, autonomousResearchActivated=false",
+    "unauthenticated_admin": "401 Unauthorized",
+    "source_archived_github": true,
+    "offline_laptops_tested": false,
+    "actual_loop_to_loop_trigger_tested": false
+  },
+  "scientific_status": {
+    "six_source_pins": 6,
+    "full_rival_fidelity_certifications": 0,
+    "AES_v2_prospective_decisive_trials": 0,
+    "claim": "No superiority/equivalence/inferiority verdict"
+  },
+  "activation": {
+    "mode": "smoke only",
+    "hourly_automation": "disabled; no cron",
+    "admin_secret_provisioned": false,
+    "cloud_llm_and_data_credentials_provisioned": false,
+    "autonomous_research_running": false,
+    "blocked_by": [
+      "Cloudflare admin secret activation and authenticated three-loop smoke verification",
+      "Cloud-only Google Drive read OAuth",
+      "Cloud GitHub fine-grained repo token",
+      "Cloud OpenAI API key and budget authorization",
+      "A source-native cloud CI runner and independent knowledgeable defender are not implemented"
+    ],
+    "safety": "Do not claim full science work from source-tree inventory. GOAL_MET rejected by state machine until certified prospective evidence and independent review. Budget exhaustion pauses, not success."
+  },
+  "source_repo": "ssadhin/Feeling-Origin-Research-Cloud",
+  "source_branch": "research2-provenance-v001",
+  "source_path": "Research-2/cloud_orchestrator/eon_research2_cloud_loop_v001/",
+  "local_office_source": "C:\\Users\\cholo\\Research2\\eon-research-cloud-loop"
+}
