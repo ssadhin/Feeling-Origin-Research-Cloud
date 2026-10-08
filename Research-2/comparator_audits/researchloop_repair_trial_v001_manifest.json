@@ -1,0 +1,63 @@
+{
+  "status": "DEVELOPMENT_ONLY_SYNTAX_REPAIR_NOT_SEMANTIC_APPROVAL",
+  "original_commit": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+  "files": [
+    {
+      "path": "tests/researchloop/test_smoke_harness_contract.py",
+      "original_sha256": "811cb5a795ec0ec14775952c30498c182ad89d00a0ba0129258785ac14a92913",
+      "original_git_blob": "767a1c56b08380e5782e17c26b6b8d67d8fbcce8",
+      "repaired_sha256": "58e7b9436dbb4b2e0b0e5d61f232847739cb4f6eec59ae8a75633d461378b51a",
+      "decoded": "gb18030_to_utf8",
+      "inserted_closing_quote_lines": [],
+      "syntax_or_yaml_parse": "PASS",
+      "semantic_fidelity": "UNDETERMINED"
+    },
+    {
+      "path": "tests/researchloop/test_reproduction_registry.py",
+      "original_sha256": "ee8476b865f545f6f5eaa87e238e68dbb1c1d40cf093b74262834f7af1602a13",
+      "original_git_blob": "750284f776a4adf6a80fb8331c0cd47a21c34652",
+      "repaired_sha256": "0c30c0116c982a65641df97993445a0e9e7d9124aa4db0d35890e9ef42ec2cad",
+      "decoded": "gb18030_to_utf8",
+      "inserted_closing_quote_lines": [
+        28,
+        66,
+        77,
+        88,
+        137,
+        138,
+        139,
+        146,
+        147
+      ],
+      "syntax_or_yaml_parse": "SyntaxError:closing parenthesis ']' does not match opening parenthesis '(' on line 139 (tests/researchloop/test_reproduction_registry.py, line 140)",
+      "semantic_fidelity": "UNDETERMINED"
+    },
+    {
+      "path": "docs/research/V0/reproduction/REPRODUCTION_LEDGER.yaml",
+      "original_sha256": "bf7c9cafc89eff4eaeac0eac0b08fb53c8eeacb3a925cf4b63db0cfc6f0ef2e2",
+      "original_git_blob": "0809eca0274390a4d14f23add38a02c3e808c214",
+      "repaired_sha256": "557aaa11a78b148adefc195b5f4f5efc74d8b5a3d0732012f51496db758fed86",
+      "decoded": "gb18030_to_utf8",
+      "inserted_closing_quote_lines": [
+        41,
+        60,
+        79
+      ],
+      "syntax_or_yaml_parse": "PASS",
+      "semantic_fidelity": "UNDETERMINED"
+    },
+    {
+      "path": "docs/research/V0/reproduction/smoke_specs/PROVENANCE_ONLY.yaml",
+      "original_sha256": "26904a399d66b41eab5aab3a6d94276a6cb4b56812d1155e263f5090d5696ea3",
+      "original_git_blob": "6fb94df20660107a37222bca897d3d17933e711f",
+      "repaired_sha256": "7f3c2952edcf509be94dde8ddfd862d451c85b825c5cb8b4d106e2792a35ba79",
+      "decoded": "gb18030_to_utf8",
+      "inserted_closing_quote_lines": [
+        12
+      ],
+      "syntax_or_yaml_parse": "PASS",
+      "semantic_fidelity": "UNDETERMINED"
+    }
+  ],
+  "decisive_runs": 0
+}
