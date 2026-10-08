@@ -1,0 +1,549 @@
+{
+  "dev_n_per_seen_regime": 64,
+  "dev_seed_base": 10000,
+  "development_priority": "max number survived, then steps, then min hits, then min lexicographic parameter tuple",
+  "grid": {
+    "bayes_tuned": [
+      {
+        "hits": 239,
+        "living_steps": 22701,
+        "parameters": [
+          0.2
+        ],
+        "survivals": 186
+      },
+      {
+        "hits": 263,
+        "living_steps": 22579,
+        "parameters": [
+          0.29
+        ],
+        "survivals": 181
+      },
+      {
+        "hits": 315,
+        "living_steps": 22216,
+        "parameters": [
+          0.4
+        ],
+        "survivals": 172
+      },
+      {
+        "hits": 353,
+        "living_steps": 21835,
+        "parameters": [
+          0.5
+        ],
+        "survivals": 167
+      }
+    ],
+    "ema_tuned": [
+      {
+        "hits": 332,
+        "living_steps": 22277,
+        "parameters": [
+          0.1,
+          0.25
+        ],
+        "survivals": 164
+      },
+      {
+        "hits": 328,
+        "living_steps": 22229,
+        "parameters": [
+          0.1,
+          0.36
+        ],
+        "survivals": 169
+      },
+      {
+        "hits": 381,
+        "living_steps": 21926,
+        "parameters": [
+          0.1,
+          0.45
+        ],
+        "survivals": 163
+      },
+      {
+        "hits": 434,
+        "living_steps": 21131,
+        "parameters": [
+          0.1,
+          0.55
+        ],
+        "survivals": 145
+      },
+      {
+        "hits": 266,
+        "living_steps": 22560,
+        "parameters": [
+          0.22,
+          0.25
+        ],
+        "survivals": 179
+      },
+      {
+        "hits": 272,
+        "living_steps": 22500,
+        "parameters": [
+          0.22,
+          0.36
+        ],
+        "survivals": 179
+      },
+      {
+        "hits": 339,
+        "living_steps": 22047,
+        "parameters": [
+          0.22,
+          0.45
+        ],
+        "survivals": 166
+      },
+      {
+        "hits": 397,
+        "living_steps": 21657,
+        "parameters": [
+          0.22,
+          0.55
+        ],
+        "survivals": 153
+      },
+      {
+        "hits": 224,
+        "living_steps": 22695,
+        "parameters": [
+          0.35,
+          0.25
+        ],
+        "survivals": 183
+      },
+      {
+        "hits": 267,
+        "living_steps": 22520,
+        "parameters": [
+          0.35,
+          0.36
+        ],
+        "survivals": 179
+      },
+      {
+        "hits": 323,
+        "living_steps": 22247,
+        "parameters": [
+          0.35,
+          0.45
+        ],
+        "survivals": 172
+      },
+      {
+        "hits": 372,
+        "living_steps": 22035,
+        "parameters": [
+          0.35,
+          0.55
+        ],
+        "survivals": 163
+      },
+      {
+        "hits": 247,
+        "living_steps": 22714,
+        "parameters": [
+          0.55,
+          0.25
+        ],
+        "survivals": 184
+      },
+      {
+        "hits": 283,
+        "living_steps": 22410,
+        "parameters": [
+          0.55,
+          0.36
+        ],
+        "survivals": 178
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.55,
+          0.45
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.55,
+          0.55
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.8,
+          0.25
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.8,
+          0.36
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.8,
+          0.45
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          0.8,
+          0.55
+        ],
+        "survivals": 167
+      }
+    ],
+    "instinct_tuned": [
+      {
+        "hits": 326,
+        "living_steps": 22079,
+        "parameters": [
+          10,
+          60
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          10,
+          78
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 339,
+        "living_steps": 21912,
+        "parameters": [
+          10,
+          80
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 21913,
+        "parameters": [
+          10,
+          90
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 326,
+        "living_steps": 22079,
+        "parameters": [
+          16,
+          60
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          16,
+          78
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 339,
+        "living_steps": 21912,
+        "parameters": [
+          16,
+          80
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 21913,
+        "parameters": [
+          16,
+          90
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 326,
+        "living_steps": 22079,
+        "parameters": [
+          18,
+          60
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          18,
+          78
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 339,
+        "living_steps": 21912,
+        "parameters": [
+          18,
+          80
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 21913,
+        "parameters": [
+          18,
+          90
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 327,
+        "living_steps": 22067,
+        "parameters": [
+          24,
+          60
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 22031,
+        "parameters": [
+          24,
+          78
+        ],
+        "survivals": 167
+      },
+      {
+        "hits": 339,
+        "living_steps": 21912,
+        "parameters": [
+          24,
+          80
+        ],
+        "survivals": 170
+      },
+      {
+        "hits": 342,
+        "living_steps": 21913,
+        "parameters": [
+          24,
+          90
+        ],
+        "survivals": 170
+      }
+    ],
+    "window_tuned": [
+      {
+        "hits": 248,
+        "living_steps": 22688,
+        "parameters": [
+          2,
+          0.25
+        ],
+        "survivals": 183
+      },
+      {
+        "hits": 248,
+        "living_steps": 22688,
+        "parameters": [
+          2,
+          0.36
+        ],
+        "survivals": 183
+      },
+      {
+        "hits": 248,
+        "living_steps": 22688,
+        "parameters": [
+          2,
+          0.45
+        ],
+        "survivals": 183
+      },
+      {
+        "hits": 453,
+        "living_steps": 21218,
+        "parameters": [
+          2,
+          0.55
+        ],
+        "survivals": 146
+      },
+      {
+        "hits": 291,
+        "living_steps": 22392,
+        "parameters": [
+          4,
+          0.25
+        ],
+        "survivals": 176
+      },
+      {
+        "hits": 300,
+        "living_steps": 22188,
+        "parameters": [
+          4,
+          0.36
+        ],
+        "survivals": 172
+      },
+      {
+        "hits": 300,
+        "living_steps": 22188,
+        "parameters": [
+          4,
+          0.45
+        ],
+        "survivals": 172
+      },
+      {
+        "hits": 418,
+        "living_steps": 21298,
+        "parameters": [
+          4,
+          0.55
+        ],
+        "survivals": 146
+      },
+      {
+        "hits": 321,
+        "living_steps": 22486,
+        "parameters": [
+          8,
+          0.25
+        ],
+        "survivals": 173
+      },
+      {
+        "hits": 299,
+        "living_steps": 22408,
+        "parameters": [
+          8,
+          0.36
+        ],
+        "survivals": 174
+      },
+      {
+        "hits": 358,
+        "living_steps": 22130,
+        "parameters": [
+          8,
+          0.45
+        ],
+        "survivals": 162
+      },
+      {
+        "hits": 402,
+        "living_steps": 21622,
+        "parameters": [
+          8,
+          0.55
+        ],
+        "survivals": 152
+      },
+      {
+        "hits": 347,
+        "living_steps": 22365,
+        "parameters": [
+          16,
+          0.25
+        ],
+        "survivals": 169
+      },
+      {
+        "hits": 344,
+        "living_steps": 22195,
+        "parameters": [
+          16,
+          0.36
+        ],
+        "survivals": 166
+      },
+      {
+        "hits": 375,
+        "living_steps": 21993,
+        "parameters": [
+          16,
+          0.45
+        ],
+        "survivals": 161
+      },
+      {
+        "hits": 407,
+        "living_steps": 21642,
+        "parameters": [
+          16,
+          0.55
+        ],
+        "survivals": 153
+      }
+    ]
+  },
+  "seen_regimes": [
+    "calm",
+    "persistent",
+    "volatile"
+  ],
+  "selected": {
+    "bayes_tuned": [
+      0.2
+    ],
+    "ema_tuned": [
+      0.55,
+      0.25
+    ],
+    "instinct_tuned": [
+      10,
+      60
+    ],
+    "window_tuned": [
+      2,
+      0.25
+    ]
+  },
+  "software_checks": {
+    "bounds_and_action_contract": true,
+    "literal_ema_emotion_equivalence": true,
+    "memory_removal_changes_behavior": true,
+    "paired_worlds_deterministic": true,
+    "report_only_actions_identical": true,
+    "v01_regression_checked": true
+  },
+  "source_sha256": "8ed7d15a756e35a8d74b1228cddc311c882c11bef00633a81223a42bff43131e",
+  "stage": "development_selection_pre_evaluation",
+  "study": "Research2_four_function_exploratory_v020",
+  "version": "0.2.0"
+}
