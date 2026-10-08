@@ -1,0 +1,340 @@
+{
+  "schema": "R2-6RIVALS-PINNED-TREE-V001",
+  "created_utc": "2026-10-08",
+  "pre_decisive": true,
+  "total_repos": 6,
+  "all_critical_paths_present": true,
+  "all_locked": false,
+  "rivals": [
+    {
+      "repo": "SakanaAI/AI-Scientist-v2",
+      "pinned_commit": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 68,
+      "submodules": [],
+      "proof": [
+        {
+          "path": "launch_scientist_bfts.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "e854af0efce00ea8be0cfe21abf4b0066f703224"
+        },
+        {
+          "path": "ai_scientist/treesearch/agent_manager.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "a81a31f9c8e0ecb5a3eae461002f2008e26b096b"
+        },
+        {
+          "path": "ai_scientist/treesearch/journal.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "a2a338a72d1797980537322dd7234e9538d41a67"
+        },
+        {
+          "path": "ai_scientist/perform_ideation_temp_free.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "467530d56e5334c018acdd099667ce86d6bebc0e"
+        },
+        {
+          "path": "ai_scientist/perform_llm_review.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "aa9b4b420bf6e32ce37bdd6a264d1d82e1863053"
+        },
+        {
+          "path": "requirements.txt",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "3b3c932f5bd05390d0351718488fecf53421f4b2"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "3bb62d43ab4632b3bbffc2642f12beafe869d3a4"
+        }
+      ],
+      "python_lockfiles": [],
+      "source_src_file_count": 0,
+      "unresolved": [
+        "No root/near-root Python dependency lock at pinned source"
+      ],
+      "source_map_complete": true,
+      "dependency_lock_present": false,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    },
+    {
+      "repo": "InternScience/InternAgent",
+      "pinned_commit": "fa8c3eedfa9751d3752ea6eb49220b303ac2397d",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 1829,
+      "submodules": [
+        {
+          "path": "sci_tasks",
+          "sha": "9b5288e3abe660bf1c1e4bcec57f474e6e1c7ce5"
+        }
+      ],
+      "proof": [
+        {
+          "path": "launch_discovery.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "625565a0ebf14ec85ea06ed639344deb9620b898"
+        },
+        {
+          "path": "internagent/mas/agents/generation_agent.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "c61abd8cb860553a9d2f24f9cf8ee98db8cb70e7"
+        },
+        {
+          "path": "internagent/mas/agents/evolution_agent.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "3c25803bd8dc34243a0c9210f95704063c5ca06b"
+        },
+        {
+          "path": "internagent/mas/memory/file_system_memory_manager.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "c1421370e471a3bb4d676d3a990b7946ab457df8"
+        },
+        {
+          "path": "requirements.txt",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "94b94c4c68e97a9c2f14ac7e87805fe681b573d4"
+        },
+        {
+          "path": ".gitmodules",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "b0f5f681ab0b55f8786a8eae18c39e94ea29c648"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "6a70f0b3e8061d279e3416495509f21bedff2778"
+        }
+      ],
+      "python_lockfiles": [],
+      "source_src_file_count": 0,
+      "unresolved": [
+        "No root/near-root Python dependency lock at pinned source",
+        "Review transitive gitlink/submodule pinned source"
+      ],
+      "source_map_complete": true,
+      "dependency_lock_present": false,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    },
+    {
+      "repo": "tsinghua-fib-lab/OmniScientist-V2",
+      "pinned_commit": "1cbb9f6f6d793290326ca29df4d389fb64832f91",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 1348,
+      "submodules": [],
+      "proof": [
+        {
+          "path": "cli/src/omni/agent/orchestrator.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "840c19ea2488d10f125eba6848b5a37d6736dd65"
+        },
+        {
+          "path": "cli/src/omni/agent/reviewer.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "a7a50c5937f3a553a3b0112acbb363a5e1f85688"
+        },
+        {
+          "path": "cli/uv.lock",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "ae316cd03363f7c823dc47ad37d07a8108bb132c"
+        },
+        {
+          "path": "cli/pyproject.toml",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "f202fd3ec6f5cdddaa3ecb084454740406f7a054"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "f0e16d4aee65e0ef3fa983b9f8360e2c78f44473"
+        }
+      ],
+      "python_lockfiles": [
+        {
+          "path": "cli/uv.lock",
+          "sha": "ae316cd03363f7c823dc47ad37d07a8108bb132c"
+        }
+      ],
+      "source_src_file_count": 0,
+      "unresolved": [],
+      "source_map_complete": true,
+      "dependency_lock_present": true,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    },
+    {
+      "repo": "EvoScientist/EvoScientist",
+      "pinned_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 535,
+      "submodules": [],
+      "proof": [
+        {
+          "path": "EvoScientist/memory/scheduler.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "32720fd2cb706cacc9297e79cf0f628ac5d660a0"
+        },
+        {
+          "path": "EvoScientist/EvoScientist.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "9263c8cabf9ae292da52566e2854d44e3c6d2edf"
+        },
+        {
+          "path": "uv.lock",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "46da69aaab90e61cbd85d5c008bfdca1fa7adf8e"
+        },
+        {
+          "path": "pyproject.toml",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "76fe3a203e38d46292ee694eb84f634a87789e76"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "4f23fdac62169ae6345800cab00f8c87797a5d7f"
+        }
+      ],
+      "python_lockfiles": [
+        {
+          "path": "uv.lock",
+          "sha": "46da69aaab90e61cbd85d5c008bfdca1fa7adf8e"
+        }
+      ],
+      "source_src_file_count": 0,
+      "unresolved": [],
+      "source_map_complete": true,
+      "dependency_lock_present": true,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    },
+    {
+      "repo": "plan-lab-szu/ResearchLoop",
+      "pinned_commit": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 3214,
+      "submodules": [],
+      "proof": [
+        {
+          "path": "src",
+          "present": true,
+          "type": "tree",
+          "blob_sha": "d34f4fc982c986dc87c2221bad9eaaf465f7b532"
+        },
+        {
+          "path": "tests",
+          "present": true,
+          "type": "tree",
+          "blob_sha": "22612c1683f9bb66dc5b431b12bb1e1f1c5b07ec"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "d7d5403387c626d7a4d7f82a92d71bfe1c117f28"
+        },
+        {
+          "path": "AGENTS.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "16f1fbc818fb2d41047974ae687c2da93f50e6e9"
+        }
+      ],
+      "python_lockfiles": [],
+      "source_src_file_count": 1,
+      "unresolved": [
+        "No root/near-root Python dependency lock at pinned source"
+      ],
+      "source_map_complete": true,
+      "dependency_lock_present": false,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    },
+    {
+      "repo": "sjtu-sai-agents/EvoMaster",
+      "pinned_commit": "36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9",
+      "readable_tree": true,
+      "truncated": false,
+      "source_blob_count": 508,
+      "submodules": [],
+      "proof": [
+        {
+          "path": "playground/x_master/core/exp/select_exp.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "8b36f4549a7bbd9e96499020990f4aa348aa3cdd"
+        },
+        {
+          "path": "playground/x_master/core/exp/solve_exp.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "3f95c6f7abcad710b6ef20a9ac8b555fd1fbad29"
+        },
+        {
+          "path": "playground/x_master/core/exp/rewrite_exp.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "082539605dc10c482cc12f9b673e94f730892baf"
+        },
+        {
+          "path": "playground/x_master/core/exp/critique_exp.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "bb60d75956828b761e4e4b54b8d39cccd2e6a590"
+        },
+        {
+          "path": "evomaster/evolution/manager.py",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "75e9919ca36e93b753730a85daee41e09c5ef2c3"
+        },
+        {
+          "path": "pyproject.toml",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "321dace2bcf8f917da385f3774d5ed2eea53d138"
+        },
+        {
+          "path": "README.md",
+          "present": true,
+          "type": "blob",
+          "blob_sha": "318d93fb43e25f8ce9b0aa2bcd10730582c1c01c"
+        }
+      ],
+      "python_lockfiles": [],
+      "source_src_file_count": 0,
+      "unresolved": [
+        "No root/near-root Python dependency lock at pinned source"
+      ],
+      "source_map_complete": true,
+      "dependency_lock_present": false,
+      "gate": "PINNED_SOURCE_PROVENANCE_VERIFIED__FULL_BEHAVIOR_FIDELITY_OPEN"
+    }
+  ]
+}
