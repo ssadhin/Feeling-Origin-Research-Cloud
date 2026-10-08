@@ -1,0 +1,41 @@
+{
+  "kind": "RESEARCH_2_DEVELOPMENT_SENTINEL_MANIFEST",
+  "utc_created_at": "2026-10-08T02:34:33.123160+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "host_platform": "Windows-11-10.0.26200-SP0",
+  "device": "Eon Agent MCP / Home Laptop",
+  "source_files": {
+    "neutral_claim_gate_dev_v001.py": {
+      "sha256": "29319d33ee0a9266dccfbc9422781d54351afa47858d3e26b6eb72240057c001",
+      "exit_code": 0,
+      "outcome": "22 unit tests passed",
+      "captured_stdout": "",
+      "captured_stderr": "test_default_prereg_gate_blocks (__main__.AdversarialFixtures.test_default_prereg_gate_blocks) ... ok\ntest_extra_unfrozen_comparator (__main__.AdversarialFixtures.test_extra_unfrozen_comparator) ... ok\ntest_fidelity (__main__.AdversarialFixtures.test_fidelity) ... ok\ntest_h011 (__main__.AdversarialFixtures.test_h011) ... ok\ntest_holm_six_p_of_001_pass (__main__.AdversarialFixtures.test_holm_six_p_of_001_pass) ... ok\ntest_holm_six_p_of_01_fail (__main__.AdversarialFixtures.test_holm_six_p_of_01_fail) ... ok\ntest_invalid_critical_family (__main__.AdversarialFixtures.test_invalid_critical_family) ... ok\ntest_invalid_interval (__main__.AdversarialFixtures.test_invalid_interval) ... ok\ntest_margin_boundary_not_material_reversal (__main__.AdversarialFixtures.test_margin_boundary_not_material_reversal) ... ok\ntest_missing_critical_ci (__main__.AdversarialFixtures.test_missing_critical_ci) ... ok\ntest_missing_critical_family_ceiling (__main__.AdversarialFixtures.test_missing_critical_family_ceiling) ... ok\ntest_missing_model (__main__.AdversarialFixtures.test_missing_model) ... ok\ntest_missing_sixth_comparator (__main__.AdversarialFixtures.test_missing_sixth_comparator) ... ok\ntest_model_sign_reversal (__main__.AdversarialFixtures.test_model_sign_reversal) ... ok\ntest_nan_invalid_p (__main__.AdversarialFixtures.test_nan_invalid_p) ... ok\ntest_ood_negative_even_if_other_family_positive (__main__.AdversarialFixtures.test_ood_negative_even_if_other_family_positive) ... ok\ntest_positive_is_only_review_eligible (__main__.AdversarialFixtures.test_positive_is_only_review_eligible) ... ok\ntest_scoped_specialist_win (__main__.AdversarialFixtures.test_scoped_specialist_win) ... ok\ntest_single_weak_pair (__main__.AdversarialFixtures.test_single_weak_pair) ... ok\ntest_unadjusted_interval (__main__.AdversarialFixtures.test_unadjusted_interval) ... ok\ntest_undeclared_critical_family (__main__.AdversarialFixtures.test_undeclared_critical_family) ... ok\ntest_unfrozen_margin (__main__.AdversarialFixtures.test_unfrozen_margin) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.002s\n\nOK\n"
+    },
+    "neutral_claim_gate_mutation_dev_v001.py": {
+      "sha256": "dc23d2ef4648f945beac421fb0fef7b9bab220aa7fa5a63505a12c8d43bbba6d",
+      "exit_code": 0,
+      "outcome": "5/5 mutants detected",
+      "captured_stdout": "{\n  \"status\": \"MUTATION_SENSITIVITY_DEVELOPMENT_ONLY\",\n  \"mutations\": {\n    \"DROP_PREREG_GATE\": {\n      \"tests_run\": 22,\n      \"detected\": true,\n      \"failed_tests\": 1\n    },\n    \"DROP_H011_GATE\": {\n      \"tests_run\": 22,\n      \"detected\": true,\n      \"failed_tests\": 2\n    },\n    \"IGNORE_HOLM\": {\n      \"tests_run\": 22,\n      \"detected\": true,\n      \"failed_tests\": 2\n    },\n    \"IGNORE_CRITICAL_OOD\": {\n      \"tests_run\": 22,\n      \"detected\": true,\n      \"failed_tests\": 1\n    },\n    \"IGNORE_SCOPED_LOSS\": {\n      \"tests_run\": 22,\n      \"detected\": true,\n      \"failed_tests\": 1\n    }\n  },\n  \"all_detected\": true,\n  \"decisive_runs\": 0\n}\n",
+      "captured_stderr": ""
+    },
+    "provider_usage_contract_dev_v001.py": {
+      "sha256": "57440873787c3dbc4adfe0ecb8e55a279074ace1a2dca8991c0a1760ef97e831",
+      "exit_code": 0,
+      "outcome": "15 unit tests passed",
+      "captured_stdout": "",
+      "captured_stderr": "test_anthropic_usage_preserves_native_counter (__main__.ProviderContractTests.test_anthropic_usage_preserves_native_counter) ... ok\ntest_boolean_not_int (__main__.ProviderContractTests.test_boolean_not_int) ... ok\ntest_cached_exceeds_input (__main__.ProviderContractTests.test_cached_exceeds_input) ... ok\ntest_configured_not_returned_model (__main__.ProviderContractTests.test_configured_not_returned_model) ... ok\ntest_deterministic_commitment (__main__.ProviderContractTests.test_deterministic_commitment) ... ok\ntest_distinct_usage_changes_commitment (__main__.ProviderContractTests.test_distinct_usage_changes_commitment) ... ok\ntest_fake_flag (__main__.ProviderContractTests.test_fake_flag) ... ok\ntest_locally_estimated (__main__.ProviderContractTests.test_locally_estimated) ... ok\ntest_mismatch_total (__main__.ProviderContractTests.test_mismatch_total) ... ok\ntest_missing_model (__main__.ProviderContractTests.test_missing_model) ... ok\ntest_missing_usage (__main__.ProviderContractTests.test_missing_usage) ... ok\ntest_negative_usage (__main__.ProviderContractTests.test_negative_usage) ... ok\ntest_reasoning_exceeds_output (__main__.ProviderContractTests.test_reasoning_exceeds_output) ... ok\ntest_structural_valid (__main__.ProviderContractTests.test_structural_valid) ... ok\ntest_unrecognized_provider_blocks (__main__.ProviderContractTests.test_unrecognized_provider_blocks) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n"
+    },
+    "six_rival_power_sensitivity_dev_v001.py": {
+      "sha256": "bff0244a5f1ff7faea5f2c96099fad337dff4897429a68981b16352cb1669882",
+      "exit_code": 0,
+      "outcome": "5 unit tests passed",
+      "captured_stdout": "{\n  \"status\": \"DEVELOPMENT_SENSITIVITY_ONLY\",\n  \"source_rule\": \"21A/21C/21D proposals\",\n  \"alpha_family_one_sided_candidate\": 0.025,\n  \"rival_count_candidate\": 6,\n  \"power_candidate\": 0.9,\n  \"p_values_or_results_observed\": false,\n  \"SESOI_frozen\": false,\n  \"N_frozen\": false,\n  \"tests_passed\": 5,\n  \"tests_total\": 5,\n  \"rows\": [\n    {\n      \"discordance_q\": 0.1,\n      \"accuracy_SESOI_scenario\": 0.02,\n      \"six_comparator_N_approx\": 3842,\n      \"cluster_m4_ICC02_N_sensitivity\": 6148\n    },\n    {\n      \"discordance_q\": 0.1,\n      \"accuracy_SESOI_scenario\": 0.03,\n      \"six_comparator_N_approx\": 1708,\n      \"cluster_m4_ICC02_N_sensitivity\": 2733\n    },\n    {\n      \"discordance_q\": 0.1,\n      \"accuracy_SESOI_scenario\": 0.05,\n      \"six_comparator_N_approx\": 615,\n      \"cluster_m4_ICC02_N_sensitivity\": 984\n    },\n    {\n      \"discordance_q\": 0.2,\n      \"accuracy_SESOI_scenario\": 0.02,\n      \"six_comparator_N_approx\": 7683,\n      \"cluster_m4_ICC02_N_sensitivity\": 12293\n    },\n    {\n      \"discordance_q\": 0.2,\n      \"accuracy_SESOI_scenario\": 0.03,\n      \"six_comparator_N_approx\": 3415,\n      \"cluster_m4_ICC02_N_sensitivity\": 5464\n    },\n    {\n      \"discordance_q\": 0.2,\n      \"accuracy_SESOI_scenario\": 0.05,\n      \"six_comparator_N_approx\": 1230,\n      \"cluster_m4_ICC02_N_sensitivity\": 1968\n    },\n    {\n      \"discordance_q\": 0.3,\n      \"accuracy_SESOI_scenario\": 0.02,\n      \"six_comparator_N_approx\": 11524,\n      \"cluster_m4_ICC02_N_sensitivity\": 18439\n    },\n    {\n      \"discordance_q\": 0.3,\n      \"accuracy_SESOI_scenario\": 0.03,\n      \"six_comparator_N_approx\": 5122,\n      \"cluster_m4_ICC02_N_sensitivity\": 8196\n    },\n    {\n      \"discordance_q\": 0.3,\n      \"accuracy_SESOI_scenario\": 0.05,\n      \"six_comparator_N_approx\": 1844,\n      \"cluster_m4_ICC02_N_sensitivity\": 2951\n    }\n  ]\n}\n",
+      "captured_stderr": "----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    }
+  },
+  "provider_inference_calls": 0,
+  "decisive_benchmark_calls": 0,
+  "phase5_preregistration_frozen": false,
+  "claim": "NONDECISIVE SOURCE/LOGIC ONLY; NOT PROVIDER TELEMETRY OR METHOD EFFICACY"
+}
