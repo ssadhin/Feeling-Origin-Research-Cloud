@@ -1,0 +1,15 @@
+{
+  "status": "PASS_WITH_REQUIRED_HARNESS_SENTINEL",
+  "decisive_outcomes_opened": false,
+  "repo": "sjtu-sai-agents/EvoMaster",
+  "commit": "36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9",
+  "contestant_contract": {
+    "agent": "x_master",
+    "workflow": ["solve", "critic", "rewrite", "select"],
+    "self_evolution": "only if prospectively enabled; same x_master agent; charge analyzer and rerun model calls",
+    "specialist_switching": "forbidden",
+    "parallelism": "common aggregate resource cap",
+    "hidden_evaluator_pre_stop": "forbidden"
+  },
+  "summary": "12/12 source fidelity checks passed. Mandatory harness sentinel: evaluator-private score artifacts must not be visible before STOP."
+}
