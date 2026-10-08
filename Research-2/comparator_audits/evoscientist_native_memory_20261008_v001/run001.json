@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-10-08T17:28:30.959437+00:00",
+  "method": "EvoScientist",
+  "pinned_upstream_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "upstream_repo": "EvoScientist/EvoScientist",
+  "scope": "nondecisive source-native memory unit/integration checks, no live LLM/provider",
+  "tests": {
+    "tests\\test_observation_memory.py": "7130002f8c47be1ff33843e3ea4de4df0613770d86689b513be905febc3662ff",
+    "tests\\test_profile_memory_middleware.py": "33137b34e45e46895a2927c341c5175dbecced912c5e19afd0f06ed928f53c0f"
+  },
+  "runner": "C:\\Users\\hasad\\Research2\\venvs\\evosci312\\Scripts\\python.exe",
+  "python_version": "Python 3.12.10",
+  "argv": [
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_observation_memory.py",
+    "tests/test_profile_memory_middleware.py"
+  ],
+  "exit_code": 1,
+  "status": "EXITED",
+  "wall_seconds": 29.96,
+  "source_clean_before": true,
+  "source_clean_after": true,
+  "stdout_tail": "...............................................F............F........... [ 43%]\n.FF...F....................................F..F...F..................... [ 86%]\n..............F.......                                                   [100%]\n================================== FAILURES ===================================\n____________ test_lifecycle_schedules_turn_worker_without_awaiting ____________\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n__ test_async_observation_linker_does_not_launch_when_observations_disabled ___\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n__ test_async_memory_worker_watcher_untracks_without_counting_on_poll_abort ___\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n____ test_async_memory_worker_watcher_counts_completion_under_blockbuster _____\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n_______________ test_async_memory_worker_offloads_blocking_work _______________\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n____________ test_profile_memory_async_path_bootstraps_and_injects ____________\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n______ test_profile_memory_async_path_inlines_content_under_blockbuster _______\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n_________ test_profile_memory_resolves_project_id_once_per_middleware _________\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n___________________ test_bootstrap_async_path_matches_sync ____________________\nasync def functions are not natively supported.\nYou need to install a suitable plugin for your async framework, for example:\n  - anyio\n  - pytest-asyncio\n  - pytest-tornasync\n  - pytest-trio\n  - pytest-twisted\n============================== warnings summary ===============================\n..\\..\\venvs\\evosci312\\Lib\\site-packages\\_pytest\\config\\__init__.py:1464\n  C:\\Users\\hasad\\Research2\\venvs\\evosci312\\Lib\\site-packages\\_pytest\\config\\__init__.py:1464: PytestConfigWarning: Unknown config option: asyncio_default_fixture_loop_scope\n  \n    self._warn_or_fail_if_strict(f\"Unknown config option: {key}\\n\")\n\n..\\..\\venvs\\evosci312\\Lib\\site-packages\\_pytest\\config\\__init__.py:1464\n  C:\\Users\\hasad\\Research2\\venvs\\evosci312\\Lib\\site-packages\\_pytest\\config\\__init__.py:1464: PytestConfigWarning: Unknown config option: asyncio_mode\n  \n    self._warn_or_fail_if_strict(f\"Unknown config option: {key}\\n\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ===========================\nFAILED tests/test_observation_memory.py::test_lifecycle_schedules_turn_worker_without_awaiting\nFAILED tests/test_observation_memory.py::test_async_observation_linker_does_not_launch_when_observations_disabled\nFAILED tests/test_observation_memory.py::test_async_memory_worker_watcher_untracks_without_counting_on_poll_abort\nFAILED tests/test_observation_memory.py::test_async_memory_worker_watcher_counts_completion_under_blockbuster\nFAILED tests/test_observation_memory.py::test_async_memory_worker_offloads_blocking_work\nFAILED tests/test_profile_memory_middleware.py::test_profile_memory_async_path_bootstraps_and_injects\nFAILED tests/test_profile_memory_middleware.py::test_profile_memory_async_path_inlines_content_under_blockbuster\nFAILED tests/test_profile_memory_middleware.py::test_profile_memory_resolves_project_id_once_per_middleware\nFAILED tests/test_profile_memory_middleware.py::test_bootstrap_async_path_matches_sync\n9 failed, 157 passed, 2 warnings in 28.49s\n",
+  "stderr_tail": "",
+  "claim_ceiling": "selected original-source test reproducibility only, not full ES-1..ES-5 fidelity certification and not AES prospective comparison",
+  "aes_v2_prospective_decisive_trials": 0
+}
