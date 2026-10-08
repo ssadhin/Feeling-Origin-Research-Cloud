@@ -1,0 +1,16 @@
+{
+  "attempt": 2,
+  "at_utc": "2026-10-08T16:36:13.565892+00:00",
+  "exit_code": 0,
+  "wall_seconds": 10.805,
+  "peak_rss_mb": 140.95,
+  "sampled_cpu_seconds": 9.156,
+  "samples": 41,
+  "summary_lines": [
+    "31 passed in 9.12s"
+  ],
+  "output_sha256": "5455291682338fdf63f5df7a412704aff090e0533cf6fa9becc2591ae3a450dd",
+  "original_checkout_clean_after": true,
+  "stdout_tail": "...............................                                          [100%]\n31 passed in 9.12s\n",
+  "stderr_tail": ""
+}
