@@ -25,3 +25,8 @@ Canonical gate 19C/19G requires complete source-native defining sentinels with m
 AES v2 inherited evidence from Research 1 P14/P15 but AES v2 itself was post-benchmark synthesis; no comparative superior/equivalent/inferior verdict from Research 2. No changes to frozen contestants or benchmark conditions were made.
 
 Next: author-approved/defender-approved ResearchLoop fixture resolution and license clearance, isolated reproducible dependencies for all methods, full 19C execution and independent defender assessment, matched common broker. Do not interpret test failures as policy inferiority.
+
+## Further native dependency-closure blockers (Office audit312 env)
+- OmniScientist-V2 two selected native test modules (paper-review script / research provenance): base pytest collection failed because `omni` was not installed / on PYTHONPATH (Eon managed process proc_ebc41af7c9074076bfd6, exit 1). After setting only source PYTHONPATH=cli/src, collection reached package import and failed on missing `httpx` (proc_7b073a26b594402e9e5a, exit 1). No native test result can be inferred from collection errors; CLI uv.lock exists but was not provisioned into dedicated reproducible env.
+- EvoScientist original upstream tests/test_scheduler.py collection in audit312 failed on missing `httpx`; warnings indicated missing pytest-asyncio options (proc_6fa07c494a7d4bafb2ab, exit 1). Do not count as an upstream test assertion failing or infer method inferiority.
+- Resource-safe decision: no dependency installation in shared audit environment; dedicated isolated pinned/hashed reproducible envs still required.
