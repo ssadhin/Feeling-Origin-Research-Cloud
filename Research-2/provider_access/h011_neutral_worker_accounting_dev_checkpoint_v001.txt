@@ -1,0 +1,16 @@
+R2_H011_NEUTRAL_WORKER_ACCOUNTING_DEVELOPMENT_CHECKPOINT_v001
+Date: 2026-10-08. ZERO prospective AES v2 decisive trials.
+Trusted inputs: Research #2 canonical 17M status; private immutable Gemini v001 failure evidence commit 9731acf1ea3f297bd1c510e1b36613631f088fae and v002 success evidence commit 0e292848c2ff9337d548cdf371f742e2ae203e2c. No secrets or live provider keys accessed.
+Execution host for this loop: isolated local Python 3.13 sandbox. Home Laptop offline, so Eon did not execute the newly developed scripts; Office Laptop deliberately not used.
+Credential-free prototype neutral-worker ledger: 21/21 synthetic software-development tests PASS (sandbox interpreter exit zero). Covers: attempt identity and deduplication, provider native success usage, missing totals rejected, preserving failed-call unknown billability, model+schema+reasoning+context+cap static fairness, cached prompt non-doublecount, no fabricated dollar cost.
+Adversarial negative controls: 4/4 mutants detected in separate isolated modules:
+- drop timeout unknown-billability -> 2/21 failures;
+- ignore returned-model drift -> 1/21 failure;
+- allow impossible total token count -> 1/21 failure;
+- ignore tool-schema parity -> 1/21 failure.
+Sandbox source artifacts:
+h011_neutral_worker_accounting_v001.py SHA256 76401523ef022d5022864af8e6737a728006bd9089d3ceaff8a2c4
+h011_neutral_worker_accounting_mutation_v001.py SHA256 2db86dfd22ba4d2a3f02e7219f5efd4fbcdd42691ce56723373fe36c08f46767
+This checkpoint captures precise source identities and test output for audit; original source files are conversation sandbox attachments and should be added to immutable Git in a later sync. Do not misrepresent the archive as containing these full files.
+Hard scientific boundaries: the 21 tests used synthetic shapes matching authentic Gemini evidence; no live provider calls, no production common worker integration or actual comparator parity, and no empirical validation of charge for the timed-out 3.8 Flash call. Unknown-billability remains UNKNOWN, not zero. Different models are not valid matched-policy comparison by this sentinel. Sample size, SESOI, benchmarks, final models, provider, tool permission model, and study budget not frozen.
+Next action: obtain independent fair neutral-harness software review and integrate the ledger with real accounting events; continue source-faithful full comparator behavior and preregistration only after equal resource/defender review. No decisive evaluation.
