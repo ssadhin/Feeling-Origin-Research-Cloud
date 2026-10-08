@@ -1,0 +1,1 @@
+QC source: ds005883 pinned 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd. Coverage: 39 BOLD, 38 pulse, 38 respiratory sidecars. Further timing validation required. No causal mechanism or phenomenal inference.
