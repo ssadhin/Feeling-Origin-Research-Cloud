@@ -1,0 +1,1 @@
+2026-10-08: CoSpine metadata audit at pinned dataset commit 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd. Pulse and respiration sidecars found for 38 of 39 subjects. Subject 22 has neither. Completeness prediction failed.
