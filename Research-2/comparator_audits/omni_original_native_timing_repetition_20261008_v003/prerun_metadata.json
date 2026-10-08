@@ -1,0 +1,20 @@
+{
+  "upstream": "tsinghua-fib-lab/OmniScientist-V2",
+  "upstream_exact_commit": "1cbb9f6f6d793290326ca29df4d389fb64832f91",
+  "source_sha256": "62daaf6f03c13a9ac1e5ea59d7edf83a730874098ed66e10e13789f452b874d8",
+  "runner": "C:\\Users\\hasad\\Research2\\venvs\\omni312\\Scripts\\python.exe",
+  "native_command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/agent/test_paper_review_engine.py"
+  ],
+  "N": 3,
+  "measurement_kind": "nondecisive upstream reliability, not methodology-effect comparison",
+  "resource_sample_interval_s": 0.25,
+  "no_live_provider_credentials_used": true
+}
