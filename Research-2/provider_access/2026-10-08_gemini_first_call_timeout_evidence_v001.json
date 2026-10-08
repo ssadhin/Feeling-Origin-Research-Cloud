@@ -1,0 +1,23 @@
+{
+  "available_model_count": 45,
+  "decisive_runs": 0,
+  "generation_http": null,
+  "generation_meta": {
+    "transport_error_type": "TimeoutError"
+  },
+  "key_file_deleted": true,
+  "max_successful_model_calls": 1,
+  "metadata_sha256": "a8564d7cb089d8be10742e61456711518ac80a3e56a9b80f04e826616233d40a",
+  "model_listing_http": 200,
+  "model_listing_meta": {
+    "elapsed_ms": 477.1,
+    "x-request-id": null
+  },
+  "public_request_sha256": "c0ed3a75d9163d71fe9280e4d17accf74112805f8aa52db4f5ed21f1527e6740",
+  "secret_recorded": false,
+  "selected_development_model": "gemini-3.8-flash",
+  "status": "BLOCKED_GENERATION_HTTP",
+  "type": "R2_H011_GEMINI_REAL_PROVIDER_SENTINEL",
+  "utc": "2026-10-08T04:57:06.054636+00:00",
+  "utc_completed": "2026-10-08T04:57:31.690062+00:00"
+}
