@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-10-08T17:29:58.966764+00:00",
+  "method": "EvoScientist",
+  "pinned_upstream_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "upstream_repo": "EvoScientist/EvoScientist",
+  "scope": "nondecisive source-native memory unit/integration checks, no live LLM/provider",
+  "tests": {
+    "tests\\test_observation_memory.py": "7130002f8c47be1ff33843e3ea4de4df0613770d86689b513be905febc3662ff",
+    "tests\\test_profile_memory_middleware.py": "33137b34e45e46895a2927c341c5175dbecced912c5e19afd0f06ed928f53c0f"
+  },
+  "runner": "C:\\Users\\hasad\\Research2\\venvs\\evosci312\\Scripts\\python.exe",
+  "python_version": "Python 3.12.10",
+  "argv": [
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_observation_memory.py",
+    "tests/test_profile_memory_middleware.py"
+  ],
+  "exit_code": 0,
+  "status": "EXITED",
+  "wall_seconds": 25.982,
+  "source_clean_before": true,
+  "source_clean_after": true,
+  "stdout_tail": "........................................................................ [ 43%]\n........................................................................ [ 86%]\n......................                                                   [100%]\n166 passed in 22.78s\n",
+  "stderr_tail": "",
+  "claim_ceiling": "selected original-source test reproducibility only, not full ES-1..ES-5 fidelity certification and not AES prospective comparison",
+  "aes_v2_prospective_decisive_trials": 0
+}
