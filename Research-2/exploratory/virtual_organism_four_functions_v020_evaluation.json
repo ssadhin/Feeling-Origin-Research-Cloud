@@ -1,0 +1,1418 @@
+{
+  "caveats": [
+    "Constructed virtual world and hand-written controllers, no human emotion evidence.",
+    "Identical EMA and emotion controllers refute uniqueness of name/function in this model.",
+    "Predictive model uses guessed generic rates, not real scenario rates, but assumptions/compute still differ.",
+    "This heldout split is in an open developer-authored synthetic family, not independently controlled or sealed.",
+    "Bootstrap confidence intervals are exploratory and not multiple-comparison-adjusted.",
+    "No real subjective feelings, no methodology AES-v2 competitor trials."
+  ],
+  "dev_parameters": {
+    "bayes_tuned": [
+      0.2
+    ],
+    "ema_tuned": [
+      0.55,
+      0.25
+    ],
+    "instinct_tuned": [
+      10,
+      60
+    ],
+    "window_tuned": [
+      2,
+      0.25
+    ]
+  },
+  "eval_seed_base": 500000,
+  "n_per_regime": 256,
+  "paired_emotion_minus_comparator": {
+    "calm": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      }
+    },
+    "hazard_shift": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          -0.05859,
+          0.01172
+        ],
+        "difference": -0.02344
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          -0.0625,
+          0
+        ],
+        "difference": -0.03125
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          -0.05078,
+          0.00391
+        ],
+        "difference": -0.02344
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0.05859,
+          0.16016
+        ],
+        "difference": 0.10938
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0.03516,
+          0.12109
+        ],
+        "difference": 0.07812
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.23438,
+          0.35547
+        ],
+        "difference": 0.29297
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0.02344,
+          0.10547
+        ],
+        "difference": 0.06641
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          -0.05859,
+          0.00391
+        ],
+        "difference": -0.02734
+      }
+    },
+    "hazard_shift_reverse": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          -0.08203,
+          0
+        ],
+        "difference": -0.03906
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          -0.10547,
+          -0.02344
+        ],
+        "difference": -0.0625
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          -0.08203,
+          -0.00391
+        ],
+        "difference": -0.04297
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0.04297,
+          0.15234
+        ],
+        "difference": 0.09766
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0.05078,
+          0.14844
+        ],
+        "difference": 0.09766
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.28125,
+          0.41406
+        ],
+        "difference": 0.34766
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0.07422,
+          0.17969
+        ],
+        "difference": 0.125
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          -0.09766,
+          -0.01562
+        ],
+        "difference": -0.05469
+      }
+    },
+    "persistent": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          -0.01562,
+          0.06641
+        ],
+        "difference": 0.02344
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          -0.05469,
+          0.01172
+        ],
+        "difference": -0.02344
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          -0.03125,
+          0.03516
+        ],
+        "difference": 0
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0.16406,
+          0.26953
+        ],
+        "difference": 0.21484
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0.16016,
+          0.26172
+        ],
+        "difference": 0.20703
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.36719,
+          0.48438
+        ],
+        "difference": 0.42578
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0.17969,
+          0.28906
+        ],
+        "difference": 0.23828
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          -0.03125,
+          0.03125
+        ],
+        "difference": 0
+      }
+    },
+    "scarce_food": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          0,
+          0.09375
+        ],
+        "difference": 0.04688
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          -0.01172,
+          0.06641
+        ],
+        "difference": 0.02734
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          -0.01172,
+          0.07031
+        ],
+        "difference": 0.02734
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0.1875,
+          0.30859
+        ],
+        "difference": 0.25391
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0.16016,
+          0.27344
+        ],
+        "difference": 0.21484
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.41406,
+          0.54688
+        ],
+        "difference": 0.48047
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0.20312,
+          0.32031
+        ],
+        "difference": 0.26172
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          -0.00781,
+          0.07422
+        ],
+        "difference": 0.03125
+      }
+    },
+    "unreliable_signal": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          0.06641,
+          0.18359
+        ],
+        "difference": 0.125
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          0.03125,
+          0.13672
+        ],
+        "difference": 0.08203
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          0.01562,
+          0.12109
+        ],
+        "difference": 0.07031
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          0.07031,
+          0.19922
+        ],
+        "difference": 0.13281
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          0.02734,
+          0.14844
+        ],
+        "difference": 0.08594
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.125,
+          0.25391
+        ],
+        "difference": 0.19141
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          0.08594,
+          0.20703
+        ],
+        "difference": 0.14453
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          0.03516,
+          0.13672
+        ],
+        "difference": 0.08594
+      }
+    },
+    "volatile": {
+      "bayes_fixed": {
+        "bootstrap_95_interval": [
+          -0.09766,
+          0.01172
+        ],
+        "difference": -0.04297
+      },
+      "bayes_tuned": {
+        "bootstrap_95_interval": [
+          -0.08203,
+          0.01172
+        ],
+        "difference": -0.03516
+      },
+      "ema_clone": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "ema_tuned": {
+        "bootstrap_95_interval": [
+          -0.08594,
+          -0.00391
+        ],
+        "difference": -0.04297
+      },
+      "emotion_report": {
+        "bootstrap_95_interval": [
+          0,
+          0
+        ],
+        "difference": 0
+      },
+      "instinct_fixed": {
+        "bootstrap_95_interval": [
+          -0.06641,
+          0.03125
+        ],
+        "difference": -0.01562
+      },
+      "instinct_tuned": {
+        "bootstrap_95_interval": [
+          -0.08594,
+          -0.00391
+        ],
+        "difference": -0.04297
+      },
+      "maintenance": {
+        "bootstrap_95_interval": [
+          0.23438,
+          0.36328
+        ],
+        "difference": 0.29688
+      },
+      "memory_ablation": {
+        "bootstrap_95_interval": [
+          -0.07031,
+          0.03125
+        ],
+        "difference": -0.01953
+      },
+      "window_tuned": {
+        "bootstrap_95_interval": [
+          -0.10156,
+          -0.00391
+        ],
+        "difference": -0.05078
+      }
+    }
+  },
+  "policies": [
+    "maintenance",
+    "instinct_fixed",
+    "instinct_tuned",
+    "emotion_v01",
+    "ema_clone",
+    "emotion_report",
+    "ema_tuned",
+    "window_tuned",
+    "bayes_fixed",
+    "bayes_tuned",
+    "memory_ablation"
+  ],
+  "regimes": [
+    "calm",
+    "persistent",
+    "volatile",
+    "hazard_shift",
+    "hazard_shift_reverse",
+    "unreliable_signal",
+    "scarce_food"
+  ],
+  "report": [
+    {
+      "mean_forages": 30.918,
+      "mean_hits": 0.2031,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.7031,
+      "mean_hits": 0.1094,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 32.9336,
+      "mean_hits": 0.1094,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.5703,
+      "mean_hits": 0.1719,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.5703,
+      "mean_hits": 0.1719,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.5703,
+      "mean_hits": 0.1719,
+      "mean_reports": 120,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.4375,
+      "mean_hits": 0.1055,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.3594,
+      "mean_hits": 0.1016,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.6328,
+      "mean_hits": 0.0977,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.6445,
+      "mean_hits": 0.0977,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 35.3672,
+      "mean_hits": 0.1289,
+      "mean_reports": 0,
+      "mean_steps": 120,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "calm",
+      "survival_rate": 1,
+      "survived": 256
+    },
+    {
+      "mean_forages": 25.7227,
+      "mean_hits": 3.918,
+      "mean_reports": 0,
+      "mean_steps": 99.4648,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "persistent",
+      "survival_rate": 0.48438,
+      "survived": 124
+    },
+    {
+      "mean_forages": 31.5312,
+      "mean_hits": 3.1523,
+      "mean_reports": 0,
+      "mean_steps": 107.9219,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "persistent",
+      "survival_rate": 0.69531,
+      "survived": 178
+    },
+    {
+      "mean_forages": 29.0625,
+      "mean_hits": 3.1016,
+      "mean_reports": 0,
+      "mean_steps": 109.1445,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "persistent",
+      "survival_rate": 0.70312,
+      "survived": 180
+    },
+    {
+      "mean_forages": 31.5625,
+      "mean_hits": 1.8945,
+      "mean_reports": 0,
+      "mean_steps": 117.8281,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "persistent",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 31.5625,
+      "mean_hits": 1.8945,
+      "mean_reports": 0,
+      "mean_steps": 117.8281,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "persistent",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 31.5625,
+      "mean_hits": 1.8945,
+      "mean_reports": 117.8281,
+      "mean_steps": 117.8281,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "persistent",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 31.8828,
+      "mean_hits": 1.9531,
+      "mean_reports": 0,
+      "mean_steps": 116.7461,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "persistent",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 31.7148,
+      "mean_hits": 1.9336,
+      "mean_reports": 0,
+      "mean_steps": 116.7188,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "persistent",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 32.2656,
+      "mean_hits": 2.0586,
+      "mean_reports": 0,
+      "mean_steps": 116.0234,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "persistent",
+      "survival_rate": 0.88672,
+      "survived": 227
+    },
+    {
+      "mean_forages": 32.2461,
+      "mean_hits": 1.8867,
+      "mean_reports": 0,
+      "mean_steps": 117.3633,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "persistent",
+      "survival_rate": 0.93359,
+      "survived": 239
+    },
+    {
+      "mean_forages": 31.4961,
+      "mean_hits": 3.1875,
+      "mean_reports": 0,
+      "mean_steps": 108.3008,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "persistent",
+      "survival_rate": 0.67188,
+      "survived": 172
+    },
+    {
+      "mean_forages": 27.3672,
+      "mean_hits": 3.7656,
+      "mean_reports": 0,
+      "mean_steps": 105.6914,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "volatile",
+      "survival_rate": 0.57031,
+      "survived": 146
+    },
+    {
+      "mean_forages": 34.707,
+      "mean_hits": 2.3984,
+      "mean_reports": 0,
+      "mean_steps": 116.8672,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "volatile",
+      "survival_rate": 0.88281,
+      "survived": 226
+    },
+    {
+      "mean_forages": 32.0039,
+      "mean_hits": 2.2734,
+      "mean_reports": 0,
+      "mean_steps": 117.7461,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "volatile",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 32.5664,
+      "mean_hits": 2.7305,
+      "mean_reports": 0,
+      "mean_steps": 116.6445,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "volatile",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 32.5664,
+      "mean_hits": 2.7305,
+      "mean_reports": 0,
+      "mean_steps": 116.6445,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "volatile",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 32.5664,
+      "mean_hits": 2.7305,
+      "mean_reports": 116.6445,
+      "mean_steps": 116.6445,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "volatile",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 33.3516,
+      "mean_hits": 2.1602,
+      "mean_reports": 0,
+      "mean_steps": 118.1367,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "volatile",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 33.3242,
+      "mean_hits": 2.168,
+      "mean_reports": 0,
+      "mean_steps": 118.5078,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "volatile",
+      "survival_rate": 0.91797,
+      "survived": 235
+    },
+    {
+      "mean_forages": 34.4336,
+      "mean_hits": 2.2383,
+      "mean_reports": 0,
+      "mean_steps": 118.043,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "volatile",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 33.7266,
+      "mean_hits": 2.1914,
+      "mean_reports": 0,
+      "mean_steps": 117.7773,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "volatile",
+      "survival_rate": 0.90234,
+      "survived": 231
+    },
+    {
+      "mean_forages": 34.4531,
+      "mean_hits": 2.375,
+      "mean_reports": 0,
+      "mean_steps": 116.7422,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "volatile",
+      "survival_rate": 0.88672,
+      "survived": 227
+    },
+    {
+      "mean_forages": 26.5859,
+      "mean_hits": 3.7383,
+      "mean_reports": 0,
+      "mean_steps": 102.9922,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "hazard_shift",
+      "survival_rate": 0.60547,
+      "survived": 155
+    },
+    {
+      "mean_forages": 33.3086,
+      "mean_hits": 2.6328,
+      "mean_reports": 0,
+      "mean_steps": 112.2617,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "hazard_shift",
+      "survival_rate": 0.78906,
+      "survived": 202
+    },
+    {
+      "mean_forages": 30.8398,
+      "mean_hits": 2.5781,
+      "mean_reports": 0,
+      "mean_steps": 114.0508,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "hazard_shift",
+      "survival_rate": 0.82031,
+      "survived": 210
+    },
+    {
+      "mean_forages": 32.6797,
+      "mean_hits": 2.082,
+      "mean_reports": 0,
+      "mean_steps": 117.6055,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "hazard_shift",
+      "survival_rate": 0.89844,
+      "survived": 230
+    },
+    {
+      "mean_forages": 32.6797,
+      "mean_hits": 2.082,
+      "mean_reports": 0,
+      "mean_steps": 117.6055,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "hazard_shift",
+      "survival_rate": 0.89844,
+      "survived": 230
+    },
+    {
+      "mean_forages": 32.6797,
+      "mean_hits": 2.082,
+      "mean_reports": 117.6055,
+      "mean_steps": 117.6055,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "hazard_shift",
+      "survival_rate": 0.89844,
+      "survived": 230
+    },
+    {
+      "mean_forages": 33.0625,
+      "mean_hits": 1.875,
+      "mean_reports": 0,
+      "mean_steps": 117.6133,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "hazard_shift",
+      "survival_rate": 0.92188,
+      "survived": 236
+    },
+    {
+      "mean_forages": 32.9297,
+      "mean_hits": 1.8672,
+      "mean_reports": 0,
+      "mean_steps": 117.5938,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "hazard_shift",
+      "survival_rate": 0.92578,
+      "survived": 237
+    },
+    {
+      "mean_forages": 34.1953,
+      "mean_hits": 2.0234,
+      "mean_reports": 0,
+      "mean_steps": 117.4688,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "hazard_shift",
+      "survival_rate": 0.92188,
+      "survived": 236
+    },
+    {
+      "mean_forages": 33.4844,
+      "mean_hits": 1.957,
+      "mean_reports": 0,
+      "mean_steps": 117.6953,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "hazard_shift",
+      "survival_rate": 0.92969,
+      "survived": 238
+    },
+    {
+      "mean_forages": 33.4297,
+      "mean_hits": 2.6328,
+      "mean_reports": 0,
+      "mean_steps": 113.4922,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "hazard_shift",
+      "survival_rate": 0.83203,
+      "survived": 213
+    },
+    {
+      "mean_forages": 26.9219,
+      "mean_hits": 3.9492,
+      "mean_reports": 0,
+      "mean_steps": 103.9766,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.51953,
+      "survived": 133
+    },
+    {
+      "mean_forages": 33.3984,
+      "mean_hits": 2.9805,
+      "mean_reports": 0,
+      "mean_steps": 114.0703,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.76953,
+      "survived": 197
+    },
+    {
+      "mean_forages": 30.4375,
+      "mean_hits": 2.8477,
+      "mean_reports": 0,
+      "mean_steps": 113.9023,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.76953,
+      "survived": 197
+    },
+    {
+      "mean_forages": 31.3008,
+      "mean_hits": 2.5508,
+      "mean_reports": 0,
+      "mean_steps": 116.543,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 31.3008,
+      "mean_hits": 2.5508,
+      "mean_reports": 0,
+      "mean_steps": 116.543,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 31.3008,
+      "mean_hits": 2.5508,
+      "mean_reports": 116.543,
+      "mean_steps": 116.543,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.86719,
+      "survived": 222
+    },
+    {
+      "mean_forages": 32.3477,
+      "mean_hits": 2.2305,
+      "mean_reports": 0,
+      "mean_steps": 118.2773,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.91016,
+      "survived": 233
+    },
+    {
+      "mean_forages": 32.1953,
+      "mean_hits": 2.2227,
+      "mean_reports": 0,
+      "mean_steps": 118.6797,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.92188,
+      "survived": 236
+    },
+    {
+      "mean_forages": 32.875,
+      "mean_hits": 2.2266,
+      "mean_reports": 0,
+      "mean_steps": 117.7539,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.90625,
+      "survived": 232
+    },
+    {
+      "mean_forages": 32.6914,
+      "mean_hits": 2.1602,
+      "mean_reports": 0,
+      "mean_steps": 118.4023,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.92969,
+      "survived": 238
+    },
+    {
+      "mean_forages": 33.0195,
+      "mean_hits": 2.9531,
+      "mean_reports": 0,
+      "mean_steps": 112.8789,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "hazard_shift_reverse",
+      "survival_rate": 0.74219,
+      "survived": 190
+    },
+    {
+      "mean_forages": 25.7227,
+      "mean_hits": 3.918,
+      "mean_reports": 0,
+      "mean_steps": 99.4648,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.48438,
+      "survived": 124
+    },
+    {
+      "mean_forages": 30.0625,
+      "mean_hits": 3.6953,
+      "mean_reports": 0,
+      "mean_steps": 99.75,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.54297,
+      "survived": 139
+    },
+    {
+      "mean_forages": 27.9531,
+      "mean_hits": 3.5469,
+      "mean_reports": 0,
+      "mean_steps": 103.2305,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.58984,
+      "survived": 151
+    },
+    {
+      "mean_forages": 27.2852,
+      "mean_hits": 3.2031,
+      "mean_reports": 0,
+      "mean_steps": 109.0859,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.67578,
+      "survived": 173
+    },
+    {
+      "mean_forages": 27.2852,
+      "mean_hits": 3.2031,
+      "mean_reports": 0,
+      "mean_steps": 109.0859,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.67578,
+      "survived": 173
+    },
+    {
+      "mean_forages": 27.2852,
+      "mean_hits": 3.2031,
+      "mean_reports": 109.0859,
+      "mean_steps": 109.0859,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.67578,
+      "survived": 173
+    },
+    {
+      "mean_forages": 26.8203,
+      "mean_hits": 3.4336,
+      "mean_reports": 0,
+      "mean_steps": 104.6055,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.60547,
+      "survived": 155
+    },
+    {
+      "mean_forages": 26.6289,
+      "mean_hits": 3.4648,
+      "mean_reports": 0,
+      "mean_steps": 104.5703,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.58984,
+      "survived": 151
+    },
+    {
+      "mean_forages": 28.8633,
+      "mean_hits": 3.5547,
+      "mean_reports": 0,
+      "mean_steps": 101.4922,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.55078,
+      "survived": 141
+    },
+    {
+      "mean_forages": 26.8711,
+      "mean_hits": 3.4062,
+      "mean_reports": 0,
+      "mean_steps": 104.0352,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.59375,
+      "survived": 152
+    },
+    {
+      "mean_forages": 29.6875,
+      "mean_hits": 3.6602,
+      "mean_reports": 0,
+      "mean_steps": 99.4961,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "unreliable_signal",
+      "survival_rate": 0.53125,
+      "survived": 136
+    },
+    {
+      "mean_forages": 31.5352,
+      "mean_hits": 4.1914,
+      "mean_reports": 0,
+      "mean_steps": 89.7227,
+      "n": 256,
+      "policy": "maintenance",
+      "regime": "scarce_food",
+      "survival_rate": 0.36328,
+      "survived": 93
+    },
+    {
+      "mean_forages": 41.1289,
+      "mean_hits": 3.4102,
+      "mean_reports": 0,
+      "mean_steps": 105.0039,
+      "n": 256,
+      "policy": "instinct_fixed",
+      "regime": "scarce_food",
+      "survival_rate": 0.58984,
+      "survived": 151
+    },
+    {
+      "mean_forages": 38.0508,
+      "mean_hits": 3.3359,
+      "mean_reports": 0,
+      "mean_steps": 106.3516,
+      "n": 256,
+      "policy": "instinct_tuned",
+      "regime": "scarce_food",
+      "survival_rate": 0.62891,
+      "survived": 161
+    },
+    {
+      "mean_forages": 41.0781,
+      "mean_hits": 2.2695,
+      "mean_reports": 0,
+      "mean_steps": 115.5898,
+      "n": 256,
+      "policy": "emotion_v01",
+      "regime": "scarce_food",
+      "survival_rate": 0.84375,
+      "survived": 216
+    },
+    {
+      "mean_forages": 41.0781,
+      "mean_hits": 2.2695,
+      "mean_reports": 0,
+      "mean_steps": 115.5898,
+      "n": 256,
+      "policy": "ema_clone",
+      "regime": "scarce_food",
+      "survival_rate": 0.84375,
+      "survived": 216
+    },
+    {
+      "mean_forages": 41.0781,
+      "mean_hits": 2.2695,
+      "mean_reports": 115.5898,
+      "mean_steps": 115.5898,
+      "n": 256,
+      "policy": "emotion_report",
+      "regime": "scarce_food",
+      "survival_rate": 0.84375,
+      "survived": 216
+    },
+    {
+      "mean_forages": 40.1289,
+      "mean_hits": 2.2539,
+      "mean_reports": 0,
+      "mean_steps": 113.8242,
+      "n": 256,
+      "policy": "ema_tuned",
+      "regime": "scarce_food",
+      "survival_rate": 0.81641,
+      "survived": 209
+    },
+    {
+      "mean_forages": 39.9805,
+      "mean_hits": 2.2969,
+      "mean_reports": 0,
+      "mean_steps": 113.8555,
+      "n": 256,
+      "policy": "window_tuned",
+      "regime": "scarce_food",
+      "survival_rate": 0.8125,
+      "survived": 208
+    },
+    {
+      "mean_forages": 41.7617,
+      "mean_hits": 2.3672,
+      "mean_reports": 0,
+      "mean_steps": 113.2969,
+      "n": 256,
+      "policy": "bayes_fixed",
+      "regime": "scarce_food",
+      "survival_rate": 0.79688,
+      "survived": 204
+    },
+    {
+      "mean_forages": 40.875,
+      "mean_hits": 2.2539,
+      "mean_reports": 0,
+      "mean_steps": 114.4102,
+      "n": 256,
+      "policy": "bayes_tuned",
+      "regime": "scarce_food",
+      "survival_rate": 0.81641,
+      "survived": 209
+    },
+    {
+      "mean_forages": 40.7656,
+      "mean_hits": 3.4414,
+      "mean_reports": 0,
+      "mean_steps": 104.5,
+      "n": 256,
+      "policy": "memory_ablation",
+      "regime": "scarce_food",
+      "survival_rate": 0.58203,
+      "survived": 149
+    }
+  ],
+  "self_tests": {
+    "bounds_and_action_contract": true,
+    "literal_ema_emotion_equivalence": true,
+    "memory_removal_changes_behavior": true,
+    "paired_worlds_deterministic": true,
+    "report_only_actions_identical": true,
+    "v01_regression_checked": true
+  },
+  "source_sha256": "8ed7d15a756e35a8d74b1228cddc311c882c11bef00633a81223a42bff43131e",
+  "stage": "development_heldout_evaluation_not_Research2_methodology_trial",
+  "study": "Research2_four_function_exploratory_v020",
+  "version": "0.2.0"
+}
