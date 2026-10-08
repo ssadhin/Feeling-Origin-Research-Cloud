@@ -1,0 +1,1 @@
+Before full outcome inspection: use leave-one-subject-out site offsets to predict TMS discomfort; compare to subject-only and pooled-site rivals. Seed 20261008. Preprint DOI 10.64898/2026.02.27.708526. This is not a phenomenal measure.
