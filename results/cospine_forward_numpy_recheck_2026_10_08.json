@@ -1,0 +1,13 @@
+{
+ "date":"2026-10-08","scope":"Feeling Origin","protocol_drive_id":"1DQs8heXfcGZ5eZanRIUUqhxf741xb1PWPLJFrP1P-fk",
+ "source":"OpenNeuro ds005883 commit 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd",
+ "method":"independent NumPy lstsq on 39x15 connector-transcribed PR/UpR pairs; no independent raw network verification",
+ "test_n":195,
+ "SSE":{"A":397.65000000000015,"B":182.22077750518542,"C":275.6816298043557,"D":173.18230472768707,"E":202.39806509749695,"F":189.75454558559386},
+ "D_B_reduction":0.04960176825741591,"D_B_wins_losses_ties":[19,16,4],"D_B_sign_p":0.735878800856881,
+ "D_B_subject_bootstrap_95pct":[-0.0949684509861145,0.15984354466980688],
+ "E_B_reduction":-0.11072989517749887,"F_E_reduction":0.0624685789649847,
+ "F_E_subject_bootstrap_95pct":[-0.0865234842603633,0.2182999635787954],
+ "F_fallback_trials":15,"data_sha256":"6da4a6342b40041a332aeac61bf2a964440b6bb2d4dd80729f02b82afb057e9b",
+ "status":"D original frozen criterion FAIL; descriptive only; no causal M or phenomenality; not paper-worthy"
+}
