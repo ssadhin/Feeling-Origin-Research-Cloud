@@ -1,0 +1,49 @@
+{
+  "dataset": "OpenNeuro ds005883",
+  "pinned_commit": "037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd",
+  "frozen_plan_drive_id": "1ZFKFfEDdMmcETKtCJwo7jF3YIMOHjBmI74VfW06Tcs0",
+  "result_drive_id": "1qBJhCkehCeWfAmJHnb1Fae-c4rog_pV4lvNc35qamik",
+  "exploratory": true,
+  "execution": "JavaScript via GitHub connector; Python aggregation of emitted subject SSE; independent raw-data Python rerun pending",
+  "subjects": 39,
+  "training_trials_per_subject": 10,
+  "test_trials_per_subject": 5,
+  "total_test_trials": 195,
+  "models": {
+    "A": "training mean UpR",
+    "B": "OLS UpR~PR",
+    "C": "OLS UpR~PR+trial_index",
+    "D": "OLS UpR~PR+prior_UpR; extra online observation"
+  },
+  "sse": {
+    "A": 397.65000000000003,
+    "B": 182.22077750518537,
+    "C": 275.6816298043569,
+    "D": 173.18230472768664
+  },
+  "rmse": {
+    "A": 1.428016375687187,
+    "B": 0.9666775706861194,
+    "C": 1.1890130141065112,
+    "D": 0.9423982084124024
+  },
+  "subject_wins_vs_B": {
+    "C": 16,
+    "D": 19
+  },
+  "subject_losses_vs_B": {
+    "C": 20,
+    "D": 16
+  },
+  "subject_ties_vs_B": {
+    "C": 3,
+    "D": 4
+  },
+  "D_relative_sse_reduction": 0.04960176825741802,
+  "frozen_criterion": {
+    "min_sse_reduction": 0.05,
+    "min_subject_wins_exclusive": 20,
+    "passed": false
+  },
+  "conclusion": "No proof-grade M; not paper-worthy"
+}
