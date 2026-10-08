@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-08",
+  "component": "Eon Agent MCP project-specific file folders",
+  "status": "DEPLOYED_AND_VERIFIED",
+  "cloudflare_worker": "eon-mcp-agent",
+  "deployed_version_id": "800f8588-27c8-4875-a7a4-708180161a58",
+  "existing_mcp_only": true,
+  "existing_top_level_tools": [
+    "eon_device",
+    "eon_run",
+    "eon_catalog"
+  ],
+  "engine": "file_policy",
+  "actions": [
+    "list",
+    "get",
+    "add",
+    "set",
+    "remove",
+    "check",
+    "bind",
+    "unbind",
+    "current"
+  ],
+  "storage": "Existing Cloudflare EON_DB, per authenticated workspace; project_id+workspace_id composite key",
+  "source_on_eon_original": "G:\\My Drive\\Untitled folder\\agente M MCP server\\cloudflare-worker",
+  "documentation_on_eon_original": "G:\\My Drive\\Untitled folder\\agente M MCP server\\docs\\PROJECT_FILE_DESTINATIONS.md",
+  "runtime_knowledge": "%LOCALAPPDATA%\\EonMCP\\knowledge\\PROJECT_FILE_DESTINATIONS.md",
+  "source_sha256": "c1d9585cf0b208e3d190291d09a509e0414af5f24ce25656d486ebc7a67c6e9b",
+  "tests": "18/18 combined native Eon tests passed; 7/7 multi-project registry; 5/5 legacy single-folder guard; 6/6 cloud loop state machine",
+  "live_tests": [
+    "Authenticated Eon catalog file_policy returned nine actions",
+    "Authenticated Eon list returned 0 projects (no user folder invented)",
+    "Unconfirmed add rejected EXPLICIT_USER_CONFIRMATION_REQUIRED",
+    "Original office Eon Windows route recovered after Cloudflare deployment",
+    "Canonical original Eon source dry-run passed, bindings intact"
+  ],
+  "safety": [
+    "One preferred Windows folder per configured project",
+    "Multiple projects per Eon workspace",
+    "Never automatically infer ChatGPT Project identity from shared MCP account",
+    "Allow explicit project_id or per-chat user-authorized binding",
+    "Prompt user for move approval; no automatic file move or overwrite",
+    "Folder mappings are advisory and do not intercept non-Eon operations",
+    "No canonical scientific records modified by file preferences"
+  ],
+  "scientific_state": "AES v2 formal prospective comparative superiority remains untested; 0 decisive AES v2 trials; 0/6 competitor full fidelity. This feature is infrastructure not evidence.",
+  "next": "User can programmatically add/remove/set folders through existing Eon eon_run engine=file_policy; no need to choose any directory upfront."
+}
