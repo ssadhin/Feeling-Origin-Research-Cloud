@@ -1,0 +1,20 @@
+{
+  "status": "SOURCE_STRUCTURAL_SENTINELS_ONLY",
+  "commit": "36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9",
+  "checks": {
+    "EM_S01_four_phase_sources": true,
+    "EM_S02_four_phase_syntax": true,
+    "EM_S03_declared_four_phase_contract": true,
+    "EM_S04_explicit_evolution_opt_in": true,
+    "EM_S05_baseline_analyze_evolve_rerun": true,
+    "EM_S06_tool_proposals_not_autoapplied": true,
+    "EM_S07_serial_single_task_scope": true,
+    "EM_N01_mutation_detects_deleted_opt_in": true,
+    "EM_N02_mutation_detects_deleted_phase": true
+  },
+  "pass": 9,
+  "total": 9,
+  "behavioral_fidelity": "NOT_TESTED",
+  "real_model_calls": 0,
+  "decisive_benchmarks": 0
+}
