@@ -1,0 +1,43 @@
+{
+  "program": "Research #2",
+  "case": "Four-function virtual organism developmental science loop",
+  "classification": "exploratory_open_development_NOT_decisive",
+  "version": "0.1.0",
+  "date": "2026-10-08",
+  "workspace": "C:\\Users\\cholo\\Research2",
+  "device": "Office Laptop CHOLOSPEED using Eon Agent",
+  "runtime": "Office audit312 Python 3.12; Python standard library only",
+  "code_path": "Research-2/exploratory/virtual_organism_four_functions_v010.py",
+  "code_sha256_office": "377E7FA42DDCB0CA2ECAD61CC807082C361D2B8EBFE4CF949504265664BF0A3D",
+  "results_path": "Research-2/exploratory/virtual_organism_four_functions_v010_results.json",
+  "science_note_path": "Research-2/exploratory/four_function_literature_hypothesis_and_failure_map_20261008_v001.md",
+  "office_execution": {
+    "first_run_process_id": "proc_937fb52b9be145ed9897",
+    "rerun_and_self_test_process_id": "proc_09a16eb751eb4e7d96d3",
+    "both_exit_code": 0
+  },
+  "config": {
+    "horizon": 120,
+    "seeds_per_regime": 160,
+    "seed_offset": 42173,
+    "regimes": ["calm", "persistent", "volatile"],
+    "policies": ["maintenance", "instinct", "emotion", "emotion_report", "predictive", "emotion_no_memory"],
+    "same_exogenous_sequence_per_seed": true
+  },
+  "software_checks": {
+    "deterministic_world": true,
+    "report_only_noncausal": true,
+    "memory_ablation_detected": true,
+    "physiological_bounds": true,
+    "action_equivalence": true
+  },
+  "known_limits": [
+    "Predictive policy was supplied true Markov transition parameters and is not fair for overall superiority ranking",
+    "No human/animal ground truth",
+    "Functional reporter is not subjective feeling",
+    "Only one hand-designed open development benchmark family; no method tournament",
+    "No independent code implementation or neutral blinded defender evaluation"
+  ],
+  "research_2_aes_decisive_trials": 0,
+  "full_six_rival_research_method_fidelity_certified": 0
+}
