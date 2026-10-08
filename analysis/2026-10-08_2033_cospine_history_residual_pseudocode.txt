@@ -1,0 +1,12 @@
+# Reproduction pseudocode (not executable; exact numerical code retained in run artifact)
+# Pinned source: OpenNeuroDatasets/ds005883 037ed267e7f7f2024a5fe3d0e8fb4759f7f67bdd
+# Read PR, UpR from 15 pain events in each sub-02..sub-39 events.tsv.
+# For each subject, c=mean(UpR-PR) in first 3 trials.
+# For t=4..15: y=UpR_t, x=[PR_t,PR_(t-1),t,c,UpR_(t-1)-PR_(t-1)].
+# Train 02..25; test 26..39.
+# R0 uses x[:4], R1 uses x[:5].
+# Standardize using train mean and population SD, then beta=(X'X+0.001I)^-1 X'(y-mean(y)).
+# Predict with fixed train beta, compute test RMSE and subject-cluster bootstrap.
+# Bootstrap 2000, RNG numpy.default_rng(20261008), resample 14 subjects with replacement.
+# Permutation 1000, RNG numpy.default_rng(20261009), shuffle test x[4] within each subject.
+# Preserve exact numerical result in results/2026-10-08_2033_cospine_history_residual_oos_negative.md.
