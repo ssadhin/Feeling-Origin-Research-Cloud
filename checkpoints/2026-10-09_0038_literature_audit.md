@@ -1,0 +1,1 @@
+Literature audit: a 2026 ultrasound preprint is not proof of phenomenal affect. Sensory and cognitive preservation were not jointly demonstrated. No publication-ready finding.
