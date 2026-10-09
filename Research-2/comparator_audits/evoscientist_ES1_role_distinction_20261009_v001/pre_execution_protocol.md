@@ -1,0 +1,10 @@
+# Frozen before execution — ES-1 Role-distinction negative controls v001
+Date: 2026-10-09 Asia/Dhaka. Source audit under Research #2; NONDECISIVE, not a sealed AES trial.
+Official unmodified EvoScientist/EvoScientist pinned at 3b382b92b8fdad6e1f13467c382dcdd91d9b19d2.
+Goal: distinguish an actual original-source researcher/engineer role configuration from mere simultaneous file existence, and validate that the main agent builder routes the loaded roles as subagents.
+Test official EvoScientist.utils.load_subagents on original YAML folder (research.yaml and code.yaml). Require distinct named research-agent vs code-agent; distinct prompts; research-agent declares tavily_search and think_tool while code-agent declares think_tool but NOT tavily_search. Both have non-empty descriptions.
+AST audit of original EvoScientist.EvoScientist source requires both _build_base_kwargs and load_mcp_and_build_kwargs to call load_subagents, and each returns a dict with the "subagents" key from local symbol "subs". This is structural wiring, not execution.
+Negative/mutation controls in independent temp folder (no upstream edits): (1) omit code.yaml => fail ES-1 role gate, (2) replace code-agent system prompt with research-agent's system prompt => fail, (3) replace research-agent declared tools with code-agent tools => fail.
+Pass only if original source guard passes AND all three ablations are detected AND git remains clean at same commit; two fresh Python processes pass. If any mutation escapes or source role loader differs, fail; do not tune the same version after observing outputs.
+Recorded evidence: source SHA256, preprotocol hash, independent runner SHA256, run stdout/exit, source cleanliness. No Gemini or other provider calls.
+Claim limit: executable role config distinctions and main-agent assembler wiring only. NOT genuine model delegation, researcher -> engineer handoff, learning, task-level benefit, independent knowledgeable defender, or full EvoScientist fidelity. All six rivals remain active; AES v2 zero decisive trials. This is not a replacement for the genuine model-mediated task test blocked by GoogleModelNotFoundError.
