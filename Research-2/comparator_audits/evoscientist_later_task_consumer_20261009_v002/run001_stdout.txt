@@ -1,0 +1,3 @@
+﻿SENTINEL_RESULTS {"A_memory_on": {"action": "CALIBRATE_FIRST", "read_calls": 1, "search_hits": 1}, "B_memory_empty": {"action": "DIRECT_MEASUREMENT", "read_calls": 0, "search_hits": 0}, "C_irrelevant_negative": {"action": "DIRECT_MEASUREMENT", "read_calls": 0, "search_hits": 0}, "D_other_project": {"action": "DIRECT_MEASUREMENT", "read_calls": 0, "search_hits": 0}, "E_no_read": {"action": "DIRECT_MEASUREMENT", "read_calls": 0, "search_hits": 1}}
+.
+1 passed in 4.13s
