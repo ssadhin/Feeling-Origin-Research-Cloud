@@ -1,0 +1,32 @@
+{
+  "date_local": "2026-10-09",
+  "experiment": "model_consumer_v001",
+  "source_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "source_clean_before": true,
+  "protocol_sha256": "143172a7bd7bb838a489a6f09fd61f1182a24e372ab3a8fbd9f97c46971eda99",
+  "script_sha256": "8ffbe5d0af58b2b5749bb6a9697bdd134b49f1e51f6bf217d660413c02f5c1bd",
+  "model_requested": "gemini-2.5-flash-lite",
+  "provider": "google-genai",
+  "conditions": [
+    {
+      "name": "A_relevant_on",
+      "search_hits": 1,
+      "read_calls": 1,
+      "passed_memory_to_model": true,
+      "error_type": "GoogleModelNotFoundError",
+      "action": "PROVIDER_ERROR"
+    }
+  ],
+  "calls_attempted": 1,
+  "verdict": "BLOCKED_PROVIDER",
+  "model_class": "ChatGoogleGenerativeAI",
+  "source_clean_after": true,
+  "source_sha_matches": true,
+  "quota_after": {
+    "limit_per_hour": 10,
+    "used_in_window": 1,
+    "remaining_in_window": 9,
+    "reset_in_seconds": 3600
+  },
+  "elapsed_seconds": 2.23
+}
