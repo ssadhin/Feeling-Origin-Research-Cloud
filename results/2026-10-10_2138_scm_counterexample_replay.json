@@ -1,0 +1,15 @@
+{
+  "run_date_local": "2026-10-10 21:38 +06:00",
+  "kind": "synthetic_structural_causal_counterexample",
+  "source_file": "analysis/2026-10-10_2138_scm_report_bridge_counterexample.py",
+  "source_git_blob_sha": "532ef856deaf23abb2ce647bbca5bdc6a99a19e3",
+  "runner": "Python 3 local exact script replay",
+  "factorial_cells": 8,
+  "observables_identical": 8,
+  "apparent_forward_selectivity": true,
+  "apparent_reverse_selectivity": true,
+  "latent_affect_differs_when_z_equals_1": true,
+  "empirical_participant_n": 0,
+  "paper_worthy": false,
+  "note": "Counterexample to report-only inference, not evidence of phenomenal experience or unique M."
+}
