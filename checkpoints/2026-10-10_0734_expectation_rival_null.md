@@ -1,0 +1,2 @@
+# 2026-10-10 07:34
+Paingen expectation contrast: 230 families, slope 0.00370914156 per 50 expectation points; bootstrap 95% CI [-0.00218917505, 0.00976274092]; permutation p=0.146385; held-out skill -0.00186087. Negative result, no causal or phenomenal proof. Full result in Drive document 1yUCwADlxQ8sN74qScg5YOy-41xEp9PcXNGBfCFG0HCg. Source blobs 539a7bdeb9a324afc20d064a458979b43594c456 and 4ea9caf233d4e8f1cf8b975dd5e7c5bf1417998b.
