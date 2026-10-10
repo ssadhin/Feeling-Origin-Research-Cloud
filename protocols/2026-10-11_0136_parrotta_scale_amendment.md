@@ -1,0 +1,2 @@
+# NONBLIND AMENDMENT 2026-10-11 01:36+06
+After v1 freeze but before participant data, published eLife results showed VAS values around 51-62, incompatible with v1 assumption 0-10. V1 scale gate FAILS; retain it unchanged. For future trialwise analysis, normalize VAS/100 ONLY after independent confirmation of 0-100 scale in codebook/data. LIK 5-point normalize differences by /4; origin irrelevant for contrasts. All remaining v1 gates unchanged. Any analysis is exploratory, nonblind, not preregistered. No raw participant outcomes accessed.
