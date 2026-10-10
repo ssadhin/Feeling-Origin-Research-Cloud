@@ -1,0 +1,61 @@
+{
+  "status": "POST-PRIMARY, NONBLIND ANALYTIC SENSITIVITY; NO PROOF",
+  "sourceGitBlob": "447fff57c91fb5ff761449d98d93737e26b1236c",
+  "sourceResultPath": "results/2026-10-11_0237_parrotta_raw_matched_v2_negative.json",
+  "sample": {
+    "Intero": 34,
+    "Extero": 29
+  },
+  "formula": "D(c) = meanDeltaLIK/4 - c*(meanDeltaVAS/100); c=1 is original range-normalized comparison",
+  "zeroCrossingCalibration": {
+    "intero": 0.9174311926605504,
+    "extero": 0.8403361344537815,
+    "between": 0.9748022806694867
+  },
+  "calibration": [
+    {
+      "relativeIntensityCalibration": 0.7,
+      "interoD": 0.010455882352941176,
+      "exteroD": 0.002879310344827586,
+      "betweenD": 0.00757657200811359
+    },
+    {
+      "relativeIntensityCalibration": 0.8,
+      "interoD": 0.005647058823529408,
+      "exteroD": 0.0008275862068965502,
+      "betweenD": 0.004819472616632858
+    },
+    {
+      "relativeIntensityCalibration": 0.9,
+      "interoD": 0.0008382352941176396,
+      "exteroD": -0.0012241379310344858,
+      "betweenD": 0.0020623732251521254
+    },
+    {
+      "relativeIntensityCalibration": 1,
+      "interoD": -0.003970588235294122,
+      "exteroD": -0.0032758620689655182,
+      "betweenD": -0.0006947261663286033
+    },
+    {
+      "relativeIntensityCalibration": 1.1,
+      "interoD": -0.00877941176470589,
+      "exteroD": -0.005327586206896554,
+      "betweenD": -0.0034518255578093356
+    },
+    {
+      "relativeIntensityCalibration": 1.2,
+      "interoD": -0.013588235294117651,
+      "exteroD": -0.007379310344827587,
+      "betweenD": -0.006208924949290061
+    }
+  ],
+  "limitations": [
+    "No validated cross-scale psychometric mapping c",
+    "Crossings of point estimates do not imply significant effects",
+    "No confidence intervals for c != 1 without paired participant data and covariance",
+    "No objective sensory discrimination or reasoning/access reverse arm",
+    "No direct phenomenality measure or isolated mechanism M",
+    "Not an independent dataset; no manuscript-worthy proof"
+  ]
+}
