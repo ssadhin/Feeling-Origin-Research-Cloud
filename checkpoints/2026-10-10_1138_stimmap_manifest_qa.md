@@ -1,0 +1,4 @@
+Feeling Origin stimMAP metadata QA (2026-10-10)
+Pinned source canlab/stimMAP_2025@6c419ffc8a5d242b00ff95106aacb250365d3715.
+50 subjects; 2271 blobs: 1183 CSV and 1087 MAT and 1 README. Expected canonical CSV 1200; 1182 present, 18 absent, 1 noncanonical (session 3 sub40 sensations anterior instead of total). Calibration 144/150; pain 892/900; sensations total 146/150.
+No outcome-level causal analysis. Condition allocation unverified. Pain intensity and response time present in sampled CSV, but no independent thermal pain unpleasantness or reasoning endpoint. NOT PROOF. See frozen protocol commit c3b306f0e47895bd911034d5c8f308a1c69ed3cb.
