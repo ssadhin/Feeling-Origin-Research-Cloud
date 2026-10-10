@@ -1,0 +1,1 @@
+Nonblind source screen. Gil-Ugidos et al. 2026 DOI 10.1016/j.accpm.2025.101613: active tES changes reported pain intensity and unpleasantness. Published nonsignificant QST changes do not establish equivalence. No objective reasoning or reverse intervention in inspected sources; no raw data tested. No proof. Next: obtain independent raw data and freeze tests.
