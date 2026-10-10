@@ -1,0 +1,30 @@
+{
+  "run": "2026-10-10T07:34+06:00",
+  "status": "negative",
+  "source_blobs": [
+    "539a7bdeb9a324afc20d064a458979b43594c456",
+    "4ea9caf233d4e8f1cf8b975dd5e7c5bf1417998b"
+  ],
+  "source_rows": 4709,
+  "expectation_rows": 376,
+  "matched_pairs": 2075,
+  "families": 230,
+  "unmatched_groups": 23,
+  "nonfinite_groups": 180,
+  "missing_expectation_pairs": 88,
+  "mean_D": -0.0020770128395595482,
+  "slope_D": 0.0037091415615570205,
+  "slope_U": 0.02481969784010471,
+  "slope_I": 0.021110556278547677,
+  "permutation_p_one_sided": 0.1463853614638536,
+  "bootstrap_95": [
+    -0.002189175051041251,
+    0.009762740921435286
+  ],
+  "heldout_mse": 0.0005026967153562569,
+  "intercept_mse": 0.0005017629992759173,
+  "heldout_skill": -0.0018608707331688734,
+  "code_blob": "7c067b7fc6486186e83267218f2f10a6ded24b8e",
+  "replay": "committed logic reproduced in isolated V8 with GitHub connector source SHAs, in-memory hash check stubbed",
+  "proof_grade": false
+}
