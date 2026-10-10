@@ -1,0 +1,1 @@
+NONBLIND frozen gate 2026-10-11 01:36. Parrotta eLife 90013.3. Compare within-subject Faster vs Slower unpleasantness minus intensity, Intero vs Extero, at matched StimInt 2/3/4. Welch 95% CI, 10000 subject bootstrap seed 20261011. No proof of P or M.
