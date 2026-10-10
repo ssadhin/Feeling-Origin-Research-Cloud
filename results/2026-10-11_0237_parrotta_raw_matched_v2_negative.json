@@ -1,0 +1,175 @@
+{
+  "runDateLocal": "2026-10-11 02:37 +06",
+  "sourceGitBlob": "447fff57c91fb5ff761449d98d93737e26b1236c",
+  "analysisGitBlob": "f7ed62ab6d697648c90152da108a9f941bd6880a",
+  "classification": "NONBLIND EXPLORATORY NEGATIVE, NOT PROOF, NOT PAPER-WORTHY",
+  "results": {
+    "provenance": {
+      "repo": "EP171993/painperception",
+      "path": "Data_v3 - 2504.xlsx",
+      "expectedGitBlob": "447fff57c91fb5ff761449d98d93737e26b1236c",
+      "sourceBytes": 537743,
+      "zipEntries": 49,
+      "verifiedCrc": [
+        "xl/worksheets/sheet1.xml",
+        "xl/sharedStrings.xml"
+      ]
+    },
+    "qc": {
+      "trialRows": 1764,
+      "subjects": 63,
+      "subjectsInMultipleExp": 0,
+      "rowsPerSubject": [
+        28
+      ],
+      "likRange": [
+        1,
+        5
+      ],
+      "vasRange": [
+        1,
+        100
+      ],
+      "stimCounts": {
+        "1": 126,
+        "2": 504,
+        "3": 504,
+        "4": 504,
+        "5": 126
+      },
+      "exps": {
+        "Intero": {
+          "trials": 952,
+          "subjects": 34,
+          "feedbackCounts": {
+            "Congruent": 204,
+            "Slower": 204,
+            "Faster": 204,
+            "No Feedback": 340
+          },
+          "meanTrialFaster": 0.09400230680507494,
+          "meanTrialSlower": -0.001730103806228447,
+          "sessionCounts": {
+            "1": 340,
+            "2": 612
+          }
+        },
+        "Extero": {
+          "trials": 812,
+          "subjects": 29,
+          "feedbackCounts": {
+            "Congruent": 174,
+            "Slower": 174,
+            "Faster": 174,
+            "No Feedback": 290
+          },
+          "meanTrialFaster": 0.009803921568627394,
+          "meanTrialSlower": 0.049019607843137185,
+          "sessionCounts": {
+            "1": 290,
+            "2": 522
+          }
+        }
+      }
+    },
+    "eligibility": {
+      "minimumPerExperiment": 10,
+      "passed": true,
+      "matchedParticipants": {
+        "Intero": 34,
+        "Extero": 29
+      }
+    },
+    "primary": {
+      "Intero": {
+        "n": 34,
+        "meanD": -0.003970588235294118,
+        "meanUnpleasantness": 0.04411764705882353,
+        "meanIntensity": 0.048088235294117654,
+        "matchedStrata": 102,
+        "minStrata": 3,
+        "maxStrata": 3
+      },
+      "Extero": {
+        "n": 29,
+        "meanD": -0.0032758620689655174,
+        "meanUnpleasantness": 0.017241379310344827,
+        "meanIntensity": 0.020517241379310346,
+        "matchedStrata": 87,
+        "minStrata": 3,
+        "maxStrata": 3
+      },
+      "InteroMinusExtero": -0.0006947261663286007,
+      "bootstrapCI95": {
+        "Intero": [
+          -0.020294117647058824,
+          0.012598039215686273
+        ],
+        "Extero": [
+          -0.020977011494252875,
+          0.01431034482758621
+        ],
+        "InteroMinusExtero": [
+          -0.024670385395537522,
+          0.023550371872887076
+        ]
+      },
+      "permutationTwoSided": {
+        "Intero": 0.6513348665133487,
+        "Extero": 0.7381261873812619,
+        "InteroMinusExtero": 0.9578042195780422,
+        "caveat": "Exploratory exchangeability sensitivity, not guaranteed design-randomization p values"
+      }
+    },
+    "sensitivity": {
+      "strictWithinSession": {
+        "Intero": {
+          "n": 34,
+          "meanD": -0.003970588235294118,
+          "meanUnpleasantness": 0.04411764705882353,
+          "meanIntensity": 0.048088235294117654,
+          "matchedStrata": 102,
+          "minStrata": 3,
+          "maxStrata": 3
+        },
+        "Extero": {
+          "n": 29,
+          "meanD": -0.0032758620689655174,
+          "meanUnpleasantness": 0.017241379310344827,
+          "meanIntensity": 0.020517241379310346,
+          "matchedStrata": 87,
+          "minStrata": 3,
+          "maxStrata": 3
+        }
+      },
+      "includeStim1and5": {
+        "Intero": {
+          "n": 34,
+          "meanD": -0.003970588235294118,
+          "meanUnpleasantness": 0.04411764705882353,
+          "meanIntensity": 0.048088235294117654,
+          "matchedStrata": 102,
+          "minStrata": 3,
+          "maxStrata": 3
+        },
+        "Extero": {
+          "n": 29,
+          "meanD": -0.0032758620689655174,
+          "meanUnpleasantness": 0.017241379310344827,
+          "meanIntensity": 0.020517241379310346,
+          "matchedStrata": 87,
+          "minStrata": 3,
+          "maxStrata": 3
+        }
+      }
+    },
+    "limits": [
+      "NONBLIND published source; not independent replication",
+      "Range normalization not psychometric equivalence",
+      "No objective sensory discrimination equivalence",
+      "No reverse objective reasoning/access intervention",
+      "Feedback may change HR, salience, expectancy, valuation, sensory and report",
+      "No inference of phenomenal presence P from report"
+    ]
+  }
+}
