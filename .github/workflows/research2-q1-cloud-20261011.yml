@@ -1,0 +1,45 @@
+name: Research2 Q1 cloud source qualification 20261011
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-q1-cloud-20261011.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research2-q1-qualification-cloud-20261011
+  cancel-in-progress: false
+
+jobs:
+  source-native-development:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout isolated Research2 cloud branch
+        uses: actions/checkout@v4
+      - name: Configure original method Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Record compute hardware and controls
+        run: |
+          echo "RESEARCH_2_STAGE=Q1_DEVELOPMENT_NONDECISIVE"
+          echo "AES_DECISIVE_TRIALS=0"
+          echo "No external inference or provider secret access"
+          date -u
+          uname -a
+          nproc
+          free -m
+      - name: Run pinned original AI Scientist-v2 source behavior checks
+        run: python -B research2/qualification/ais_cloud_source_probe.py
+      - name: Preserve qualification receipts even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-ais-cloud-20261011
+          path: research2/qualification/output/
+          if-no-files-found: warn
+          retention-days: 14
