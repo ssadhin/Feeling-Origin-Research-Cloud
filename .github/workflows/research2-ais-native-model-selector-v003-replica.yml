@@ -1,0 +1,24 @@
+name: Research2 AIS native 3B v003 independent reproduction
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-ais-native-model-selector-v003-replica.yml
+permissions:
+  contents: read
+jobs:
+  independent-replica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent new VM repetition original exact source and Qwen 3B token ceiling 384
+        run: bash research2/qualification/run_ais_native_model_selector_v003_3b.sh
+      - name: Preserve independent receipt without editing first-run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-ais-native-3b-v003-second-independent-run
+          path: research2/qualification/output-ais-native-selector-v003/
+          retention-days: 14
+          if-no-files-found: warn
