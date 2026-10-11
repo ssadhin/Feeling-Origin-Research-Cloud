@@ -1,0 +1,1 @@
+2026-10-11 07:29 Asia/Dhaka: nonblind literature methods audit only. Mathematical paired CI halfwidth 0.619849 SDdiff at n=9, threshold n=32 for illustrative +/-0.30 SDdiff TOST. No proof. Script analysis/2026-10-11_0729_amygdala_equivalence_feasibility.py. Next: verify individual-level endpoint schema. No notification.
