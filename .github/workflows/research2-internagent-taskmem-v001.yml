@@ -1,0 +1,27 @@
+name: Research2 Q1 InternAgent native hybrid signed-memory guidance
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-taskmem-v001.yml
+permissions:
+  contents: read
+jobs:
+  original-internagent-taskmem:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original pinned TaskMemoryLayer local embeddings FAISS BM25 and negative control
+        run: bash research2/qualification/run_internagent_taskmem_native_v001.sh
+      - name: Preserve all original signed-guidance results, failures, model/version receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-internagent-native-taskmem-v001
+          path: research2/qualification/output-internagent-taskmem-v001/
+          retention-days: 14
+          if-no-files-found: warn
