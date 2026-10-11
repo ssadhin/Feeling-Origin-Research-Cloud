@@ -1,0 +1,24 @@
+name: Research2 Q1 no-key OpenAI-compatible metered model on GitHub CPU
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-local-model-api-v004.yml
+permissions:
+  contents: read
+jobs:
+  verify-metered-local-inference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove original llama.cpp OpenAI-compatible API and token metering
+        run: bash research2/qualification/run_local_openai_api_v004.sh
+      - name: Preserve original model hashes, returned usage IDs and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-local-model-openai-usage-v004-20261011
+          path: research2/qualification/output-local-server-v004/
+          retention-days: 14
+          if-no-files-found: warn
