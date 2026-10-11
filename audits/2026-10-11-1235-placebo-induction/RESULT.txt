@@ -1,0 +1,1 @@
+Synthetic rank audit: 16 study indicators plus one group label yield rank 16, not 17. Source-statistic arithmetic: t=-1.83 with df=409 implies two-sided p=0.06798, one-sided p=0.03399. No raw participant analysis. See Drive checkpoint for caveats.
