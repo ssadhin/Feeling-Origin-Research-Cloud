@@ -1,0 +1,24 @@
+name: Research2 Corrected Linux Source Audit v002
+on:
+  push:
+    branches: [research2-cloud-qualification-20261011-v001]
+    paths: [.github/workflows/research2-cloud-rl-v002.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest==8.4.2 PyYAML==6.0.2
+      - run: python research2/cloud_qualification/run_rl_original_cloud_v002.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-rl-cloud-v002
+          path: research2/cloud_qualification/artifacts/rl-original-suite-v002/
+          retention-days: 14
