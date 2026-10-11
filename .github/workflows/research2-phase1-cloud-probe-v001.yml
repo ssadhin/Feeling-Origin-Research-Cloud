@@ -1,0 +1,97 @@
+name: Research2 Phase1 Cloud Qualification Probe v001
+on:
+  push:
+    branches:
+      - research2-cloud-qualification-20261011-v001
+    paths:
+      - .github/workflows/research2-phase1-cloud-probe-v001.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: research2-cloud-qual-v001
+  cancel-in-progress: false
+jobs:
+  researchloop-original-source:
+    name: Pinned ResearchLoop original test-suite and UTF8 audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Save cloud host characteristics
+        run: |
+          mkdir -p research2/cloud_qualification/artifacts/rl-original-suite-v001
+          (uname -a; nproc; free -m; python --version) > research2/cloud_qualification/artifacts/rl-original-suite-v001/host.txt
+      - name: Install test harness dependencies (development only)
+        run: python -m pip install --disable-pip-version-check pytest==8.4.2 PyYAML==6.0.2
+      - name: Read-only original pinned source audit
+        run: python research2/cloud_qualification/run_rl_original_cloud_v001.py
+      - name: Publish reproducibility receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-rl-pinned-utf8-original-suite-v001
+          path: research2/cloud_qualification/artifacts/rl-original-suite-v001/
+          retention-days: 14
+          if-no-files-found: warn
+  ollama-cpu-feasibility:
+    name: Bounded Ollama real 3B CPU model feasibility (not scientific trial)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: CPU and memory declaration
+        run: |
+          mkdir -p research2/cloud_qualification/artifacts/ollama-cpu-v001
+          (uname -a; nproc; free -m; docker --version) > research2/cloud_qualification/artifacts/ollama-cpu-v001/host.txt
+      - name: Original 3B open-weight CPU runner with bounded predictions
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$PWD/research2/cloud_qualification/artifacts/ollama-cpu-v001"
+          cat > "$OUT/PREDECLARED_CONTRACT.txt" <<'EOF'
+          Research #2 Phase1 CPU feasibility / nondecisive; zero sealed trials.
+          No comparator fidelity PASS expected. CPU-only hosted runner.
+          Ollama runtime container model qwen2.5:3b, untrusted runtime image tag with recorded immutable image digest.
+          Positive: local health endpoint, local model completed, prompt_eval_count and eval_count >0, model ID and durations logged.
+          Negative: nonexistent model ID returns HTTP failure with nonzero HTTP response status.
+          On model pull failure mark BLOCKED, not success. Never upload model weights or API credentials.
+          EOF
+          docker pull ollama/ollama:0.12.9
+          docker image inspect ollama/ollama:0.12.9 --format '{{index .RepoDigests 0}}' > "$OUT/docker_image_digest.txt"
+          docker run --rm -d --name r2-ollama-cpu -p 127.0.0.1:11434:11434 ollama/ollama:0.12.9 > "$OUT/container_id.txt"
+          trap 'docker logs r2-ollama-cpu > "$OUT/docker_logs.txt" 2>&1 || true; docker stop r2-ollama-cpu >/dev/null 2>&1 || true' EXIT
+          READY=0
+          for i in $(seq 1 50); do
+            if curl --max-time 2 -fsS http://127.0.0.1:11434/api/version -o "$OUT/ollama_version.json"; then READY=1; break; fi
+            sleep 2
+          done
+          if [ "$READY" != 1 ]; then echo BLOCKED_HEALTH > "$OUT/verdict.txt"; exit 20; fi
+          timeout 480 curl --fail --silent --show-error --max-time 470 -H 'Content-Type: application/json' -d '{"name":"qwen2.5:3b","stream":false}' http://127.0.0.1:11434/api/pull > "$OUT/model_pull.json" || { echo BLOCKED_MODEL_PULL > "$OUT/verdict.txt"; exit 21; }
+          curl --fail --silent --show-error --max-time 160 -H 'Content-Type: application/json' -d '{"model":"qwen2.5:3b","prompt":"In one sentence, give one reason to preserve a failed scientific hypothesis for later falsification.","stream":false,"options":{"num_predict":64,"temperature":0,"num_ctx":1024}}' http://127.0.0.1:11434/api/generate > "$OUT/model_positive.json" || { echo BLOCKED_GENERATION > "$OUT/verdict.txt"; exit 22; }
+          NEG_STATUS=$(curl -s -o "$OUT/model_negative.json" -w '%{http_code}' --max-time 20 -H 'Content-Type: application/json' -d '{"model":"r2_nonexistent_model_000:latest","prompt":"test","stream":false}' http://127.0.0.1:11434/api/generate)
+          printf '%s\n' "$NEG_STATUS" > "$OUT/negative_http_status.txt"
+          python - "$OUT" <<'PY'
+          import json,sys,pathlib,hashlib
+          d=pathlib.Path(sys.argv[1])
+          j=json.loads((d/'model_positive.json').read_text())
+          neg=int((d/'negative_http_status.txt').read_text().strip())
+          fields={k:j.get(k) for k in ('model','done','total_duration','load_duration','prompt_eval_count','eval_count','eval_duration')}
+          passed=bool(j.get('done') and j.get('response') and j.get('prompt_eval_count',0)>0 and j.get('eval_count',0)>0 and neg>=400)
+          receipt={'experiment':'Research2 CPU Ollama 3B feasibility v001','scope':'development hardware proof only','model_requested':'qwen2.5:3b','observed':fields,'negative_http_status':neg,'positive_nonempty':bool(j.get('response')),'passed':passed,'hypothesis_quality_not_evaluated':True,'fidelity_certificates_added':0,'decisive_trials':0,'model_sha256_not_claimed':True}
+          (d/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          print(receipt)
+          if not passed: sys.exit(23)
+          PY
+          echo 'PASS_CPU_OLLAMA_FEASIBILITY_ONLY' > "$OUT/verdict.txt"
+      - name: Save cloud Ollama evidence, including blocked outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-ollama-real-cpu-3b-v001
+          path: research2/cloud_qualification/artifacts/ollama-cpu-v001/
+          retention-days: 14
+          if-no-files-found: warn
