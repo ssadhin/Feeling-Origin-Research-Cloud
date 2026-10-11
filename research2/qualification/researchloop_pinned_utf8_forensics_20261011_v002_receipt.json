@@ -1,0 +1,100 @@
+{
+  "project": "Research #2",
+  "phase": "qualification",
+  "audit_id": "R2_RL_PINNED_UTF8_SOURCE_FORENSICS_20261011_v002",
+  "date": "2026-10-11",
+  "repository": "plan-lab-szu/ResearchLoop",
+  "source_commit": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+  "archive_location": "Google-Drive-synced Home Laptop: Consciousness Formula Research/09_Checkpoints/R2_RL_PINNED_UTF8_SOURCE_FORENSICS_20261011_v002",
+  "experiment_type": "Read-only integrity audit; nondecisive; zero model/provider calls",
+  "prereg": "PREEXEC_PROTOCOL.md written before execution",
+  "result": {
+    "exit_code": 0,
+    "controls": "ASCII positive and FF-byte negative passed",
+    "source_clean_before": true,
+    "source_clean_after": true,
+    "scope": "Tracked .py/.yaml/.yml/.md/.txt files under tests/researchloop and docs/research/V0/reproduction and docs/research/V1",
+    "count": 100,
+    "valid_utf8": 90,
+    "invalid_utf8": 10,
+    "git_blob_matches_index": 100,
+    "test_files": 8,
+    "invalid_test_files": 2
+  },
+  "invalid_files": [
+    [
+      "docs/research/V0/reproduction/REPRODUCTION_LEDGER.yaml",
+      "0809eca0274390a4d14f23add38a02c3e808c214",
+      1590
+    ],
+    [
+      "docs/research/V0/reproduction/reproduction_targets.yaml",
+      "efa241c5a1b1ca8f7eef0f8556000f669a910d01",
+      489
+    ],
+    [
+      "docs/research/V0/reproduction/smoke_specs/AGENT_LABORATORY.yaml",
+      "a5107bc1ed638bb1cb7fe24825368eb45d0dec91",
+      322
+    ],
+    [
+      "docs/research/V0/reproduction/smoke_specs/AI_SCIENTIST_V2.yaml",
+      "c70874f8e799d87247a852e6e7fad6f62951c6fe",
+      331
+    ],
+    [
+      "docs/research/V0/reproduction/smoke_specs/PROVENANCE_ONLY.yaml",
+      "6fb94df20660107a37222bca897d3d17933e711f",
+      319
+    ],
+    [
+      "docs/research/V1/DIRECTION_ABSTRACT.md",
+      "04808d26e4d6efa67ba30c314e25180017cb3844",
+      152
+    ],
+    [
+      "docs/research/V1/PAPER_SCOPE.md",
+      "bf338bd3af466a20279a15140fcebf0fa6d974c6",
+      588
+    ],
+    [
+      "docs/research/V1/wiki/literature_notes.md",
+      "48807244cf75c2b83ad3ce385fdaa76d61ef9cce",
+      341
+    ],
+    [
+      "tests/researchloop/test_reproduction_registry.py",
+      "750284f776a4adf6a80fb8331c0cd47a21c34652",
+      1014
+    ],
+    [
+      "tests/researchloop/test_smoke_harness_contract.py",
+      "767a1c56b08380e5782e17c26b6b8d67d8fbcce8",
+      959
+    ]
+  ],
+  "artifact_sha256": {
+    "protocol": "9780A7E1A2872D976E4EFBF226EB1DB719C094792A0FB3ADDEB0780D4C6C5410",
+    "runner": "D761E0326A4B0FE57C9DEB654CBB524DAAF89620E95BDEB522BBF39C46F41349",
+    "receipt": "D6F159C6715F714FEF5DA2C1D64D65223C1D70745B628479327DC9CAC2A0BC1F",
+    "stdout": "9848A37422E15E0178FB698631F793AF966FAA417346FE16A79B5DF8DA1D3A29",
+    "exitcode": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+  },
+  "correction_history": "v001 (immutable) included binary assets; v002 preregistered text-only suffix restriction. v002 predicted 135/11 but actual 100/10; prediction mismatch preserved (excluded other nontext suffixes).",
+  "prior_tests": {
+    "all_8_original_files": "collection exit code 2, source decoding/parse errors",
+    "six_file_diagnostic": "26 passed, 9 failed; both exclude two invalid test files"
+  },
+  "interpretation": "Tracked pinned ResearchLoop blobs, not checkout changes, contain invalid UTF-8. This is a source snapshot testability BLOCKER and does not establish failure of full ResearchLoop RL1–RL5. No repairs made.",
+  "gates": {
+    "source_integrity": "PASS for verification",
+    "original_full_upstream_suite": "BLOCKED",
+    "researchloop_full_19C": "BLOCKED",
+    "six_independent_defender_certificates": "0/6",
+    "aes_parity": "OPEN",
+    "common_provider_resource_metering": "OPEN",
+    "prereg21": "NOT FROZEN",
+    "decisive_trials": 0,
+    "goal_resolved": false
+  }
+}
