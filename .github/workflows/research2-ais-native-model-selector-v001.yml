@@ -1,0 +1,24 @@
+name: Research2 Q1 original AIS native model-driven selector
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-ais-native-model-selector-v001.yml
+permissions:
+  contents: read
+jobs:
+  native-original-method:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute original journal function selector with credentialless real model
+        run: bash research2/qualification/run_ais_native_model_selector_v001.sh
+      - name: Preserve exact source hashes, API tool calls, token receipts and errors
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-ais-native-original-selector-v001
+          path: research2/qualification/output-ais-native-selector/
+          retention-days: 14
+          if-no-files-found: warn
