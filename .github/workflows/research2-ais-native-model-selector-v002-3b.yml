@@ -1,0 +1,24 @@
+name: Research2 AIS native selection model adequacy 3B v002
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-ais-native-model-selector-v002-3b.yml
+permissions:
+  contents: read
+jobs:
+  original-controller-model-adequacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute pinned AIS native tool decision with 3B stronger model
+        run: bash research2/qualification/run_ais_native_model_selector_v002_3b.sh
+      - name: Preserve full original-source native-selection, usage, model hash and negative results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-ais-native-model-3b-v002
+          path: research2/qualification/output-ais-native-selector-v002/
+          retention-days: 14
+          if-no-files-found: warn
