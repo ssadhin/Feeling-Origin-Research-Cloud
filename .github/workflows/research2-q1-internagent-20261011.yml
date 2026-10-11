@@ -1,0 +1,36 @@
+name: Research2 Q1 InternAgent cloud qualification 20261011
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-q1-internagent-20261011.yml
+
+permissions:
+  contents: read
+
+jobs:
+  internagent-pinned-original-memory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify compute context
+        run: |
+          echo "RESEARCH2_NONDECISIVE=true"
+          echo "MODEL_PROVIDER_USED=false"
+          date -u
+          nproc
+          free -m
+      - name: Test unchanged original InternAgent source-native memory
+        run: python -B research2/qualification/internagent_cloud_memory_probe.py
+      - name: Preserve complete result receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-internagent-cloud-20261011
+          path: research2/qualification/output-internagent/
+          if-no-files-found: warn
+          retention-days: 14
