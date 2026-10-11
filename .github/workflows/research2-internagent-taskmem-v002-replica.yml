@@ -1,0 +1,27 @@
+name: Research2 InternAgent task memory v002 independent reproduction
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-taskmem-v002-replica.yml
+permissions:
+  contents: read
+jobs:
+  independent-original-taskmem:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independently replay original pinned native memory signed guidance & reloaded index
+        run: bash research2/qualification/run_internagent_taskmem_native_v002.sh
+      - name: Archive separate second-run source-native memory and environment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-internagent-taskmem-v002-independent-replica
+          path: research2/qualification/output-internagent-taskmem-v002/
+          retention-days: 14
+          if-no-files-found: warn
