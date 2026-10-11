@@ -1,0 +1,6 @@
+{
+  "references_all_datasets": false,
+  "generalizes": true,
+  "bounded": false,
+  "acknowledges_negative": false
+}
