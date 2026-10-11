@@ -1,0 +1,24 @@
+name: Research2 open-weight CPU Qwen2.5-1.5B feasibility v003
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-local-openweight-smoke-v003.yml
+permissions:
+  contents: read
+jobs:
+  exact-hash-instruction-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source-hash verified no-key CPU final-answer test
+        run: bash research2/qualification/run_open_model_smoke_v003.sh
+      - name: Preserve model-hash, terminal output, failures and process receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-local-openweight-cpu-v003-20261011
+          path: research2/qualification/output-local-model-v003/
+          retention-days: 14
+          if-no-files-found: warn
