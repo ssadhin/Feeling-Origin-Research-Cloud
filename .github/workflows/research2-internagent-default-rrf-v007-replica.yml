@@ -1,0 +1,27 @@
+name: Research2 InternAgent default RRF adversarial independent replication
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-default-rrf-v007-replica.yml
+permissions:
+  contents: read
+jobs:
+  independent-negative-control-replica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Repeat original unchanged Q1 v007 hybrid score scale and negative failed-memory gate
+        run: bash research2/qualification/run_internagent_taskmem_native_v007.sh
+      - name: Preserve independent artifact and default safeguard failure evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-internagent-default-rrf-v007-second-independent-run
+          path: research2/qualification/output-internagent-taskmem-v007/
+          retention-days: 14
+          if-no-files-found: warn
