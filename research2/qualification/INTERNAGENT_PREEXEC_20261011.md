@@ -1,0 +1,8 @@
+# Research #2 Q1 — InternAgent GitHub cloud original-source memory sentinel PRE-EXECUTION
+Date 2026-10-11 Asia/Dhaka. Isolated nondecisive second GitHub Actions compute test; original legacy main branch untouched.
+
+Exact pinned upstream: InternScience/InternAgent@fa8c3eedfa9751d3752ea6eb49220b303ac2397d, source file `internagent/mas/memory/memory_manager.py`, verified upstream blob SHA1 `19445653f88b945d0fad8dcf5250c6e219f97b44` (git blob object). Fetch source from pinned GitHub raw file URL, verify computed Git blob SHA1, and import the exact unchanged file into Python via importlib, with no mocks or project source edits.
+
+Predetermined native tests: InMemoryMemoryManager records positive and negative hypotheses against separate sessions; list counts; deleting session drops only associated hypotheses; separate fresh instance has no previous records. FileSystemMemoryManager saves two histories in a temporary external task directory; new instance rereads the positive and negative records; deletion empties only relevant session. Check Python runtime and resource constraints, store machine-readable PASS/FAIL receipt in cloud artifact. The test has to fail if preservation or isolation is broken. No AI provider calls, no inference, no external benchmark tasks or secret access, no mutation of frozen source.
+
+Claims: only IA2 partial and memory persistence readiness. Does NOT certify full IA1–IA5 autonomous generation/verification/evolution/IdeaGraph memory or Research #2 tournament. Original six methods full 19C certificates remain 0/6 pending genuinely matched model/provider/tool metering and independent knowledgeable defender. AES v2 decisive trial count remains 0.
