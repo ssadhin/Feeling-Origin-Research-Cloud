@@ -1,0 +1,1 @@
+P14=704/1000; min P14_ALIAS_01=692/1000; max P14_ALIAS_31=751/1000; range=59/1000. 31 paired exact tests: nominal p<.05 count=1, Holm-adjusted p<.05 count=0. Replay, fixed cost, label-independent mutant each 1000/1000.
