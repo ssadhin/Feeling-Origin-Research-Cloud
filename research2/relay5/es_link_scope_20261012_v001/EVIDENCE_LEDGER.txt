@@ -1,0 +1,12 @@
+Research #2 Relay5 original EvoScientist relation-scope audit v001
+Date 2026-10-12 Asia/Dhaka; original source commit 3b382b92b8fdad6e1f13467c382dcdd91d9b19d2, observations/store.py blob 9294ecf238875e71722819a74cb67f331bbefe58.
+Pre-execution protocol was saved to canonical Drive before execution: 1mAPWPPsrg0teQEyxA8U4hpcA2h8CZ7-WE5ynRyBd4eY.
+Source-original function hashes FNV1a32: _resolve_related_observations 1be07cc5; _resolve_document_links d63b05a8.
+Synthetic project A reference to project B produced project-B summary in resolved relation metadata. 7/7 predeclared observations; 2 independent Python processes identical. Verdict FAIL_BOUNDED_CROSS_PROJECT_METADATA; synthetic stubbed source-component only, not real model/tool, no actual data exposure shown.
+SHA256 run_probe.py eacabbb9eaa159c2e4d4a0c62ae9977fca7948aaa54a5fac68b695ae489d2d2a
+receipt.json 5c72d084e5add3c252f552f6d66f86e350aa743e26eaec5926ea8fac5ef15e6d
+fixture.json 90701a1f1c161d8b0c5ec5b211e1ba17c47fa098ca162f2bf63bcb47c7480833
+replication.json 89393429db9b505680eb371048d6cd4d951671ef5ea9aa2665be871c7808ddf5.
+Canonical Drive verified status v019 1lwvgt1hC2DXwqQDN5tN5SwPv4yt7RcA1, results 1073jzqJnTUd1uacJkm7OUQ1kqaLbV-uG, full ZIP 1JU4U4E1igH98uAuUxws-RgJwDR5tazDu.
+No paid cloud/provider/model calls; prereg21 not frozen; 19C 0/6 full certificates; AES decisive trials 0; claim ceiling Level 0.
+Next: independent defender and native on-disk tool reproduction if unowned.
