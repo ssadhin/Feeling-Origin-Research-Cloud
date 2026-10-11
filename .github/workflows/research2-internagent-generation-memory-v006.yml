@@ -1,0 +1,27 @@
+name: Research2 InternAgent native causal memory v006 dependency isolation
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-generation-memory-v006.yml
+permissions:
+  contents: read
+jobs:
+  original-policy-memory-filter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original pinned Generation and Evolution agents, memory enabled disabled, complete native imports
+        run: bash research2/qualification/run_internagent_taskmem_native_v006.sh
+      - name: Preserve original source, score, errors, raw receipts and dependency versions
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-internagent-native-memory-v006
+          path: research2/qualification/output-internagent-taskmem-v006/
+          retention-days: 14
+          if-no-files-found: warn
