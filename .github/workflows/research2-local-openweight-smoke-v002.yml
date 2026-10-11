@@ -1,0 +1,26 @@
+name: Research2 local open-weight CPU inference feasibility v002
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-local-openweight-smoke-v002.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify-final-answer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate genuinely generated final sentence with no API key
+        run: bash research2/qualification/run_open_model_smoke_v002.sh
+      - name: Preserve exact model outputs and negative results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-local-openweight-cpu-v002-20261011
+          path: research2/qualification/output-local-model-v002/
+          retention-days: 14
+          if-no-files-found: warn
