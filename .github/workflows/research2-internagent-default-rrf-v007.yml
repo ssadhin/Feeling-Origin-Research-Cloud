@@ -1,0 +1,27 @@
+name: Research2 InternAgent default RRF score threshold adversarial v007
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-default-rrf-v007.yml
+permissions:
+  contents: read
+jobs:
+  source-native-default-score-bound:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test original default generation evolution negative safeguard and source permitted nondefault contrast
+        run: bash research2/qualification/run_internagent_taskmem_native_v007.sh
+      - name: Preserve all outcomes including source-native failure of default safeguard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-internagent-default-rrf-adversarial-v007
+          path: research2/qualification/output-internagent-taskmem-v007/
+          retention-days: 14
+          if-no-files-found: warn
