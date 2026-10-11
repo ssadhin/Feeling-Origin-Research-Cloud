@@ -1,0 +1,27 @@
+name: Research2 InternAgent original agent memory causal v004 deps
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-internagent-generation-memory-v004.yml
+permissions:
+  contents: read
+jobs:
+  source-original-agent-with-complete-native-dependencies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original source GenerationAgent and EvolutionAgent original memory ablation, dependencies versioned
+        run: bash research2/qualification/run_internagent_taskmem_native_v004.sh
+      - name: Preserve original source failures, genuine tool results and model-independent ablation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-internagent-generation-evolution-native-v004
+          path: research2/qualification/output-internagent-taskmem-v004/
+          retention-days: 14
+          if-no-files-found: warn
