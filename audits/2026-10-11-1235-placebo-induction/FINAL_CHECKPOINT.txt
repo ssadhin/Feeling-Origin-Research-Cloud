@@ -1,0 +1,1 @@
+Final checkpoint 2026-10-11: no proof, no new human analysis. The synthetic study-indicator rank result and the published bootstrap-vs-t arithmetic caveat are in RESULT.txt. Full analysis is stored in Google Drive document 1KLp6_Cx6nPjtWGjRiZtgdIziCVIKhqwJkThf-njYGcM. Next: inspect bootstrap implementation and independent randomized data.
