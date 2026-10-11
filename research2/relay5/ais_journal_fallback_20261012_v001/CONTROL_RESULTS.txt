@@ -1,0 +1,1 @@
+T1 B; T2 A; T3 B; T4 B; T5 A; T6 A; T7 None; T8 A; T9 A; T10 original hashes matched; T11 corrupted hash rejected. Eleven expected controls reproduced. Source pinned 96bd51617cfdbb494a9fc283af00fe090edfae48. Journal source method length 3519 FNV64 48d09e5c987ae2ea. Original metric.py blob e73f0c5fd811fd4417829aed163904b4ae90a14b. No provider calls. Full fidelity remains open.
