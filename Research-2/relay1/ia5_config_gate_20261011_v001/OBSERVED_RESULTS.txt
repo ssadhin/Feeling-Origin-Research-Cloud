@@ -1,0 +1,26 @@
+Observed raw test ledger — Research2 Relay1 IA5 2026-10-11.
+Pinned InternScience/InternAgent fa8c3eedfa9751d3752ea6eb49220b303ac2397d.
+Primary local Python run1 10 of 10 PASS. Primary local Python run2 10 of 10 PASS.
+T1 unique source should_evolve expression PASS
+T2 source guard does not check enabled flags PASS
+T3 stage IdeaGraph init lacks enabled flag PASS
+T4 launch MemoryModule honors long_memory.enabled PASS
+T5 config declares both enabled flags PASS
+T6 round2 interval1 source expression true with enabled true/false PASS
+T7 independent flag-gated mutant changes disabled outcomes PASS
+T8 interval0 round2 raises ZeroDivisionError PASS
+T9 library existence and imports are real preconditions PASS
+T10 full source agent was not executed PASS
+Initial attempt failed with IndentationError in locally constructed Python wrapper; corrected before both successful runs; source excerpt unchanged.
+Exploratory followup run1 and run2 both PASS all seven cases:
+both_enabled: original true, mutant true
+both_disabled: original true, mutant false
+prompt_disabled: original true, mutant false
+long_disabled: original true, mutant false
+missing_library: original false, mutant false
+no_import: original false, mutant false
+no_evolver: original false, mutant false
+No native full agent, no model calls, no actual prompt mutation observed. Full 19C 0/6, prereg21 not frozen, decisive trials 0.
+Source expression: should_evolve = (self.round_num > 1) and ((self.round_num - 1) % evolution_interval == 0)
+Source guard: if should_evolve and osp.exists(library_path) and LONG_MEMORY_AVAILABLE and PromptEvolver is not None:
+Next: source-native complete stage.load_task ablation under synthetic library and independent defender.
