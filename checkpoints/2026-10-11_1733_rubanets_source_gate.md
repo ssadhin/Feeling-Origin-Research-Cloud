@@ -1,0 +1,2 @@
+# Rubanets 2026 nonblind eligibility gate
+The open CC0 data DOI 10.57903/UJ/IPFZXX has raw CSV file 37961, README 37962, codebook 37963. We have not independently downloaded data or computed results. Preprint DOI 10.31234/osf.io/2hsbm_v1 already reports a null in anxiety plus conditioning arm relative to conditioning alone. This does not identify affect-specific M. Drive frozen protocol 1AY5UOEDrjiG8LtEjG2HPQVxSixibSz8atPU7C2R4LcA. NO PROOF.
