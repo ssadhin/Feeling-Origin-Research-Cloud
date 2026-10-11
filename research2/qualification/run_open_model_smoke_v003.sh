@@ -80,5 +80,5 @@ PY
 CODE=$?
 if [ "$CODE" -ne 0 ]; then exit "$CODE"; fi
 echo 'Development-only model inference; 19C full method fidelity NOT certified.' >> "$OUT/verdict.txt"
-echo 'Research2 nondecisive: provider-free CPU inference, model Qwen3.5-0.8B-Q4_0, NO full 19C behavior or AES decisive trial.' >> "$OUT/verdict.txt"
+echo 'Research2 nondecisive: provider-free CPU inference, model Qwen2.5-1.5B-Instruct-Q4_K_M, NO full 19C behavior or AES decisive trial.' >> "$OUT/verdict.txt"
 echo '== SUMMARY ==' && cat "$OUT/verdict.txt" && tail -c 900 "$OUT/model_stdout.txt" && echo
