@@ -1,0 +1,26 @@
+name: Research2 local open-weight CPU inference feasibility
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-local-openweight-smoke.yml
+
+permissions:
+  contents: read
+
+jobs:
+  one-local-model-development:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove inference via open Apache-2.0 model, no provider secrets
+        run: bash research2/qualification/run_open_model_smoke.sh
+      - name: Preserve input, hashes, full stdout/stderr and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-local-openweight-cpu-20261011
+          path: research2/qualification/output-local-model/
+          retention-days: 14
+          if-no-files-found: warn
