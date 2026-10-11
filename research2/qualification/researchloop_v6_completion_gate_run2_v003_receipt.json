@@ -1,0 +1,96 @@
+{
+  "AES_decisive_trials": 0,
+  "adverse_original_observation": {
+    "cited_evidence_exists": false,
+    "model_call_actual_billed_count": 0,
+    "pytest_exit_code_present": false,
+    "scripted_source_calls": 1,
+    "source_completion_claim": "completed",
+    "source_inferred_model_calls_field": 1,
+    "source_manifest_path": "G:\\My Drive\\Consciousness Formula Research\\RL_v003\\runs\\R2_Q1_COMPLETION_CONTROL_V003_run2\\RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z\\manifest.json",
+    "source_manifest_sha256": "afe01e49c7e466312fae454756850e998a94cb47816aac44f0c729b5a434d802",
+    "source_model_transport": "scripted external single-turn stub; original source ModelClient class chat method only replaced",
+    "source_original_oracle_diagnostics": {
+      "acknowledges_negative": false,
+      "bounded": false,
+      "generalizes": true,
+      "references_all_datasets": false
+    },
+    "source_report_model_generated": false,
+    "source_run_status": "completed"
+  },
+  "checks": [
+    {
+      "detail": "pin and source original worktree clean",
+      "sentinel": "ORIGINAL_PIN_CLEAN_BEFORE",
+      "status": "PASS"
+    },
+    {
+      "detail": "source-original full condition declares pytest/evidence contracts",
+      "sentinel": "ORIGINAL_FULL_CONDITION_REQUIRED_CONTRACT",
+      "status": "PASS"
+    },
+    {
+      "detail": "ADVERSE: source original full run_one says completed despite oracle-negative synthetic claim, no pytest result/evidence",
+      "sentinel": "SOURCE_ORIGINAL_REAL_RUN_COMPLETION_FALSE_POSITIVE_WITH_SCRIPTED_EXTERNAL_MODEL",
+      "status": "PASS"
+    },
+    {
+      "detail": "source original run_one correctly rejects simulated external provider failure",
+      "sentinel": "SOURCE_ORIGINAL_PROVIDER_ERROR_NEGATIVE_CONTROL",
+      "status": "PASS"
+    },
+    {
+      "detail": "source original dry-run does not claim completed nor invoke external client",
+      "sentinel": "SOURCE_ORIGINAL_DRY_RUN_NEGATIVE_CONTROL",
+      "status": "PASS"
+    },
+    {
+      "detail": "EXTERNAL NONORIGINAL diagnostic: correct contract would reject this artificial report",
+      "sentinel": "STRICT_EXTERNAL_GUARD_MUTATION_CONTROL_NONORIGINAL",
+      "status": "PASS"
+    },
+    {
+      "detail": "original-only generated outputs safely copied to Research2 archive and dedicated temporary subtree removed, file count=30",
+      "sentinel": "ARCHIVE_ORIGINAL_OUTPUTS_AND_REMOVE_DEDICATED_TEMP",
+      "status": "PASS"
+    },
+    {
+      "detail": "pin and source original worktree clean",
+      "sentinel": "ORIGINAL_PIN_CLEAN_AFTER",
+      "status": "PASS"
+    }
+  ],
+  "controlled_transport_calls": [
+    {
+      "kwargs": {
+        "temperature": 0.0
+      },
+      "mode": "scripted-model-boundary",
+      "model_requested": "qwen3.6-27b-nvfp4-262k",
+      "roles": [
+        "system",
+        "user"
+      ],
+      "text": "We conclude our method universally improves all datasets by 99% according to workspace/R2_CONTROL_NONEXISTENT_NO_EVIDENCE_20261011.csv. We successfully achieved this."
+    },
+    {
+      "mode": "forced-model-error"
+    }
+  ],
+  "fail": 0,
+  "original_git_sha": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+  "pass": 8,
+  "protocol_version": "v003-receipt-path-only",
+  "round": "run2",
+  "scientific_claim": "Original V6 run_one completion branch vulnerable under synthetic model-response fixture; NOT autonomous original model behavior or full method failure",
+  "scripted_report": "We conclude our method universally improves all datasets by 99% according to workspace/R2_CONTROL_NONEXISTENT_NO_EVIDENCE_20261011.csv. We successfully achieved this.",
+  "source_rival_full_19C_certified": false,
+  "source_sha256": {
+    "experiments/v6/harness/condition_matrix.yaml": "f37a269c664bbccb7dedc85de44cee0e9c39afd5bd1f39f6afc65b6a0632c8ff",
+    "experiments/v6/harness/model_client.py": "8f2231efb6aa77a745f5a007f03c8fa93d448af0b3f9e6cb422b5535dadc60cf",
+    "experiments/v6/harness/run_condition.py": "cb1d9cf0207b53560541c57bef2ee7aa3c71cef1c03d09f865cafb9bcc00ab93",
+    "experiments/v6/tasks/RTS11_ml_comparison/oracle.py": "0d2b8c0734eb817b0ca3bb5a22b474316a30d8e3a574b82d55ec911230db33ac"
+  },
+  "study": "Research2 Q1 V6 source-original completion admission, scripted model transport SOFTWARE CONTROL only"
+}
