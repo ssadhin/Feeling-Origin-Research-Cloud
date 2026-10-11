@@ -1,0 +1,27 @@
+{
+  "source_pin": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+  "A": {
+    "accuracy": 0.9,
+    "loss": 0.1
+  },
+  "B": {
+    "accuracy": 0.8,
+    "loss": 0.9
+  },
+  "metric_order_cases": [
+    [
+      "accuracy",
+      "loss"
+    ],
+    [
+      "loss",
+      "accuracy"
+    ]
+  ],
+  "directions": {
+    "accuracy": "maximize",
+    "loss": "minimize"
+  },
+  "dataset": "dev",
+  "final_equals_best": true
+}

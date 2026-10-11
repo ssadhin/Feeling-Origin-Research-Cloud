@@ -1,0 +1,1 @@
+Research2 Relay5 AIS Journal fallback nondecisive result. 2026-10-12. Source pin 96bd51617cfdbb494a9fc283af00fe090edfae48. T1-T11 11/11 controls. Mixed-direction dominated selection reproduced on source-original method excerpt. Full AIS 19C OPEN; no decisive trial.
