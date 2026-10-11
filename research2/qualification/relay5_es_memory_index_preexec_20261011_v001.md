@@ -1,0 +1,18 @@
+# Research #2 Relay 5 — EvoScientist native observation-index truncation / failed-history visibility (PRE-EXECUTION v001)
+Date: 2026-10-11 Asia/Dhaka. Development-only, independent of ResearchLoop V6 tests and sealed benchmark.
+Governance: Sources 00–04; canonical Research #2 status v010 (12Zgx1_kN3OnsuU9PA8ZWy3FpVpLmpiA-YU32UmFK7lw); 19C ES-2, ES-3, ES-4, ES-5; 19G/19H; prereg21 NOT FROZEN.
+Upstream author-original: EvoScientist/EvoScientist exact Git SHA 3b382b92b8fdad6e1f13467c382dcdd91d9b19d2. Read-only original modules EvoScientist.memory.observations.store, .index, and original search tool; source clean before/after.
+Question: Can bounded prompt-inline observation index hide an older failed research direction despite native storage and on-demand search remaining able to retrieve it? This tests ES-3/ES-4 exposure boundary, not scientific correctness, not autonomous agent use, and not whether AES wins.
+Two isolated synthetic project memory roots under new Relay5 checkpoint; no shared source/data or concurrent relays. Pair A: failed 'blinded spectral calibration' lesson recorded first; positive 'normalization anchor' lesson recorded second, separated >=1.1 seconds. Pair B: reverse order, with failed lesson recorded second. Both records are PROJECT-scoped to R2-ES-INDEX-A. Decoy project R2-ES-INDEX-B should not see them. No global memory. All input texts are synthetic and never contain sealed tasks.
+Predeclared decision procedure: for each pair, first build original index at max_inline_chars=100000, require both IDs. Scan integer caps 100..1999 in ascending order and choose the FIRST cap whose index contains the newest observation ID and excludes the older ID; save cap, full/capped index and candidate count. If no cap exists, classify BLOCKED_NO_BOUNDARY and preserve raw evidence. This is a boundary-finding characterization, not an optimization to improve AES.
+Expected controls:
+S1 original record_observation_file creates both observations in each isolated root; source unchanged.
+S2 generous inline index includes both positive and negative histories in each pair.
+S3 bounded index pair A contains NEWER success but excludes OLDER failure at first qualifying cap.
+S4 bounded index pair B contains NEWER failure but excludes OLDER success at first qualifying cap (recency reversal).
+S5 original create_search_observations_tool on same pair A project returns failed observation despite inline omission (on-demand recovery).
+S6 same search tool for unrelated project B does not return project A failure.
+S7 in-memory negative mutation of original index.list_observation_documents to empty yields no seeded IDs, proving the sentinel detects missing storage-to-index connection.
+S8 separate Python audit process checks source commit and clean status; output files, hashes, timing, and raw evidence saved.
+Adverse/NULL outcome: no selective omission, or missing on-demand recovery, is recorded exactly; do not repair method or cherry-pick test. If source env/provider/tool cannot execute, BLOCKED. Source method does not guarantee automatic retrieval; even if S3/S4 hold, this is a bounded visibility/resource issue, not whole-method ES-3/ES-4 failure.
+Run locally with existing evosci312 environment, original pinned import path, zero model/API calls, zero new GitHub Actions runs, zero paid provider costs. No direct source edits, no sealed data. Preserve preexec script hash, all source hashes, raw fixture records, full/capped indexes, search responses, logs, failure receipts and provenance. Commit results to this isolated Research2 branch and write a new Drive checkpoint; do not modify canonical v010 or frozen prereg21. Six 19C defender certificates remain 0/6; decisive AES trials 0.
