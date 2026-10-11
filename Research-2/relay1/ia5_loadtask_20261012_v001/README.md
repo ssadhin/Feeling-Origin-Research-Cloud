@@ -1,0 +1,1 @@
+Research #2 IA5 original-source method audit, 2026-10-12. Predeclared, nondecisive, no model calls. Full evidence in canonical Drive result and local reproducibility package. Pinned InternAgent fa8c3eedfa9751d3752ea6eb49220b303ac2397d.
