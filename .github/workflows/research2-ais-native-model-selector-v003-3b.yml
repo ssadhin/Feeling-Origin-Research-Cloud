@@ -1,0 +1,24 @@
+name: Research2 AIS native model selection 3B adequate output v003
+on:
+  push:
+    branches: [research2-qualification-cloud-20261011]
+    paths:
+      - .github/workflows/research2-ais-native-model-selector-v003-3b.yml
+permissions:
+  contents: read
+jobs:
+  original-ais-tool-completion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Original Journal function-call on pinned 3B with 384 maximum tokens
+        run: bash research2/qualification/run_ais_native_model_selector_v003_3b.sh
+      - name: Persist original upstream function call and negative controls
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research2-q1-ais-native-3b-v003
+          path: research2/qualification/output-ais-native-selector-v003/
+          retention-days: 14
+          if-no-files-found: warn
