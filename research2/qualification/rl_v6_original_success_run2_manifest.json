@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "run_id": "RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z",
+  "task_id": "RTS11_ml_comparison",
+  "condition_id": "full",
+  "seed": 1,
+  "temperature": 0.0,
+  "mode": "real-run",
+  "run_status": "completed",
+  "model_id": "qwen3.6-27b-nvfp4-262k",
+  "endpoint": "http://localhost:8000/v1",
+  "prompt_path": "experiments\\v6\\tasks\\RTS11_ml_comparison\\prompt.md",
+  "transcript_path": "runs\\R2_Q1_COMPLETION_CONTROL_V003_run2\\RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z\\transcript.json",
+  "report_artifact_path": "runs\\R2_Q1_COMPLETION_CONTROL_V003_run2\\RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z\\workspace\\comparison_report.md",
+  "oracle_audit_path": "runs\\R2_Q1_COMPLETION_CONTROL_V003_run2\\RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z\\oracle_audit.json",
+  "claims_path": "runs\\R2_Q1_COMPLETION_CONTROL_V003_run2\\RTS11_ml_comparison__full__seed1__t0.0__20261011T131549Z\\claims.json",
+  "completion_claim": "completed",
+  "oracle_audit": {
+    "references_all_datasets": false,
+    "generalizes": true,
+    "bounded": false,
+    "acknowledges_negative": false
+  },
+  "claims_count": 1,
+  "overhead": {
+    "wall_time_seconds": 0.629,
+    "model_calls": 1,
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "manual_intervention_count": 0
+  },
+  "operator_notes": []
+}
