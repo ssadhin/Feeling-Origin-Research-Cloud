@@ -1,0 +1,8 @@
+Research2 Relay5 EvoMaster collector result 2026-10-12 v001.
+Upstream sjtu-sai-agents/EvoMaster pin 36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9; collector blob 8dc739e0db3256d51ded0c12d534b752c1af465f. Original collect_trace_digest 4813-byte FNV64 efe4f995199ebcb8.
+Original source-exact function executed with synthetic JSON and neutral filesystem helpers.
+Observed LLM/tool/error counts: aggregate 3 steps in 1 entry = 1/1/0; same steps as 3 entries = 3/3/0; single step = 1/1/0; empty = 0/0/0; aggregate error on second step = 1/1/0; per-step second-step error = 3/3/1.
+Eight preregistered checks passed. Independent second Python process matched normalized receipt SHA256 1c1b4ffcecd30da5296c050c1c05f81cba771cd8971bdc63c43b72d8118658ef. Count-all-steps mutation detects 3/3 and second-step error.
+Classification BOUNDED_SOURCE_COMPONENT_FAIL_CONDITIONAL_NATIVE_PATH_OPEN. Native EvolutionManager path may only use per-step serialization; defender must adjudicate. No real LLM/tool calls, no sealed tasks, no full 19C certificate or superiority claim.
+Preexecution commit 959d41b86bd53c314db8a8151597a1807a644372. Full local ZIP SHA256 465a4e5350ccc8964e0388946665e84f5a83095831e32a52f1e9ffcff017c5a8. Canonical Drive ZIP upload blocked.
+Handoff Relay1: check pinned native run.py/Playground trajectory serializer and original collector under native dependencies. Gates unchanged: 19C 0/6, prereg21 not frozen, decisive AES trials 0, claim ceiling Level 0.
