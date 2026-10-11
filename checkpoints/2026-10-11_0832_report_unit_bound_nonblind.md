@@ -1,0 +1,4 @@
+2026-10-11 08:32 Asia/Dhaka. NONBLIND mathematical audit, not empirical evidence.
+Amygdala ultrasound preprint DOI 10.64898/2026.09.18.26363360 reports nine complete crossover pairs and spontaneous mood reports p<0.001. If these were nine independent matched binary participant-level outcomes, exact McNemar minimum two-sided p=0.00390625 and one-sided p=0.001953125. Hence its reported p-value must NOT be attributed to this specific test without verifying the paper's statistical method and observation unit. Other analyses may be valid. Prior art: exact paired-binomial McNemar. No participant-level data accessed, no proof.
+P presence, S felt affect, V valuation, B bodily, N sensory, R report, A access, C metacognition, Q reasoning separate. Ownership not required. No identified M or causal double dissociation.
+Next: obtain original event coding and test specification; preserve all earlier nulls. NO NOTIFICATION.
