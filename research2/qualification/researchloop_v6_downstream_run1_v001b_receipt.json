@@ -1,0 +1,141 @@
+{
+  "AES_decisive_trials": 0,
+  "checks": [
+    {
+      "evidence": "pinned original repo clean",
+      "name": "ORIGINAL_SOURCE_PIN_CLEAN_PRE",
+      "status": "PASS"
+    },
+    {
+      "evidence": "staged 30 immutable original files with bytewise SHA256 parity outside source repo",
+      "name": "STAGE_BYTE_EXACT_SOURCE_ORIGINAL_MANIFESTS",
+      "status": "PASS"
+    },
+    {
+      "evidence": "native ORIGINAL downstream V6 audit correctly detects universal overclaim from upstream false-completion manifest",
+      "name": "NATIVE_DOWNSTREAM_DETECTS_OVERGENERALIZATION",
+      "status": "PASS"
+    },
+    {
+      "evidence": "original auditor regards missing/DRY-RUN controlled outputs incomplete, counts no supported claims",
+      "name": "NATIVE_PROVIDER_ERROR_AND_DRYRUN_INCOMPLETE",
+      "status": "PASS"
+    },
+    {
+      "evidence": "native original auditor rejects deliberately MISSING REPORT file in isolated mutated staging, archived source unaffected",
+      "name": "NATIVE_STAGED_REPORT_MISSING_NEGATIVE_CONTROL",
+      "status": "PASS"
+    },
+    {
+      "evidence": "original audit_run exposes diagnostics, DOES NOT override upstream completion_claim or produce pytest verification",
+      "name": "DOWNSTREAM_SCOPE_NO_COMPLETION_OVERRIDE",
+      "status": "PASS"
+    },
+    {
+      "evidence": "all original files unchanged, entire archived original result unchanged byte-for-byte",
+      "name": "ORIGINAL_ARCHIVES_AND_SOURCE_CLEAN_POST",
+      "status": "PASS"
+    }
+  ],
+  "evidence": {
+    "external_stage_root": "G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_RL_V6_DOWNSTREAM_20261011_v001b\\stage_run1\\runs\\R2_Q1_COMPLETION_CONTROL_V003_run1",
+    "manifest_seeds": [
+      1,
+      2,
+      3
+    ],
+    "native_downstream_completed_success": {
+      "claim_labels": [
+        {
+          "claim_text": "We conclude our method universally improves all datasets by 99% according to workspace/R2_CONTROL_NONEXISTENT_NO_EVIDENCE_20261011.csv.",
+          "has_trace": true,
+          "label": "overgeneralizes"
+        }
+      ],
+      "condition_id": "full",
+      "has_baseline_drift": false,
+      "has_causation": false,
+      "has_cross_contamination": false,
+      "has_failure_misclassification": false,
+      "has_mock_leakage": false,
+      "has_overgeneralization": true,
+      "has_source_abuse": false,
+      "incomplete_execution": false,
+      "run_id": "RTS11_ml_comparison__full__seed1__t0.0__20261011T131541Z",
+      "seed": 1,
+      "supported_count": 0,
+      "task_id": "RTS11_ml_comparison",
+      "temperature": 0.0,
+      "total_claims": 1,
+      "unsupported_count": 0
+    },
+    "native_downstream_missing_report_control": {
+      "claim_labels": [],
+      "condition_id": "full",
+      "has_baseline_drift": false,
+      "has_causation": false,
+      "has_cross_contamination": false,
+      "has_failure_misclassification": false,
+      "has_mock_leakage": false,
+      "has_overgeneralization": false,
+      "has_source_abuse": false,
+      "incomplete_execution": true,
+      "run_id": "RTS11_ml_comparison__full__seed1__t0.0__20261011T131541Z",
+      "seed": 1,
+      "supported_count": 0,
+      "task_id": "RTS11_ml_comparison",
+      "temperature": 0.0,
+      "total_claims": 0,
+      "unsupported_count": 0
+    },
+    "native_downstream_negative_2": {
+      "claim_labels": [],
+      "condition_id": "full",
+      "has_baseline_drift": false,
+      "has_causation": false,
+      "has_cross_contamination": false,
+      "has_failure_misclassification": false,
+      "has_mock_leakage": false,
+      "has_overgeneralization": false,
+      "has_source_abuse": false,
+      "incomplete_execution": true,
+      "run_id": "RTS11_ml_comparison__full__seed2__t0.0__20261011T131542Z",
+      "seed": 2,
+      "supported_count": 0,
+      "task_id": "RTS11_ml_comparison",
+      "temperature": 0.0,
+      "total_claims": 0,
+      "unsupported_count": 0
+    },
+    "native_downstream_negative_3": {
+      "claim_labels": [],
+      "condition_id": "full",
+      "has_baseline_drift": false,
+      "has_causation": false,
+      "has_cross_contamination": false,
+      "has_failure_misclassification": false,
+      "has_mock_leakage": false,
+      "has_overgeneralization": false,
+      "has_source_abuse": false,
+      "incomplete_execution": true,
+      "run_id": "RTS11_ml_comparison__full__seed3__t0.0__20261011T131543Z",
+      "seed": 3,
+      "supported_count": 0,
+      "task_id": "RTS11_ml_comparison",
+      "temperature": 0.0,
+      "total_claims": 0,
+      "unsupported_count": 0
+    },
+    "original_archive_root": "G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_RL_V6_COMPLETION_RUNTIME_20261011_v001\\archive_v003_run1",
+    "staged_file_count": 30
+  },
+  "fail": 0,
+  "original_RL1_RL5_full_certified": false,
+  "original_audit_sha256": "a5de92c61d11dd4177a20fa28e42bf3420604fdf7a60ef28363906ba668ecbcf",
+  "original_commit": "7e0a4fbe0cf646f4c859b6d20e46870d73abb11a",
+  "pass": 7,
+  "program": "Research2 Q1 NONDECISIVE V6 SOURCE ORIGINAL audit_run via EXTERNAL root-rebased staging of SCRIPTED model-control archived reports",
+  "round": "run1",
+  "source_model_chat_scripted_not_billed": true,
+  "staging_adapter": "REPO_ROOT reassigned to isolated external bytewise copy, original audit_run unchanged"
+}
