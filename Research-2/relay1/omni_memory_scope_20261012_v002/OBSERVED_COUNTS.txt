@@ -1,0 +1,8 @@
+Research #2 Relay 1 | OmniScientist original verifier memory scope and strict acceptance | 2026-10-12
+Pinned original verify.py Git blob d2f31134d3836e88989de479fadfcd3308e7fc26, acceptance.py 09c0073f60e51ac31638f00a959fbb8d45b86bae.
+Initial v001: 9/11, failed T06/T10, preserved.
+Corrected source-contract v002: 15/15 per independent process x2, byte-identical raw SHA256 62cafd0670e7bfeece9c9a8eacae1737fe07470b82eead310f3010fcd26f3a62; independent verifier 17/17.
+T01 accepted true issues0; T02 B-only unsupported memory included in A audit issues1; T03 accepted true despite issue; T04 memory audit disabled issues0; T05 grounded B memory issues0; T06 A supported+unsupported accepted true issues2; T07 contradicted rejected; T08 B note ignored; T09 whole workspace includes both; T10 warn accepted without notes at threshold; T11 counterfactual strict-memory rejects; T12 A one supported/two unsupported rejected; T13 A two supported/one unsupported accepted; T14 combined B unsupported memory and A unsupported claim accepted issues3; T15 threshold sensitivity .75 rejects (diagnostic only).
+No full native ResearchStore, CLI, model, defender, sealed or decisive evaluation. 19C six rivals 0/6; prereg21 not frozen; decisive trials 0.
+Canonical Docs: protocol 14Eie9By4BG5vxTKbMDMW8l3wtE5jXsq5hl4bXtDoaK4; amendment 1jcL7J9DRtvLQeFGsKYg5cFgQkuNkkTZyV25U1xLRNNE; results 1af-y9t89qkK2QH50THshbRLqvCv4wLB39ad1J0u4080; raw compact 1tbIpFJsR4nOPyESjGy1ly2cDTNX8d7lYdmpKDo2M7ok.
+Archive SHA256 48d1496dceb159a00464f92b4e314f3afd25849999fba99768a39cd376086ef0.
