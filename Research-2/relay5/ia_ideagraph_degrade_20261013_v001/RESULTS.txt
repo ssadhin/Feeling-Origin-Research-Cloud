@@ -1,0 +1,16 @@
+RESEARCH #2 RELAY5 IA IdeaGraph v056L BOUNDED RESULT (2026-10-13 Asia/Dhaka)
+GOVERNING: canonical v055A read; v037 unchanged. PREEXEC Git commit 9007039ef2244b089140f4355989f841563d379e verified before execution. Original official source InternScience/InternAgent@fa8c3eedfa9751d3752ea6eb49220b303ac2397d; long_memory.py Git blob 272fbb7a3dcbff7bf4cdcbae8821fc44336494a4.
+SCOPE: Manually transcribed original IdeaGraph.retrieve_related_ideas and PromptEvolver._calculate_exploration_score with networkx and synthetic Chroma adapter, not full native module or real model. No source edits.
+RESULT: two fresh Python processes PYTHONHASHSEED=11 and 97 each 12/12 predeclared assertions PASS. Independent receipt verifier 10/10. runner.py SHA256 84dd0bae85fa4c63a38d4d3fb584d40f853801d16b3954bc8aa9c012e617f52c. Receipts SHA256 11:2a36550ad4c2d6924440a26dba4815f05b652780851174ee3a7494ed5a450203; 97:9e78e807a4e90b8be834a064af6d2ea8ac74933490438be7a710424a0b3c624d. Normalized scientific receipt SHA256 714589db75b3281a8bcc65940e544a2bbbc1c1882a1c7b396d6d666052ec1f68.
+OBSERVATIONS:
+- absent IdeaGraph => neutral 0.5 reason no_graph.
+- IdeaGraph present but Chroma collection None => retrieval [] and score 0.0 reason no_similar_ideas, same as genuinely novel no-hit query. Exception-raising Chroma query likewise yields score 0.0.
+- graph nodes A,B with edge and one cluster; valid query A => score 1.0.
+- vector results A,ghost1,ghost2 while graph only A,B => retrieval includes two orphan IDs, related_count4/graph_size2, exploration score 1.6. Membership-filter mutant returns 1.0. Neutral-unavailable mutant returns 0.5.
+- empty task correctly scores 1.0.
+POSTEXEC SOURCE CONTEXT: Original evolve_prompt selects min(exploration_score) from generated candidates; this supports potential ranking relevance, but actual native ranking and autonomous model behavior were NOT executed or verified.
+CLASSIFICATION: BOUNDED_SOURCE_DERIVED_IA_IDEAGRAPH_DEGRADED_RETRIEVAL_AND_ORPHAN_SCORE. Conditional software behavior, not native 19C IA1-IA5 method failure. Orphan vector IDs require out-of-sync collection/graph state; actual ordinary reachability unverified. Tool/model unavailability was simulated and does not prove real failure rate.
+COST: zero provider calls, zero external autonomous tools, no sealed benchmarks, no unapproved cloud spend.
+FAILURE/PROVENANCE: no assertion failures; first Drive preexec content write and parent move were blocked, later short insertion and addParents succeeded. Remote Git PREEXEC is the prospective registration authority. Independent defender absent. No AES win/tie/loss inferred.
+NEXT for Relay1 :36: check ownership; if unowned, independent native InternAgent IdeaGraph/PromptEvolver lifecycle test with Chroma collection absent, query exception, empty genuine collection, persisted graph/vector divergence and ranking, plus verified model/tool accounting. If owned, choose distinct read-only 19C audit. Preserve original source and do not rerun this stub fixture.
+GATES: full six 19C certificates 0/6; AES A1-A4 blocked; P14/P15 parity open; equal capable provider/tools open; prereg21 NOT FROZEN; affect-v004 sealed; decisive AES trials 0; claim ceiling Level0; GOAL_RESOLVED NO.
