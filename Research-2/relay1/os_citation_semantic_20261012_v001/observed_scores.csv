@@ -1,0 +1,10 @@
+case,score,class
+aligned,1.0,supported
+negation,1.0,supported
+direction_reversal,0.6666666666666666,supported
+magnitude_mismatch,0.8,supported
+unrelated,0.0,unsupported
+contradictory_union,1.0,supported
+empty_claim,1.0,supported
+empty_evidence,0.0,unsupported
+case_punctuation,1.0,supported
