@@ -1,0 +1,1 @@
+Offline source-derived test: 11/11 twice. Independent receipt checker: 16/16. Four executable comparison checks passed. Raw SHA256 f7b2134f0bb140c6668629d70b69b6976d33c0f71ac1565afbd4f8e96ab7fd43. Native application and defender certification not performed.
