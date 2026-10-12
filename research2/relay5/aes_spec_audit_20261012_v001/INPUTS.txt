@@ -1,0 +1,1 @@
+Inputs: AES original Markdown commit e8a2d5fc699336d658ea8196ab9d9f4ccdd5c331. Check Stage1 claim gate; Stage3 ancestor/equivalence; Stage6 two no-new rounds; Stage4 conditional escalation. Delete each defining clause for four negative mutations. Compare frozen P14/P15 schedule as negative controls. All static predicates as expected. No executable behavior tested.
