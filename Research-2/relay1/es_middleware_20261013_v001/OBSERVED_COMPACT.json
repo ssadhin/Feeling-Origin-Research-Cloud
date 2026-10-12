@@ -1,0 +1,28 @@
+{
+  "experiment": "Research2_Relay1_ESMiddleware_20261013_v001",
+  "date": "2026-10-13",
+  "pinned_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "middleware_blob": "b2acc852132c758656fd9b5703920876ecf486d7",
+  "scheduler_blob": "32720fd2cb706cacc9297e79cf0f628ac5d660a0",
+  "runs": [
+    {
+      "passed": 16,
+      "total": 16
+    },
+    {
+      "passed": 16,
+      "total": 16
+    }
+  ],
+  "raw_sha256": "41d54037098d3648ae867f6b448ae05ebb94bd3e31d0da7256f188b69cbdf51a",
+  "independent_verification": {
+    "passed": 18,
+    "total": 18
+  },
+  "mutations": {
+    "detected": 4,
+    "total": 4
+  },
+  "limitations": "Original two modules executed with offline dependency shims, not full native agent, no 19C certification, no tournament",
+  "protocol_canonical_id": "1cE_zptOizILpsmgJNAIcp3Xesc_cktAetdu_8Dft_Is"
+}
