@@ -1,0 +1,1 @@
+Research1 TRAIN source-excerpt audit 2026-10-12. 2200 worlds, 400 generation-required. A=343 B=327 C=343 D=344 recoveries. B/A discordant=82; C/A equal=2200; D/B discordant=97. No AES decisive trials. Full evidence SHA256 cc5114905202161ae9c42b4fcf427363e591537395cc66cae9a63a0ada12ff02. Bounded, not full original native import.
