@@ -1,0 +1,20 @@
+RESEARCH #2 — Relay5 v065L PROSPECTIVE BOUNDED PROTOCOL — 2026-10-13 Asia/Dhaka
+Scope: InternAgent-1.5 IdeaGraph -> PromptEvolver selection, NOT decisive benchmark and NOT independent 19C certification.
+Governing canonical status v064A (Relay1 AIS save_run), readiness v037, prereg21 NOT FROZEN. Avoid Relay1 AIS ownership. Previous Relay5 v056L only scored candidates; this tests downstream candidate selection and output persistence with a fixed offline generator.
+Official pinned original source: InternScience/InternAgent commit fa8c3eedfa9751d3752ea6eb49220b303ac2397d, internagent/mas/memory/long_memory.py Git blob 272fbb7a3dcbff7bf4cdcbae8821fc44336494a4. Source sections: IdeaGraph.retrieve_related_ideas lines 187+, PromptEvolver._calculate_exploration_score lines 480+, PromptEvolver.evolve_prompt lines 560+. This is a manually transcribed source-derived integration harness, not native import. Its limited fidelity must be explicitly labeled.
+Test fixed candidate order: A = familiar idea, B = novel idea. Synthetic healthy graph contains 2 nodes in one cluster; healthy retrieval returns 2 related IDs for A, none for B. Degraded retrieval returns [] for both (collection unavailable or query failure). All cases use identical candidate strings and fake model outputs, no paid inference.
+Predictions:
+T01 healthy retrieval -> select B (lower score 0 vs A 1).
+T02 Chroma collection unavailable -> both score 0; select first A, labeled no_similar_ideas (not no_graph).
+T03 Chroma query exception caught -> same first A, no_similar_ideas.
+T04 no IdeaGraph -> both score 0.5; select A, no_graph.
+T05 reverse order in degraded state -> select B; demonstrates tie order effect.
+T06 healthy swapped order -> select B; verifies novelty choice independent of ordering.
+T07 one generator failure A -> B selected if B succeeds, output persisted.
+T08 both generators fail -> RuntimeError; no output persisted.
+T09 independent strict availability-aware mutation -> abstain / BLOCKED on unavailable memory, not falsely infer novelty.
+T10 graph retrieval healthy for both with same related count -> first candidate wins; tie control.
+Record exact scores, candidate IDs, outputs, resource counters, errors. Two independent subprocess runs must match normalized receipts; any disagreement is FAIL.
+Methodology claim: only bounded source-derived behavior; no full native dependencies, actual model generation, external tool execution, knowledge defender, resource-balanced trial. Do not treat synthetic PASS as source-original methodology PASS. Record failed predictions and actual observations without retuning.
+Resources: zero paid provider calls, two fake generated candidates per valid case; memory tool simulated. No sealed tasks. Effects of real autonomous tools and model constraints UNMEASURED, except simulated failure arm.
+No source/data mutation shared with other relays. Preserve only in isolated Research2 branch and additive canonical Drive docs; never alter prereg21 or affect-v004.
