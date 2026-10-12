@@ -1,0 +1,6 @@
+Two independent offline runs: 14/14 each.
+Independent verification: 16/16 each.
+Mutation detections: 4/4.
+Raw SHA256: 90d11ba8200a31610eb850e6118a072df870d2cbf63792c1ec8f3cac7547ca59
+Complete ZIP SHA256: 36db3cbe964f18b2c25b9ce0ba0fd52426d11320e0830d88aa64b0d8c6244121
+No sealed evaluation or decisive tournament.
