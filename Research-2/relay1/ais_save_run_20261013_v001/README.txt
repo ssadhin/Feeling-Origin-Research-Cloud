@@ -1,0 +1,1 @@
+Nondecisive original-source persistence audit. Predecessor v063L. Prospective 11/12 with C05 failure preserved. Raw SHA256 5a301db62caf3943b4dcaf40b024a5ec8fcccafef1914f937e7f934e95f3bfed. No decisive tournament.
