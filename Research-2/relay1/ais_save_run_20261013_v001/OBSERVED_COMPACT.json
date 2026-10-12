@@ -1,0 +1,17 @@
+{
+  "predecessor": "v063L",
+  "upstream": "SakanaAI/AI-Scientist-v2",
+  "pin": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+  "callback_blob": "7779630b31b5d20f87da35bf13ead89e0953a4ac",
+  "save_blob": "aaeba6780fb978ddfa3f8cf7101ec28740821f51",
+  "prospective": "11/12 PASS",
+  "failed_case": "C05 expected save_run lookup failure but earlier callback lookup failed",
+  "posthoc": "C13 and C14 PASS",
+  "mutations": "3/3",
+  "receipt": "15/15",
+  "raw_sha256": "5a301db62caf3943b4dcaf40b024a5ec8fcccafef1914f937e7f934e95f3bfed",
+  "mixed_version": "C11 old journal/new progress",
+  "false_success": "C02-C04,C07-C09 printed Run saved without complete persistence",
+  "full_native": false,
+  "decisive_trials": 0
+}
