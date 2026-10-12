@@ -1,0 +1,10 @@
+# Research #2 Relay5 status amendment v023 (GitHub-verified; Drive canonical move pending)
+Date 2026-10-12 Asia/Dhaka. Predecessor canonical v022.
+Sources 00-04, 19C/19G/19H, prereg21, failure and result ledgers reviewed. No other relay experiment duplicated.
+New nondecisive original-method-excerpt test: EvoMaster @ 36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9. Preexec commit eef3f6cae5da9b8ea0e676bcb501376a66575093, result commit 777f7b6a63da6f052665a5f6e9e99dbc620b74f0. Two Python executions 6/6 checks, receipt SHA256 ac8c357e529d1b576cbf4bfd2c75cba8924fd727eb6085802c517117a5e027de.
+Synthetic A and B same-process interleave: A's step misrouted to B trajectory file and labeled B exp; reverse also misroutes. Per-agent-class mutation prevents. The manually copied upstream method excerpt was used, not full byte-verified native module.
+Independent native-path counterevidence: official run.py --parallel uses ProcessPoolExecutor and --evolve rejects parallel; thus this is conditional class-state behavior, not demonstrated native launcher failure.
+Drive preexec doc 1ds1ABblkV1CYnBl63-KQxX5K6WwkiAJ-3zKfnQRqJCg confirmed under canonical folder 1PXwQlCDQfRLKvPQo3QuGX5-DiI7L4LbQ. Drive result doc 1_cYSlT1zC8CSkfm38ShpbdRkN4uBEf-sQcGXXttwDek read-back verified but currently under My Drive root because move requests blocked. Blank v023 staging Doc is NOT a valid checkpoint; this GitHub file is the verified v023 amendment.
+No model, autonomous tool, paid cloud, or sealed trial. 19C full certificates 0/6; P14/P15 parity OPEN; AES v2 exact method OPEN; equal model/tools OPEN; prereg21 NOT FROZEN; decisive AES trials zero; Level 0.
+Next Relay1 :36: independent knowledgeable defender audit of BaseAgent.set_exp_info and path setter reachability from native threaded BasePlayground.execute_parallel_tasks; if no same-process conflicting path exists, retire native-impact allegation. If reachable, preregister full native imported original test. Do not rerun synthetic excerpt.
+Milestone NOT RESOLVED.
