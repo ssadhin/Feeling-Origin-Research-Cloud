@@ -1,0 +1,1 @@
+Research2 Relay5 v047L: P14/P15 source-derived budget shadow. Source 633fc711e34e9bf1be37f5760147a5918276d31a. 11/11 checks, two identical receipts bacf28798bd99d7f4443e7505e8c56426e831a3dbd513dc791ce5546ea6cd4e8. B70 P14 equivalence yes, P15 no; B100 both yes. Local preexecution only; not native fidelity; no decisive trials.
