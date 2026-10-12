@@ -1,0 +1,147 @@
+{
+  "schema": "research2.aes_v2_executable_provenance_manifest.v1",
+  "audit_date": "2026-10-12",
+  "intent": "Trace frozen AES v2 runtime source and release history; do not manufacture an implementation or open decisive data.",
+  "scope": "Exact source/release/Git branch/Drive name-and-document audit; absence claims bounded by inspected sources.",
+  "canonical_project_drive_folder": "1PXwQlCDQfRLKvPQo3QuGX5-DiI7L4LbQ",
+  "canonical_status_on_entry": {
+    "version": "v028",
+    "id": "1mtv7-lwNsGiSFotA_emSFq8n1P5j_L0CaTPHhi5LR6Q"
+  },
+  "repository": {
+    "name": "ssadhin/Feeling-Origin-Research-Cloud",
+    "default_branch": "main",
+    "visibility_from_github_api": "public",
+    "branch_count_observed": 58,
+    "releases_count_observed": 0,
+    "tags_status": "NOT_VERIFIED: public GitHub fetch rejected tags endpoint; no inference about tags",
+    "git_tree_complete": {
+      "frozen_aes_commit": true,
+      "main": true,
+      "research2_relay1_aes_multirisk": true,
+      "research2_relay4_fullspine_branch": true,
+      "research2_relay5_aes_spec_audit": true
+    }
+  },
+  "chronology": [
+    {
+      "at_utc": "2026-10-07T07:08:37Z",
+      "commit": "963d9642b688d66d0b12be02cf6e48e6284c856f",
+      "message": "Add Generation 2 methodology policies",
+      "changed_file": "meta_methodology/benchmark_v002.py",
+      "artifact_type": "P14-P18 source executable"
+    },
+    {
+      "at_utc": "2026-10-07T07:12:14Z",
+      "commit": "633fc711e34e9bf1be37f5760147a5918276d31a",
+      "message": "Freeze Generation 2 locked methodology benchmark",
+      "changed_file": ".github/workflows/methodology-locked-v001_1-gen2.yml",
+      "artifact_type": "Research1 historical workflow"
+    },
+    {
+      "at_utc": "2026-10-07T07:19:25Z",
+      "commit": "e8a2d5fc699336d658ea8196ab9d9f4ccdd5c331",
+      "message": "Freeze AES v2 gated recursive tournament policy",
+      "changed_file": "meta_methodology/BEST_SUPPORTED_POLICY_v001.md",
+      "artifact_type": "Markdown methodology only"
+    },
+    {
+      "at_utc": "2026-10-07T10:15:44Z",
+      "commit": "fe7fcb889153a0fceb7c48fad17db9d30abc0bbc",
+      "message": "Add AES v2 research-policy submission manuscript v1",
+      "changed_file": "manuscript/AES_v2_research_policy_manuscript_v1.md",
+      "artifact_type": "Markdown manuscript, no runtime"
+    }
+  ],
+  "exact_frozen_assets": [
+    {
+      "path": "meta_methodology/BEST_SUPPORTED_POLICY_v001.md",
+      "git_blob_sha1": "bf62d370726ea6e1c6191c59f853b53be42c9814",
+      "type": "AES v2 TEXT specification",
+      "executable": false
+    },
+    {
+      "path": "meta_methodology/benchmark_v001.py",
+      "git_blob_sha1": "6c1ce8ce8e210703a6a21625036e701a04e38d5e",
+      "type": "Historical P1-P13 benchmark policy code",
+      "AES_v2_executable": false
+    },
+    {
+      "path": "meta_methodology/benchmark_v001_1.py",
+      "git_blob_sha1": "7fa1ff5a1455e498b1c6534c981c4c1a1b903da8",
+      "type": "Historical Research1 core Environment and P1-P13 policy code",
+      "AES_v2_executable": false
+    },
+    {
+      "path": "meta_methodology/benchmark_v002.py",
+      "git_blob_sha1": "47fc8c9f2d85646ade45b846d49efbd2db8d93c4",
+      "type": "Historical P14-P18 native policy code; GEN2=('P14','P15','P16','P17','P18')",
+      "AES_v2_executable": false
+    },
+    {
+      "path": "meta_methodology/frozen_config_v001.json",
+      "git_blob_sha1": "4fe694e7c4a40293fc71f3a0cc22939b8bd9ded4",
+      "type": "Historical benchmark configuration",
+      "AES_v2_executable": false
+    },
+    {
+      "path": "manuscript/AES_v2_research_policy_manuscript_v1.md",
+      "git_blob_sha1": "6706f45286de1f522c294c6f1801a1365eb1ba6f",
+      "type": "Manuscript",
+      "executable": false
+    }
+  ],
+  "verified_frozen_AES_v2_executable": null,
+  "verified_AES_v2_runtime_commit": null,
+  "verified_AES_v2_runtime_entrypoint": null,
+  "verified_AES_v2_runtime_hash": null,
+  "verified_AES_v2_runtime_dependency_lock": null,
+  "known_historical_executable": {
+    "policy_ids": [
+      "P14",
+      "P15",
+      "P16",
+      "P17",
+      "P18"
+    ],
+    "parent_core": "meta_methodology/benchmark_v001_1.py",
+    "entrypoints": [
+      "benchmark_v002.run_gen2(env,pid)",
+      "benchmark_v002.score(world,pid)"
+    ],
+    "dependency_information": "Python standard-library imports in the two checked modules; no AES-v2-specific runnable dependency manifest located.",
+    "python_minimum_interpretation": "Python >=3.10 implied by union type syntax in original source; exact locked Python interpreter version for AES remains unverified."
+  },
+  "exploratory_assets_excluded_from_original_runtime": [
+    "Research2 Relay5 static AES spec audit: text mutation checks, not A1-A4 executable behavior",
+    "Research2 Relay1 two simulated multi-risk AES translations: exploratory and divergent, not frozen source-original AES",
+    "Research2 Relay4 branch name refers to AES full-spine validator; checked tree head identical to main and no separate AES source entrypoint identified"
+  ],
+  "A1_A4": {
+    "A1": "TEXT_ONLY; behavioral BLOCKED",
+    "A2": "TEXT_ONLY; behavioral BLOCKED",
+    "A3": "TEXT_ONLY; behavioral BLOCKED",
+    "A4": "TEXT_ONLY; behavioral BLOCKED"
+  },
+  "blocker_detail": [
+    "No uniquely pinned executable/source-identified AES policy state machine, even though policy text exists.",
+    "Unresolved source-to-executable rules: simultaneous Stage4 risks/ties; fail-closed Stage1 gate statuses; material-new survivor predicate and two-round stopping; finite budgets and model/provider metering.",
+    "Authoritative release/installable AES v2 artifact and executable dependency lock not recovered in inspected sources. This does NOT establish permanent loss or impossibility."
+  ],
+  "verification": {
+    "github": "GET authenticated GitHub repository metadata, 58 branch refs, release collection (0), commit records, complete recursive frozen/main/selected Research2 branch trees and original files; code-search queries yielded no indexed matches but aren't conclusive",
+    "google_drive": "Latest Research2 v028 and related canonical v026/v027, Drive filename searches for AES_v2.py and AES_POLICY_RUNTIME returned no results; these name searches cannot exclude differently named code.",
+    "release_tags": "Unknown, endpoint unsupported by connected GitHub fetch",
+    "original_method_mutations": "NONE",
+    "decisive_benchmark_opened": false,
+    "LLM_inference_executed": false
+  },
+  "scientific_status": {
+    "AES_v2_19C_executable": "BLOCKED_MISSING_PINNED_EXECUTABLE",
+    "full_external_rival_certifications": "0/6 as of v028",
+    "preregistration21": "NOT_FROZEN",
+    "AES_decisive_trials": 0,
+    "claim_ceiling": "LEVEL0"
+  },
+  "exact_next_step": "Seek or identify a frozen original executable from author, archival commit, release or independent source. If absent, create a NEW prospectively versioned AES v2 translation, independently adjudicate ambiguities, freeze source/deps, and run public A1-A4 source-derived negative/mutation tests; do not substitute exploratory adapter or open decisive trials."
+}
