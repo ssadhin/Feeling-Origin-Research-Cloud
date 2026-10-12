@@ -1,0 +1,1 @@
+v063L 2026-10-13. Source-static audit: 11 valid pass, 1 fail, 1 invalid control. Original AI Scientist-v2 commit 96bd51617cfdbb494a9fc283af00fe090edfae48. No decisive trial. Full native integration open.
