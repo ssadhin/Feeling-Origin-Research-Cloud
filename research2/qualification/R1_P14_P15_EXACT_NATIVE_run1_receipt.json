@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "check": "ORIGINAL_SOURCE_EXACT_HASH_AND_IMPORT",
+      "detail": "two EXACT original Research1 Git blobs and imports, not transcribed helpers",
+      "status": "PASS"
+    },
+    {
+      "check": "ORIGINAL_TRAIN_WORLD_POPULATION",
+      "detail": "(2200, 400)",
+      "status": "PASS"
+    },
+    {
+      "check": "PREDECLARED_COMPARE_TRANSCRIPTION_COUNTS",
+      "error": "({'A': (2123, 328), 'B': (2106, 309), 'C': (2115, 319), 'D': (2117, 320)}, {'A': (2123, 343), 'B': (2106, 327), 'C': (2115, 343), 'D': (2117, 344)})",
+      "status": "FAIL",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_R1_EXACT_NATIVE_IMPORT_20261012_v001\\original_source_import_rng_label_audit_v001.py\", line 18, in check\n    detail=fn()\n           ^^^^\n  File \"G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_R1_EXACT_NATIVE_IMPORT_20261012_v001\\original_source_import_rng_label_audit_v001.py\", line 90, in reference\n    assert observed==expected,(observed,expected)\n           ^^^^^^^^^^^^^^^^^^\nAssertionError: ({'A': (2123, 328), 'B': (2106, 309), 'C': (2115, 319), 'D': (2117, 320)}, {'A': (2123, 343), 'B': (2106, 327), 'C': (2115, 343), 'D': (2117, 344)})\n"
+    },
+    {
+      "check": "ACTION_RESOURCE_COST_PARITY",
+      "detail": "{'A': {80: 2200}, 'B': {90: 2200}, 'C': {90: 2200}, 'D': {90: 2200}}",
+      "status": "PASS"
+    },
+    {
+      "check": "MIST_RNG_COUNTERFACTUAL_DISCORDANCE",
+      "error": "{'B_A_recovery': 101, 'C_A_recovery': 9, 'C_A_selection': 19, 'D_B_recovery': 119, 'C_A_correct': 12}",
+      "status": "FAIL",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_R1_EXACT_NATIVE_IMPORT_20261012_v001\\original_source_import_rng_label_audit_v001.py\", line 18, in check\n    detail=fn()\n           ^^^^\n  File \"G:\\My Drive\\Consciousness Formula Research\\09_Checkpoints\\R2_Q1_R1_EXACT_NATIVE_IMPORT_20261012_v001\\original_source_import_rng_label_audit_v001.py\", line 100, in rng_recovery\n    assert discord['C_A_recovery']==0,discord\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'B_A_recovery': 101, 'C_A_recovery': 9, 'C_A_selection': 19, 'D_B_recovery': 119, 'C_A_correct': 12}\n"
+    },
+    {
+      "check": "POLICY_LABEL_RNG_COUPLING_IDENTIFIED",
+      "detail": "{'B_A_recovery': 101, 'C_A_recovery': 9, 'C_A_selection': 19, 'D_B_recovery': 119, 'C_A_correct': 12}",
+      "status": "PASS"
+    },
+    {
+      "check": "ORIGINAL_SOURCE_IDENTICAL_AFTER",
+      "detail": "two EXACT original Research1 Git blobs and imports, not transcribed helpers",
+      "status": "PASS"
+    }
+  ],
+  "commit": "633fc711e34e9bf1be37f5760147a5918276d31a",
+  "control_C_original": false,
+  "decisive_AES_runs": 0,
+  "fails": 2,
+  "notes": "P14/P15 label-seeded stochastic streams differ; source-exact core and gen2 imported; AES v2 NEVER RUN",
+  "observations": {
+    "classes": 22,
+    "counts": {
+      "A": {
+        "correct": 2123,
+        "costs": {
+          "80": 2200
+        },
+        "recovery": 328
+      },
+      "B": {
+        "correct": 2106,
+        "costs": {
+          "90": 2200
+        },
+        "recovery": 309
+      },
+      "C": {
+        "correct": 2115,
+        "costs": {
+          "90": 2200
+        },
+        "recovery": 319
+      },
+      "D": {
+        "correct": 2117,
+        "costs": {
+          "90": 2200
+        },
+        "recovery": 320
+      }
+    },
+    "discordance": {
+      "B_A_recovery": 101,
+      "C_A_correct": 12,
+      "C_A_recovery": 9,
+      "C_A_selection": 19,
+      "D_B_recovery": 119
+    },
+    "n_generation": 400,
+    "n_worlds": 2200,
+    "original_source_sha256": {
+      "benchmark_v001_1.py": "075685823a354b9b06f4e85010e35e0392fc72579d97a2b15d0b58266256873a",
+      "benchmark_v002.py": "894788122336f5f330187bc2d6a00f76e98898f2688f8558e5f1d1ed02fc4ff2"
+    },
+    "raw_sha256": "8d6a4bfca9a965ee405b0d8112309021f54059355a1b68bf2bb118e659d3c6a9"
+  },
+  "only_split": "train",
+  "passes": 5,
+  "protocol": "Research2 R1 exact original module import v001 nondecisive",
+  "run": "run1"
+}
