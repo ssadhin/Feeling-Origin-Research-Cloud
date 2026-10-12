@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": "source originals imported, Git blobs unmodified",
+      "name": "BLOB_EXACT_MODULES_BEFORE",
+      "status": "PASS"
+    },
+    {
+      "detail": "(2200, 400)",
+      "name": "PUBLIC_TRAIN_POPULATION",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'candidate_recovery': (343, 327, 343, 344), 'discordances': {'A_B_present': 82, 'A_C_present': 0, 'D_B_present': 97, 'A_C_selected': 19}}",
+      "name": "PRIOR_V024_PRIMARY_CANDIDATE_RECOVERY",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'final_selected_truth': (328, 309, 319, 320), 'accuracy': (2123, 2106, 2115, 2117)}",
+      "name": "SOURCE_EXACT_SECONDARY_TERMINAL_DECISIONS",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'A': {80: 2200}, 'B': {90: 2200}, 'C': {90: 2200}, 'D': {90: 2200}}",
+      "name": "SOURCE_EXACT_ACTION_COSTS",
+      "status": "PASS"
+    },
+    {
+      "detail": "source originals imported, Git blobs unmodified",
+      "name": "ORIGINAL_GIT_BLOBS_IDENTICAL_AFTER",
+      "status": "PASS"
+    }
+  ],
+  "claim_ceiling": "Research 1 P14/P15 public TRAIN metric reconciliation, NOT AES tournament",
+  "counterfactual_C_original_contestant": false,
+  "decisive_AES_trials": 0,
+  "fails": 0,
+  "passes": 6,
+  "run": "run2",
+  "source_original_imported": true,
+  "status": "nondecisive source-native R1 metric reconciliation v002",
+  "summary": {
+    "counts": {
+      "A": {
+        "correct": 2123,
+        "costs": {
+          "80": 2200
+        },
+        "present": 343,
+        "selected": 328
+      },
+      "B": {
+        "correct": 2106,
+        "costs": {
+          "90": 2200
+        },
+        "present": 327,
+        "selected": 309
+      },
+      "C": {
+        "correct": 2115,
+        "costs": {
+          "90": 2200
+        },
+        "present": 343,
+        "selected": 319
+      },
+      "D": {
+        "correct": 2117,
+        "costs": {
+          "90": 2200
+        },
+        "present": 344,
+        "selected": 320
+      }
+    },
+    "discord": {
+      "A_B_present": 82,
+      "A_C_present": 0,
+      "A_C_selected": 19,
+      "D_B_present": 97
+    },
+    "frozen_original_git": "633fc711e34e9bf1be37f5760147a5918276d31a",
+    "generation": 400,
+    "n": 2200,
+    "raw_sha256": "f171691cbd6cd07c6a00ff7499c8c52099fd48d20198444068eaaebef42e72c7"
+  }
+}
