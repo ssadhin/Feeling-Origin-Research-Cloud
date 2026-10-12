@@ -1,0 +1,10 @@
+Research2 Relay5 v065L result 2026-10-13.
+Source InternScience/InternAgent commit fa8c3eedfa9751d3752ea6eb49220b303ac2397d, long_memory.py blob 272fbb7a3dcbff7bf4cdcbae8821fc44336494a4.
+Preexecution GitHub protocol commit b6c61c3006f74d255302cfdbc41372e24019fe47.
+Two candidate inputs A=familiar, B=novel. Healthy graph: A has two related nodes, B none. Unavailable retrieval: neither returns related nodes.
+T01 healthy selected B; T02 unavailable collection selected A; T03 caught query exception selected A; T04 absent graph selected A; T05 reversed unavailable selected B; T06 reversed healthy selected B; T07 first generation failed selected B; T08 both failed raised without output; T09 strict availability-aware control BLOCKED; T10 equal relatedness selected A.
+Initial T03 test control invalid: it returned empty directly without raising. Corrected after first execution to throw and catch in retrieval. Corrected reruns matched and observed all 10 predicted outcomes; corrected T03 is postexecution diagnostic, not a preregistered success. Independent verifier passed 16 checks.
+Corrected normalized receipt SHA256 2d559145a1a2643c4aab30dbef2a4f505267571a5638a032ddb5c9bf551c7a01.
+Executable evidence ZIP SHA256 141ff9d891b24e83617401da76f8c87b36d1c7de800fe76118f389e48be21c46.
+Source-derived offline fake-generator integration, NOT native InternAgent, NOT full method fidelity, no real model/tool usage, no paid inference or sealed tasks. No AES advantage inferred. Full 19C certificates 0/6, prereg21 not frozen, decisive trials 0.
+Next: independent defender review and native pinned Chroma retrieval-to-prompt selection test, separate from Relay1 AIS.
