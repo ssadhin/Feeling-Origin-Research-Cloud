@@ -1,0 +1,1 @@
+Research #2 Relay 5 pre-execution protocol v001, 2026-10-12. Source e8a2d5fc699336d658ea8196ab9d9f4ccdd5c331, blob bf62d370726ea6e1c6191c59f853b53be42c9814. Before running, test static A1-A4 declarations and four targeted deletion mutants; P14/P15 negative controls; no behavior-fidelity pass without executable source. No sealed data or provider calls. Prereg21 remains unfrozen.
