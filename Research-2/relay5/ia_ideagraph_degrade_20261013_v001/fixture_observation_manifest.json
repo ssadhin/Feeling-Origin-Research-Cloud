@@ -1,0 +1,75 @@
+{
+  "schema": "research2-relay5-ia-ideagraph-v001",
+  "status": "BOUNDED_SOURCE_DERIVED",
+  "original_source": {
+    "repository": "InternScience/InternAgent",
+    "commit": "fa8c3eedfa9751d3752ea6eb49220b303ac2397d",
+    "path": "internagent/mas/memory/long_memory.py",
+    "git_blob": "272fbb7a3dcbff7bf4cdcbae8821fc44336494a4"
+  },
+  "preexecution_commit": "9007039ef2244b089140f4355989f841563d379e",
+  "execution": {
+    "native_import": false,
+    "method": "manual source-logic transcription, synthetic Chroma and networkx",
+    "hash_seeds": [
+      11,
+      97
+    ],
+    "assertions_per_process": 12,
+    "passed_per_process": 12,
+    "independent_verifier": "10/10",
+    "runner_sha256": "84dd0bae85fa4c63a38d4d3fb584d40f853801d16b3954bc8aa9c012e617f52c",
+    "receipt_sha256": {
+      "seed11": "2a36550ad4c2d6924440a26dba4815f05b652780851174ee3a7494ed5a450203",
+      "seed97": "9e78e807a4e90b8be834a064af6d2ea8ac74933490438be7a710424a0b3c624d"
+    },
+    "normalized_sha256": "714589db75b3281a8bcc65940e544a2bbbc1c1882a1c7b396d6d666052ec1f68",
+    "provider_calls": 0,
+    "external_autonomous_tool_calls": 0
+  },
+  "inputs": {
+    "graph_nodes": [
+      "A",
+      "B"
+    ],
+    "graph_edge": [
+      "A",
+      "B"
+    ],
+    "cluster_id": 0,
+    "queries": [
+      [
+        "A"
+      ],
+      [],
+      [
+        "A",
+        "ghost1",
+        "ghost2"
+      ],
+      "exception",
+      "collection=None"
+    ],
+    "candidate": "novel discovery task"
+  },
+  "observations": {
+    "no_graph_score": 0.5,
+    "collection_unavailable_score": 0,
+    "query_exception_score": 0,
+    "genuine_empty_score": 0,
+    "healthy_score": 1,
+    "orphan_score": 1.6,
+    "membership_mutant_score": 1,
+    "unavailable_mutant_score": 0.5,
+    "empty_task_score": 1
+  },
+  "failure_provenance": [
+    "Initial long Google Doc write and parent move blocked; later compact preexec and canonical copy verified.",
+    "No assertion failure; native autonomous behavior and model/tool constraints not exercised.",
+    "No full 19C certificate or defender review."
+  ],
+  "next": "Native original IdeaGraph+PromptEvolver lifecycle and actual candidate ranking under unavailable/exception/stale vector conditions, independent knowledgeable defender and resource accounting; if owned, distinct read-only audit.",
+  "prereg21_frozen": false,
+  "decisive_trials": 0,
+  "goal_resolved": false
+}
