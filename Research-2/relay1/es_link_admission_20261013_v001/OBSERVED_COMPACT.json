@@ -1,0 +1,26 @@
+{
+  "test": "source-transcribed-pydantic-yaml-link-admission",
+  "upstream_commit": "3b382b92b8fdad6e1f13467c382dcdd91d9b19d2",
+  "store_blob": "9294ecf238875e71722819a74cb67f331bbefe58",
+  "relations_blob": "209a95709de39d7d5765f2a3b9ea15d5f1a045e3",
+  "types_blob": "105f02d642950f743ab91b1bc889db77be607116",
+  "raw_sha256": "15d0f04a82cc545ce706ace69e5c43003f59cd3db72d8b6207d759105953f317",
+  "run1_pass": 14,
+  "run2_pass": 14,
+  "independent_checks": 21,
+  "mutants_detected": 3,
+  "observations": {
+    "cross_project_B_only_linked": false,
+    "cross_project_target_missing": true,
+    "same_content_A_B_id_equal": true,
+    "A_B_separate_paths": true,
+    "local_collision_target_A_updated": true,
+    "foreign_target_B_unchanged": true,
+    "local_link_bidirectional": true,
+    "global_link_allowed": true,
+    "supersedes_reverse_count": 0,
+    "project_A_direct_B_only_read": false,
+    "project_A_top_level_B_only": false,
+    "repeat_link_idempotent": true
+  }
+}
