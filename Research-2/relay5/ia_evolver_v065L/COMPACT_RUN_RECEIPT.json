@@ -1,0 +1,129 @@
+{
+  "schema": "Research2_Relay5_IA_EvolverSelection_v065L_compact",
+  "preexec_commit": "b6c61c3006f74d255302cfdbc41372e24019fe47",
+  "source": {
+    "repo": "InternScience/InternAgent",
+    "commit": "fa8c3eedfa9751d3752ea6eb49220b303ac2397d",
+    "path": "internagent/mas/memory/long_memory.py",
+    "blob": "272fbb7a3dcbff7bf4cdcbae8821fc44336494a4"
+  },
+  "inputs": {
+    "candidates": [
+      "familiar",
+      "novel"
+    ],
+    "graph_nodes": [
+      "i1",
+      "i2"
+    ],
+    "related_familiar": [
+      "i1",
+      "i2"
+    ],
+    "related_novel": [],
+    "fake_generator": true,
+    "real_model_calls": 0,
+    "paid_provider_calls": 0
+  },
+  "results": [
+    [
+      "T01",
+      "healthy",
+      "novel",
+      [
+        1,
+        0
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T02",
+      "collection_unavailable",
+      "familiar",
+      [
+        0,
+        0
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T03",
+      "query_exception",
+      "familiar",
+      [
+        0,
+        0
+      ],
+      "initial_control_invalid_corrected_posthoc"
+    ],
+    [
+      "T04",
+      "no_graph",
+      "familiar",
+      [
+        0.5,
+        0.5
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T05",
+      "reversed_unavailable",
+      "novel",
+      [
+        0,
+        0
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T06",
+      "reversed_healthy",
+      "novel",
+      [
+        0,
+        1
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T07",
+      "first_fake_generation_failed",
+      "novel",
+      [
+        0
+      ],
+      "prospective_pass"
+    ],
+    [
+      "T08",
+      "both_fake_generations_failed",
+      "RuntimeError",
+      [],
+      "prospective_pass"
+    ],
+    [
+      "T09",
+      "strict_availability_mutation",
+      "BLOCKED",
+      [],
+      "prospective_pass"
+    ],
+    [
+      "T10",
+      "equal_relatedness",
+      "familiar",
+      [
+        1,
+        1
+      ],
+      "prospective_pass"
+    ]
+  ],
+  "prospective_valid": "9/9; T03 initial control invalid",
+  "posthoc_corrected": "10/10 expected outputs in two independent subprocesses",
+  "normalized_corrected_receipt_sha256": "2d559145a1a2643c4aab30dbef2a4f505267571a5638a032ddb5c9bf551c7a01",
+  "archive_sha256": "141ff9d891b24e83617401da76f8c87b36d1c7de800fe76118f389e48be21c46",
+  "fidelity": "source-derived manual method transcription, NOT native source import",
+  "scientific_status": "bounded conditional finding; no methodology fidelity certificate; no AES comparison"
+}
