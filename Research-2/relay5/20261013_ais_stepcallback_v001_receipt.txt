@@ -1,0 +1,1 @@
+Relay5 2026-10-13 source-derived AIS callback check: two independent runs, 7/7 checks each. Local receipt SHA256 e6fb6410978ced838f5527772f67b42319550543c45e90b56ba84cb8e7120534. Original source blob 7779630b31b5d20f87da35bf13ead89e0953a4ac. Prospective protocol in canonical Drive. No native model or complete 19C certification.
