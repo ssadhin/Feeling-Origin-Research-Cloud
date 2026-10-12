@@ -1,0 +1,200 @@
+{
+  "cases": {
+    "C01": {
+      "observed": [
+        {
+          "ids": [
+            "O-a",
+            "O-z"
+          ],
+          "project": "A",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C02": {
+      "observed": [
+        {
+          "ids": [
+            "O-1"
+          ],
+          "project": "A",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C03": {
+      "observed": {
+        "held": true,
+        "launched": [
+          {
+            "ids": [
+              "O-2"
+            ],
+            "project": "A",
+            "root": "R1"
+          }
+        ]
+      },
+      "pass": true
+    },
+    "C04": {
+      "observed": {
+        "both_blocked": true,
+        "launched": [
+          {
+            "ids": [
+              "O-A"
+            ],
+            "project": "A",
+            "root": "R1"
+          },
+          {
+            "ids": [
+              "O-B"
+            ],
+            "project": "B",
+            "root": "R1"
+          }
+        ]
+      },
+      "pass": true
+    },
+    "C05": {
+      "observed": {
+        "launched": [
+          {
+            "ids": [
+              "O-B"
+            ],
+            "project": "B",
+            "root": "R2"
+          }
+        ],
+        "pending": 1
+      },
+      "pass": true
+    },
+    "C06": {
+      "observed": {
+        "attempts": 1,
+        "pending_after_failure": 0
+      },
+      "pass": true
+    },
+    "C07": {
+      "observed": {
+        "attempts": 1,
+        "pending_after_none": 0
+      },
+      "pass": true
+    },
+    "C08": {
+      "observed": [
+        {
+          "ids": [
+            "O-A"
+          ],
+          "project": "A",
+          "root": "R1"
+        },
+        {
+          "ids": [
+            "O-B"
+          ],
+          "project": "B",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C09": {
+      "observed": [
+        {
+          "ids": [
+            "O-ABORT"
+          ],
+          "project": "A",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C10": {
+      "observed": {
+        "launches": 0,
+        "pending": 0
+      },
+      "pass": true
+    },
+    "C11": {
+      "observed": {
+        "launches": 0,
+        "pending": 0
+      },
+      "pass": true
+    },
+    "C12": {
+      "observed": {
+        "launches": 0,
+        "pending": 0
+      },
+      "pass": true
+    },
+    "C13": {
+      "observed": [
+        {
+          "ids": [
+            "O-1",
+            "O-2"
+          ],
+          "project": "A",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C14": {
+      "observed": [
+        {
+          "ids": [
+            "O-1"
+          ],
+          "project": "A",
+          "root": "R1"
+        },
+        {
+          "ids": [
+            "O-2"
+          ],
+          "project": "B",
+          "root": "R1"
+        }
+      ],
+      "pass": true
+    },
+    "C15": {
+      "observed": {
+        "launches": 0,
+        "pending": 0
+      },
+      "pass": true
+    },
+    "C16": {
+      "observed": {
+        "launches": 1,
+        "pending": 0
+      },
+      "pass": true
+    }
+  },
+  "component_scope": "exact pinned original scheduler.py with external callbacks/stubs",
+  "launch_marker_calls": 15,
+  "launch_markers_balanced": true,
+  "pass_count": 16,
+  "source_blob_sha": "32720fd2cb706cacc9297e79cf0f628ac5d660a0",
+  "source_exact": true,
+  "total": 16
+}
