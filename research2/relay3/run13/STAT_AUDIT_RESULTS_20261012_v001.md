@@ -1,0 +1,5 @@
+# Research2 Relay3 Run13 — Post-outcome statistical audit
+Source: frozen Research1 633fc711e34e9bf1be37f5760147a5918276d31a; original benchmark_v002.py blob 47fc8c9f2d85646ade45b846d49efbd2db8d93c4; original benchmark_v001_1.py blob 7fa1ff5a1455e498b1c6534c981c4c1a1b903da8 (local excerpt only).
+Preexec SHA256 2a9d77a0c106c33e2b8df159ee6bceab14602f0438c1b83806f9f12354475abb. Two independent 14/14 PASS, receipt SHA256 00e9d4825d2af8a22003b6f9e8686b2068f5b65f5ece79f8f624f146671df075.
+Canonical Relay1 TRAIN aggregates (not rerun): A/B discordance 49/33, exact two-sided p=.0970309113; D/B discordance 57/40, p=.1037693829; D/A marginals 344/343 imply exact paired p=1 for any feasible joint table; C/A zero recovery discordance but 12 accuracy discordances (10 A-only/2 C-only). Exploratory posthoc; no iid/randomized causal claim, full native agent, AES superiority, or decisive trial. Prereg21 draft, 19C certifications 0/6, sealed affect-v004 untouched, decisive trials 0.
+Local reproducibility bundle SHA256 06309095b0988c64be78cd97002a0a483cee631a379df3d8f12c0515d36e9ef5.
