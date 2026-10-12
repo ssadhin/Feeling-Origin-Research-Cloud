@@ -1,0 +1,17 @@
+case,observed,pass
+C01,sorted IDs,true
+C02,deduplicated IDs,true
+C03,active root held,true
+C04,other project sharing root held,true
+C05,different root independent,true
+C06,exception consumed pending without retry,true
+C07,None consumed pending without retry,true
+C08,other batch launched after exception,true
+C09,aborted worker persisted observation launched,true
+C10,missing metadata ignored,true
+C11,missing file ignored,true
+C12,empty delta ignored,true
+C13,alias paths merged,true
+C14,projects separately batched,true
+C15,empty IDs ignored,true
+C16,second flush no relaunch,true
