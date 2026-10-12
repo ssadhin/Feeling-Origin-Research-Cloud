@@ -1,0 +1,10 @@
+Research #2 Relay1 — OmniScientist citation semantic warning bounded audit v001
+Source pinned tsinghua-fib-lab/OmniScientist-V2@1cbb9f6f6d793290326ca29df4d389fb64832f91, citation_support.py Git blob 80b6477fe6fc9f36e173fb70d19372b074e013a9.
+Preexecution protocol SHA256 7ccaa5866cafe02b6d7b19dfd68af966f974d262ee3f59bc967ee541332e5756.
+Pure original manually transcribed functions only; not whole native module.
+Two Python process runs each 12/12 predefined checks. Independent verifier 12/12. Raw JSON SHA256 207bca1c530f8b495d821b1b9c8a682e915a8d0fce71bdfd89a9c20086f31fb8.
+C01 aligned 1.0 supported; C02 negated 1.0 supported; C03 direction reversed 0.6666666666666666 supported; C04 magnitude mismatch 0.8 supported; C05 unrelated 0.0 unsupported; C06 contradictory union 1.0 supported.
+Original lexical citation check intentionally warning-only, no hard task-status veto. No proof full OmniScientist accepts false paper claim, no 19C certification, no AES advantage.
+Full ZIP SHA256 32234fadc5d2b2e66b498d505c7350a1554a000bd95b877888dbb7bccd4615a6, 18338 bytes; Drive ZIP transfer blocked container_session_unavailable.
+Latest canonical Research2 v037; Relay5 AIS metric preexec active; isolated nonoverlapping audit. No paid inference/sealed benchmark. Valid decisive AES-vs-six trials zero.
+Next: independent OmniScientist defender and full pinned native ResearchStore/verify_session/runner contradiction-aware integration.
