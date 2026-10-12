@@ -1,0 +1,83 @@
+{
+  "status": "BOUNDED_NATIVE_THREE_MODULE_ACCEPTANCE_AUDIT_NOT_19C_CERTIFICATION",
+  "date": "2026-10-12",
+  "parent_operational_status": "v037",
+  "additive_parent": "v038B",
+  "source": {
+    "repository": "tsinghua-fib-lab/OmniScientist-V2",
+    "commit": "1cbb9f6f6d793290326ca29df4d389fb64832f91",
+    "original_git_blob_sha1": {
+      "verify.py": "d2f31134d3836e88989de479fadfcd3308e7fc26",
+      "citation_support.py": "80b6477fe6fc9f36e173fb70d19372b074e013a9",
+      "acceptance.py": "09c0073f60e51ac31638f00a959fbb8d45b86bae"
+    }
+  },
+  "execution": "original verify_session, audit_citation_support, support_score, AcceptanceEngine.evaluate with deterministic fake persistence boundary; no native SQL/runner/provider",
+  "v001_negative": {
+    "two_runs": "FAILED at T12",
+    "expected_lexical": 1,
+    "observed_lexical": 0.75,
+    "failed_stderr_sha256": "a8f501b71131856f3bd19676eff5180dd09b32782e3da77688f02986980c43e5"
+  },
+  "v002": {
+    "preexec_amendment_sha256": "e416b1a00be6258714f0ca0b7d01c18e739320fdeef13e65c7c5e5430a27fc24",
+    "script_sha256": "b2757dac7cbe43a8193498619c6fe40e8ebc42ea60ecc143a1ec26cab7f59815",
+    "runs": [
+      {
+        "hashseed": 101,
+        "passed": 15,
+        "total": 15
+      },
+      {
+        "hashseed": 777,
+        "passed": 15,
+        "total": 15
+      }
+    ],
+    "raw_sha256": "626d89c9827a47e2b9a11165e6400426fbe747fb571a8864b9191b6c41d46004",
+    "independent_checks": "20/20",
+    "mutation_controls": "3/3",
+    "cases": {
+      "T02_negated_support_only": {
+        "lexical": 0.75,
+        "strict_accepted": true,
+        "issues": 0
+      },
+      "T03_wrong_magnitude": {
+        "lexical": 0.8,
+        "strict_accepted": true
+      },
+      "T04_explicit_contradiction": {
+        "strict_accepted": false
+      },
+      "T06_unrelated": {
+        "lexical": 0,
+        "strict_accepted": false
+      },
+      "T07_warn_explicit_contradiction": {
+        "accepted": true,
+        "noted": true
+      },
+      "T08_off_explicit_contradiction": {
+        "accepted": true,
+        "noted": false
+      }
+    },
+    "zip_sha256": "1c6c0626f397dfcb16260c61e55682170fb6c257c65dc5f1b43226590a180d3b"
+  },
+  "limits": [
+    "original runner and real SQL not executed",
+    "no independent knowledgeable defender",
+    "anti-HARKing/paper review untested",
+    "not AES win evidence"
+  ],
+  "tournament": {
+    "full_six_rival_19C": "0/6",
+    "AES_A1_A4": "BLOCKED",
+    "P14_P15_parity": "OPEN",
+    "prereg21": "NOT FROZEN",
+    "sealed_affect_v004": "UNOPENED",
+    "admissible_decisive_trials": 0
+  },
+  "next": "Independent OmniScientist defender and complete native SQL ResearchStore/verify_session/runner offline provider integration; then full 19C and resource parity."
+}
