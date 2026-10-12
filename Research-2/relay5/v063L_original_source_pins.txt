@@ -1,0 +1,1 @@
+AI Scientist-v2 pinned commit: 96bd51617cfdbb494a9fc283af00fe090edfae48. Callback blob: 7779630b31b5d20f87da35bf13ead89e0953a4ac. Manager blob: a81a31f9c8e0ecb5a3eae461002f2008e26b096b.
