@@ -1,0 +1,21 @@
+RESEARCH #2 RELAY5 IA IdeaGraph degraded-retrieval and orphan-score audit PREEXEC v001
+Timestamp context: 2026-10-13 Asia/Dhaka, BEFORE any local execution.
+Canonical governing v055A (ID 1Uotiu_EyQBZlsa6Npdh_Ui9Gc09lfpJz); v037 readiness unchanged. Distinct from Relay1 EvoScientist cache work.
+Source: InternScience/InternAgent @ fa8c3eedfa9751d3752ea6eb49220b303ac2397d, internagent/mas/memory/long_memory.py blob 272fbb7a3dcbff7bf4cdcbae8821fc44336494a4. Methods IdeaGraph.retrieve_related_ideas and PromptEvolver._calculate_exploration_score; no source edits.
+Question: Does an unavailable Chroma collection get treated as maximally novel rather than neutral unavailable-memory, and do orphan vector IDs distort normalized exploration scoring?
+Method: Execute faithfully transcribed source-method bodies with fake Chroma collection and networkx graph, no actual embedding/model/provider. The manually transcribed method bodies MUST be labeled non-native even if source logic matches. Two fresh Python processes, distinct PYTHONHASHSEED, deterministic normalized receipt. Public synthetic graph nodes A,B in one cluster and edge A-B.
+Predeclared assertions (12 per process):
+1 absent IdeaGraph yields neutral score 0.5 reason no_graph.
+2 collection=None returns [] from original retrieve.
+3 with graph present but collection=None original score 0.0 reason no_similar_ideas (conditional degradation anomaly).
+4 normal collection query A and graph A-B returns A,B set.
+5 normal graph A,B same cluster score 1.0.
+6 valid empty query result yields 0.0 reason no_similar_ideas (legitimate novel control).
+7 orphan query A, ghost1, ghost2 yields related A,B,ghost1,ghost2 set.
+8 orphan score equals 1.6 with related_count 4 and graph_size 2.
+9 strict graph-membership mutation would score 1.0 for orphan fixture.
+10 exception-raising collection query returns [] and original score 0.0 (constraint effect).
+11 empty candidate new_task returns 1.0 reason empty_task.
+12 scoring mutation that maps unavailable collection to neutral 0.5 differs from original 0.0.
+Falsifiers: any mismatch to predeclared exact outputs; source excerpt mismatch or dependency stub change; if downstream explicitly suppresses these scores, do not claim end-to-end effect.
+Record exact source pin, fixtures, two raw receipts, hash-seed values, code hashes, failures, status, next action. No sealed tasks, no paid model/cloud costs, no claim about AES, no 19C certificate. If remote preexec publication fails, preserve honest local-only status and do not claim remote prereg.
