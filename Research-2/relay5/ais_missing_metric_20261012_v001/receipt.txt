@@ -1,0 +1,1 @@
+Research2 development audit: source-derived missing-metric selection depends on candidate order. Controls 8/10 expected; full native integration untested. Receipt SHA256 002b245e99dbeaebec8644259f57b842e60870c0a45eb34a3a5678928a282090. No decisive trial.
