@@ -1,0 +1,1 @@
+Pinned original EvoScientist scheduler blob 32720fd2cb706cacc9297e79cf0f628ac5d660a0. Two runs 16/16 each, byte-identical SHA256 4f2bdf572a5241e7f54624a405d620e52d96063254e1ea52f12652a99d1392e6. Independent verification 24/24, mutation controls 3/3. C06/C07: no scheduler retry after failed/None launcher; C04: shared-root wait. Component only, no decisive certification.
