@@ -1,0 +1,1 @@
+Relay5 v038 local checkpoint, not canonical status. Source-derived AIS missingness 8/10 oracle; two failures; full native Journal untested. Latest verified canonical status v037. Preexec canonical Drive copy verified. Prereg21 not frozen. Decisive comparisons zero. Next Relay1: original AIS metric to Journal admissibility audit.
