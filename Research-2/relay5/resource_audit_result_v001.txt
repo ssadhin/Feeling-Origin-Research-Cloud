@@ -1,1 +1,8 @@
-2026-10-13: static source checks 7/7; mutation controls 4/4; no native execution.
+2026-10-13 Research2 Relay5 EvoMaster bounded source-structural audit.
+Official pin sjtu-sai-agents/EvoMaster@36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9, playground/x_master/core/playground.py blob f0de9bba97f6caa18178117ee364919e5e91c334, 601 lines.
+Protocol BEFORE test: Drive 1YKliJhVFxY-0TrrzedTv4GZc1JKqedO6wvh8SbU4msI, immutable Git commit c78d1be09c15926dea0bc5f342ae730a0d474d11.
+Seven source checks T01-T07 PASS. Four mutation controls DETECTED: removed critique, changed retries default, removed selector, changed worker argument.
+Source-structural Exp.run callsite counts, NOT observed model calls: N1,R3 healthy4/max12; N4,R3 healthy13/max39; N8,R3 healthy25/max75. N4 first attempt invalid in each slot and selector then success =>26. Persistent solver failure N4,R3: parallel12, serial3 before abort. Defaults N1, workers1, parallel True, retries3.
+Interpretation: aggregate model/tool cost must meter ALL agent calls and retries; max_workers limits concurrency, not aggregate nominal Exp count. This source-text checker does not execute native Python or measure tokens, tools, costs or full evolution. EvoMaster method-fidelity 19C remains BLOCKED, not FAIL; no AES comparison.
+Canonical results Drive 17Cm0Vzvt52fO92B51rpFHo1kbCR_SAgCbsGeBxopsHQ; canonical protocol copy 16_pd855XHZze8OrVNAUnl_bvkl_hEtRk_NbBGMAYnOk.
+Next: native source instrumentation under no-cost fixtures, then real equal-resource authorized model and independent defender. Prereg21 not frozen; sealed affect-v004 untouched; decisive trials 0; GOAL_RESOLVED NO.
