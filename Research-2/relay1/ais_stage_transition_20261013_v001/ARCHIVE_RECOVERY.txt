@@ -1,0 +1,1 @@
+Canonical Drive recovery completed: six earlier Relay1 archives uploaded from immutable conversation file snapshots. AISManagerCheckpoint v066A, AISSaveRun v064A, ES_Scheduler v060A, ESLinkAdmission v059A, ESNativeIdentity v057A, ESCacheSignature v055A. All six uploads succeeded. New v068A ZIP remains local for next-turn recovery.
