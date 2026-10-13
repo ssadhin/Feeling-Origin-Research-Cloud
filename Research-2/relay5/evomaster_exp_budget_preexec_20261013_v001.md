@@ -1,0 +1,1 @@
+PREEXEC 2026-10-13. Original EvoMaster 36a52bc6c42a6b9fd710a41c52f3c3bb948b9ac9 playground/x_master/core/playground.py blob f0de9bba97f6caa18178117ee364919e5e91c334. Canonical protocol Doc 1YKliJhVFxY-0TrrzedTv4GZc1JKqedO6wvh8SbU4msI. Planned static source checks T01-T08 and four mutation controls. Nondecisive; no original runtime, model calls or sealed data. No prereg21 freeze.
