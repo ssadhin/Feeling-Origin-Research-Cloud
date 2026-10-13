@@ -1,0 +1,7 @@
+# Research #2 Relay 1 — AIS execution callback source audit (prospective)
+Date: 2026-10-13 Asia/Dhaka. Nondecisive exploratory source-fidelity test. Prior source clues inspected; not a blinded prediction.
+Pinned original: SakanaAI/AI-Scientist-v2@96bd51617cfdbb494a9fc283af00fe090edfae48.
+Launcher original blob 7779630b31b5d20f87da35bf13ead89e0953a4ac; manager original blob a81a31f9c8e0ecb5a3eae461002f2008e26b096b.
+Predecessors: v068A plus parallel v069L-RL-V6 and v069L-EvoMaster. Governing v037 unchanged.
+Test callback binding and error propagation with controlled offline fakes. P01–P03: module source has unresolved interpreter global, no lexical/local binding. P04–P07: callback creation succeeds, invocation with no global raises NameError, first status emitted, final status not emitted. P08–P10: explicitly injected fake dependency succeeds with exact result, statuses and arguments. P11: injected dependency error propagates. P12–P14: original launcher starts new manager and saves after run, no native pickle.load restore; manager saves stage checkpoint. P15–P18: four mutation controls to test detection of changed source behavior.
+Two independent Python executions, raw JSON, independent verifier. No sealed benchmark, paid inference, or 19C PASS. Distinct from Relay5 ResearchLoop/EvoMaster and earlier Relay1 stage transition. Strong counterinterpretations: external module-global injection, alternate launchers, and normal execution may never invoke callback. Do not claim end-to-end failure without native package run.
