@@ -1,0 +1,48 @@
+{
+  "type": "source_connected_static",
+  "protocol_commit": "ab9d6431442251aef0868bc1e5685a1b5092b8e2",
+  "pinned_repo": "SakanaAI/AI-Scientist-v2",
+  "pinned_commit": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+  "launcher_blob": "7779630b31b5d20f87da35bf13ead89e0953a4ac",
+  "manager_blob": "a81a31f9c8e0ecb5a3eae461002f2008e26b096b",
+  "tests": [
+    {
+      "id": "P01_full",
+      "pass": true
+    },
+    {
+      "id": "P02",
+      "pass": true
+    },
+    {
+      "id": "P12",
+      "pass": true
+    },
+    {
+      "id": "P13",
+      "pass": true
+    },
+    {
+      "id": "P14",
+      "pass": true
+    },
+    {
+      "id": "P16_mutation",
+      "pass": true
+    },
+    {
+      "id": "P17_mutation",
+      "pass": true
+    },
+    {
+      "id": "P18_mutation",
+      "pass": true
+    }
+  ],
+  "pass_count": 8,
+  "limitations": [
+    "static source assertions not native whole package",
+    "source inspected before preregistration",
+    "no official restart API inferred from absence in these two files"
+  ]
+}
