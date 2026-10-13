@@ -1,0 +1,49 @@
+{
+  "type": "post_observation_counterevidence",
+  "pin": "96bd51617cfdbb494a9fc283af00fe090edfae48",
+  "blobs": {
+    "launcher": "7779630b31b5d20f87da35bf13ead89e0953a4ac",
+    "manager": "a81a31f9c8e0ecb5a3eae461002f2008e26b096b",
+    "parallel_agent": "3f0ae599eed1707d03c3e5fa9637692a26360c5d"
+  },
+  "tests": [
+    {
+      "id": "D01",
+      "pass": true,
+      "observation": 1
+    },
+    {
+      "id": "D02",
+      "pass": true,
+      "observation": true
+    },
+    {
+      "id": "D03",
+      "pass": true,
+      "observation": true
+    },
+    {
+      "id": "D04",
+      "pass": true,
+      "observation": true
+    },
+    {
+      "id": "D05",
+      "pass": true,
+      "observation": true
+    },
+    {
+      "id": "D06",
+      "pass": true,
+      "observation": true
+    },
+    {
+      "id": "D07",
+      "pass": true,
+      "observation": true
+    }
+  ],
+  "pass": 7,
+  "total": 7,
+  "interpretation": "The original manager passes an execution callback into ParallelAgent.step, but the pinned step body does not use it. Original worker process instead constructs its own Interpreter. Unbound interpreter in the unused callback is a dormant source defect, NOT evidence of normal end-to-end failure. No source edit or native whole-agent run."
+}
