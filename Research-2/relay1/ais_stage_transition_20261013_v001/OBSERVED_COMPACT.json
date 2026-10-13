@@ -1,0 +1,14 @@
+{
+  "version": "v068A",
+  "scope": "original-method excerpts with synthetic agents; not native",
+  "predecessor": "v067L",
+  "prospective_cases": 10,
+  "run1_pass": 10,
+  "run2_pass": 10,
+  "receipt_checks": 22,
+  "diagnostic_mutants_detected": 3,
+  "raw_sha256": "33121c0a451a16508108dcdf7a5d3d5ecd844de4fd54da61d6139f28c3fc2052",
+  "finding": "Stage checkpoint precedes next-main-stage transition. Injected later-stage failure leaves a prior-stage durable snapshot without pending transition.",
+  "negative": "Not an official native restart test, production failure, scientific-result loss or 19C certification.",
+  "decisive_trials_verified": 0
+}
