@@ -1,0 +1,1 @@
+2026-10-13: static source checks 7/7; mutation controls 4/4; no native execution.
