@@ -1,0 +1,6 @@
+Research #2 publication pipeline diagnostic
+Date: 2026-10-13 Asia/Dhaka
+Purpose: verify isolated GitHub branch, UTF-8 write and subsequent readback after previous write blockers.
+This is not a scientific result, does not supersede a canonical research status, and changes no original source or dataset.
+Home Laptop Eon device was briefly online but subsequently reported relay_disconnected under high CPU and memory load.
+No provider inference or sealed benchmark use.
